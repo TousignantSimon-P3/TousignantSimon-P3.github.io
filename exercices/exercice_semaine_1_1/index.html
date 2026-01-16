@@ -982,107 +982,107 @@
 
 
 <h1 id="exercices-de-la-semaine-1">Exercices de la Semaine 1</h1>
-<p>Ces exercices sont conçus pour pratiquer les concepts vus dans les notes de la semaine 1 (<code>semaine_1.md</code>, <code>semaine_1_1.md</code>, <code>semaine_1_2.md</code>).</p>
+<p>Ces exercices sont conçus pour pratiquer les concepts vus dans les notes de la semaine 1 (<code>semaine_1.md</code>, <code>semaine_1_1.md</code>, <code>semaine_1_2.md</code>).  </p>
 <hr />
 <h3 id="bloc-1-main-cout-et-saisie-simple">Bloc 1 : <code>main</code>, <code>cout</code> et Saisie Simple</h3>
-<p><strong>Exercice 1 : Bonjour le Monde</strong>
-- <strong>Objectif :</strong> Créer un programme C++ de base.
-- <strong>Tâche :</strong> Écrivez un programme qui affiche "Bonjour le monde !" dans la console et qui se termine en retournant <code>0</code> depuis la fonction <code>main</code>.</p>
-<p><strong>Exercice 2 : Fiche de Présentation</strong>
-- <strong>Objectif :</strong> Manipuler <code>std::cout</code>.
-- <strong>Tâche :</strong> Écrivez un programme qui affiche votre nom, votre ville et votre âge sur des lignes séparées.</p>
-<p><strong>Exercice 3 : Interaction Simple</strong>
-- <strong>Objectif :</strong> Utiliser <code>std::cin &gt;&gt;</code> avec <code>std::string</code> et <code>int</code>.
-- <strong>Tâche :</strong> Demandez à l'utilisateur son prénom et son année de naissance. Calculez (approximativement) son âge et affichez un message comme "Bonjour [Prénom], vous avez environ [Age] ans.".
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ctime&gt;</span>
+<p><strong>Exercice 1 : Bonjour le Monde</strong><br />
+- <strong>Objectif :</strong> Créer un programme C++ de base.<br />
+- <strong>Tâche :</strong> Écrivez un programme qui affiche "Bonjour le monde !" dans la console et qui se termine en retournant <code>0</code> depuis la fonction <code>main</code>.  </p>
+<p><strong>Exercice 2 : Fiche de Présentation</strong><br />
+- <strong>Objectif :</strong> Manipuler <code>std::cout</code>.<br />
+- <strong>Tâche :</strong> Écrivez un programme qui affiche votre nom, votre ville et votre âge sur des lignes séparées.  </p>
+<p><strong>Exercice 3 : Interaction Simple</strong><br />
+- <strong>Objectif :</strong> Utiliser <code>std::cin &gt;&gt;</code> avec <code>std::string</code> et <code>int</code>.<br />
+- <strong>Tâche :</strong> Demandez à l'utilisateur son prénom et son année de naissance. Calculez (approximativement) son âge et affichez un message comme "Bonjour [Prénom], vous avez environ [Age] ans.".<br />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ctime&gt;</span><span class="c1">  </span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1">/// @brief Obtient l&#39;année civile actuelle du système.</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">/// Utilise l&#39;heure système standard (std::time) pour calculer l&#39;année.</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1">///</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1">/// @return L&#39;année en format 4 chiffres (ex: 2026).</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="kt">int</span><span class="w"> </span><span class="nf">annee_actuelle</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="c1">// 1. Obtenir le temps actuel (secondes depuis l&#39;époque Unix)</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="kt">time_t</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">time</span><span class="p">(</span><span class="k">nullptr</span><span class="p">);</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1">/// @brief Obtient l&#39;année civile actuelle du système.  </span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">/// Utilise l&#39;heure système standard (std::time) pour calculer l&#39;année.  </span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1">///  </span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1">/// @return L&#39;année en format 4 chiffres (ex: 2026).  </span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="kt">int</span><span class="w"> </span><span class="nf">annee_actuelle</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="c1">// 1. Obtenir le temps actuel (secondes depuis l&#39;époque Unix)  </span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="kt">time_t</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">time</span><span class="p">(</span><span class="k">nullptr</span><span class="p">);</span><span class="w">  </span>
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="c1">// 2. Convertir en structure de date locale</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="c1">// Sous Linux/g++, localtime est standard.</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">tm</span><span class="o">*</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">localtime</span><span class="p">(</span><span class="o">&amp;</span><span class="n">t</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="c1">// 2. Convertir en structure de date locale  </span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="c1">// Sous Linux/g++, localtime est standard.  </span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">tm</span><span class="o">*</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">localtime</span><span class="p">(</span><span class="o">&amp;</span><span class="n">t</span><span class="p">);</span><span class="w">    </span>
 </span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="c1">// 3. Retourner l&#39;année réelle (+1900 car tm_year compte depuis 1900)</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">now</span><span class="o">-&gt;</span><span class="n">tm_year</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1900</span><span class="p">;</span><span class="w"> </span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="p">}</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="c1">// 3. Retourner l&#39;année réelle (+1900 car tm_year compte depuis 1900)  </span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">now</span><span class="o">-&gt;</span><span class="n">tm_year</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1900</span><span class="p">;</span><span class="w">   </span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="p">}</span><span class="w">  </span>
 </span></code></pre></div></p>
-<p><strong>Exercice 4 : Calcul de l'Aire d'un Rectangle</strong>
-- <strong>Objectif :</strong> Utiliser des types <code>double</code> avec <code>std::cin</code>.
-- <strong>Tâche :</strong> Demandez à l'utilisateur la largeur et la hauteur d'un rectangle. Calculez et affichez son aire.</p>
+<p><strong>Exercice 4 : Calcul de l'Aire d'un Rectangle</strong><br />
+- <strong>Objectif :</strong> Utiliser des types <code>double</code> avec <code>std::cin</code>.<br />
+- <strong>Tâche :</strong> Demandez à l'utilisateur la largeur et la hauteur d'un rectangle. Calculez et affichez son aire.  </p>
 <hr />
 <h3 id="bloc-2-le-buffer-dentree-et-getline">Bloc 2 : Le Buffer d'Entrée et <code>getline</code></h3>
-<p><strong>Exercice 5 : Le Piège de <code>getline</code></strong>
-- <strong>Objectif :</strong> Comprendre et résoudre le conflit entre <code>std::cin &gt;&gt;</code> et <code>std::getline</code>.
-- <strong>Tâche :</strong>
-    1. Demandez à l'utilisateur son numéro de porte (un <code>int</code>).
-    2. Demandez-lui ensuite son nom de rue complet (un <code>std::string</code>).
-    3. Constatez que le programme ne vous laisse pas entrer le nom de la rue.
-    4. Corrigez le problème en utilisant <code>std::cin.ignore()</code>.
-    5. Affichez l'adresse complète.</p>
-<p><strong>Exercice 6 : Formulaire d'Inscription</strong>
-- <strong>Objectif :</strong> Utiliser <code>std::getline</code> pour des champs multiples.
-- <strong>Tâche :</strong> Créez un programme qui demande à l'utilisateur son nom complet, son adresse e-mail et sa "bio" (une courte phrase). Affichez ensuite un résumé de ses informations.</p>
+<p><strong>Exercice 5 : Le Piège de <code>getline</code></strong><br />
+- <strong>Objectif :</strong> Comprendre et résoudre le conflit entre <code>std::cin &gt;&gt;</code> et <code>std::getline</code>.<br />
+- <strong>Tâche :</strong><br />
+    1. Demandez à l'utilisateur son numéro de porte (un <code>int</code>).<br />
+    2. Demandez-lui ensuite son nom de rue complet (un <code>std::string</code>).<br />
+    3. Constatez que le programme ne vous laisse pas entrer le nom de la rue.<br />
+    4. Corrigez le problème en utilisant <code>std::cin.ignore()</code>.<br />
+    5. Affichez l'adresse complète.  </p>
+<p><strong>Exercice 6 : Formulaire d'Inscription</strong><br />
+- <strong>Objectif :</strong> Utiliser <code>std::getline</code> pour des champs multiples.<br />
+- <strong>Tâche :</strong> Créez un programme qui demande à l'utilisateur son nom complet, son adresse e-mail et sa "bio" (une courte phrase). Affichez ensuite un résumé de ses informations.  </p>
 <hr />
 <h3 id="bloc-3-gestion-derreurs-de-saisie">Bloc 3 : Gestion d'Erreurs de Saisie</h3>
-<p><strong>Exercice 7 : Le Valideur de Nombre</strong>
-- <strong>Objectif :</strong> Utiliser <code>std::cin.fail()</code> pour la détection d'erreur simple.
-- <strong>Tâche :</strong> Demandez à l'utilisateur d'entrer un nombre. Si la saisie échoue (l'utilisateur tape du texte), affichez "Erreur : vous n'avez pas entre un nombre.". Sinon, affichez "Merci !".</p>
-<p><strong>Exercice 8 : Le cas "45abc"</strong>
-- <strong>Objectif :</strong> Observer ce qui reste dans le buffer après une lecture partielle.
-- <strong>Tâche :</strong>
-    1. Déclarez un <code>int</code> et un <code>std::string</code>.
-    2. Demandez à l'utilisateur d'entrer une valeur (et tapez "45abc").
-    3. Lisez la valeur dans la variable <code>int</code> avec <code>std::cin &gt;&gt;</code>.
-    4. Lisez immédiatement après dans la variable <code>std::string</code> avec <code>std::cin &gt;&gt;</code>.
-    5. Affichez la valeur de l'entier et de la chaîne. Que remarquez-vous ?</p>
-<p><strong>Exercice 9 : Le cas "abc31"</strong>
-- <strong>Objectif :</strong> Gérer un échec de lecture complet.
-- <strong>Tâche :</strong>
-    1. Demandez à l'utilisateur d'entrer un nombre (<code>int</code>). Tapez "abc31".
-    2. Vérifiez si <code>std::cin</code> a échoué.
-    3. Si c'est le cas, affichez un message d'erreur clair.
-    4. "Nettoyez" l'état de <code>cin</code> avec <code>std::cin.clear()</code> et videz le buffer avec <code>std::cin.ignore()</code>.
-    5. Pour vérifier que le nettoyage a fonctionné, demandez à l'utilisateur d'entrer un nouveau mot.</p>
-<p><strong>Exercice 10 : Boucle de Saisie Robuste</strong>
-- <strong>Objectif :</strong> Créer une boucle qui force l'utilisateur à entrer un nombre.
-- <strong>Tâche :</strong> En vous basant sur l'exercice 9, créez une boucle <code>while</code> qui continue de demander à l'utilisateur "Entrez votre age :" tant que la saisie n'est pas un nombre valide.</p>
+<p><strong>Exercice 7 : Le Valideur de Nombre</strong><br />
+- <strong>Objectif :</strong> Utiliser <code>std::cin.fail()</code> pour la détection d'erreur simple.<br />
+- <strong>Tâche :</strong> Demandez à l'utilisateur d'entrer un nombre. Si la saisie échoue (l'utilisateur tape du texte), affichez "Erreur : vous n'avez pas entre un nombre.". Sinon, affichez "Merci !".  </p>
+<p><strong>Exercice 8 : Le cas "45abc"</strong><br />
+- <strong>Objectif :</strong> Observer ce qui reste dans le buffer après une lecture partielle.<br />
+- <strong>Tâche :</strong><br />
+    1. Déclarez un <code>int</code> et un <code>std::string</code>.<br />
+    2. Demandez à l'utilisateur d'entrer une valeur (et tapez "45abc").<br />
+    3. Lisez la valeur dans la variable <code>int</code> avec <code>std::cin &gt;&gt;</code>.<br />
+    4. Lisez immédiatement après dans la variable <code>std::string</code> avec <code>std::cin &gt;&gt;</code>.<br />
+    5. Affichez la valeur de l'entier et de la chaîne. Que remarquez-vous ?  </p>
+<p><strong>Exercice 9 : Le cas "abc31"</strong><br />
+- <strong>Objectif :</strong> Gérer un échec de lecture complet.<br />
+- <strong>Tâche :</strong><br />
+    1. Demandez à l'utilisateur d'entrer un nombre (<code>int</code>). Tapez "abc31".<br />
+    2. Vérifiez si <code>std::cin</code> a échoué.<br />
+    3. Si c'est le cas, affichez un message d'erreur clair.<br />
+    4. "Nettoyez" l'état de <code>cin</code> avec <code>std::cin.clear()</code> et videz le buffer avec <code>std::cin.ignore()</code>.<br />
+    5. Pour vérifier que le nettoyage a fonctionné, demandez à l'utilisateur d'entrer un nouveau mot.  </p>
+<p><strong>Exercice 10 : Boucle de Saisie Robuste</strong><br />
+- <strong>Objectif :</strong> Créer une boucle qui force l'utilisateur à entrer un nombre.<br />
+- <strong>Tâche :</strong> En vous basant sur l'exercice 9, créez une boucle <code>while</code> qui continue de demander à l'utilisateur "Entrez votre age :" tant que la saisie n'est pas un nombre valide.  </p>
 <hr />
 <h3 id="bloc-4-fonctions-et-tableaux">Bloc 4 : Fonctions et Tableaux</h3>
-<p><strong>Exercice 11 : L'Échange qui échoue (et celui qui réussit)</strong>
-- <strong>Objectif :</strong> Différencier passage par copie et par référence.
-- <strong>Tâche :</strong>
-    1. Créez une fonction <code>swap_copie(int a, int b)</code> qui tente d'échanger les deux valeurs.
-    2. Créez une fonction <code>swap_reference(int&amp; a, int&amp; b)</code> qui fait la même chose.
-    3. Dans <code>main</code>, déclarez <code>x = 10</code> et <code>y = 20</code>. Appelez <code>swap_copie(x, y)</code> et affichez <code>x</code> et <code>y</code>. Sont-ils inchangés ?
-    4. Réinitialisez <code>x</code> et <code>y</code>, appelez <code>swap_reference(x, y)</code> et affichez à nouveau. Ont-ils été échangés ?</p>
-<p><strong>Exercice 12 : Compteur de Modifications</strong>
-- <strong>Objectif :</strong> Utiliser la copie et la référence dans une même fonction.
-- <strong>Tâche :</strong> Créez une fonction <code>formater_nom(const std::string&amp; nom_original, std::string&amp; nom_formate, int&amp; compteur)</code>.
-    - <code>nom_original</code> (référence constante) : Ne doit pas être modifié.
-    - <code>nom_formate</code> (référence) : Doit être mis en majuscules (indice : <code>toupper()</code>).
-    - <code>compteur</code> (référence) : Doit être incrémenté à chaque appel.
-    Dans <code>main</code>, appelez cette fonction plusieurs fois et affichez les résultats pour prouver que seul <code>nom_formate</code> et <code>compteur</code> sont modifiés.</p>
-<p><strong>Exercice 13 : Trouver le Maximum dans un Tableau</strong>
-- <strong>Objectif :</strong> Passer un tableau à une fonction et le parcourir.
-- <strong>Tâche :</strong> Créez une fonction <code>trouver_max(const int tableau[], int taille)</code> qui retourne la plus grande valeur d'un tableau. Dans <code>main</code>, initialisez un tableau, trouvez sa taille avec <code>std::size</code> ou <code>std::ssize</code> (C++20) et appelez votre fonction.</p>
-<p><strong>Exercice 14 : Inversion de Tableau</strong>
-- <strong>Objectif :</strong> Modifier un tableau via une fonction.
-- <strong>Tâche :</strong> Créez une fonction <code>inverser_tableau(int tableau[], int taille)</code> qui inverse les éléments du tableau sur place (le premier devient le dernier, etc.). Dans <code>main</code>, déclarez un tableau, affichez-le, appelez la fonction, puis affichez-le à nouveau pour voir le changement.
-- <strong>Indice :</strong> Vous n'avez besoin de parcourir que la moitié du tableau.</p>
-<p><strong>Exercice 15 : Bulletin de Notes</strong>
-- <strong>Objectif :</strong> Combiner plusieurs concepts.
-- <strong>Tâche :</strong>
-    1. Demandez à l'utilisateur combien de notes il veut entrer.
-    2. Créez un tableau de cette taille.
-    3. Remplissez le tableau avec les notes entrées par l'utilisateur (avec gestion d'erreur).
-    4. Créez une fonction <code>calculer_moyenne(const int notes[], int taille)</code> qui retourne la moyenne.
-    5. Affichez la moyenne à l'utilisateur.</p>
+<p><strong>Exercice 11 : L'Échange qui échoue (et celui qui réussit)</strong><br />
+- <strong>Objectif :</strong> Différencier passage par copie et par référence.<br />
+- <strong>Tâche :</strong><br />
+    1. Créez une fonction <code>swap_copie(int a, int b)</code> qui tente d'échanger les deux valeurs.<br />
+    2. Créez une fonction <code>swap_reference(int&amp; a, int&amp; b)</code> qui fait la même chose.<br />
+    3. Dans <code>main</code>, déclarez <code>x = 10</code> et <code>y = 20</code>. Appelez <code>swap_copie(x, y)</code> et affichez <code>x</code> et <code>y</code>. Sont-ils inchangés ?<br />
+    4. Réinitialisez <code>x</code> et <code>y</code>, appelez <code>swap_reference(x, y)</code> et affichez à nouveau. Ont-ils été échangés ?  </p>
+<p><strong>Exercice 12 : Compteur de Modifications</strong><br />
+- <strong>Objectif :</strong> Utiliser la copie et la référence dans une même fonction.<br />
+- <strong>Tâche :</strong> Créez une fonction <code>formater_nom(const std::string&amp; nom_original, std::string&amp; nom_formate, int&amp; compteur)</code>.<br />
+    - <code>nom_original</code> (référence constante) : Ne doit pas être modifié.<br />
+    - <code>nom_formate</code> (référence) : Doit être mis en majuscules (indice : <code>toupper()</code>).<br />
+    - <code>compteur</code> (référence) : Doit être incrémenté à chaque appel.<br />
+    Dans <code>main</code>, appelez cette fonction plusieurs fois et affichez les résultats pour prouver que seul <code>nom_formate</code> et <code>compteur</code> sont modifiés.  </p>
+<p><strong>Exercice 13 : Trouver le Maximum dans un Tableau</strong><br />
+- <strong>Objectif :</strong> Passer un tableau à une fonction et le parcourir.<br />
+- <strong>Tâche :</strong> Créez une fonction <code>trouver_max(const int tableau[], int taille)</code> qui retourne la plus grande valeur d'un tableau. Dans <code>main</code>, initialisez un tableau, trouvez sa taille avec <code>std::size</code> ou <code>std::ssize</code> (C++20) et appelez votre fonction.  </p>
+<p><strong>Exercice 14 : Inversion de Tableau</strong><br />
+- <strong>Objectif :</strong> Modifier un tableau via une fonction.<br />
+- <strong>Tâche :</strong> Créez une fonction <code>inverser_tableau(int tableau[], int taille)</code> qui inverse les éléments du tableau sur place (le premier devient le dernier, etc.). Dans <code>main</code>, déclarez un tableau, affichez-le, appelez la fonction, puis affichez-le à nouveau pour voir le changement.<br />
+- <strong>Indice :</strong> Vous n'avez besoin de parcourir que la moitié du tableau.  </p>
+<p><strong>Exercice 15 : Bulletin de Notes</strong><br />
+- <strong>Objectif :</strong> Combiner plusieurs concepts.<br />
+- <strong>Tâche :</strong><br />
+    1. Demandez à l'utilisateur combien de notes il veut entrer.<br />
+    2. Créez un tableau de cette taille.<br />
+    3. Remplissez le tableau avec les notes entrées par l'utilisateur (avec gestion d'erreur).<br />
+    4. Créez une fonction <code>calculer_moyenne(const int notes[], int taille)</code> qui retourne la moyenne.<br />
+    5. Affichez la moyenne à l'utilisateur.  </p>
 
 
 
