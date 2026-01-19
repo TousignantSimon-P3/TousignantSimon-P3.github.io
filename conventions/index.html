@@ -543,22 +543,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-nommage-naming-convention" class="md-nav__link">
+  <a href="#1-structure-du-code-et-nommage" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Nommage (Naming Convention)
+        1. Structure du Code et Nommage
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Nommage (Naming Convention)">
+    <nav class="md-nav" aria-label="1. Structure du Code et Nommage">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#la-regle-snake_case" class="md-nav__link">
+  <a href="#11-nommage-naming-convention" class="md-nav__link">
     <span class="md-ellipsis">
       
-        La règle : snake_case
+        1.1. Nommage (Naming Convention)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-initialisation-uniforme-avec-les-accolades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Initialisation Uniforme avec les Accolades {}
       
     </span>
   </a>
@@ -583,10 +594,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#regle-des-3-niveaux" class="md-nav__link">
+  <a href="#21-regle-des-3-niveaux" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Règle des 3 niveaux
+        2.1. Règle des 3 niveaux
       
     </span>
   </a>
@@ -594,10 +605,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#clause-de-garde-guard-clause" class="md-nav__link">
+  <a href="#22-clause-de-garde-guard-clause" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Clause de Garde (Guard Clause)
+        2.2. Clause de Garde (Guard Clause)
       
     </span>
   </a>
@@ -668,45 +679,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4. Documentation du Code (Doxygen)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41-ou-documenter" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.1. Où documenter ?
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42-documentation-des-classes-et-structs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2. Documentation des Classes et Structs
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#43-documentation-des-methodes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.3. Documentation des Méthodes
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -733,10 +705,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#52-fichiers-den-tete" class="md-nav__link">
+  <a href="#52-fichiers-den-tete-et-source" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.2. Fichiers d'en-tête
+        5.2. Fichiers d'en-tête et Source
       
     </span>
   </a>
@@ -744,21 +716,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#53-fichiers-source" class="md-nav__link">
+  <a href="#53-compilation-et-resultat" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.3. Fichiers source
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#54-compilation-et-resultat" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.4. Compilation et Résultat
+        5.3. Compilation et Résultat
       
     </span>
   </a>
@@ -1169,9 +1130,9 @@
 </div>
 <p>Ce document définit les standards de programmation attendus pour tous les travaux pratiques et examens. L'objectif est de produire un code lisible, maintenable et proche des standards industriels modernes.</p>
 <hr />
-<h2 id="1-nommage-naming-convention">1. Nommage (Naming Convention)</h2>
+<h2 id="1-structure-du-code-et-nommage">1. Structure du Code et Nommage</h2>
+<h3 id="11-nommage-naming-convention">1.1. Nommage (Naming Convention)</h3>
 <p>Nous adoptons le style de la <strong>Bibliothèque Standard C++ (STL)</strong>.</p>
-<h3 id="la-regle-snake_case">La règle : <code>snake_case</code></h3>
 <table>
 <thead>
 <tr>
@@ -1203,38 +1164,37 @@
 </tr>
 </tbody>
 </table>
+<h3 id="12-initialisation-uniforme-avec-les-accolades">1.2. Initialisation Uniforme avec les Accolades <code>{}</code></h3>
+<p><strong>Règle :</strong> Pour initialiser toute variable, utilisez <strong>toujours</strong> la syntaxe avec accolades <code>{}</code> (Uniform Initialization).</p>
+<p><strong>Pourquoi ?</strong>
+- <strong>Sécurité :</strong> Empêche les conversions de type risquées (ex: <code>int x {5.5};</code> génère une erreur de compilation).
+- <strong>Uniformité :</strong> La même syntaxe fonctionne pour tout (variables simples, tableaux, objets).
+- <strong>Garantie Zéro :</strong> Une initialisation avec des accolades vides (<code>int x {};</code>) garantit que la variable vaut zéro (ou son équivalent), prévenant les bogues de variables non-initialisées.</p>
 <hr />
 <h2 id="2-structure-et-complexite">2. Structure et Complexité</h2>
-<h3 id="regle-des-3-niveaux">Règle des 3 niveaux</h3>
+<h3 id="21-regle-des-3-niveaux">2.1. Règle des 3 niveaux</h3>
 <p>L'imbrication (nesting) ne doit jamais dépasser 3 niveaux de profondeur.</p>
-<h3 id="clause-de-garde-guard-clause">Clause de Garde (Guard Clause)</h3>
-<p>Privilégiez toujours le retour anticipé (Early Return) pour réduire la complexité et l'imbrication.</p>
+<h3 id="22-clause-de-garde-guard-clause">2.2. Clause de Garde (Guard Clause)</h3>
+<p>Privilégiez toujours le retour anticipé (Early Return) pour réduire la complexité.</p>
 <hr />
 <h2 id="3-bonnes-pratiques-fichiers-et-performance">3. Bonnes pratiques : Fichiers et Performance</h2>
 <h3 id="31-organisation-une-classe-par-fichier">3.1. Organisation : Une Classe par Fichier</h3>
-<p>À l'instar de Java ou C#, chaque <code>class</code> ou <code>struct</code> doit être définie dans son propre couple de fichiers (<code>.hpp</code> et <code>.cpp</code>).
-- Le fichier d'en-tête (<code>Article.hpp</code>) contient la <strong>déclaration</strong> de la classe.
-- Le fichier source (<code>Article.cpp</code>) contient son <strong>implémentation</strong>.</p>
-<p>Cette séparation améliore la clarté, la modularité et accélère la compilation en ne recompilant que ce qui a changé.</p>
+<p>Chaque <code>class</code> ou <code>struct</code> doit être définie dans son propre couple de fichiers (<code>.hpp</code> et <code>.cpp</code>).</p>
 <h3 id="32-fichiers-den-tete-et-pragma-once">3.2. Fichiers d'en-tête et <code>#pragma once</code></h3>
 <p>Tout fichier <code>.hpp</code> doit commencer impérativement par <code>#pragma once</code>.</p>
 <h3 id="33-le-const-et-le-passage-par-reference">3.3. Le <code>const</code> et le passage par référence</h3>
-<p>Pour les types complexes (<code>string</code>, <code>vector</code>, objets), utilisez toujours le passage par référence constante (<code>const type&amp;</code>) en paramètre de fonction pour éviter des copies inutiles en mémoire.</p>
+<p>Pour les types complexes (<code>string</code>, <code>vector</code>, etc.), utilisez <code>const type&amp;</code> en paramètre pour éviter des copies inutiles.</p>
 <hr />
 <h2 id="4-documentation-du-code-doxygen">4. Documentation du Code (Doxygen)</h2>
-<p>Le standard de documentation est <strong>Doxygen</strong>. Il permet de générer de la documentation externe et est utilisé par les IDEs pour afficher l'aide contextuelle.</p>
-<h3 id="41-ou-documenter">4.1. Où documenter ?</h3>
-<p><strong>👉 Règle absolue : Toujours dans le fichier d'en-tête (<code>.hpp</code>).</strong>
-Le <code>.hpp</code> est le contrat de votre classe.</p>
-<h3 id="42-documentation-des-classes-et-structs">4.2. Documentation des Classes et Structs</h3>
-<p>Chaque <code>class</code> ou <code>struct</code> doit être précédée d'un bloc <code>/** ... */</code> expliquant son rôle.
-- <strong>Obligatoire :</strong> <code>@brief</code> pour une description courte.</p>
-<h3 id="43-documentation-des-methodes">4.3. Documentation des Méthodes</h3>
-<p>Chaque méthode publique dans le <code>.hpp</code> doit être précédée d'un bloc <code>///</code> décrivant son but (<code>@brief</code>), ses paramètres (<code>@param</code>) et sa valeur de retour (<code>@return</code>).</p>
+<p>Le standard est <strong>Doxygen</strong>. La documentation se place toujours dans les fichiers <code>.hpp</code>.</p>
+<ul>
+<li><strong>Classes/Structs :</strong> Doivent avoir un bloc <code>/** ... */</code> avec au minimum <code>@brief</code>.</li>
+<li><strong>Méthodes :</strong> Doivent avoir un bloc <code>///</code> avec <code>@brief</code>, <code>@param</code> et <code>@return</code> si applicable.</li>
+</ul>
 <hr />
 <h2 id="5-exemple-complet-dapplication">5. Exemple Complet d'Application</h2>
-<p><a href="./exemple_commande/exemple_commande.zip">Télécharger l'exemple complet (ZIP)</a></p>
-<p>Voici un exemple concret qui rassemble tous les standards. (Pour commencer la session)</p>
+<p><a href="../exemple_commande/exemple_commande.zip">Télécharger l'exemple complet (ZIP)</a></p>
+<p>Voici un exemple concret qui rassemble tous les standards.</p>
 <h3 id="51-structure-des-fichiers">5.1. Structure des fichiers</h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>/exemple_commande
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>|-- Article.hpp
@@ -1244,228 +1204,57 @@ Le <code>.hpp</code> est le contrat de votre classe.</p>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>|-- ServiceConnexion.cpp
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>`-- ServiceConnexion.hpp
 </span></code></pre></div>
-<h3 id="52-fichiers-den-tete">5.2. Fichiers d'en-tête</h3>
-<details>
-<summary>Fichier : <code>Article.hpp</code></summary>
-
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">#pragma once</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="cm">/**</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="cm"> * @brief Représente un article simple avec un nom et une quantité.</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="cm"> */</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">struct</span><span class="w"> </span><span class="nc">Article</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">nom_produit</span><span class="p">;</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">quantite_en_stock</span><span class="p">;</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">};</span>
-</span></code></pre></div>
-</details>
-
-<details>
-<summary>Fichier : <code>ServiceConnexion.hpp</code></summary>
-
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">#pragma once</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="cm">/**</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="cm"> * @brief Simule une connexion à un service externe.</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="cm"> */</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="k">class</span><span class="w"> </span><span class="nc">ServiceConnexion</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="k">public</span><span class="o">:</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="c1">/// @brief Vérifie si la connexion au service est active.</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="c1">/// @return true si le service est disponible, sinon false.</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">est_active</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="p">};</span>
-</span></code></pre></div>
-</details>
-
-<details>
-<summary>Fichier : <code>Commande.hpp</code></summary>
-
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cp">#pragma once</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span><span class="c1"> // Nécessaire pour std::string dans Article.hpp si pas déjà inclus par un autre fichier.</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Article.hpp&quot;</span><span class="c1">          // Dépendance vers la structure Article</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ServiceConnexion.hpp&quot;</span><span class="c1"> // Dépendance vers la classe ServiceConnexion</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="c1">// Constante en SCREAMING_SNAKE</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MAX_ARTICLES</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="cm">/**</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="cm"> * @brief Représente une commande client et ses informations de validation.</span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="cm"> */</span>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="k">class</span><span class="w"> </span><span class="nc">Commande</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// PascalCase</span>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="k">public</span><span class="o">:</span>
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">    </span><span class="c1">/// @brief Construit une nouvelle commande avec un identifiant.</span>
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">    </span><span class="c1">/// @param id L&#39;identifiant numérique unique de la commande.</span>
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">    </span><span class="k">explicit</span><span class="w"> </span><span class="n">Commande</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">);</span>
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>
-</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">    </span><span class="c1">/// @brief Ajoute un article à la commande.</span>
-</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">    </span><span class="c1">/// @param article L&#39;article à ajouter (passé par référence constante).</span>
-</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">ajouter_article</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Article</span><span class="o">&amp;</span><span class="w"> </span><span class="n">article</span><span class="p">);</span>
-</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>
-</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">    </span><span class="c1">/// @brief Vérifie si la commande est valide pour être traitée.</span>
-</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">    </span><span class="c1">/// @return true si la commande a un ID positif et contient des articles.</span>
-</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">est_valide</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
-</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>
-</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="w">    </span><span class="c1">/// @brief Vérifie la disponibilité en stock de tous les articles.</span>
-</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="w">    </span><span class="c1">/// @return true si tous les articles sont en stock, sinon false.</span>
-</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">a_du_stock</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
-</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>
-</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="w">    </span><span class="c1">/// @brief Orchestre le traitement de la commande en appliquant les règles de validation.</span>
-</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a><span class="w">    </span><span class="c1">/// @param connexion Le service de connexion à utiliser (référence constante).</span>
-</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">traiter_commande</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">ServiceConnexion</span><span class="o">&amp;</span><span class="w"> </span><span class="n">connexion</span><span class="p">);</span>
-</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>
-</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a><span class="k">private</span><span class="o">:</span>
-</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a><span class="w">    </span><span class="c1">// Attributs en snake_case</span>
-</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">id_commande_</span><span class="p">;</span>
-</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Article</span><span class="o">&gt;</span><span class="w"> </span><span class="n">articles_</span><span class="p">;</span>
-</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>
-</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a><span class="w">    </span><span class="c1">// Méthodes privées en snake_case</span>
-</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">envoyer_commande</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
-</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">log_erreur</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">message</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
-</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a><span class="p">};</span>
-</span></code></pre></div>
-</details>
-
-<h3 id="53-fichiers-source">5.3. Fichiers source</h3>
-<details>
-<summary>Fichier : <code>ServiceConnexion.cpp</code></summary>
-
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ServiceConnexion.hpp&quot;</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kt">bool</span><span class="w"> </span><span class="nf">ServiceConnexion::est_active</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="c1">// Dans un vrai projet, on vérifierait une vraie connexion.</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="c1">// Pour l&#39;exemple, on simule qu&#39;elle est toujours active.</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p">}</span>
-</span></code></pre></div>
-</details>
-
-<details>
-<summary>Fichier : <code>Commande.cpp</code></summary>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Commande.hpp&quot;</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">Commande</span><span class="o">::</span><span class="n">Commande</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">)</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">id_commande_</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="c1">// Le constructeur initialise les valeurs par défaut.</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="c1">// L&#39;utilisation de la liste d&#39;initialisation est une bonne pratique.</span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="p">}</span>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="kt">void</span><span class="w"> </span><span class="n">Commande</span><span class="o">::</span><span class="n">ajouter_article</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Article</span><span class="o">&amp;</span><span class="w"> </span><span class="n">article</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">articles_</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">MAX_ARTICLES</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">        </span><span class="n">articles_</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">article</span><span class="p">);</span>
-</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="p">}</span>
-</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>
-</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="kt">bool</span><span class="w"> </span><span class="n">Commande</span><span class="o">::</span><span class="n">est_valide</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">    </span><span class="c1">// Une commande est valide si elle a un ID positif et n&#39;est pas vide.</span>
-</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">id_commande_</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="n">articles_</span><span class="p">.</span><span class="n">empty</span><span class="p">();</span>
-</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="p">}</span>
-</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>
-</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="kt">bool</span><span class="w"> </span><span class="n">Commande</span><span class="o">::</span><span class="n">a_du_stock</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="w">    </span><span class="c1">// Vérifie si tous les articles de la commande sont en stock.</span>
-</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">article</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">articles_</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">article</span><span class="p">.</span><span class="n">quantite_en_stock</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// Au moins un article est en rupture de stock</span>
-</span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="w">        </span><span class="p">}</span>
-</span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"> </span><span class="c1">// Tous les articles sont disponibles</span>
-</span><span id="__span-5-29"><a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a><span class="p">}</span>
-</span><span id="__span-5-30"><a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a>
-</span><span id="__span-5-31"><a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a><span class="kt">void</span><span class="w"> </span><span class="n">Commande</span><span class="o">::</span><span class="n">traiter_commande</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">ServiceConnexion</span><span class="o">&amp;</span><span class="w"> </span><span class="n">connexion</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-32"><a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;--- Traitement de la commande &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">id_commande_</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; ---&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-5-33"><a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a>
-</span><span id="__span-5-34"><a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a><span class="w">    </span><span class="c1">// Garde 1 : Validation de la commande elle-même</span>
-</span><span id="__span-5-35"><a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">est_valide</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-36"><a id="__codelineno-5-36" name="__codelineno-5-36" href="#__codelineno-5-36"></a><span class="w">        </span><span class="n">log_erreur</span><span class="p">(</span><span class="s">&quot;Commande invalide ou vide.&quot;</span><span class="p">);</span>
-</span><span id="__span-5-37"><a id="__codelineno-5-37" name="__codelineno-5-37" href="#__codelineno-5-37"></a><span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"> </span><span class="c1">// Retour anticipé</span>
-</span><span id="__span-5-38"><a id="__codelineno-5-38" name="__codelineno-5-38" href="#__codelineno-5-38"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-5-39"><a id="__codelineno-5-39" name="__codelineno-5-39" href="#__codelineno-5-39"></a>
-</span><span id="__span-5-40"><a id="__codelineno-5-40" name="__codelineno-5-40" href="#__codelineno-5-40"></a><span class="w">    </span><span class="c1">// Garde 2 : Validation de la connexion</span>
-</span><span id="__span-5-41"><a id="__codelineno-5-41" name="__codelineno-5-41" href="#__codelineno-5-41"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">connexion</span><span class="p">.</span><span class="n">est_active</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-42"><a id="__codelineno-5-42" name="__codelineno-5-42" href="#__codelineno-5-42"></a><span class="w">        </span><span class="n">log_erreur</span><span class="p">(</span><span class="s">&quot;Le service de connexion est inactif.&quot;</span><span class="p">);</span>
-</span><span id="__span-5-43"><a id="__codelineno-5-43" name="__codelineno-5-43" href="#__codelineno-5-43"></a><span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"> </span><span class="c1">// Retour anticipé</span>
-</span><span id="__span-5-44"><a id="__codelineno-5-44" name="__codelineno-5-44" href="#__codelineno-5-44"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-5-45"><a id="__codelineno-5-45" name="__codelineno-5-45" href="#__codelineno-5-45"></a>
-</span><span id="__span-5-46"><a id="__codelineno-5-46" name="__codelineno-5-46" href="#__codelineno-5-46"></a><span class="w">    </span><span class="c1">// Garde 3 : Validation du stock</span>
-</span><span id="__span-5-47"><a id="__codelineno-5-47" name="__codelineno-5-47" href="#__codelineno-5-47"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">a_du_stock</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-48"><a id="__codelineno-5-48" name="__codelineno-5-48" href="#__codelineno-5-48"></a><span class="w">        </span><span class="n">log_erreur</span><span class="p">(</span><span class="s">&quot;Un ou plusieurs articles sont en rupture de stock.&quot;</span><span class="p">);</span>
-</span><span id="__span-5-49"><a id="__codelineno-5-49" name="__codelineno-5-49" href="#__codelineno-5-49"></a><span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"> </span><span class="c1">// Retour anticipé</span>
-</span><span id="__span-5-50"><a id="__codelineno-5-50" name="__codelineno-5-50" href="#__codelineno-5-50"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-5-51"><a id="__codelineno-5-51" name="__codelineno-5-51" href="#__codelineno-5-51"></a>
-</span><span id="__span-5-52"><a id="__codelineno-5-52" name="__codelineno-5-52" href="#__codelineno-5-52"></a><span class="w">    </span><span class="c1">// &quot;Happy Path&quot; : toutes les vérifications ont réussi.</span>
-</span><span id="__span-5-53"><a id="__codelineno-5-53" name="__codelineno-5-53" href="#__codelineno-5-53"></a><span class="w">    </span><span class="c1">// L&#39;indentation est minimale.</span>
-</span><span id="__span-5-54"><a id="__codelineno-5-54" name="__codelineno-5-54" href="#__codelineno-5-54"></a><span class="w">    </span><span class="n">envoyer_commande</span><span class="p">();</span>
-</span><span id="__span-5-55"><a id="__codelineno-5-55" name="__codelineno-5-55" href="#__codelineno-5-55"></a>
-</span><span id="__span-5-56"><a id="__codelineno-5-56" name="__codelineno-5-56" href="#__codelineno-5-56"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-5-57"><a id="__codelineno-5-57" name="__codelineno-5-57" href="#__codelineno-5-57"></a><span class="p">}</span>
-</span><span id="__span-5-58"><a id="__codelineno-5-58" name="__codelineno-5-58" href="#__codelineno-5-58"></a>
-</span><span id="__span-5-59"><a id="__codelineno-5-59" name="__codelineno-5-59" href="#__codelineno-5-59"></a><span class="c1">// Méthodes privées</span>
-</span><span id="__span-5-60"><a id="__codelineno-5-60" name="__codelineno-5-60" href="#__codelineno-5-60"></a>
-</span><span id="__span-5-61"><a id="__codelineno-5-61" name="__codelineno-5-61" href="#__codelineno-5-61"></a><span class="kt">void</span><span class="w"> </span><span class="n">Commande</span><span class="o">::</span><span class="n">envoyer_commande</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-62"><a id="__codelineno-5-62" name="__codelineno-5-62" href="#__codelineno-5-62"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;SUCCES : La commande &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">id_commande_</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; a ete envoyee avec succes.&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-5-63"><a id="__codelineno-5-63" name="__codelineno-5-63" href="#__codelineno-5-63"></a><span class="p">}</span>
-</span><span id="__span-5-64"><a id="__codelineno-5-64" name="__codelineno-5-64" href="#__codelineno-5-64"></a>
-</span><span id="__span-5-65"><a id="__codelineno-5-65" name="__codelineno-5-65" href="#__codelineno-5-65"></a><span class="kt">void</span><span class="w"> </span><span class="n">Commande</span><span class="o">::</span><span class="n">log_erreur</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">message</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-66"><a id="__codelineno-5-66" name="__codelineno-5-66" href="#__codelineno-5-66"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;ERREUR (Cmd &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">id_commande_</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;): &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-5-67"><a id="__codelineno-5-67" name="__codelineno-5-67" href="#__codelineno-5-67"></a><span class="p">}</span>
-</span></code></pre></div>
-</details>
-
+<h3 id="52-fichiers-den-tete-et-source">5.2. Fichiers d'en-tête et Source</h3>
 <details>
 <summary>Fichier : <code>main.cpp</code></summary>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Commande.hpp&quot;</span><span class="c1"> // Inclut Commande.hpp qui lui-même inclut Article.hpp et ServiceConnexion.hpp</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="n">ServiceConnexion</span><span class="w"> </span><span class="n">service_connexion</span><span class="p">;</span>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="n">Article</span><span class="w"> </span><span class="n">article_disponible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;Stylo&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">};</span>
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="n">Article</span><span class="w"> </span><span class="n">article_indisponible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;Cahier&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">};</span>
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;--- Debut des tests de scenarios ---&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>
-</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">    </span><span class="c1">// Scénario 1 : Commande valide</span>
-</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">    </span><span class="n">Commande</span><span class="w"> </span><span class="n">cmd_valide</span><span class="p">(</span><span class="mi">101</span><span class="p">);</span>
-</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">    </span><span class="n">cmd_valide</span><span class="p">.</span><span class="n">ajouter_article</span><span class="p">(</span><span class="n">article_disponible</span><span class="p">);</span>
-</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">    </span><span class="n">cmd_valide</span><span class="p">.</span><span class="n">traiter_commande</span><span class="p">(</span><span class="n">service_connexion</span><span class="p">);</span>
-</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>
-</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">    </span><span class="c1">// Scénario 2 : Article en rupture de stock</span>
-</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">    </span><span class="n">Commande</span><span class="w"> </span><span class="n">cmd_stock_epuise</span><span class="p">(</span><span class="mi">102</span><span class="p">);</span>
-</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">    </span><span class="n">cmd_stock_epuise</span><span class="p">.</span><span class="n">ajouter_article</span><span class="p">(</span><span class="n">article_disponible</span><span class="p">);</span>
-</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="w">    </span><span class="n">cmd_stock_epuise</span><span class="p">.</span><span class="n">ajouter_article</span><span class="p">(</span><span class="n">article_indisponible</span><span class="p">);</span>
-</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="w">    </span><span class="n">cmd_stock_epuise</span><span class="p">.</span><span class="n">traiter_commande</span><span class="p">(</span><span class="n">service_connexion</span><span class="p">);</span>
-</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>
-</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="w">    </span><span class="c1">// Scénario 3 : Commande invalide (vide)</span>
-</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="w">    </span><span class="n">Commande</span><span class="w"> </span><span class="n">cmd_vide</span><span class="p">(</span><span class="mi">103</span><span class="p">);</span>
-</span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a><span class="w">    </span><span class="n">cmd_vide</span><span class="p">.</span><span class="n">traiter_commande</span><span class="p">(</span><span class="n">service_connexion</span><span class="p">);</span>
-</span><span id="__span-6-25"><a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>
-</span><span id="__span-6-26"><a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">--- Fin des tests ---&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-6-27"><a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a>
-</span><span id="__span-6-28"><a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-</span><span id="__span-6-29"><a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a><span class="p">}</span>
+
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Commande.hpp&quot;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="n">ServiceConnexion</span><span class="w"> </span><span class="n">service_connexion</span><span class="w"> </span><span class="p">{};</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="n">Article</span><span class="w"> </span><span class="n">article_disponible</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;Stylo&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">};</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="n">Article</span><span class="w"> </span><span class="n">article_indisponible</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;Cahier&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">};</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;--- Debut des tests de scenarios ---</span><span class="se">\\</span><span class="s">n&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="c1">// Scénario 1 : Commande valide</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="n">Commande</span><span class="w"> </span><span class="n">cmd_valide</span><span class="w"> </span><span class="p">{</span><span class="mi">101</span><span class="p">};</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="n">cmd_valide</span><span class="p">.</span><span class="n">ajouter_article</span><span class="p">(</span><span class="n">article_disponible</span><span class="p">);</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="n">cmd_valide</span><span class="p">.</span><span class="n">traiter_commande</span><span class="p">(</span><span class="n">service_connexion</span><span class="p">);</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="c1">// Scénario 2 : Article en rupture de stock</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="n">Commande</span><span class="w"> </span><span class="n">cmd_stock_epuise</span><span class="w"> </span><span class="p">{</span><span class="mi">102</span><span class="p">};</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="n">cmd_stock_epuise</span><span class="p">.</span><span class="n">ajouter_article</span><span class="p">(</span><span class="n">article_disponible</span><span class="p">);</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="n">cmd_stock_epuise</span><span class="p">.</span><span class="n">ajouter_article</span><span class="p">(</span><span class="n">article_indisponible</span><span class="p">);</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="n">cmd_stock_epuise</span><span class="p">.</span><span class="n">traiter_commande</span><span class="p">(</span><span class="n">service_connexion</span><span class="p">);</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">    </span><span class="c1">// Scénario 3 : Commande invalide (vide)</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">    </span><span class="n">Commande</span><span class="w"> </span><span class="n">cmd_vide</span><span class="w"> </span><span class="p">{</span><span class="mi">103</span><span class="p">};</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">    </span><span class="n">cmd_vide</span><span class="p">.</span><span class="n">traiter_commande</span><span class="p">(</span><span class="n">service_connexion</span><span class="p">);</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">--- Fin des tests ---</span><span class="se">\\</span><span class="s">n&quot;</span><span class="p">;</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="p">}</span>
 </span></code></pre></div>
 </details>
 
-<h3 id="54-compilation-et-resultat">5.4. Compilation et Résultat</h3>
-<p>Pour compiler et exécuter cet exemple :</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>g++<span class="w"> </span>-std<span class="o">=</span>c++20<span class="w"> </span>-Wall<span class="w"> </span>-o<span class="w"> </span>exemple_commande/exemple<span class="w"> </span>exemple_commande/main.cpp<span class="w"> </span>exemple_commande/Commande.cpp<span class="w"> </span>exemple_commande/ServiceConnexion.cpp
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>./exemple_commande/exemple
-</span></code></pre></div>
-<p>Le résultat attendu est :</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>--- Debut des tests de scenarios ---
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>SUCCES : La commande 101 a ete envoyee avec succes.
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>--- Traitement de la commande 102 ---
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>ERREUR (Cmd 102): Un ou plusieurs articles sont en rupture de stock.
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>--- Traitement de la commande 103 ---
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>ERREUR (Cmd 103): Commande invalide ou vide.
-</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>---
-</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>
-</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>--- Fin des tests ---
-</span></code></pre></div>
+<p><em>(Le code des autres fichiers <code>Article.hpp</code>, <code>Commande.hpp</code>, etc. est omis pour la lisibilité, mais est inclus dans le ZIP téléchargeable.)</em></p>
+<h3 id="53-compilation-et-resultat">5.3. Compilation et Résultat</h3>
+<p>Pour compiler et exécuter cet exemple :
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>g++<span class="w"> </span>-std<span class="o">=</span>c++20<span class="w"> </span>-Wall<span class="w"> </span>-o<span class="w"> </span>exemple_commande/exemple<span class="w"> </span>exemple_commande/main.cpp<span class="w"> </span>exemple_commande/Commande.cpp<span class="w"> </span>exemple_commande/ServiceConnexion.cpp
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>./exemple_commande/exemple
+</span></code></pre></div></p>
+<p>Le résultat attendu est :
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>--- Debut des tests de scenarios ---
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>SUCCES : La commande 101 a ete envoyee.
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>ERREUR (Cmd 102): Un ou plusieurs articles en rupture de stock.
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>ERREUR (Cmd 103): Commande invalide ou vide.
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>--- Fin des tests ---
+</span></code></pre></div></p>
 
 
 

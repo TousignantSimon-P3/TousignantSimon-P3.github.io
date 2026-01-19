@@ -982,8 +982,8 @@ Concentrez-vous sur la maîtrise de la compilation, de l'affichage, de la saisie
 - <strong>Objectif :</strong> Manipuler <code>std::cout</code> avec plusieurs lignes.<br />
 - <strong>Tâche :</strong> Écrivez un programme qui affiche votre nom, votre ville et votre âge sur des lignes séparées.</p>
 <p><strong>Exercice 3 : Déclaration de Variables</strong><br />
-- <strong>Objectif :</strong> Se familiariser avec les types primitifs.<br />
-- <strong>Tâche :</strong> Déclarez quatre variables : un <code>int</code>, un <code>double</code>, un <code>char</code>, et un <code>bool</code>.<br />
+- <strong>Objectif :</strong> Se familiariser avec l'initialisation uniforme.<br />
+- <strong>Tâche :</strong> Déclarez quatre variables en utilisant la syntaxe d'accolades <code>{}</code> : un <code>int</code>, un <code>double</code>, un <code>char</code>, et un <code>bool</code>.<br />
 Assignez-leur des valeurs de votre choix et affichez chaque valeur avec une description.</p>
 <p><strong>Exercice 4 : Interaction Simple</strong><br />
 - <strong>Objectif :</strong> Utiliser <code>std::cin &gt;&gt;</code> avec <code>std::string</code> et <code>int</code>.<br />
@@ -1026,28 +1026,27 @@ Chaque fonction doit retourner le résultat du calcul. Dans <code>main</code>, t
 - <strong>Objectif :</strong> Constater l'effet d'un passage par copie.<br />
 - <strong>Tâche :</strong>
   1. Écrivez une fonction <code>ajouter_vingt(int nombre)</code> qui reçoit un entier, lui ajoute 20, et n'a pas de <code>return</code>.<br />
-  2. Dans <code>main</code>, initialisez une variable <code>ma_valeur</code> à <code>10</code>.<br />
+  2. Dans <code>main</code>, initialisez une variable <code>ma_valeur {10}</code>.<br />
   3. Appelez <code>ajouter_vingt(ma_valeur)</code>.<br />
   4. Affichez <code>ma_valeur</code> après l'appel. A-t-elle changé ? Pourquoi ?</p>
 <p><strong>Exercice 12 : Passage par Référence</strong><br />
 - <strong>Objectif :</strong> Utiliser une référence pour modifier une variable externe.<br />
 - <strong>Tâche :</strong>
   1. Écrivez une fonction <code>reinitialiser(int&amp; nombre)</code> qui change la valeur de l'entier reçu à <code>0</code>.<br />
-  2. Dans <code>main</code>, initialisez une variable <code>ma_valeur</code> à <code>123</code>.<br />
+  2. Dans <code>main</code>, initialisez une variable <code>ma_valeur {123}</code>.<br />
   3. Appelez <code>reinitialiser(ma_valeur)</code>.<br />
   4. Affichez <code>ma_valeur</code> après l'appel. A-t-elle changé ? Pourquoi ?</p>
 <p><strong>Exercice 13 : Somme d'un Tableau</strong><br />
 - <strong>Objectif :</strong> Passer un tableau à une fonction.<br />
 - <strong>Tâche :</strong> Créez une fonction <code>calculer_somme(const int tableau[], int taille)</code> qui retourne la somme de tous les éléments d'un tableau.<br />
-Dans <code>main</code>, initialisez un tableau, trouvez sa taille avec <code>std::ssize</code>, et affichez la somme retournée par votre fonction.</p>
+Dans <code>main</code>, initialisez un tableau (ex: <code>int tableau[] {10, 20, 30};</code>), trouvez sa taille avec <code>std::ssize</code>, et affichez la somme retournée par votre fonction.</p>
 <p><strong>Exercice 14 : Trouver le Maximum</strong><br />
 - <strong>Objectif :</strong> Parcourir un tableau dans une fonction.<br />
 - <strong>Tâche :</strong> Créez une fonction <code>trouver_max(const int tableau[], int taille)</code> qui retourne la plus grande valeur d'un tableau. Testez-la dans <code>main</code>.</p>
 <p><strong>Exercice 15 : Inversion de Tableau</strong><br />
 - <strong>Objectif :</strong> Modifier un tableau via une fonction.<br />
 - <strong>Tâche :</strong> Créez une fonction <code>inverser_tableau(int tableau[], int taille)</code> qui inverse les éléments du tableau sur place (le premier devient le dernier, etc.).<br />
-Dans <code>main</code>, déclarez un tableau, affichez-le, appelez la fonction, puis affichez-le à nouveau pour voir le changement.<br />
-(Exemple : <code>{1, 2, 3, 4, 5}</code> devient <code>{5, 4, 3, 2, 1}</code>).</p>
+Dans <code>main</code>, déclarez un tableau comme <code>int tableau[] {1, 2, 3, 4, 5};</code>, affichez-le, appelez la fonction, puis affichez-le à nouveau pour voir le changement.</p>
 
 
 
