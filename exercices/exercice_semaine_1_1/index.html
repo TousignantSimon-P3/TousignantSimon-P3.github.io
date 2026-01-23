@@ -819,10 +819,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#bloc-3-fonctions-et-tableaux" class="md-nav__link">
+  <a href="#bloc-3-fonctions-et-tableaux-classique" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Bloc 3 : Fonctions et Tableaux
+        Bloc 3 : Fonctions et Tableaux (Classique)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bloc-4-c-moderne-stdspan-vector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloc 4 : C++ Moderne (std::span &amp; Vector)
       
     </span>
   </a>
@@ -870,41 +881,31 @@
 Concentrez-vous sur la maîtrise de la compilation, de l'affichage, de la saisie et des fonctions simples.</p>
 <hr />
 <h3 id="bloc-1-affichage-et-saisie-simple">Bloc 1 : Affichage et Saisie Simple</h3>
-<p><strong>Exercice 1 : Bonjour le Monde</strong><br />
-- <strong>Objectif :</strong> Créer un programme C++ de base.<br />
+<p><strong>Exercice 1 : Bonjour le Monde</strong> - <strong>Objectif :</strong> Créer un programme C++ de base.<br />
 - <strong>Tâche :</strong> Écrivez un programme qui affiche "Bonjour le monde !" dans la console et qui se termine en retournant <code>0</code>.</p>
-<p><strong>Exercice 2 : Fiche de Présentation</strong><br />
-- <strong>Objectif :</strong> Manipuler <code>std::cout</code> avec plusieurs lignes.<br />
+<p><strong>Exercice 2 : Fiche de Présentation</strong> - <strong>Objectif :</strong> Manipuler <code>std::cout</code> avec plusieurs lignes.<br />
 - <strong>Tâche :</strong> Écrivez un programme qui affiche votre nom, votre ville et votre âge sur des lignes séparées.</p>
-<p><strong>Exercice 3 : Déclaration de Variables</strong><br />
-- <strong>Objectif :</strong> Se familiariser avec l'initialisation uniforme.<br />
+<p><strong>Exercice 3 : Déclaration de Variables</strong> - <strong>Objectif :</strong> Se familiariser avec l'initialisation uniforme.<br />
 - <strong>Tâche :</strong> Déclarez quatre variables en utilisant la syntaxe d'accolades <code>{}</code> : un <code>int</code>, un <code>double</code>, un <code>char</code>, et un <code>bool</code>.<br />
 Assignez-leur des valeurs de votre choix et affichez chaque valeur avec une description.</p>
-<p><strong>Exercice 4 : Interaction Simple</strong><br />
-- <strong>Objectif :</strong> Utiliser <code>std::cin &gt;&gt;</code> avec <code>std::string</code> et <code>int</code>.<br />
+<p><strong>Exercice 4 : Interaction Simple</strong> - <strong>Objectif :</strong> Utiliser <code>std::cin &gt;&gt;</code> avec <code>std::string</code> et <code>int</code>.<br />
 - <strong>Tâche :</strong> Demandez à l'utilisateur son prénom et son année de naissance.<br />
 Calculez (approximativement) son âge et affichez un message comme <code>"Bonjour [Prénom], vous avez environ [Age] ans."</code>.</p>
-<p><strong>Exercice 5 : Calcul d'Aire</strong><br />
-- <strong>Objectif :</strong> Utiliser des types <code>double</code> avec <code>std::cin</code>.<br />
+<p><strong>Exercice 5 : Calcul d'Aire</strong> - <strong>Objectif :</strong> Utiliser des types <code>double</code> avec <code>std::cin</code>.<br />
 - <strong>Tâche :</strong> Demandez à l'utilisateur la largeur et la hauteur d'un rectangle.<br />
 Calculez et affichez son aire.</p>
 <hr />
 <h3 id="bloc-2-gestion-du-buffer-et-erreurs-de-saisie">Bloc 2 : Gestion du Buffer et Erreurs de Saisie</h3>
-<p><strong>Exercice 6 : Le Piège de <code>getline</code></strong><br />
-- <strong>Objectif :</strong> Résoudre le conflit entre <code>std::cin &gt;&gt;</code> et <code>std::getline</code>.<br />
-- <strong>Tâche :</strong><br />
-  1. Demandez à l'utilisateur son numéro de porte (un <code>int</code>).<br />
+<p><strong>Exercice 6 : Le Piège de <code>getline</code></strong> - <strong>Objectif :</strong> Résoudre le conflit entre <code>std::cin &gt;&gt;</code> et <code>std::getline</code>.<br />
+- <strong>Tâche :</strong> 1. Demandez à l'utilisateur son numéro de porte (un <code>int</code>).<br />
   2. Demandez-lui ensuite son nom de rue complet (un <code>std::string</code> avec <code>getline</code>).<br />
   3. Observez que le programme ignore la saisie de la rue.<br />
   4. Corrigez le problème en nettoyant le buffer après la lecture du nombre.</p>
-<p><strong>Exercice 7 : Gestion d'Erreur Simple</strong><br />
-- <strong>Objectif :</strong> Utiliser <code>std::cin.fail()</code> pour détecter une erreur.<br />
+<p><strong>Exercice 7 : Gestion d'Erreur Simple</strong> - <strong>Objectif :</strong> Utiliser <code>std::cin.fail()</code> pour détecter une erreur.<br />
 - <strong>Tâche :</strong> Demandez à l'utilisateur d'entrer un nombre. Si la saisie échoue (si l'utilisateur tape du texte), affichez "Erreur : saisie invalide.". Sinon, affichez "Merci !".</p>
-<p><strong>Exercice 8 : Boucle de Saisie Robuste</strong><br />
-- <strong>Objectif :</strong> Créer une boucle qui force une saisie numérique valide.<br />
+<p><strong>Exercice 8 : Boucle de Saisie Robuste</strong> - <strong>Objectif :</strong> Créer une boucle qui force une saisie numérique valide.<br />
 - <strong>Tâche :</strong> Créez une boucle <code>while</code> qui continue de demander "Entrez votre age :" jusqu'à ce que l'utilisateur entre un nombre entier valide. Si l'utilisateur se trompe, le programme doit afficher une erreur et lui redemander.</p>
-<p><strong>Exercice 9 : Analyse d'Entrée Mixte</strong><br />
-- <strong>Objectif :</strong> Comprendre comment <code>cin</code> gère les lectures partielles.<br />
+<p><strong>Exercice 9 : Analyse d'Entrée Mixte</strong> - <strong>Objectif :</strong> Comprendre comment <code>cin</code> gère les lectures partielles.<br />
 - <strong>Tâche :</strong>
   1. Demandez à l'utilisateur un nombre. L'utilisateur doit taper <code>45abc</code>.<br />
   2. Lisez la saisie dans une variable de type <code>int</code>.<br />
@@ -912,36 +913,51 @@ Calculez et affichez son aire.</p>
   4. Ensuite, lisez le reste du buffer dans une variable <code>std::string</code>.<br />
   5. Affichez la chaîne de caractères. Le résultat devrait vous montrer ce qui restait dans le buffer.</p>
 <hr />
-<h3 id="bloc-3-fonctions-et-tableaux">Bloc 3 : Fonctions et Tableaux</h3>
-<p><strong>Exercice 10 : Calculatrice Simple</strong><br />
-- <strong>Objectif :</strong> Écrire et appeler des fonctions simples.<br />
+<h3 id="bloc-3-fonctions-et-tableaux-classique">Bloc 3 : Fonctions et Tableaux (Classique)</h3>
+<p><strong>Exercice 10 : Calculatrice Simple</strong> - <strong>Objectif :</strong> Écrire et appeler des fonctions simples.<br />
 - <strong>Tâche :</strong> Écrivez quatre fonctions : <code>addition(int a, int b)</code>, <code>soustraction(int a, int b)</code>, <code>multiplication(int a, int b)</code>, et <code>division(int a, int b)</code>.<br />
 Chaque fonction doit retourner le résultat du calcul. Dans <code>main</code>, testez chaque fonction avec des valeurs de votre choix et affichez les résultats.</p>
-<p><strong>Exercice 11 : Passage par Copie</strong><br />
-- <strong>Objectif :</strong> Constater l'effet d'un passage par copie.<br />
+<p><strong>Exercice 11 : Passage par Copie</strong> - <strong>Objectif :</strong> Constater l'effet d'un passage par copie.<br />
 - <strong>Tâche :</strong>
   1. Écrivez une fonction <code>ajouter_vingt(int nombre)</code> qui reçoit un entier, lui ajoute 20, et n'a pas de <code>return</code>.<br />
   2. Dans <code>main</code>, initialisez une variable <code>ma_valeur {10}</code>.<br />
   3. Appelez <code>ajouter_vingt(ma_valeur)</code>.<br />
   4. Affichez <code>ma_valeur</code> après l'appel. A-t-elle changé ? Pourquoi ?</p>
-<p><strong>Exercice 12 : Passage par Référence</strong><br />
-- <strong>Objectif :</strong> Utiliser une référence pour modifier une variable externe.<br />
+<p><strong>Exercice 12 : Passage par Référence</strong> - <strong>Objectif :</strong> Utiliser une référence pour modifier une variable externe.<br />
 - <strong>Tâche :</strong>
   1. Écrivez une fonction <code>reinitialiser(int&amp; nombre)</code> qui change la valeur de l'entier reçu à <code>0</code>.<br />
   2. Dans <code>main</code>, initialisez une variable <code>ma_valeur {123}</code>.<br />
   3. Appelez <code>reinitialiser(ma_valeur)</code>.<br />
   4. Affichez <code>ma_valeur</code> après l'appel. A-t-elle changé ? Pourquoi ?</p>
-<p><strong>Exercice 13 : Somme d'un Tableau</strong><br />
-- <strong>Objectif :</strong> Passer un tableau à une fonction.<br />
+<p><strong>Exercice 13 : Somme d'un Tableau (Style C)</strong> - <strong>Objectif :</strong> Passer un tableau à une fonction (méthode classique).<br />
 - <strong>Tâche :</strong> Créez une fonction <code>calculer_somme(const int tableau[], int taille)</code> qui retourne la somme de tous les éléments d'un tableau.<br />
 Dans <code>main</code>, initialisez un tableau (ex: <code>int tableau[] {10, 20, 30};</code>), trouvez sa taille avec <code>std::ssize</code>, et affichez la somme retournée par votre fonction.</p>
-<p><strong>Exercice 14 : Trouver le Maximum</strong><br />
-- <strong>Objectif :</strong> Parcourir un tableau dans une fonction.<br />
+<p><strong>Exercice 14 : Trouver le Maximum</strong> - <strong>Objectif :</strong> Parcourir un tableau dans une fonction.<br />
 - <strong>Tâche :</strong> Créez une fonction <code>trouver_max(const int tableau[], int taille)</code> qui retourne la plus grande valeur d'un tableau. Testez-la dans <code>main</code>.</p>
-<p><strong>Exercice 15 : Inversion de Tableau</strong><br />
-- <strong>Objectif :</strong> Modifier un tableau via une fonction.<br />
+<p><strong>Exercice 15 : Inversion de Tableau</strong> - <strong>Objectif :</strong> Modifier un tableau via une fonction.<br />
 - <strong>Tâche :</strong> Créez une fonction <code>inverser_tableau(int tableau[], int taille)</code> qui inverse les éléments du tableau sur place (le premier devient le dernier, etc.).<br />
 Dans <code>main</code>, déclarez un tableau comme <code>int tableau[] {1, 2, 3, 4, 5};</code>, affichez-le, appelez la fonction, puis affichez-le à nouveau pour voir le changement.</p>
+<hr />
+<h3 id="bloc-4-c-moderne-stdspan-vector">Bloc 4 : C++ Moderne (std::span &amp; Vector)</h3>
+<p><strong>Exercice 16 : La Règle d'Or (std::span)</strong> - <strong>Objectif :</strong> Remplacer le couple <code>(tableau, taille)</code> par <code>std::span</code>.<br />
+- <strong>Tâche :</strong>
+  1. Reprenez votre fonction <code>calculer_somme</code> de l'exercice 13.
+  2. Changez sa signature pour qu'elle prenne un <code>std::span&lt;const int&gt;</code> au lieu d'un tableau et une taille.
+  3. Dans <code>main</code>, créez un tableau brut (<code>int t[]...</code>).
+  4. Appelez la fonction. Remarquez que vous n'avez plus besoin de passer la taille manuellement !</p>
+<p><strong>Exercice 17 : Optimisation avec Référence Constante</strong> - <strong>Objectif :</strong> Éviter les copies inutiles sur les gros objets.<br />
+- <strong>Tâche :</strong>
+  1. Écrivez une fonction <code>afficher_message(std::string message)</code> (par copie).
+  2. Modifiez-la pour utiliser le passage par <strong>référence constante</strong> (<code>const std::string&amp;</code>).
+  3. Ajoutez un <code>cout</code> dans la fonction pour vérifier que le message s'affiche bien.
+  <em>Question :</em> À l'utilisation dans le <code>main</code>, est-ce que le code d'appel change ? (Réponse attendue : Non, c'est transparent, mais plus rapide).</p>
+<p><strong>Exercice 18 : Vecteur Dynamique et Span</strong> - <strong>Objectif :</strong> Utiliser un tableau qui peut grandir (<code>vector</code>) avec une fonction moderne.<br />
+- <strong>Tâche :</strong>
+  1. Incluez <code>&lt;vector&gt;</code>.
+  2. Créez un <code>std::vector&lt;int&gt;</code> vide.
+  3. Utilisez une boucle <code>while</code> pour demander des nombres à l'utilisateur. Ajoutez-les au vecteur avec <code>.push_back()</code>. Arrêtez quand il tape -1.
+  4. Appelez votre fonction <code>calculer_somme</code> (celle avec le <code>std::span</code> de l'exercice 16) en lui passant ce vecteur.
+  <em>Observation :</em> Notez que le <code>span</code> accepte aussi bien le tableau brut (Ex 16) que le vecteur (Ex 18).</p>
 
 
 
