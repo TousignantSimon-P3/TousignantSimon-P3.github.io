@@ -143,7 +143,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#les-types-de-donnees-et-linitialisation-en-c" class="md-skip">
+        <a href="#1-types-entiers-et-logiques" class="md-skip">
           Aller au contenu
         </a>
       
@@ -633,8 +633,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -677,8 +675,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -687,10 +683,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-les-types-primitifs" class="md-nav__link">
+  <a href="#1-types-entiers-et-logiques" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Les Types Primitifs
+        1. Types Entiers et Logiques
       
     </span>
   </a>
@@ -698,10 +694,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-linitialisation-uniforme-avec-les-accolades" class="md-nav__link">
+  <a href="#2-types-de-caracteres-et-octets" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. L'Initialisation Uniforme avec les Accolades {}
+        2. Types de Caractères et Octets
       
     </span>
   </a>
@@ -709,10 +705,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-les-chaines-de-caracteres-et-tableaux" class="md-nav__link">
+  <a href="#3-types-a-virgule-flottante" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Les Chaînes de Caractères et Tableaux
+        3. Types à Virgule Flottante
       
     </span>
   </a>
@@ -720,22 +716,234 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-utiliser-les-tableaux-avec-des-fonctions" class="md-nav__link">
+  <a href="#4-initialisation-des-variables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Utiliser les Tableaux avec des Fonctions
+        4. Initialisation des Variables
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4. Utiliser les Tableaux avec des Fonctions">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manipulation-des-chaines-de-caracteres-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manipulation des Chaînes de Caractères (Strings)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Manipulation des Chaînes de Caractères (Strings)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#le-probleme-la-taille-est-perdue" class="md-nav__link">
+  <a href="#1-la-classe-stdstring-le-standard" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Le Problème : La Taille est Perdue
+        1. La Classe std::string (Le Standard)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-operations-courantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Opérations Courantes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-casse-tete-des-accents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ Le Casse-tête des Accents
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stdwstring-standard-ou-pas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        std::wstring : Standard ou pas ?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="std::wstring : Standard ou pas ?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-grand-debat-faut-il-lutiliser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le Grand Débat : "Faut-il l'utiliser ?"
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Le Grand Débat : &#34;Faut-il l&#39;utiliser ?&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-le-probleme-de-portabilite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Le Problème de Portabilité
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-le-verdict-quand-lutiliser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Le Verdict : Quand l'utiliser ?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-le-hack-pour-gerer-les-accents-avec-une-bibliotheque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Le "hack" pour gérer les accents, avec une bibliothèque
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-les-tableaux-bruts-static-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Les Tableaux Bruts (Static Arrays)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Les Tableaux Bruts (Static Arrays)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#declaration-et-memoire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Déclaration et Mémoire
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Déclaration et Mémoire">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initialisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Initialisation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acces-et-danger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accès et Danger 💀
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tableaux-bruts-et-fonctions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tableaux Bruts et Fonctions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tableaux Bruts et Fonctions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-piege-du-decay-degenerescence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le Piège du "Decay" (Dégénérescence)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-bonne-facon-de-faire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La Bonne Façon de Faire
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problematique-au-niveau-de-la-taille" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problématique au niveau de la taille
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comment-trouver-la-taille-automatiquement-c17-c20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comment trouver la taille automatiquement (C++17 / C++20)
       
     </span>
   </a>
@@ -747,17 +955,6 @@
     <span class="md-ellipsis">
       
         Déterminer la taille d'un tableau (localement)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#la-solution-generale-passer-la-taille-en-parametre" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        La Solution Générale : Passer la taille en paramètre
       
     </span>
   </a>
@@ -777,6 +974,22 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-bordel-quoi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le bordel quoi !?
+      
+    </span>
+  </a>
   
 </li>
       
@@ -928,168 +1141,599 @@
   
 
 
-<h1 id="les-types-de-donnees-et-linitialisation-en-c">Les Types de Données et l'Initialisation en C++</h1>
-<p>Cette section couvre les types de données fondamentaux et la manière <strong>moderne et sécuritaire</strong> de les initialiser en C++.</p>
-<hr />
-<h2 id="1-les-types-primitifs">1. Les Types Primitifs</h2>
-<p>Les types primitifs sont les briques de base pour stocker des données. Leur taille en mémoire peut varier selon l'architecture (32-bit ou 64-bit), mais voici les valeurs les plus courantes sur un système moderne.</p>
+<p>Voici la liste exhaustive des types fondamentaux à utiliser en C++.</p>
+<h2 id="1-types-entiers-et-logiques">1. Types Entiers et Logiques</h2>
+<p>Utilisés pour compter, indexer ou gérer des états.</p>
 <table>
 <thead>
 <tr>
 <th style="text-align: left;">Type</th>
-<th style="text-align: left;">Taille (Octets)</th>
-<th style="text-align: left;">Plage de Valeurs Typique</th>
-<th style="text-align: left;">Valeur par Défaut (<code>{}</code>)</th>
+<th style="text-align: center;">Taille</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Plage de Valeurs (Min / Max)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;"><strong><code>bool</code></strong></td>
-<td style="text-align: left;">1</td>
-<td style="text-align: left;"><code>true</code> ou <code>false</code></td>
-<td style="text-align: left;"><code>false</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong><code>char</code></strong></td>
-<td style="text-align: left;">1</td>
-<td style="text-align: left;">-128 à 127</td>
-<td style="text-align: left;"><code>'\0'</code></td>
+<td style="text-align: center;">1 octet</td>
+<td style="text-align: left;">Logique pure</td>
+<td style="text-align: left;"><code>true</code> (1) ou <code>false</code> (0)</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong><code>int</code></strong></td>
-<td style="text-align: left;">4</td>
-<td style="text-align: left;">-2,1 milliards à +2,1 milliards</td>
-<td style="text-align: left;"><code>0</code></td>
+<td style="text-align: center;">4 octets</td>
+<td style="text-align: left;">Entier standard (Signé)</td>
+<td style="text-align: left;">-2 147 483 648 à +2 147 483 647</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>unsigned int</code></strong></td>
+<td style="text-align: center;">4 octets</td>
+<td style="text-align: left;">Entier positif</td>
+<td style="text-align: left;">0 à 4 294 967 295</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong><code>long long</code></strong></td>
-<td style="text-align: left;">8</td>
-<td style="text-align: left;">Environ -9 x 10¹⁸ à +9 x 10¹⁸</td>
-<td style="text-align: left;"><code>0</code></td>
+<td style="text-align: center;">8 octets</td>
+<td style="text-align: left;">Grand entier (Signé)</td>
+<td style="text-align: left;">-9 Quintillions à +9 Quintillions</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong><code>float</code></strong></td>
-<td style="text-align: left;">4</td>
-<td style="text-align: left;">~6-7 chiffres de précision</td>
-<td style="text-align: left;"><code>0.0f</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong><code>double</code></strong></td>
-<td style="text-align: left;">8</td>
-<td style="text-align: left;">~15-16 chiffres de précision</td>
-<td style="text-align: left;"><code>0.0</code></td>
+<td style="text-align: left;"><strong><code>unsigned long long</code></strong></td>
+<td style="text-align: center;">8 octets</td>
+<td style="text-align: left;">Grand entier positif</td>
+<td style="text-align: left;">0 à 18 Quintillions (approx)</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="2-linitialisation-uniforme-avec-les-accolades">2. L'Initialisation Uniforme avec les Accolades <code>{}</code></h2>
-<p>Depuis C++11, la méthode privilégiée pour initialiser <strong>toute variable</strong> est d'utiliser les accolades <code>{}</code>.</p>
-<p><strong>(Les détails sur la sécurité, l'uniformité et la garantie zéro sont dans les sections précédentes)</strong></p>
+<h2 id="2-types-de-caracteres-et-octets">2. Types de Caractères et Octets</h2>
+<p>Tous ces types font <strong>1 octet</strong> (8 bits), mais leur usage est différent.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: center;">Signé ?</th>
+<th style="text-align: left;">Usage Recommandé</th>
+<th style="text-align: left;">Plage de Valeurs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><code>char</code></strong></td>
+<td style="text-align: center;">Variable*</td>
+<td style="text-align: left;"><strong>Texte ASCII standard</strong>. (Lettres simples).</td>
+<td style="text-align: left;">-128 à 127 <em>OU</em> 0 à 255</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>signed char</code></strong></td>
+<td style="text-align: center;">✅ Oui</td>
+<td style="text-align: left;"><strong>Petit entier</strong>. Pour économiser la mémoire.</td>
+<td style="text-align: left;">-128 à 127</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>unsigned char</code></strong></td>
+<td style="text-align: center;">❌ Non</td>
+<td style="text-align: left;"><strong>Compatible binaire</strong>. Valeurs numériques 0-255.</td>
+<td style="text-align: left;">0 à 255</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>char8_t</code></strong></td>
+<td style="text-align: center;">❌ Non</td>
+<td style="text-align: left;"><strong>Texte UTF-8</strong> (C++20). Chaînes <code>u8"..."</code>.</td>
+<td style="text-align: left;">0 à 255</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>std::byte</code></strong></td>
+<td style="text-align: center;">N/A</td>
+<td style="text-align: left;"><strong>Données brutes</strong>. Pas de maths possibles.</td>
+<td style="text-align: left;">Bits (0x00 à 0xFF)</td>
+</tr>
+</tbody>
+</table>
+<p><small><em>* Le type <code>char</code> peut être signé ou non selon le système d'exploitation. Ne l'utilisez pas pour des calculs.</em></small></p>
 <hr />
-<h2 id="3-les-chaines-de-caracteres-et-tableaux">3. Les Chaînes de Caractères et Tableaux</h2>
-<p><em>(Contenu omis pour la brièveté)</em></p>
+<h2 id="3-types-a-virgule-flottante">3. Types à Virgule Flottante</h2>
+<p>Utilisés pour les nombres à décimales (réels).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: center;">Taille</th>
+<th style="text-align: left;">Précision</th>
+<th style="text-align: left;">Plage de Valeurs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><code>double</code></strong></td>
+<td style="text-align: center;">8 octets</td>
+<td style="text-align: left;"><strong>Standard</strong> (~15 chiffres)</td>
+<td style="text-align: left;">± 2.23e-308 à ± 1.80e308</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>float</code></strong></td>
+<td style="text-align: center;">4 octets</td>
+<td style="text-align: left;">Faible (~7 chiffres)</td>
+<td style="text-align: left;">± 1.18e-38 à ± 3.4e38</td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h2 id="4-utiliser-les-tableaux-avec-des-fonctions">4. Utiliser les Tableaux avec des Fonctions</h2>
-<h3 id="le-probleme-la-taille-est-perdue">Le Problème : La Taille est Perdue</h3>
-<p>Quand vous passez un tableau à une fonction, sa taille est perdue. La fonction ne reçoit qu'un pointeur.</p>
+<h2 id="4-initialisation-des-variables">4. Initialisation des Variables</h2>
+<p>En C++ moderne (C++20), privilégiez l'initialisation avec des accolades <code>{}</code> pour éviter les conversions dangereuses.</p>
+<p><strong>Syntaxe :</strong> <code>Type nom { valeur };</code></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Exemple Correct</th>
+<th style="text-align: left;">Pourquoi ?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>int age { 25 };</code></td>
+<td style="text-align: left;">Initialise <code>age</code> à 25.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>double prix { 19.99 };</code></td>
+<td style="text-align: left;">Initialise <code>prix</code> à 19.99.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>unsigned int id { 0 };</code></td>
+<td style="text-align: left;">Initialise <code>id</code> à 0.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>std::vector&lt;int&gt; v {};</code></td>
+<td style="text-align: left;">Initialise un tableau vide.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Protection contre les erreurs :</strong>
+L'initialisation <code>{}</code> empêche de mettre accidentellement un nombre à virgule dans un entier.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.9</span><span class="p">;</span><span class="w">  </span><span class="c1">// ⚠️ DANGEREUX : Compile, mais &#39;a&#39; vaut 3 (perte de 0.9).</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mf">3.9</span><span class="w"> </span><span class="p">};</span><span class="w"> </span><span class="c1">// 🛑 ERREUR : Le compilateur refuse de perdre des données.</span>
+</span></code></pre></div>
+<hr />
+<h1 id="manipulation-des-chaines-de-caracteres-strings">Manipulation des Chaînes de Caractères (Strings)</h1>
+<p>En C++, le texte ne se gère pas avec des tableaux de <code>char</code> (trop dangereux), mais avec la classe standard <strong><code>std::string</code></strong>.</p>
+<h2 id="1-la-classe-stdstring-le-standard">1. La Classe <code>std::string</code> (Le Standard)</h2>
+<p>Pour utiliser les chaînes, vous devez inclure <code>&lt;string&gt;</code>.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span><span class="c1"> // Indispensable</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="c1">// 1. Déclaration et Initialisation</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Mario&quot;</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">salutation</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Bonjour&quot;</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="c1">// 2. Concaténation (Coller des morceaux)</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="c1">// On utilise simplement le signe &#39;+&#39;</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">salutation</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; !&quot;</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="c1">// Résultat : &quot;Bonjour Mario !&quot;</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="c1">// 3. Accès aux lettres</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">premiereLettre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w"> </span><span class="c1">// &#39;M&#39;</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="n">nom</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;W&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Mario devient Wario</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="2-operations-courantes">2. Opérations Courantes</h2>
+<p>Voici les méthodes que vous utiliserez dans 90% des cas avec <code>std::string</code>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Opération</th>
+<th style="text-align: left;">Méthode</th>
+<th style="text-align: left;">Exemple</th>
+<th style="text-align: left;">Résultat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Longueur</strong></td>
+<td style="text-align: left;"><code>.size()</code> ou <code>.length()</code></td>
+<td style="text-align: left;"><code>nom.size()</code></td>
+<td style="text-align: left;"><code>5</code> (nombre d'octets)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Vide ?</strong></td>
+<td style="text-align: left;"><code>.empty()</code></td>
+<td style="text-align: left;"><code>nom.empty()</code></td>
+<td style="text-align: left;"><code>false</code> (si contient du texte)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Vider</strong></td>
+<td style="text-align: left;"><code>.clear()</code></td>
+<td style="text-align: left;"><code>nom.clear()</code></td>
+<td style="text-align: left;">La chaîne devient vide <code>""</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ajouter</strong></td>
+<td style="text-align: left;"><code>+=</code> ou <code>.append()</code></td>
+<td style="text-align: left;"><code>nom += " Bros"</code></td>
+<td style="text-align: left;"><code>"Mario Bros"</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Comparer</strong></td>
+<td style="text-align: left;"><code>==</code> ou <code>!=</code></td>
+<td style="text-align: left;"><code>nom == "Luigi"</code></td>
+<td style="text-align: left;"><code>false</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Trouver</strong></td>
+<td style="text-align: left;"><code>.find("texte")</code></td>
+<td style="text-align: left;"><code>msg.find("jour")</code></td>
+<td style="text-align: left;">Retourne l'index (position) ou <code>std::string::npos</code> si absent.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Sous-chaîne</strong></td>
+<td style="text-align: left;"><code>.substr(pos, len)</code></td>
+<td style="text-align: left;"><code>msg.substr(0, 3)</code></td>
+<td style="text-align: left;">Extrait une partie du texte (ex: les 3 premières lettres).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="le-casse-tete-des-accents">⚠️ Le Casse-tête des Accents</h2>
+<p>Gérer les accents en C++ est notoirement complexe (un vrai "bordel") car le type <code>std::string</code> a été conçu à une époque où l'informatique ne parlait qu'anglais. Pour C++, une chaîne n'est <strong>pas une liste de lettres</strong>, c'est une <strong>liste d'octets</strong> (des nombres).</p>
+<p>Le problème survient avec l'encodage moderne (UTF-8) :
+* Une lettre simple (<code>a</code>) pèse <strong>1 octet</strong>.
+* Une lettre accentuée (<code>é</code>) pèse <strong>2 octets</strong> (voire plus).</p>
+<p><strong>Conséquence :</strong> Toutes vos intuitions sont fausses.
+Si vous prenez le mot <code>"été"</code>, vous voyez 3 lettres. Mais C++ voit <strong>5 octets</strong> (2 pour le é, 1 pour le t, 2 pour le é).
+Résultat : <code>.size()</code> renvoie 5 au lieu de 3, et si vous essayez d'accéder à la deuxième lettre via <code>mot[1]</code>, vous tombez au milieu du premier 'é', ce qui produit un caractère buggé (corrompu).</p>
+<h1 id="stdwstring-standard-ou-pas">std::wstring : Standard ou pas ?</h1>
+<p><strong>Réponse courte : OUI.</strong>
+<code>std::wstring</code> est un type officiel du langage C++. Il est disponible partout (Windows, Mac, Linux, Android) via <code>#include &lt;string&gt;</code>.</p>
+<h2 id="le-grand-debat-faut-il-lutiliser">Le Grand Débat : "Faut-il l'utiliser ?"</h2>
+<p>Bien que standard, ce type divise la communauté des développeurs pour une raison technique précise.</p>
+<h3 id="1-le-probleme-de-portabilite">1. Le Problème de Portabilité</h3>
+<p>Le type <code>char</code> fait toujours 1 octet. Mais le type <code>wchar_t</code> (utilisé par wstring) change de taille selon l'ordinateur !</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Système</th>
+<th style="text-align: center;">Taille de <code>wchar_t</code></th>
+<th style="text-align: left;">Conséquence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Windows</strong></td>
+<td style="text-align: center;"><strong>2 octets</strong></td>
+<td style="text-align: left;">Utilise l'encodage UTF-16 (comme Java ou C#).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Linux / macOS</strong></td>
+<td style="text-align: center;"><strong>4 octets</strong></td>
+<td style="text-align: left;">Utilise l'encodage UTF-32 (Universel).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Pourquoi est-ce gênant ?</strong>
+Si vous écrivez un fichier binaire avec des <code>wstring</code> sur Windows et que vous l'envoyez à un ami sous Linux, il ne pourra pas le relire correctement car les lettres n'ont pas la même taille en mémoire.</p>
+<h3 id="2-le-verdict-quand-lutiliser">2. Le Verdict : Quand l'utiliser ?</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Cas d'usage</th>
+<th style="text-align: left;">Verdict</th>
+<th style="text-align: left;">Pourquoi ?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Projets Étudiants / Apprentissage</strong></td>
+<td style="text-align: left;">✅ <strong>RECOMMANDÉ</strong></td>
+<td style="text-align: left;">C'est le moyen le plus simple de manipuler des accents sans librairie externe.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Développement Windows natif</strong></td>
+<td style="text-align: left;">✅ <strong>STANDARD</strong></td>
+<td style="text-align: left;">Toute l'API Windows fonctionne avec des <code>wstring</code>. C'est la norme chez Microsoft.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Logiciel Web / Réseau</strong></td>
+<td style="text-align: left;">❌ <strong>DÉCONSEILLÉ</strong></td>
+<td style="text-align: left;">Le web parle UTF-8 (<code>std::string</code>). Convertir sans cesse est lourd.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Bibliothèques portables</strong></td>
+<td style="text-align: left;">❌ <strong>DÉCONSEILLÉ</strong></td>
+<td style="text-align: left;">À cause de la différence de taille (2 vs 4 octets), on préfère <code>std::string</code> ou <code>char32_t</code>.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition summary">
+<p class="admonition-title">En résumé</p>
+<p>Pour vos besoins actuels (gérer des chaînes simplement, avoir le bon nombre de lettres, afficher des accents), <strong><code>std::wstring</code> est une solution validée et standard</strong>.</p>
+<p>Sachez juste que si un jour vous créez le "nouveau Google", vous passerez probablement à une gestion plus stricte avec UTF-8.</p>
+</div>
+<h2 id="3-le-hack-pour-gerer-les-accents-avec-une-bibliotheque">3. Le "hack" pour gérer les accents, avec une bibliothèque</h2>
+<p>Il existe des bibliothèques pour gérer l'utf8 qu'on peut ajouter au programme.
+Ceci étant dit, n'oubliez pas que plusieurs logiciels ont encore du mal à gérer l'affichage 
+de symboles qui ne sont pas strictement "natif anglais"
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;utf8.h&quot;</span><span class="c1"> // Librairie externe légère</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">texte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sa">u8</span><span class="s">&quot;Noël&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Stockage standard (5 octets)</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="c1">// 1. Compter les lettres (Distance)</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">utf8</span><span class="o">::</span><span class="n">distance</span><span class="p">(</span><span class="n">texte</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">texte</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Lettres : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Affiche 4</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="c1">// 2. Ajouter du texte (Append) - Sûr car std::string gère les octets</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="n">texte</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="sa">u8</span><span class="s">&quot; en été&quot;</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="p">}</span><span class="w">    </span>
+</span></code></pre></div></p>
+<hr />
+<h1 id="4-les-tableaux-bruts-static-arrays">4. Les Tableaux Bruts (Static Arrays)</h1>
+<p>C'est la forme la plus primitive de stockage. Un tableau brut est une suite de cases mémoire collées les unes aux autres.</p>
+<h2 id="declaration-et-memoire">Déclaration et Mémoire</h2>
+<p>Il faut impérativement connaître la taille <strong>à la compilation</strong>. Une fois créé, le tableau ne peut <strong>jamais</strong> changer de taille.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// Syntaxe : Type nom[Taille];</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">scores</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span><span class="w"> </span><span class="c1">// Réserve 5 entiers (valeurs aléatoires si non initialisé !)</span>
+</span></code></pre></div>
+<h3 id="initialisation">Initialisation</h3>
+<p>On utilise les accolades <code>{}</code>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Syntaxe</th>
+<th style="text-align: left;">Résultat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>int t[3] { 10, 20, 30 };</code></td>
+<td style="text-align: left;">Tableau rempli : <code>[10, 20, 30]</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>int t[5] { 10, 20 };</code></td>
+<td style="text-align: left;">Reste rempli de zéros : <code>[10, 20, 0, 0, 0]</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>int t[10] {};</code></td>
+<td style="text-align: left;"><strong>Tout à zéro</strong> : <code>[0, 0, ... 0]</code> <em>(Recommandé)</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>int t[] { 1, 2, 3 };</code></td>
+<td style="text-align: left;">Taille auto-déduite (ici 3 cases).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="acces-et-danger">Accès et Danger 💀</h3>
+<p>On accède aux éléments via l'index [i] (commence à 0).
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">scores</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"> </span><span class="c1">// Première case</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">scores</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="p">;</span><span class="w">  </span><span class="c1">// Dernière case (pour taille 5)</span>
+</span></code></pre></div></p>
+<div class="admonition danger">
+<p class="admonition-title">Pas de garde-fou ! C++ ne vérifie pas si vous dépassez le tableau.</p>
+</div>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">t</span><span class="p">[</span><span class="mi">100</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">99</span><span class="p">;</span><span class="w"> </span><span class="c1">// 💥 Écrit n&#39;importe où dans la RAM.</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">             </span><span class="c1">// Peut faire crasher le programme ou corrompre d&#39;autres variables.</span>
+</span></code></pre></div>
+<h2 id="tableaux-bruts-et-fonctions">Tableaux Bruts et Fonctions</h2>
+<p>C'est ici que ça se corse. En C++, on ne peut pas passer un tableau brut "en entier" à une fonction comme on passerait un entier.</p>
+<h3 id="le-piege-du-decay-degenerescence">Le Piège du "Decay" (Dégénérescence)</h3>
+<p>Quand vous passez un tableau à une fonction, il "perd" son identité de tableau et se transforme en simple <strong>adresse mémoire (pointeur)</strong> vers la première case.</p>
+<div class="admonition failure">
+<p class="admonition-title">Conséquence grave</p>
+<p><strong>La fonction ne connaît pas la taille du tableau !</strong>
+Le lien avec la taille d'origine est perdu. La fonction reçoit juste l'adresse du début, mais elle ne sait pas où ça s'arrête.</p>
+</div>
+<h3 id="la-bonne-facon-de-faire">La Bonne Façon de Faire</h3>
+<p>Pour compenser cette perte d'information, vous devez <strong>toujours</strong> envoyer la taille du tableau manuellement dans un deuxième paramètre.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1">// ❌ MAUVAIS : La fonction ne sait pas quand s&#39;arrêter</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kt">void</span><span class="w"> </span><span class="nf">afficher</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">tab</span><span class="p">[])</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="c1">// Impossible de savoir combien d&#39;éléments il y a ici !</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p">}</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="c1">// ✅ BON : On passe le tableau ET sa taille</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="kt">void</span><span class="w"> </span><span class="nf">afficher</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">tab</span><span class="p">[],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">taille</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">taille</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="p">}</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">mesNotes</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">    </span><span class="c1">// Appel : On donne le tableau et le nombre 4</span>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">    </span><span class="n">afficher</span><span class="p">(</span><span class="n">mesNotes</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="problematique-au-niveau-de-la-taille">Problématique au niveau de la taille</h3>
+<p>La problématique se situe au niveau du "4" comment faire pour trouver la taille du tableau.  </p>
+<h3 id="comment-trouver-la-taille-automatiquement-c17-c20">Comment trouver la taille automatiquement (C++17 / C++20)</h3>
+<p>Plus besoin de compter à la main ou de faire des divisions de <code>sizeof</code>. Il faut inclure <code>&lt;iterator&gt;</code> (ou <code>&lt;vector&gt;</code>/<code>&lt;array&gt;</code>).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Commande</th>
+<th style="text-align: center;">Version</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>std::size(tab)</code></td>
+<td style="text-align: center;">C++17</td>
+<td style="text-align: left;">Retourne la taille en <strong>non-signé</strong> (<code>unsigned</code>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>std::ssize(tab)</code></td>
+<td style="text-align: center;"><strong>C++20</strong></td>
+<td style="text-align: left;">Retourne la taille en <strong>signé</strong> (<code>signed</code>). Recommandé pour les boucles avec <code>int i</code>.</td>
+</tr>
+</tbody>
+</table>
 <h3 id="determiner-la-taille-dun-tableau-localement">Déterminer la taille d'un tableau (localement)</h3>
 <p>La méthode C++20 recommandée est <code>std::ssize()</code> (de la bibliothèque <code>&lt;iterator&gt;</code>).</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iterator&gt;</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">notes_cours</span><span class="p">[]</span><span class="w"> </span><span class="p">{</span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="mi">85</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w"> </span><span class="mi">75</span><span class="p">,</span><span class="w"> </span><span class="mi">88</span><span class="p">};</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">taille</span><span class="w"> </span><span class="p">{</span><span class="n">std</span><span class="o">::</span><span class="n">ssize</span><span class="p">(</span><span class="n">notes_cours</span><span class="p">)};</span><span class="w"> </span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;La taille du tableau est : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">taille</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// Affiche 5</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">}</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iterator&gt;</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">notes_cours</span><span class="p">[]</span><span class="w"> </span><span class="p">{</span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="mi">85</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w"> </span><span class="mi">75</span><span class="p">,</span><span class="w"> </span><span class="mi">88</span><span class="p">};</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">taille</span><span class="w"> </span><span class="p">{</span><span class="n">std</span><span class="o">::</span><span class="n">ssize</span><span class="p">(</span><span class="n">notes_cours</span><span class="p">)};</span><span class="w"> </span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;La taille du tableau est : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">taille</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">// Affiche 5</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="p">}</span>
 </span></code></pre></div>
-<h3 id="la-solution-generale-passer-la-taille-en-parametre">La Solution Générale : Passer la taille en paramètre</h3>
-<p>La convention est de <strong>toujours passer la taille comme un paramètre supplémentaire</strong>. Mais quel type choisir pour ce paramètre ?</p>
 <h3 id="quel-type-utiliser-pour-la-taille-analyse">Quel type utiliser pour la taille ? (Analyse)</h3>
 <p>Le choix du type pour la <code>taille</code> est un compromis entre simplicité, sécurité et portabilité. Le fichier d'exemple ci-dessous (que vous pouvez télécharger et compiler) démontre plusieurs approches.</p>
 <details>
 <summary>Fichier d'exemple : <code>exemple_types_taille.cpp</code></summary>
 
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cm">/**</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="cm"> * @file main.cpp</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="cm"> * @brief Fichier d&#39;exemple pour démontrer les différentes manières de passer la taille</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="cm"> *        d&#39;un tableau à une fonction en C++, en soulignant les avantages et les risques</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="cm"> *        de chaque approche.</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="cm"> */</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iterator&gt;</span><span class="c1"> // Pour std::ssize</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstddef&gt;</span><span class="c1">  // Pour std::ptrdiff_t</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="cm">/**</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="cm"> * @brief APPROCHE 1 : Utilise &#39;long long&#39; pour la taille.</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="cm"> * @note L&#39;utilisation de `long long` est un choix simple et sûr sur la plupart des </span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="cm"> *       systèmes 64-bit, car il est garanti d&#39;être assez grand.</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="cm"> */</span>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="kt">void</span><span class="w"> </span><span class="nf">afficher_moyenne_long</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">notes</span><span class="p">[],</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">taille</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">taille</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">somme</span><span class="w"> </span><span class="p">{</span><span class="mf">0.0</span><span class="p">};</span>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">taille</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">        </span><span class="n">somme</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">notes</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;[long long] La moyenne est : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">somme</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">taille</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="p">}</span>
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="cm">/**</span>
-</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="cm"> * @brief APPROCHE 2 : Utilise &#39;int&#39; pour la taille.</span>
-</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="cm"> * @note Cette version est **risquée** pour des applications générales. Un `int` (32 bits)</span>
-</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="cm"> *       est trop petit pour contenir la taille d&#39;un très grand tableau, menant à des bogues.</span>
-</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="cm"> *       Pour des exercices simples, c&#39;est souvent acceptable.</span>
-</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="cm"> */</span>
-</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="kt">void</span><span class="w"> </span><span class="nf">afficher_moyenne_risque</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">notes</span><span class="p">[],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">taille</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;[int] Appel a la fonction risquee...&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="p">}</span>
-</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>
-</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="cm">/**</span>
-</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="cm"> * @brief APPROCHE 3 : Utilise &#39;std::ptrdiff_t&#39; pour la taille.</span>
-</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="cm"> * @note Cette version est la plus **techniquement correcte et portable**. `std::ptrdiff_t` est le </span>
-</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="cm"> *       type signé que `std::ssize` retourne. Il est garanti d&#39;être assez grand</span>
-</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="cm"> *       sur n&#39;importe quelle plateforme.</span>
-</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="cm"> */</span>
-</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="kt">void</span><span class="w"> </span><span class="nf">afficher_moyenne_semi_pro</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">notes</span><span class="p">[],</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">ptrdiff_t</span><span class="w"> </span><span class="n">taille</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;[ptrdiff_t] Appel a la fonction semi-pro...&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a><span class="p">}</span>
-</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>
-</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a><span class="cm">/**</span>
-</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a><span class="cm"> * @brief APPROCHE 4 : Utilise un template de fonction (C++20).</span>
-</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a><span class="cm"> * @note L&#39;utilisation de `auto` dans un paramètre est une fonctionnalité C++20</span>
-</span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a><span class="cm"> *       qui crée un &quot;template&quot;. C&#39;est très flexible, mais moins explicite.</span>
-</span><span id="__span-1-50"><a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a><span class="cm"> */</span>
-</span><span id="__span-1-51"><a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a><span class="kt">void</span><span class="w"> </span><span class="nf">afficher_moyenne_moderne</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">notes</span><span class="p">[],</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">taille</span><span class="p">)</span>
-</span><span id="__span-1-52"><a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a><span class="p">{</span>
-</span><span id="__span-1-53"><a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;[auto] Appel moderne qui redirige vers la version &#39;long long&#39;.&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-1-54"><a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a><span class="w">    </span><span class="n">afficher_moyenne_long</span><span class="p">(</span><span class="n">notes</span><span class="p">,</span><span class="w"> </span><span class="n">taille</span><span class="p">);</span>
-</span><span id="__span-1-55"><a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a><span class="p">}</span>
-</span><span id="__span-1-56"><a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a>
-</span><span id="__span-1-57"><a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-58"><a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">notes_cours</span><span class="p">[]</span><span class="w"> </span><span class="p">{</span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="mi">85</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w"> </span><span class="mi">75</span><span class="p">,</span><span class="w"> </span><span class="mi">88</span><span class="p">};</span>
-</span><span id="__span-1-59"><a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a>
-</span><span id="__span-1-60"><a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a><span class="w">    </span><span class="c1">// On utilise std::ssize (C++20) pour obtenir la taille de manière sûre.</span>
-</span><span id="__span-1-61"><a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a><span class="w">    </span><span class="c1">// std::ssize retourne un type signé (std::ptrdiff_t).</span>
-</span><span id="__span-1-62"><a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">taille_notes</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">ssize</span><span class="p">(</span><span class="n">notes_cours</span><span class="p">)</span><span class="w"> </span><span class="p">};</span>
-</span><span id="__span-1-63"><a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a>
-</span><span id="__span-1-64"><a id="__codelineno-1-64" name="__codelineno-1-64" href="#__codelineno-1-64"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;--- Affichage des moyennes ---&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-1-65"><a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a>
-</span><span id="__span-1-66"><a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a><span class="w">    </span><span class="c1">// Appel à la version `long long`. C&#39;est un bon compromis entre simplicité et sécurité.</span>
-</span><span id="__span-1-67"><a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a><span class="w">    </span><span class="n">afficher_moyenne_long</span><span class="p">(</span><span class="n">notes_cours</span><span class="p">,</span><span class="w"> </span><span class="n">taille_notes</span><span class="p">);</span>
-</span><span id="__span-1-68"><a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a>
-</span><span id="__span-1-69"><a id="__codelineno-1-69" name="__codelineno-1-69" href="#__codelineno-1-69"></a><span class="w">    </span><span class="c1">// Appel à la version C++20 avec `auto`.</span>
-</span><span id="__span-1-70"><a id="__codelineno-1-70" name="__codelineno-1-70" href="#__codelineno-1-70"></a><span class="w">    </span><span class="n">afficher_moyenne_moderne</span><span class="p">(</span><span class="n">notes_cours</span><span class="p">,</span><span class="w"> </span><span class="n">taille_notes</span><span class="p">);</span>
-</span><span id="__span-1-71"><a id="__codelineno-1-71" name="__codelineno-1-71" href="#__codelineno-1-71"></a>
-</span><span id="__span-1-72"><a id="__codelineno-1-72" name="__codelineno-1-72" href="#__codelineno-1-72"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-</span><span id="__span-1-73"><a id="__codelineno-1-73" name="__codelineno-1-73" href="#__codelineno-1-73"></a><span class="p">}</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="cm">/**</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="cm"> * @file main.cpp</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="cm"> * @brief Fichier d&#39;exemple pour démontrer les différentes manières de passer la taille</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="cm"> *        d&#39;un tableau à une fonction en C++, en soulignant les avantages et les risques</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="cm"> *        de chaque approche.</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="cm"> */</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iterator&gt;</span><span class="c1"> // Pour std::ssize</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstddef&gt;</span><span class="c1">  // Pour std::ptrdiff_t</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="cm">/**</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="cm"> * @brief APPROCHE 1 : Utilise &#39;int&#39; pour la taille.</span>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="cm"> * @note Cette version est **risquée** pour des applications générales. Un `int` (32 bits)</span>
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="cm"> *       est trop petit pour contenir la taille d&#39;un très grand tableau, menant à des bogues.</span>
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="cm"> *       Pour des exercices simples, c&#39;est souvent acceptable.</span>
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="cm"> */</span>
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="kt">void</span><span class="w"> </span><span class="nf">afficher_moyenne_risque</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">notes</span><span class="p">[],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">taille</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;[int] Appel a la fonction risquee...&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="p">}</span>
+</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>
+</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>
+</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a><span class="cm">/**</span>
+</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="cm"> * @brief APPROCHE 2 : Utilise &#39;long long&#39; pour la taille.</span>
+</span><span id="__span-8-27"><a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a><span class="cm"> * @note L&#39;utilisation de `long long` est un choix simple et sûr sur la plupart des </span>
+</span><span id="__span-8-28"><a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a><span class="cm"> *       systèmes 64-bit, car il est garanti d&#39;être assez grand.</span>
+</span><span id="__span-8-29"><a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a><span class="cm"> */</span>
+</span><span id="__span-8-30"><a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a><span class="kt">void</span><span class="w"> </span><span class="nf">afficher_moyenne_long</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">notes</span><span class="p">[],</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">taille</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-31"><a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">taille</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+</span><span id="__span-8-32"><a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">somme</span><span class="w"> </span><span class="p">{</span><span class="mf">0.0</span><span class="p">};</span>
+</span><span id="__span-8-33"><a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">taille</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+</span><span id="__span-8-34"><a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a><span class="w">        </span><span class="n">somme</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">notes</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span><span id="__span-8-35"><a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-8-36"><a id="__codelineno-8-36" name="__codelineno-8-36" href="#__codelineno-8-36"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;[long long] La moyenne est : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">somme</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">taille</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-8-37"><a id="__codelineno-8-37" name="__codelineno-8-37" href="#__codelineno-8-37"></a><span class="p">}</span>
+</span><span id="__span-8-38"><a id="__codelineno-8-38" name="__codelineno-8-38" href="#__codelineno-8-38"></a>
+</span><span id="__span-8-39"><a id="__codelineno-8-39" name="__codelineno-8-39" href="#__codelineno-8-39"></a>
+</span><span id="__span-8-40"><a id="__codelineno-8-40" name="__codelineno-8-40" href="#__codelineno-8-40"></a><span class="cm">/**</span>
+</span><span id="__span-8-41"><a id="__codelineno-8-41" name="__codelineno-8-41" href="#__codelineno-8-41"></a><span class="cm"> * @brief APPROCHE 3 : Utilise &#39;std::ptrdiff_t&#39; pour la taille.</span>
+</span><span id="__span-8-42"><a id="__codelineno-8-42" name="__codelineno-8-42" href="#__codelineno-8-42"></a><span class="cm"> * @note Cette version est la plus **techniquement correcte et portable**. `std::ptrdiff_t` est le </span>
+</span><span id="__span-8-43"><a id="__codelineno-8-43" name="__codelineno-8-43" href="#__codelineno-8-43"></a><span class="cm"> *       type signé que `std::ssize` retourne. Il est garanti d&#39;être assez grand</span>
+</span><span id="__span-8-44"><a id="__codelineno-8-44" name="__codelineno-8-44" href="#__codelineno-8-44"></a><span class="cm"> *       sur n&#39;importe quelle plateforme.</span>
+</span><span id="__span-8-45"><a id="__codelineno-8-45" name="__codelineno-8-45" href="#__codelineno-8-45"></a><span class="cm"> */</span>
+</span><span id="__span-8-46"><a id="__codelineno-8-46" name="__codelineno-8-46" href="#__codelineno-8-46"></a><span class="kt">void</span><span class="w"> </span><span class="nf">afficher_moyenne_semi_pro</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">notes</span><span class="p">[],</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">ptrdiff_t</span><span class="w"> </span><span class="n">taille</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-47"><a id="__codelineno-8-47" name="__codelineno-8-47" href="#__codelineno-8-47"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;[ptrdiff_t] Appel a la fonction semi-pro...&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-8-48"><a id="__codelineno-8-48" name="__codelineno-8-48" href="#__codelineno-8-48"></a><span class="p">}</span>
+</span><span id="__span-8-49"><a id="__codelineno-8-49" name="__codelineno-8-49" href="#__codelineno-8-49"></a>
+</span><span id="__span-8-50"><a id="__codelineno-8-50" name="__codelineno-8-50" href="#__codelineno-8-50"></a><span class="cm">/**</span>
+</span><span id="__span-8-51"><a id="__codelineno-8-51" name="__codelineno-8-51" href="#__codelineno-8-51"></a><span class="cm"> * @brief APPROCHE 4 : Utilise un template de fonction (C++20).</span>
+</span><span id="__span-8-52"><a id="__codelineno-8-52" name="__codelineno-8-52" href="#__codelineno-8-52"></a><span class="cm"> * @note L&#39;utilisation de `auto` dans un paramètre est une fonctionnalité C++20</span>
+</span><span id="__span-8-53"><a id="__codelineno-8-53" name="__codelineno-8-53" href="#__codelineno-8-53"></a><span class="cm"> *       qui crée un &quot;template&quot;. C&#39;est très flexible, mais moins explicite.</span>
+</span><span id="__span-8-54"><a id="__codelineno-8-54" name="__codelineno-8-54" href="#__codelineno-8-54"></a><span class="cm"> */</span>
+</span><span id="__span-8-55"><a id="__codelineno-8-55" name="__codelineno-8-55" href="#__codelineno-8-55"></a><span class="kt">void</span><span class="w"> </span><span class="nf">afficher_moyenne_moderne</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">notes</span><span class="p">[],</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">taille</span><span class="p">)</span>
+</span><span id="__span-8-56"><a id="__codelineno-8-56" name="__codelineno-8-56" href="#__codelineno-8-56"></a><span class="p">{</span>
+</span><span id="__span-8-57"><a id="__codelineno-8-57" name="__codelineno-8-57" href="#__codelineno-8-57"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;[auto] Appel moderne qui redirige vers la version &#39;long long&#39;.&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-8-58"><a id="__codelineno-8-58" name="__codelineno-8-58" href="#__codelineno-8-58"></a><span class="w">    </span><span class="n">afficher_moyenne_long</span><span class="p">(</span><span class="n">notes</span><span class="p">,</span><span class="w"> </span><span class="n">taille</span><span class="p">);</span>
+</span><span id="__span-8-59"><a id="__codelineno-8-59" name="__codelineno-8-59" href="#__codelineno-8-59"></a><span class="p">}</span>
+</span><span id="__span-8-60"><a id="__codelineno-8-60" name="__codelineno-8-60" href="#__codelineno-8-60"></a>
+</span><span id="__span-8-61"><a id="__codelineno-8-61" name="__codelineno-8-61" href="#__codelineno-8-61"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-62"><a id="__codelineno-8-62" name="__codelineno-8-62" href="#__codelineno-8-62"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">notes_cours</span><span class="p">[]</span><span class="w"> </span><span class="p">{</span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="mi">85</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w"> </span><span class="mi">75</span><span class="p">,</span><span class="w"> </span><span class="mi">88</span><span class="p">};</span>
+</span><span id="__span-8-63"><a id="__codelineno-8-63" name="__codelineno-8-63" href="#__codelineno-8-63"></a>
+</span><span id="__span-8-64"><a id="__codelineno-8-64" name="__codelineno-8-64" href="#__codelineno-8-64"></a><span class="w">    </span><span class="c1">// On utilise std::ssize (C++20) pour obtenir la taille de manière sûre.</span>
+</span><span id="__span-8-65"><a id="__codelineno-8-65" name="__codelineno-8-65" href="#__codelineno-8-65"></a><span class="w">    </span><span class="c1">// std::ssize retourne un type signé (std::ptrdiff_t).</span>
+</span><span id="__span-8-66"><a id="__codelineno-8-66" name="__codelineno-8-66" href="#__codelineno-8-66"></a><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">taille_notes</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">ssize</span><span class="p">(</span><span class="n">notes_cours</span><span class="p">)</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-8-67"><a id="__codelineno-8-67" name="__codelineno-8-67" href="#__codelineno-8-67"></a>
+</span><span id="__span-8-68"><a id="__codelineno-8-68" name="__codelineno-8-68" href="#__codelineno-8-68"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;--- Affichage des moyennes ---&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-8-69"><a id="__codelineno-8-69" name="__codelineno-8-69" href="#__codelineno-8-69"></a>
+</span><span id="__span-8-70"><a id="__codelineno-8-70" name="__codelineno-8-70" href="#__codelineno-8-70"></a><span class="w">    </span><span class="c1">// Appel à la version `long long`. C&#39;est un bon compromis entre simplicité et sécurité.</span>
+</span><span id="__span-8-71"><a id="__codelineno-8-71" name="__codelineno-8-71" href="#__codelineno-8-71"></a><span class="w">    </span><span class="n">afficher_moyenne_long</span><span class="p">(</span><span class="n">notes_cours</span><span class="p">,</span><span class="w"> </span><span class="n">taille_notes</span><span class="p">);</span>
+</span><span id="__span-8-72"><a id="__codelineno-8-72" name="__codelineno-8-72" href="#__codelineno-8-72"></a>
+</span><span id="__span-8-73"><a id="__codelineno-8-73" name="__codelineno-8-73" href="#__codelineno-8-73"></a><span class="w">    </span><span class="c1">// Appel à la version C++20 avec `auto`.</span>
+</span><span id="__span-8-74"><a id="__codelineno-8-74" name="__codelineno-8-74" href="#__codelineno-8-74"></a><span class="w">    </span><span class="n">afficher_moyenne_moderne</span><span class="p">(</span><span class="n">notes_cours</span><span class="p">,</span><span class="w"> </span><span class="n">taille_notes</span><span class="p">);</span>
+</span><span id="__span-8-75"><a id="__codelineno-8-75" name="__codelineno-8-75" href="#__codelineno-8-75"></a>
+</span><span id="__span-8-76"><a id="__codelineno-8-76" name="__codelineno-8-76" href="#__codelineno-8-76"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-8-77"><a id="__codelineno-8-77" name="__codelineno-8-77" href="#__codelineno-8-77"></a><span class="p">}</span>
 </span></code></pre></div>
 </details>
 
-<p><strong>Conclusion :</strong>
-- Pour les exercices de ce cours, utiliser <code>int</code> est souvent suffisant et simple.
-- Dans un contexte professionnel, <code>std::size_t</code> (non signé) ou <code>std::ptrdiff_t</code> (signé) sont de meilleurs choix pour la portabilité et la sécurité.</p>
+<h1 id="le-bordel-quoi">Le bordel quoi !?</h1>
+<p>En effet. Ceci étant dit !</p>
+<p>Il existe une solution qui modernise le c++ et qui va nous être utile avec plein d'autres cas.<br />
+On utilise std::span qui permet de conserver la taille du tableau au travers du passage de paramètre.<br />
+La variable contient "grosso-modo" la taille et le pointeur de début du tableau.</p>
+<p>C'est un pointeur "gras" </p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1">// Représentation mentale simplifiée</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="k">struct</span><span class="w"> </span><span class="nc">Span</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="n">T</span><span class="o">*</span><span class="w"> </span><span class="n">pointeur</span><span class="p">;</span><span class="w">   </span><span class="c1">// L&#39;adresse du début des données (8 octets sur 64-bit)</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">taille</span><span class="p">;</span><span class="w"> </span><span class="c1">// Le nombre d&#39;éléments (8 octets sur 64-bit)</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="p">};</span>
+</span></code></pre></div>
+<p>Avantage, le <strong>span</strong> peut être utilisé avec des tableaux standards vanille, des array de la bibliothèque standard et des vectors</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;span&gt;</span><span class="c1">   // 👈 Obligatoire (C++20)</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;array&gt;</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="c1">// 1. La fonction prend un &quot;span&quot; (une vue)</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="c1">// const int : on lit seulement (lecture seule)</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="kt">void</span><span class="w"> </span><span class="nf">afficher</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">span</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">donnees</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;[ &quot;</span><span class="p">;</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">    </span><span class="c1">// Le span connaît sa taille et permet le foreach !</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">valeur</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">donnees</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">valeur</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;] (Taille: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">donnees</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;)</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="p">}</span>
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">    </span><span class="c1">// Cas A : Tableau Brut (C-Style)</span>
+</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">tabC</span><span class="p">[]</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>
+</span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="w">    </span><span class="c1">// Cas B : std::vector (Dynamique)</span>
+</span><span id="__span-10-22"><a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">vec</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-10-23"><a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a>
+</span><span id="__span-10-24"><a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="w">    </span><span class="c1">// Cas C : std::array (Fixe moderne)</span>
+</span><span id="__span-10-25"><a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">99</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-10-26"><a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a>
+</span><span id="__span-10-27"><a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a><span class="w">    </span><span class="c1">// ✨ MAGIE : La même fonction accepte TOUT !</span>
+</span><span id="__span-10-28"><a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a><span class="w">    </span><span class="n">afficher</span><span class="p">(</span><span class="n">tabC</span><span class="p">);</span><span class="w"> </span><span class="c1">// Déduit automatiquement la taille (3)</span>
+</span><span id="__span-10-29"><a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a><span class="w">    </span><span class="n">afficher</span><span class="p">(</span><span class="n">vec</span><span class="p">);</span><span class="w">  </span><span class="c1">// Convertit automatiquement</span>
+</span><span id="__span-10-30"><a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a><span class="w">    </span><span class="n">afficher</span><span class="p">(</span><span class="n">arr</span><span class="p">);</span><span class="w">  </span><span class="c1">// Convertit automatiquement</span>
+</span><span id="__span-10-31"><a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a>
+</span><span id="__span-10-32"><a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-10-33"><a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><strong>Conclusion Finale : La Règle d'Or (C++20)</strong></p>
+<ol>
+<li>
+<p><strong>Pour apprendre (Exercices simples)</strong> : 
+    Passer le tableau et sa taille séparément (<code>int* tab, int taille</code>) reste une bonne méthode pédagogique pour comprendre la mémoire.</p>
+</li>
+<li>
+<p><strong>Pour le "Vrai Monde" (Professionnel)</strong> :
+    Utilisez <strong><code>std::span</code></strong>. C'est le standard moderne qui remplace toutes les anciennes méthodes.</p>
+<ul>
+<li>❌ Plus besoin de <code>void f(int* t, int size)</code></li>
+<li>❌ Plus besoin de <code>void f(const std::vector&lt;int&gt;&amp; v)</code></li>
+<li>✅ Utilisez <code>void f(std::span&lt;int&gt; data)</code></li>
+</ul>
+</li>
+</ol>
 
 
 
