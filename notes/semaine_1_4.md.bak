@@ -1,0 +1,98 @@
+# Guide de Compilation en C++20
+
+Ce document explique comment transformer votre code source (`.cpp`, `.hpp`) en un programme exécutable à l'aide du compilateur `g++` et du standard C++20.
+
+---
+
+## 1. Qu'est-ce que la Compilation ?
+
+La compilation est le processus qui **traduit** votre code C++, lisible par un humain, en **code machine**, compréhensible par l'ordinateur. L'outil qui réalise cette traduction est appelé un **compilateur**. Dans ce cours, nous utiliserons `g++`, le compilateur C++ du projet GNU, l'un des plus populaires.
+
+![Diagramme de compilation](https://i.imgur.com/CHLd3hS.png)
+
+---
+
+## 2. La Commande de Compilation Essentielle
+
+Pour compiler, vous ouvrirez un terminal (ou une console) et taperez une commande qui ressemble à ceci :
+
+```bash
+g++ [options] -o [nom_executable] [vos_fichiers.cpp]
+```
+
+Détaillons chaque partie :
+
+-   **`g++`** : C'est l'appel au compilateur lui-même.
+-   **`[options]`** : Ce sont des "drapeaux" (flags) qui modifient le comportement du compilateur. Les deux plus importants pour nous sont :
+    -   **`-std=c++20`** : C'est le drapeau **crucial** qui dit à `g++` d'utiliser le standard C++20. Sans cela, les fonctionnalités modernes du langage ne seront pas disponibles.
+    -   **`-Wall`** : (Abréviation de "Warnings All") C'est une option très fortement recommandée qui active presque tous les avertissements (`warnings`). Le compilateur vous signalera des erreurs potentielles dans votre code, même si elles ne l'empêchent pas de compiler. C'est un filet de sécurité indispensable.
+-   **`-o [nom_executable]`** : L'option `-o` (pour "output") vous permet de nommer votre programme final. Si vous l'omettez, le fichier de sortie s'appellera `a.out` (sur Linux/macOS) ou `a.exe` (sur Windows).
+-   **`[vos_fichiers.cpp]`** : C'est la liste de **tous vos fichiers `.cpp`**, séparés par des espaces. Vous n'avez pas besoin d'inclure les fichiers `.hpp`, car ils sont gérés via les directives `#include` dans vos fichiers `.cpp`.
+
+---
+
+## 3. Exemples Concrets
+
+### Cas 1 : Un Projet avec un Seul Fichier
+
+Imaginons que vous avez un seul fichier `main.cpp`.
+
+**Commande :**
+```bash
+g++ -std=c++20 -Wall -o mon_programme main.cpp
+```
+-   Ceci créera un exécutable nommé `mon_programme`.
+
+### Cas 2 : Un Projet avec Plusieurs Fichiers
+
+Reprenons notre exemple `Commande`. Nous avons trois fichiers `.cpp` à compiler ensemble.
+
+**Commande :**
+```bash
+g++ -std=c++20 -Wall -o exemple main.cpp Commande.cpp ServiceConnexion.cpp
+```
+-   `g++` va compiler chaque fichier `.cpp` et les lier ("link") ensemble pour créer un seul exécutable nommé `exemple`.
+
+---
+
+## 4. Exécuter votre Programme
+
+Une fois la compilation réussie (si la commande ne retourne aucune erreur), un nouveau fichier exécutable apparaîtra dans votre dossier.
+
+Pour l'exécuter dans le terminal :
+
+-   **Sur Linux ou macOS :**
+    ```bash
+    ./nom_executable 
+    ```
+    (Le `./` signifie "dans le dossier actuel")
+
+-   **Sur Windows (cmd ou PowerShell) :**
+    ```bash
+    .\nom_executable.exe
+    ```
+
+---
+
+## 5. "Ça ne compile pas !" - Gérer les Erreurs
+
+Il est normal d'avoir des erreurs de compilation. L'art de la programmation est de savoir les lire.
+
+**Les erreurs les plus courantes au début :**
+-   **Oubli d'un point-virgule (`;`)** à la fin d'une ligne.
+-   **Faute de frappe** dans un nom de variable ou de fonction.
+-   **Accolade (`{` ou `}`) manquante.**
+-   **Oubli d'inclure un en-tête** (ex: `#include <string>` pour utiliser `std::string`).
+
+Lisez attentivement les messages d'erreur. `g++` vous donnera généralement le nom du fichier et le numéro de la ligne où l'erreur a été détectée.
+
+**Exemple de message d'erreur :**
+```
+main.cpp: In function 'int main()':
+main.cpp:5:3: error: expected ';' before 'return'
+   return 0;
+   ^~~~~~
+```
+Le compilateur nous dit qu'à la ligne 5 du fichier `main.cpp`, il s'attendait à un point-virgule avant le mot-clé `return`.
+
+```
