@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://tousignantsimon-p3.github.io/notes/semaine_1_4/">
+        <link rel="canonical" href="https://tousignantsimon-p3.github.io/exercices/semaine_1_1_exercices/">
       
       
-        <link rel="prev" href="../semaine_1_2/">
+        <link rel="prev" href="../../notes/semaine_1_4_compilation_cpp20/">
       
       
-        <link rel="next" href="../../exercices/exercice_semaine_1_1/">
+        <link rel="next" href="../semaine_1_2_exercices_supplementaires/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Compilation C++20 - Cours de Programmation 3</title>
+        <title>Exercices Semaine 1 - Cours de Programmation 3</title>
       
     
     
@@ -143,7 +143,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#guide-de-compilation-en-c20" class="md-skip">
+        <a href="#exercices-de-la-semaine-1-les-bases" class="md-skip">
           Aller au contenu
         </a>
       
@@ -179,7 +179,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Compilation C++20
+              Exercices Semaine 1
             
           </span>
         </div>
@@ -364,7 +364,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../semaine_1/" class="md-tabs__link">
+        <a href="../../notes/semaine_1_0_introduction/" class="md-tabs__link">
           
   
   
@@ -384,7 +384,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../semaine_1_3/" class="md-tabs__link">
+        <a href="../../notes/semaine_2_1_passage_copie_reference/" class="md-tabs__link">
           
   
   
@@ -619,7 +619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../semaine_1/" class="md-nav__link">
+      <a href="../../notes/semaine_1_0_introduction/" class="md-nav__link">
         
   
   
@@ -647,7 +647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../semaine_1_1/" class="md-nav__link">
+      <a href="../../notes/semaine_1_1_types_de_donnees/" class="md-nav__link">
         
   
   
@@ -675,7 +675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../semaine_1_1_2/" class="md-nav__link">
+      <a href="../../notes/semaine_1_2_tableau/" class="md-nav__link">
         
   
   
@@ -703,7 +703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../semaine_1_2/" class="md-nav__link">
+      <a href="../../notes/semaine_1_3_gestion_saisie_cin/" class="md-nav__link">
         
   
   
@@ -711,6 +711,34 @@
     
   
     Gestion de la Saisie (std::cin)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/semaine_1_4_compilation_cpp20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compilation C++20
   
 
     
@@ -747,7 +775,7 @@
   <span class="md-ellipsis">
     
   
-    Compilation C++20
+    Exercices Semaine 1
   
 
     
@@ -765,7 +793,7 @@
   <span class="md-ellipsis">
     
   
-    Compilation C++20
+    Exercices Semaine 1
   
 
     
@@ -791,10 +819,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-quest-ce-que-la-compilation" class="md-nav__link">
+  <a href="#bloc-1-affichage-et-saisie-simple" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Qu'est-ce que la Compilation ?
+        Bloc 1 : Affichage et Saisie Simple
       
     </span>
   </a>
@@ -802,10 +830,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-la-commande-de-compilation-essentielle" class="md-nav__link">
+  <a href="#bloc-2-gestion-du-buffer-et-erreurs-de-saisie" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. La Commande de Compilation Essentielle
+        Bloc 2 : Gestion du Buffer et Erreurs de Saisie
       
     </span>
   </a>
@@ -813,49 +841,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-exemples-concrets" class="md-nav__link">
+  <a href="#bloc-3-fonctions-et-tableaux-classique" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Exemples Concrets
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. Exemples Concrets">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cas-1-un-projet-avec-un-seul-fichier" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cas 1 : Un Projet avec un Seul Fichier
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cas-2-un-projet-avec-plusieurs-fichiers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cas 2 : Un Projet avec Plusieurs Fichiers
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-executer-votre-programme" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Exécuter votre Programme
+        Bloc 3 : Fonctions et Tableaux (Classique)
       
     </span>
   </a>
@@ -863,10 +852,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-ca-ne-compile-pas-gerer-les-erreurs" class="md-nav__link">
+  <a href="#bloc-4-c-moderne-stdspan-vector" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. "Ça ne compile pas !" - Gérer les Erreurs
+        Bloc 4 : C++ Moderne (std::span &amp; Vector)
       
     </span>
   </a>
@@ -889,35 +878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../exercices/exercice_semaine_1_1/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Exercices Semaine 1
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../exercices/exercice_semaine_1_1_2/" class="md-nav__link">
+      <a href="../semaine_1_2_exercices_supplementaires/" class="md-nav__link">
         
   
   
@@ -1002,7 +963,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../semaine_1_3/" class="md-nav__link">
+      <a href="../../notes/semaine_2_1_passage_copie_reference/" class="md-nav__link">
         
   
   
@@ -1030,7 +991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../semaine_2_structs/" class="md-nav__link">
+      <a href="../../notes/semaine_2_2_les_structs/" class="md-nav__link">
         
   
   
@@ -1078,76 +1039,88 @@
   
 
 
-<h1 id="guide-de-compilation-en-c20">Guide de Compilation en C++20</h1>
-<p>Ce document explique comment transformer votre code source (<code>.cpp</code>, <code>.hpp</code>) en un programme exécutable à l'aide du compilateur <code>g++</code> et du standard C++20.</p>
+<h1 id="exercices-de-la-semaine-1-les-bases">Exercices de la Semaine 1 : Les Bases</h1>
+<p>Ces exercices sont conçus pour pratiquer les concepts de base vus dans les notes de la semaine 1.<br />
+Concentrez-vous sur la maîtrise de la compilation, de l'affichage, de la saisie et des fonctions simples.</p>
 <hr />
-<h2 id="1-quest-ce-que-la-compilation">1. Qu'est-ce que la Compilation ?</h2>
-<p>La compilation est le processus qui <strong>traduit</strong> votre code C++, lisible par un humain, en <strong>code machine</strong>, compréhensible par l'ordinateur. L'outil qui réalise cette traduction est appelé un <strong>compilateur</strong>. Dans ce cours, nous utiliserons <code>g++</code>, le compilateur C++ du projet GNU, l'un des plus populaires.</p>
-<p><img alt="Diagramme de compilation" src="../images/compilation.jpg" /></p>
+<h3 id="bloc-1-affichage-et-saisie-simple">Bloc 1 : Affichage et Saisie Simple</h3>
+<p><strong>Exercice 1 : Bonjour le Monde</strong> - <strong>Objectif :</strong> Créer un programme C++ de base.<br />
+- <strong>Tâche :</strong> Écrivez un programme qui affiche "Bonjour le monde !" dans la console et qui se termine en retournant <code>0</code>.</p>
+<p><strong>Exercice 2 : Fiche de Présentation</strong> - <strong>Objectif :</strong> Manipuler <code>std::cout</code> avec plusieurs lignes.<br />
+- <strong>Tâche :</strong> Écrivez un programme qui affiche votre nom, votre ville et votre âge sur des lignes séparées.</p>
+<p><strong>Exercice 3 : Déclaration de Variables</strong> - <strong>Objectif :</strong> Se familiariser avec l'initialisation uniforme.<br />
+- <strong>Tâche :</strong> Déclarez quatre variables en utilisant la syntaxe d'accolades <code>{}</code> : un <code>int</code>, un <code>double</code>, un <code>char</code>, et un <code>bool</code>.<br />
+Assignez-leur des valeurs de votre choix et affichez chaque valeur avec une description.</p>
+<p><strong>Exercice 4 : Interaction Simple</strong> - <strong>Objectif :</strong> Utiliser <code>std::cin &gt;&gt;</code> avec <code>std::string</code> et <code>int</code>.<br />
+- <strong>Tâche :</strong> Demandez à l'utilisateur son prénom et son année de naissance.<br />
+Calculez (approximativement) son âge et affichez un message comme <code>"Bonjour [Prénom], vous avez environ [Age] ans."</code>.</p>
+<p><strong>Exercice 5 : Calcul d'Aire</strong> - <strong>Objectif :</strong> Utiliser des types <code>double</code> avec <code>std::cin</code>.<br />
+- <strong>Tâche :</strong> Demandez à l'utilisateur la largeur et la hauteur d'un rectangle.<br />
+Calculez et affichez son aire.</p>
 <hr />
-<h2 id="2-la-commande-de-compilation-essentielle">2. La Commande de Compilation Essentielle</h2>
-<p>Pour compiler, vous ouvrirez un terminal (ou une console) et taperez une commande qui ressemble à ceci :</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>g++<span class="w"> </span><span class="o">[</span>options<span class="o">]</span><span class="w"> </span>-o<span class="w"> </span><span class="o">[</span>nom_executable<span class="o">]</span><span class="w"> </span><span class="o">[</span>vos_fichiers.cpp<span class="o">]</span>
-</span></code></pre></div>
-<p>Détaillons chaque partie :</p>
-<ul>
-<li><strong><code>g++</code></strong> : C'est l'appel au compilateur lui-même.</li>
-<li><strong><code>[options]</code></strong> : Ce sont des "drapeaux" (flags) qui modifient le comportement du compilateur. Les deux plus importants pour nous sont :<ul>
-<li><strong><code>-std=c++20</code></strong> : C'est le drapeau <strong>crucial</strong> qui dit à <code>g++</code> d'utiliser le standard C++20. Sans cela, les fonctionnalités modernes du langage ne seront pas disponibles.</li>
-<li><strong><code>-Wall</code></strong> : (Abréviation de "Warnings All") C'est une option très fortement recommandée qui active presque tous les avertissements (<code>warnings</code>). Le compilateur vous signalera des erreurs potentielles dans votre code, même si elles ne l'empêchent pas de compiler. C'est un filet de sécurité indispensable.</li>
-</ul>
-</li>
-<li><strong><code>-o [nom_executable]</code></strong> : L'option <code>-o</code> (pour "output") vous permet de nommer votre programme final. Si vous l'omettez, le fichier de sortie s'appellera <code>a.out</code> (sur Linux/macOS) ou <code>a.exe</code> (sur Windows).</li>
-<li><strong><code>[vos_fichiers.cpp]</code></strong> : C'est la liste de <strong>tous vos fichiers <code>.cpp</code></strong>, séparés par des espaces. Vous n'avez pas besoin d'inclure les fichiers <code>.hpp</code>, car ils sont gérés via les directives <code>#include</code> dans vos fichiers <code>.cpp</code>.</li>
-</ul>
+<h3 id="bloc-2-gestion-du-buffer-et-erreurs-de-saisie">Bloc 2 : Gestion du Buffer et Erreurs de Saisie</h3>
+<p><strong>Exercice 6 : Le Piège de <code>getline</code></strong> - <strong>Objectif :</strong> Résoudre le conflit entre <code>std::cin &gt;&gt;</code> et <code>std::getline</code>.<br />
+- <strong>Tâche :</strong> 1. Demandez à l'utilisateur son numéro de porte (un <code>int</code>).<br />
+  2. Demandez-lui ensuite son nom de rue complet (un <code>std::string</code> avec <code>getline</code>).<br />
+  3. Observez que le programme ignore la saisie de la rue.<br />
+  4. Corrigez le problème en nettoyant le buffer après la lecture du nombre.</p>
+<p><strong>Exercice 7 : Gestion d'Erreur Simple</strong> - <strong>Objectif :</strong> Utiliser <code>std::cin.fail()</code> pour détecter une erreur.<br />
+- <strong>Tâche :</strong> Demandez à l'utilisateur d'entrer un nombre. Si la saisie échoue (si l'utilisateur tape du texte), affichez "Erreur : saisie invalide.". Sinon, affichez "Merci !".</p>
+<p><strong>Exercice 8 : Boucle de Saisie Robuste</strong> - <strong>Objectif :</strong> Créer une boucle qui force une saisie numérique valide.<br />
+- <strong>Tâche :</strong> Créez une boucle <code>while</code> qui continue de demander "Entrez votre age :" jusqu'à ce que l'utilisateur entre un nombre entier valide. Si l'utilisateur se trompe, le programme doit afficher une erreur et lui redemander.</p>
+<p><strong>Exercice 9 : Analyse d'Entrée Mixte</strong> - <strong>Objectif :</strong> Comprendre comment <code>cin</code> gère les lectures partielles.<br />
+- <strong>Tâche :</strong>
+  1. Demandez à l'utilisateur un nombre. L'utilisateur doit taper <code>45abc</code>.<br />
+  2. Lisez la saisie dans une variable de type <code>int</code>.<br />
+  3. Affichez l'entier que vous avez réussi à lire.<br />
+  4. Ensuite, lisez le reste du buffer dans une variable <code>std::string</code>.<br />
+  5. Affichez la chaîne de caractères. Le résultat devrait vous montrer ce qui restait dans le buffer.</p>
 <hr />
-<h2 id="3-exemples-concrets">3. Exemples Concrets</h2>
-<h3 id="cas-1-un-projet-avec-un-seul-fichier">Cas 1 : Un Projet avec un Seul Fichier</h3>
-<p>Imaginons que vous avez un seul fichier <code>main.cpp</code>.</p>
-<p><strong>Commande :</strong>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>g++<span class="w"> </span>-std<span class="o">=</span>c++20<span class="w"> </span>-Wall<span class="w"> </span>-o<span class="w"> </span>mon_programme<span class="w"> </span>main.cpp
-</span></code></pre></div>
--   Ceci créera un exécutable nommé <code>mon_programme</code>.</p>
-<h3 id="cas-2-un-projet-avec-plusieurs-fichiers">Cas 2 : Un Projet avec Plusieurs Fichiers</h3>
-<p>Reprenons notre exemple <code>Commande</code>. Nous avons trois fichiers <code>.cpp</code> à compiler ensemble.</p>
-<p><strong>Commande :</strong>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>g++<span class="w"> </span>-std<span class="o">=</span>c++20<span class="w"> </span>-Wall<span class="w"> </span>-o<span class="w"> </span>exemple<span class="w"> </span>main.cpp<span class="w"> </span>Commande.cpp<span class="w"> </span>ServiceConnexion.cpp
-</span></code></pre></div>
--   <code>g++</code> va compiler chaque fichier <code>.cpp</code> et les lier ("link") ensemble pour créer un seul exécutable nommé <code>exemple</code>.</p>
+<h3 id="bloc-3-fonctions-et-tableaux-classique">Bloc 3 : Fonctions et Tableaux (Classique)</h3>
+<p><strong>Exercice 10 : Calculatrice Simple</strong> - <strong>Objectif :</strong> Écrire et appeler des fonctions simples.<br />
+- <strong>Tâche :</strong> Écrivez quatre fonctions : <code>addition(int a, int b)</code>, <code>soustraction(int a, int b)</code>, <code>multiplication(int a, int b)</code>, et <code>division(int a, int b)</code>.<br />
+Chaque fonction doit retourner le résultat du calcul. Dans <code>main</code>, testez chaque fonction avec des valeurs de votre choix et affichez les résultats.</p>
+<p><strong>Exercice 11 : Passage par Copie</strong> - <strong>Objectif :</strong> Constater l'effet d'un passage par copie.<br />
+- <strong>Tâche :</strong>
+  1. Écrivez une fonction <code>ajouter_vingt(int nombre)</code> qui reçoit un entier, lui ajoute 20, et n'a pas de <code>return</code>.<br />
+  2. Dans <code>main</code>, initialisez une variable <code>ma_valeur {10}</code>.<br />
+  3. Appelez <code>ajouter_vingt(ma_valeur)</code>.<br />
+  4. Affichez <code>ma_valeur</code> après l'appel. A-t-elle changé ? Pourquoi ?</p>
+<p><strong>Exercice 12 : Passage par Référence</strong> - <strong>Objectif :</strong> Utiliser une référence pour modifier une variable externe.<br />
+- <strong>Tâche :</strong>
+  1. Écrivez une fonction <code>reinitialiser(int&amp; nombre)</code> qui change la valeur de l'entier reçu à <code>0</code>.<br />
+  2. Dans <code>main</code>, initialisez une variable <code>ma_valeur {123}</code>.<br />
+  3. Appelez <code>reinitialiser(ma_valeur)</code>.<br />
+  4. Affichez <code>ma_valeur</code> après l'appel. A-t-elle changé ? Pourquoi ?</p>
+<p><strong>Exercice 13 : Somme d'un Tableau (Style C)</strong> - <strong>Objectif :</strong> Passer un tableau à une fonction (méthode classique).<br />
+- <strong>Tâche :</strong> Créez une fonction <code>calculer_somme(const int tableau[], int taille)</code> qui retourne la somme de tous les éléments d'un tableau.<br />
+Dans <code>main</code>, initialisez un tableau (ex: <code>int tableau[] {10, 20, 30};</code>), trouvez sa taille avec <code>std::ssize</code>, et affichez la somme retournée par votre fonction.</p>
+<p><strong>Exercice 14 : Trouver le Maximum</strong> - <strong>Objectif :</strong> Parcourir un tableau dans une fonction.<br />
+- <strong>Tâche :</strong> Créez une fonction <code>trouver_max(const int tableau[], int taille)</code> qui retourne la plus grande valeur d'un tableau. Testez-la dans <code>main</code>.</p>
+<p><strong>Exercice 15 : Inversion de Tableau</strong> - <strong>Objectif :</strong> Modifier un tableau via une fonction.<br />
+- <strong>Tâche :</strong> Créez une fonction <code>inverser_tableau(int tableau[], int taille)</code> qui inverse les éléments du tableau sur place (le premier devient le dernier, etc.).<br />
+Dans <code>main</code>, déclarez un tableau comme <code>int tableau[] {1, 2, 3, 4, 5};</code>, affichez-le, appelez la fonction, puis affichez-le à nouveau pour voir le changement.</p>
 <hr />
-<h2 id="4-executer-votre-programme">4. Exécuter votre Programme</h2>
-<p>Une fois la compilation réussie (si la commande ne retourne aucune erreur), un nouveau fichier exécutable apparaîtra dans votre dossier.</p>
-<p>Pour l'exécuter dans le terminal :</p>
-<ul>
-<li>
-<p><strong>Sur Linux ou macOS :</strong>
-    <div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>./nom_executable<span class="w"> </span>
-</span></code></pre></div>
-    (Le <code>./</code> signifie "dans le dossier actuel")</p>
-</li>
-<li>
-<p><strong>Sur Windows (cmd ou PowerShell) :</strong>
-    <div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>.<span class="se">\n</span>om_executable.exe
-</span></code></pre></div></p>
-</li>
-</ul>
-<hr />
-<h2 id="5-ca-ne-compile-pas-gerer-les-erreurs">5. "Ça ne compile pas !" - Gérer les Erreurs</h2>
-<p>Il est normal d'avoir des erreurs de compilation. L'art de la programmation est de savoir les lire.</p>
-<p><strong>Les erreurs les plus courantes au début :</strong>
--   <strong>Oubli d'un point-virgule (<code>;</code>)</strong> à la fin d'une ligne.
--   <strong>Faute de frappe</strong> dans un nom de variable ou de fonction.
--   <strong>Accolade (<code>{</code> ou <code>}</code>) manquante.</strong>
--   <strong>Oubli d'inclure un en-tête</strong> (ex: <code>#include &lt;string&gt;</code> pour utiliser <code>std::string</code>).</p>
-<p>Lisez attentivement les messages d'erreur. <code>g++</code> vous donnera généralement le nom du fichier et le numéro de la ligne où l'erreur a été détectée.</p>
-<p><strong>Exemple de message d'erreur :</strong>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>main.cpp: In function &#39;int main()&#39;:
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>main.cpp:5:3: error: expected &#39;;&#39; before &#39;return&#39;
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>   return 0;
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>   ^~~~~~
-</span></code></pre></div>
-Le compilateur nous dit qu'à la ligne 5 du fichier <code>main.cpp</code>, il s'attendait à un point-virgule avant le mot-clé <code>return</code>.</p>
-<p>```</p>
+<h3 id="bloc-4-c-moderne-stdspan-vector">Bloc 4 : C++ Moderne (std::span &amp; Vector)</h3>
+<p><strong>Exercice 16 : La Règle d'Or (std::span)</strong> - <strong>Objectif :</strong> Remplacer le couple <code>(tableau, taille)</code> par <code>std::span</code>.<br />
+- <strong>Tâche :</strong>
+  1. Reprenez votre fonction <code>calculer_somme</code> de l'exercice 13.
+  2. Changez sa signature pour qu'elle prenne un <code>std::span&lt;const int&gt;</code> au lieu d'un tableau et une taille.
+  3. Dans <code>main</code>, créez un tableau brut (<code>int t[]...</code>).
+  4. Appelez la fonction. Remarquez que vous n'avez plus besoin de passer la taille manuellement !</p>
+<p><strong>Exercice 17 : Optimisation avec Référence Constante</strong> - <strong>Objectif :</strong> Éviter les copies inutiles sur les gros objets.<br />
+- <strong>Tâche :</strong>
+  1. Écrivez une fonction <code>afficher_message(std::string message)</code> (par copie).
+  2. Modifiez-la pour utiliser le passage par <strong>référence constante</strong> (<code>const std::string&amp;</code>).
+  3. Ajoutez un <code>cout</code> dans la fonction pour vérifier que le message s'affiche bien.
+  <em>Question :</em> À l'utilisation dans le <code>main</code>, est-ce que le code d'appel change ? (Réponse attendue : Non, c'est transparent, mais plus rapide).</p>
+<p><strong>Exercice 18 : Vecteur Dynamique et Span</strong> - <strong>Objectif :</strong> Utiliser un tableau qui peut grandir (<code>vector</code>) avec une fonction moderne.<br />
+- <strong>Tâche :</strong>
+  1. Incluez <code>&lt;vector&gt;</code>.
+  2. Créez un <code>std::vector&lt;int&gt;</code> vide.
+  3. Utilisez une boucle <code>while</code> pour demander des nombres à l'utilisateur. Ajoutez-les au vecteur avec <code>.push_back()</code>. Arrêtez quand il tape -1.
+  4. Appelez votre fonction <code>calculer_somme</code> (celle avec le <code>std::span</code> de l'exercice 16) en lui passant ce vecteur.
+  <em>Observation :</em> Notez que le <code>span</code> accepte aussi bien le tableau brut (Ex 16) que le vecteur (Ex 18).</p>
 
 
 

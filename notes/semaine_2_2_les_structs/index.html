@@ -8,10 +8,10 @@
       
       
       
-        <link rel="canonical" href="https://tousignantsimon-p3.github.io/notes/semaine_2_structs/">
+        <link rel="canonical" href="https://tousignantsimon-p3.github.io/notes/semaine_2_2_les_structs/">
       
       
-        <link rel="prev" href="../semaine_1_3/">
+        <link rel="prev" href="../semaine_2_1_passage_copie_reference/">
       
       
       
@@ -360,7 +360,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../semaine_1/" class="md-tabs__link">
+        <a href="../semaine_1_0_introduction/" class="md-tabs__link">
           
   
   
@@ -382,7 +382,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../semaine_1_3/" class="md-tabs__link">
+        <a href="../semaine_2_1_passage_copie_reference/" class="md-tabs__link">
           
   
   
@@ -612,7 +612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../semaine_1/" class="md-nav__link">
+      <a href="../semaine_1_0_introduction/" class="md-nav__link">
         
   
   
@@ -640,7 +640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../semaine_1_1/" class="md-nav__link">
+      <a href="../semaine_1_1_types_de_donnees/" class="md-nav__link">
         
   
   
@@ -668,7 +668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../semaine_1_1_2/" class="md-nav__link">
+      <a href="../semaine_1_2_tableau/" class="md-nav__link">
         
   
   
@@ -696,7 +696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../semaine_1_2/" class="md-nav__link">
+      <a href="../semaine_1_3_gestion_saisie_cin/" class="md-nav__link">
         
   
   
@@ -724,7 +724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../semaine_1_4/" class="md-nav__link">
+      <a href="../semaine_1_4_compilation_cpp20/" class="md-nav__link">
         
   
   
@@ -752,7 +752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../exercices/exercice_semaine_1_1/" class="md-nav__link">
+      <a href="../../exercices/semaine_1_1_exercices/" class="md-nav__link">
         
   
   
@@ -780,7 +780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../exercices/exercice_semaine_1_1_2/" class="md-nav__link">
+      <a href="../../exercices/semaine_1_2_exercices_supplementaires/" class="md-nav__link">
         
   
   
@@ -870,7 +870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../semaine_1_3/" class="md-nav__link">
+      <a href="../semaine_2_1_passage_copie_reference/" class="md-nav__link">
         
   
   
@@ -1004,6 +1004,51 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Partie 2 : struct avec Fonctions Libres">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#partie-21-structure-inclusions-et-compilation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Partie 2.1 : Structure, Inclusions et Compilation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Partie 2.1 : Structure, Inclusions et Compilation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema-des-inclusions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schéma des Inclusions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compilation-du-projet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compilation du Projet
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1284,6 +1329,30 @@ Fonctionne sur tous les compilateurs. Le nom (<code>JOUEUR_HPP</code>) doit êtr
 </span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="p">}</span>
 </span></code></pre></div></p>
 <hr />
+<h3 id="partie-21-structure-inclusions-et-compilation">Partie 2.1 : Structure, Inclusions et Compilation</h3>
+<p>Cette séparation des fichiers suit un principe essentiel : le <strong>Principe de Responsabilité Unique</strong>. Chaque fichier a un seul rôle.</p>
+<ul>
+<li><code>Joueur.hpp</code> : Définit ce qu'<strong>EST</strong> un <code>Joueur</code>.</li>
+<li><code>JoueurActions.hpp</code> : Déclare ce qu'on <strong>PEUT FAIRE</strong> avec un <code>Joueur</code>.</li>
+<li><code>JoueurActions.cpp</code> : Explique <strong>COMMENT</strong> on le fait.</li>
+<li><code>main.cpp</code> : <strong>Lance</strong> le programme.</li>
+</ul>
+<h4 id="schema-des-inclusions">Schéma des Inclusions</h4>
+<p>Voici comment les fichiers dépendent les uns des autres. Une flèche <code>A -&gt; B</code> signifie que le fichier <code>A</code> inclut le fichier <code>B</code>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>           main.cpp  ---------------&gt; JoueurActions.hpp
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>                                          |
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>JoueurActions.cpp  ------------&gt; JoueurActions.hpp
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>                                          |
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>                                          v
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>                                      Joueur.hpp
+</span></code></pre></div>
+<p>Le <code>main.cpp</code> n'a pas besoin de connaître les détails de <code>Joueur.hpp</code>. Il fait confiance à <code>JoueurActions.hpp</code> pour lui fournir les actions nécessaires.</p>
+<h4 id="compilation-du-projet">Compilation du Projet</h4>
+<p>Pour créer l'exécutable, vous devez fournir <strong>tous les fichiers <code>.cpp</code></strong> au compilateur. Celui-ci va les traduire en code machine, puis l'éditeur de liens (linker) va les assembler en un seul programme.</p>
+<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>g++<span class="w"> </span>-std<span class="o">=</span>c++20<span class="w"> </span>-Wall<span class="w"> </span>-o<span class="w"> </span>mon_programme<span class="w"> </span>main.cpp<span class="w"> </span>JoueurActions.cpp
+</span></code></pre></div>
+Notez qu'on ne donne jamais les fichiers <code>.hpp</code> au compilateur directement. Ils sont inclus par les <code>.cpp</code>.</p>
+<hr />
 <h2 id="partie-3-evolution-vers-les-fonctions-membres">Partie 3 : Évolution vers les Fonctions Membres</h2>
 <p>L'étape suivante est de lier plus fortement un comportement à la <code>struct</code> elle-même. Si une fonction est intrinsèquement liée à un objet (comme <code>afficher</code>), on peut en faire une <strong>fonction membre</strong>.</p>
 <p><strong>Important</strong> : À ce stade, la <code>struct</code> reste un conteneur "passif" avec des données publiques. C'est une étape d'organisation, pas encore de protection.</p>
@@ -1291,34 +1360,34 @@ Fonctionne sur tous les compilateurs. Le nom (<code>JOUEUR_HPP</code>) doit êtr
 <li><strong><code>Joueur.hpp</code></strong> : La fonction est déclarée DANS la <code>struct</code>.</li>
 <li><strong><code>Joueur.cpp</code></strong> : Un fichier source pour <code>Joueur</code> implémente ses fonctions membres.</li>
 </ul>
-<p><div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1">// Fichier : Joueur.hpp (refactorisé)</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="cp">#pragma once</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="k">struct</span><span class="w"> </span><span class="nc">Joueur</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">points_de_vie</span><span class="p">;</span>
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">niveau</span><span class="p">;</span>
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">afficher</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"> </span><span class="c1">// Déclaration de la fonction MEMBRE</span>
-</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="p">};</span>
+<p><div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1">// Fichier : Joueur.hpp (refactorisé)</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="cp">#pragma once</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="k">struct</span><span class="w"> </span><span class="nc">Joueur</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">points_de_vie</span><span class="p">;</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">niveau</span><span class="p">;</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">afficher</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"> </span><span class="c1">// Déclaration de la fonction MEMBRE</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="p">};</span>
 </span></code></pre></div>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">// Fichier : Joueur.cpp (nouveau)</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Joueur.hpp&quot;</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;format&gt;</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="kt">void</span><span class="w"> </span><span class="nf">Joueur::afficher</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Joueur:: indique que c&#39;est une fonction de Joueur</span>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">format</span><span class="p">(</span><span class="s">&quot;- Nom: {}, PV: {}</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">points_de_vie</span><span class="p">);</span>
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="p">}</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1">// Fichier : Joueur.cpp (nouveau)</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Joueur.hpp&quot;</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;format&gt;</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="kt">void</span><span class="w"> </span><span class="nf">Joueur::afficher</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Joueur:: indique que c&#39;est une fonction de Joueur</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">format</span><span class="p">(</span><span class="s">&quot;- Nom: {}, PV: {}</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">points_de_vie</span><span class="p">);</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="p">}</span>
 </span></code></pre></div>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1">// Fichier : main.cpp (refactorisé)</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Joueur.hpp&quot;</span>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="n">Joueur</span><span class="w"> </span><span class="n">p1</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Gandalf&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">.</span><span class="n">points_de_vie</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="p">};</span>
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="n">p1</span><span class="p">.</span><span class="n">afficher</span><span class="p">();</span><span class="w"> </span><span class="c1">// Appel plus naturel : on demande à l&#39;objet de s&#39;afficher.</span>
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="p">}</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1">// Fichier : main.cpp (refactorisé)</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Joueur.hpp&quot;</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="n">Joueur</span><span class="w"> </span><span class="n">p1</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Gandalf&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">.</span><span class="n">points_de_vie</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span><span class="n">p1</span><span class="p">.</span><span class="n">afficher</span><span class="p">();</span><span class="w"> </span><span class="c1">// Appel plus naturel : on demande à l&#39;objet de s&#39;afficher.</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="p">}</span>
 </span></code></pre></div></p>
 <hr />
 <h2 id="partie-4-gestion-de-la-memoire-et-fonctions">Partie 4 : Gestion de la Mémoire et Fonctions</h2>
@@ -1352,62 +1421,62 @@ Fonctionne sur tous les compilateurs. Le nom (<code>JOUEUR_HPP</code>) doit êtr
 <h3 id="42-passage-en-parametre">4.2 - Passage en Paramètre</h3>
 <ul>
 <li><strong>Lecture Seule (<code>const&amp;</code>)</strong> : Le plus sûr et le plus efficace pour passer des objets que la fonction ne doit pas modifier. Évite une copie.
-    <div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">afficher_details</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Joueur</span><span class="o">&amp;</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* ... */</span><span class="w"> </span><span class="p">}</span>
+    <div class="language-cpp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">afficher_details</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Joueur</span><span class="o">&amp;</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* ... */</span><span class="w"> </span><span class="p">}</span>
 </span></code></pre></div></li>
 <li><strong>Lecture/Écriture (<code>&amp;</code>)</strong> : Quand la fonction DOIT modifier l'objet original.
-    <div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">monter_niveau</span><span class="p">(</span><span class="n">Joueur</span><span class="o">&amp;</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">j</span><span class="p">.</span><span class="n">niveau</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+    <div class="language-cpp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">monter_niveau</span><span class="p">(</span><span class="n">Joueur</span><span class="o">&amp;</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">j</span><span class="p">.</span><span class="n">niveau</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 </span></code></pre></div></li>
 </ul>
 <h3 id="43-retour-de-struct-depuis-une-fonction">4.3 - Retour de <code>struct</code> depuis une fonction</h3>
 <ul>
 <li><strong>Par Copie (Sûr)</strong> : La fonction retourne une copie. L'objet original créé dans la fonction est détruit, mais sa copie survit.
-    <div class="language-cpp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">Joueur</span><span class="w"> </span><span class="nf">creer_ennemi</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="n">Joueur</span><span class="w"> </span><span class="n">orc</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Orc de base&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">.</span><span class="n">niveau</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">};</span>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">orc</span><span class="p">;</span><span class="w"> </span><span class="c1">// OK : une copie de &#39;orc&#39; est envoyée.</span>
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="p">}</span>
+    <div class="language-cpp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">Joueur</span><span class="w"> </span><span class="nf">creer_ennemi</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="n">Joueur</span><span class="w"> </span><span class="n">orc</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Orc de base&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">.</span><span class="n">niveau</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">orc</span><span class="p">;</span><span class="w"> </span><span class="c1">// OK : une copie de &#39;orc&#39; est envoyée.</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="p">}</span>
 </span></code></pre></div></li>
 <li><strong>Par Pointeur (DANGEREUX !)</strong>
     !!! failure "À NE JAMAIS FAIRE"
     Il ne faut <strong>jamais</strong> retourner l'adresse (<code>&amp;</code>) ou un pointeur (<code>*</code>) d'une variable locale. La variable est détruite à la fin de la fonction, et le pointeur devient un <strong>"dangling pointer"</strong> qui pointe vers une zone mémoire invalide. Utiliser ce pointeur mène à un comportement indéfini (crash, corruption).
-    <div class="language-cpp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">Joueur</span><span class="o">*</span><span class="w"> </span><span class="nf">creer_ennemi_dangereux</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="n">Joueur</span><span class="w"> </span><span class="n">gobelin</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Gobelin&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">.</span><span class="n">niveau</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">};</span>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="o">&amp;</span><span class="n">gobelin</span><span class="p">;</span><span class="w"> </span><span class="c1">// ERREUR FATALE !  </span>
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="cm">/* </span>
-</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="cm">     * gobelin va être détruit après la fonction.  </span>
-</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="cm">     * C&#39;est une variable locale, donc, le pointeur  </span>
-</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="cm">     * va pointer sur une valeur instable.  </span>
-</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="cm">     * (mémoire libre pour autre chose) </span>
-</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="cm">     */</span>
-</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="p">}</span>
+    <div class="language-cpp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">Joueur</span><span class="o">*</span><span class="w"> </span><span class="nf">creer_ennemi_dangereux</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="n">Joueur</span><span class="w"> </span><span class="n">gobelin</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Gobelin&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">.</span><span class="n">niveau</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="o">&amp;</span><span class="n">gobelin</span><span class="p">;</span><span class="w"> </span><span class="c1">// ERREUR FATALE !  </span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">    </span><span class="cm">/* </span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="cm">     * gobelin va être détruit après la fonction.  </span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="cm">     * C&#39;est une variable locale, donc, le pointeur  </span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="cm">     * va pointer sur une valeur instable.  </span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="cm">     * (mémoire libre pour autre chose) </span>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="cm">     */</span>
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="p">}</span>
 </span></code></pre></div></li>
 </ul>
 <hr />
 <h2 id="partie-5-ouverture-vers-la-class-semaine-3">Partie 5 : Ouverture vers la <code>class</code> (Semaine 3)</h2>
 <p>Le problème de nos <code>struct</code>s actuelles est que leurs données sont publiques et vulnérables (<code>p1.niveau = -99;</code>). La prochaine étape est d'apprendre à protéger les données et à garantir des règles (invariants) en utilisant le mot-clé <code>class</code>.</p>
 <h3 id="apercu-de-levolution-en-class">Aperçu de l'Évolution en <code>class</code></h3>
-<p><div class="language-cpp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1">// Fichier : Joueur.hpp (Version Semaine 3)</span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="cp">#pragma once</span>
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
-</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>
-</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="k">class</span><span class="w"> </span><span class="nc">Joueur</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="k">private</span><span class="o">:</span><span class="w"> </span><span class="c1">// Les données sont maintenant protégées et inaccessibles de l&#39;extérieur.</span>
-</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">nom_</span><span class="p">;</span>
-</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">points_de_vie_</span><span class="p">;</span>
-</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">niveau_</span><span class="p">;</span>
-</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>
-</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="k">public</span><span class="o">:</span>
-</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="w">    </span><span class="c1">// Un &quot;constructeur&quot; pour garantir que chaque Joueur est créé dans un état valide.</span>
-</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="w">    </span><span class="n">Joueur</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pv</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">niveau</span><span class="p">);</span>
-</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>
-</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="w">    </span><span class="c1">// Une fonction membre pour une modification contrôlée des données.</span>
-</span><span id="__span-13-16"><a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">subir_degats</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">degats</span><span class="p">);</span>
-</span><span id="__span-13-17"><a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>
-</span><span id="__span-13-18"><a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a><span class="w">    </span><span class="c1">// Une fonction membre pour un accès en lecture seule.</span>
-</span><span id="__span-13-19"><a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">afficher</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
-</span><span id="__span-13-20"><a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a>
-</span><span id="__span-13-21"><a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a><span class="w">    </span><span class="c1">// Un &quot;getter&quot; pour lire une valeur privée de manière contrôlée.</span>
-</span><span id="__span-13-22"><a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">get_niveau</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
-</span><span id="__span-13-23"><a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a><span class="p">};</span>
+<p><div class="language-cpp highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1">// Fichier : Joueur.hpp (Version Semaine 3)</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="cp">#pragma once</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="k">class</span><span class="w"> </span><span class="nc">Joueur</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="k">private</span><span class="o">:</span><span class="w"> </span><span class="c1">// Les données sont maintenant protégées et inaccessibles de l&#39;extérieur.</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">nom_</span><span class="p">;</span>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">points_de_vie_</span><span class="p">;</span>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">niveau_</span><span class="p">;</span>
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="k">public</span><span class="o">:</span>
+</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="w">    </span><span class="c1">// Un &quot;constructeur&quot; pour garantir que chaque Joueur est créé dans un état valide.</span>
+</span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="w">    </span><span class="n">Joueur</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pv</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">niveau</span><span class="p">);</span>
+</span><span id="__span-15-14"><a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>
+</span><span id="__span-15-15"><a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a><span class="w">    </span><span class="c1">// Une fonction membre pour une modification contrôlée des données.</span>
+</span><span id="__span-15-16"><a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">subir_degats</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">degats</span><span class="p">);</span>
+</span><span id="__span-15-17"><a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a>
+</span><span id="__span-15-18"><a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a><span class="w">    </span><span class="c1">// Une fonction membre pour un accès en lecture seule.</span>
+</span><span id="__span-15-19"><a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">afficher</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+</span><span id="__span-15-20"><a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a>
+</span><span id="__span-15-21"><a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a><span class="w">    </span><span class="c1">// Un &quot;getter&quot; pour lire une valeur privée de manière contrôlée.</span>
+</span><span id="__span-15-22"><a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">get_niveau</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+</span><span id="__span-15-23"><a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a><span class="p">};</span>
 </span></code></pre></div>
 Cette structure est le cœur de la programmation orientée objet en C++ et sera l'objet de la semaine 3.</p>
 <hr />

@@ -8,9 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://tousignantsimon-p3.github.io/notes/semaine2_includes/">
+        <link rel="canonical" href="https://tousignantsimon-p3.github.io/notes/semaine_1_3_gestion_saisie_cin/">
       
       
+        <link rel="prev" href="../semaine_1_2_tableau/">
+      
+      
+        <link rel="next" href="../semaine_1_4_compilation_cpp20/">
       
       
         
@@ -21,7 +25,7 @@
     
     
       
-        <title>Organisation du Code : Headers, Implémentations et main - Cours de Programmation 3</title>
+        <title>Gestion de la Saisie (std::cin) - Cours de Programmation 3</title>
       
     
     
@@ -139,7 +143,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#organisation-du-code-headers-implementations-et-main" class="md-skip">
+        <a href="#entrees-utilisateur-avec-stdcin" class="md-skip">
           Aller au contenu
         </a>
       
@@ -175,7 +179,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Organisation du Code : Headers, Implémentations et main
+              Gestion de la Saisie (std::cin)
             
           </span>
         </div>
@@ -354,11 +358,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../semaine_1/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../semaine_1_0_introduction/" class="md-tabs__link">
           
   
   
@@ -378,7 +384,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../semaine_1_3/" class="md-tabs__link">
+        <a href="../semaine_2_1_passage_copie_reference/" class="md-tabs__link">
           
   
   
@@ -555,24 +561,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   
@@ -590,7 +601,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -608,7 +619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../semaine_1/" class="md-nav__link">
+      <a href="../semaine_1_0_introduction/" class="md-nav__link">
         
   
   
@@ -636,7 +647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../semaine_1_1/" class="md-nav__link">
+      <a href="../semaine_1_1_types_de_donnees/" class="md-nav__link">
         
   
   
@@ -664,7 +675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../semaine_1_1_2/" class="md-nav__link">
+      <a href="../semaine_1_2_tableau/" class="md-nav__link">
         
   
   
@@ -689,10 +700,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../semaine_1_2/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestion de la Saisie (std::cin)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -708,6 +746,176 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-les-bases-flux-et-buffer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Les Bases : Flux et Buffer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-les-deux-facons-de-lire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Les Deux Façons de Lire
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Les Deux Façons de Lire">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-lire-un-mot-ou-un-nombre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Lire un mot ou un nombre (&gt;&gt;)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-lire-une-ligne-complete-stdgetline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Lire une ligne complète (std::getline)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-le-piege-classique-melanger-et-getline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Le Piège Classique : Mélanger &gt;&gt; et getline ⚠️
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Le Piège Classique : Mélanger &gt;&gt; et getline ⚠️">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le Scénario
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-solution-nettoyer-le-buffer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La Solution : Nettoyer le Buffer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-gestion-des-erreurs-de-saisie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Gestion des Erreurs de Saisie
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Gestion des Erreurs de Saisie">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cas-a-lecture-partielle-45abc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cas A : Lecture Partielle (45abc)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cas-b-echec-total-abc45" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cas B : Échec Total (abc45)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-solution-robuste-pattern-a-retenir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La Solution Robuste (Pattern à retenir)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resume-des-commandes-de-nettoyage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Résumé des Commandes de Nettoyage
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -720,7 +928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../semaine_1_4/" class="md-nav__link">
+      <a href="../semaine_1_4_compilation_cpp20/" class="md-nav__link">
         
   
   
@@ -748,7 +956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../exercices/exercice_semaine_1_1/" class="md-nav__link">
+      <a href="../../exercices/semaine_1_1_exercices/" class="md-nav__link">
         
   
   
@@ -776,7 +984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../exercices/exercice_semaine_1_1_2/" class="md-nav__link">
+      <a href="../../exercices/semaine_1_2_exercices_supplementaires/" class="md-nav__link">
         
   
   
@@ -861,7 +1069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../semaine_1_3/" class="md-nav__link">
+      <a href="../semaine_2_1_passage_copie_reference/" class="md-nav__link">
         
   
   
@@ -889,7 +1097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../semaine_2_structs/" class="md-nav__link">
+      <a href="../semaine_2_2_les_structs/" class="md-nav__link">
         
   
   
@@ -937,105 +1145,153 @@
   
 
 
-<h1 id="organisation-du-code-headers-implementations-et-main">Organisation du Code : Headers, Implémentations et <code>main</code></h1>
-<p>En C++, une bonne organisation des fichiers est essentielle pour créer un projet lisible, maintenable et facile à faire évoluer. Le principe directeur est le <strong>Principe de Responsabilité Unique</strong> : chaque fichier doit avoir un seul et unique but.</p>
-<p>Cette note explique comment structurer le code en séparant les données, les déclarations de fonctions et le point d'entrée du programme.</p>
+<h1 id="entrees-utilisateur-avec-stdcin">Entrées Utilisateur avec <code>std::cin</code></h1>
+<p>Cette section explique comment récupérer des informations de l'utilisateur via la console en utilisant la bibliothèque <code>&lt;iostream&gt;</code>.</p>
 <hr />
-<h2 id="le-scenario">Le Scénario</h2>
-<p>Nous voulons créer une <code>struct Livre</code>, écrire des fonctions pour la manipuler (nos "exercices"), et lancer le tout depuis un <code>main</code>.</p>
-<p>Voici la structure de fichiers idéale :
-- <code>Livre.hpp</code> : Définit ce qu'EST un <code>Livre</code>.
-- <code>Exercices.hpp</code> : Déclare ce qu'on PEUT FAIRE avec les livres.
-- <code>Exercices.cpp</code> : Explique COMMENT on fait ces actions.
-- <code>main.cpp</code> : Lance le programme.</p>
+<h2 id="1-les-bases-flux-et-buffer">1. Les Bases : Flux et Buffer</h2>
+<p>En C++, les entrées clavier ne vont pas directement dans vos variables. Elles passent par un <strong>flux d'entrée</strong> (<code>std::cin</code>) et une zone d'attente appelée le <strong>Buffer</strong>.</p>
+<ul>
+<li><strong><code>std::cin</code></strong> : Le flux qui lit le clavier.</li>
+<li><strong>Buffer</strong> : Une salle d'attente où les caractères s'empilent quand vous tapez.</li>
+<li><strong><code>std::endl</code></strong> : Pour l'affichage (<code>cout</code>), cela fait un retour à la ligne (<code>\n</code>) et force l'affichage immédiat.</li>
+</ul>
 <hr />
-<h3 id="etape-1-le-fichier-de-donnees-livrehpp">Étape 1 : Le Fichier de Données (<code>Livre.hpp</code>)</h3>
-<p><strong>Rôle : Exclusivement définir la structure des données.</strong></p>
-<p>Ce fichier est le "moule" ou le "plan". Il ne contient que la définition de la <code>struct</code>. Il ne sait rien des fonctions qui l'utiliseront. C'est la brique de base de notre programme.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Fichier : Livre.hpp</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">#pragma once</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1">// La seule et unique responsabilité de ce fichier est de définir la struct Livre.</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">struct</span><span class="w"> </span><span class="nc">Livre</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">titre</span><span class="p">;</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">auteur</span><span class="p">;</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">annee_publication</span><span class="p">;</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">};</span>
+<h2 id="2-les-deux-facons-de-lire">2. Les Deux Façons de Lire</h2>
+<p>Il existe deux outils principaux selon ce que vous voulez lire.</p>
+<h3 id="a-lire-un-mot-ou-un-nombre">A. Lire un mot ou un nombre (<code>&gt;&gt;</code>)</h3>
+<p>L'opérateur d'extraction <code>&gt;&gt;</code> lit des données jusqu'au premier "espace blanc" (Espace, Tabulation, ou Entrée).</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">age</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1">// Si je tape &quot;25&quot; + Entrée :</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">// -&gt; &#39;25&#39; va dans la variable.</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1">// -&gt; &#39;\n&#39; (Entrée) RESTE dans le buffer.</span>
 </span></code></pre></div>
-<hr />
-<h3 id="etape-2-le-fichier-dactions-exerciceshpp">Étape 2 : Le Fichier d'Actions (<code>Exercices.hpp</code>)</h3>
-<p><strong>Rôle : Déclarer les fonctions (l'"API" de nos exercices).</strong></p>
-<p>Ce fichier contient les <strong>signatures</strong> (prototypes) des fonctions. C'est le "menu des opérations" disponibles. Comme ces opérations travaillent sur des <code>Livre</code>, ce fichier <strong>doit inclure <code>Livre.hpp</code></strong> pour savoir ce qu'est un <code>Livre</code>.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// Fichier : Exercices.hpp</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="cp">#pragma once</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Livre.hpp&quot;</span><span class="c1"> // Dépendance : on a besoin de connaître la struct Livre.</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1">// Déclarations (promesses) des fonctions que nous allons offrir.</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="kt">void</span><span class="w"> </span><span class="nf">afficher_livre</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Livre</span><span class="o">&amp;</span><span class="w"> </span><span class="n">l</span><span class="p">);</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="kt">void</span><span class="w"> </span><span class="nf">corriger_annee</span><span class="p">(</span><span class="n">Livre</span><span class="o">&amp;</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nouvelle_annee</span><span class="p">);</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">Livre</span><span class="w"> </span><span class="nf">creer_best_seller</span><span class="p">();</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c1">// Une fonction &quot;chef d&#39;orchestre&quot; qui exécute tous nos exercices.</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="kt">void</span><span class="w"> </span><span class="nf">executer_les_exercices</span><span class="p">();</span>
+<h3 id="b-lire-une-ligne-complete-stdgetline">B. Lire une ligne complète (<code>std::getline</code>)</h3>
+<p>Cette fonction lit tout jusqu'au retour à la ligne (n). Elle est indispensable pour lire des phrases avec des espaces.  </p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">std</span><span class="o">::</span><span class="n">getline</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="p">);</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1">// Elle consomme le texte ET le &#39;\n&#39;, puis jette le &#39;\n&#39;.</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">// Le buffer est propre après son passage.</span>
 </span></code></pre></div>
-<hr />
-<h3 id="etape-3-limplementation-exercicescpp">Étape 3 : L'Implémentation (<code>Exercices.cpp</code>)</h3>
-<p><strong>Rôle : Écrire le code (l'implémentation) des fonctions déclarées.</strong></p>
-<p>Ce fichier contient la "cuisine" de notre programme. Il fournit le code pour chaque fonction promise dans <code>Exercices.hpp</code>. Naturellement, il doit inclure son propre en-tête pour s'assurer que les définitions correspondent aux déclarations.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// Fichier : Exercices.cpp</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Exercices.hpp&quot;</span><span class="c1"> // On inclut le menu des fonctions à implémenter.</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;format&gt;</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1">// Implémentation de la fonction d&#39;affichage</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="kt">void</span><span class="w"> </span><span class="nf">afficher_livre</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Livre</span><span class="o">&amp;</span><span class="w"> </span><span class="n">l</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="c1">// ... code pour afficher le livre ...</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">}</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="c1">// Implémentation de la fonction de correction</span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="kt">void</span><span class="w"> </span><span class="nf">corriger_annee</span><span class="p">(</span><span class="n">Livre</span><span class="o">&amp;</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nouvelle_annee</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="n">l</span><span class="p">.</span><span class="n">annee_publication</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nouvelle_annee</span><span class="p">;</span>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="p">}</span>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="c1">// ... autres implémentations ...</span>
-</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>
-</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="c1">// Implémentation du chef d&#39;orchestre</span>
-</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="kt">void</span><span class="w"> </span><span class="nf">executer_les_exercices</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;---&quot;</span><span class="w"> </span><span class="n">Lancement</span><span class="w"> </span><span class="n">des</span><span class="w"> </span><span class="n">exercices</span><span class="w"> </span><span class="o">---</span>
-</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="s">&quot;;</span>
-</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">    </span><span class="c1">// ... code qui appelle les autres fonctions et fait les exercices ...</span>
-</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="p">}</span>
+<h2 id="3-le-piege-classique-melanger-et-getline">3. Le Piège Classique : Mélanger <code>&gt;&gt;</code> et <code>getline</code> ⚠️</h2>
+<p>C'est l'erreur <strong>n°1</strong> des débutants en C++.</p>
+<h3 id="le-scenario">Le Scénario</h3>
+<ol>
+<li>Vous demandez un âge avec <code>std::cin &gt;&gt; age</code>.</li>
+<li>L'utilisateur tape <code>25</code> et appuie sur <code>Entrée</code>.</li>
+<li><code>cin</code> extrait le nombre <code>25</code>.</li>
+<li>🛑 <strong>Problème :</strong> Le caractère de saut de ligne <code>\n</code> (correspondant à la touche Entrée) <strong>reste dans le buffer</strong>.</li>
+<li>Vous appelez <code>std::getline</code> pour demander le nom.</li>
+<li><code>getline</code> regarde le buffer, voit le <code>\n</code> qui traîne immédiatement, pense que l'utilisateur a entré une ligne vide, et s'arrête.</li>
+</ol>
+<p><strong>Résultat :</strong> Le programme "saute" la demande du nom et ne vous laisse rien écrire.</p>
+<div class="admonition failure">
+<p class="admonition-title">Exemple du Code Problématique</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Age : &quot;</span><span class="p">;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">age</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1">// L&#39;utilisateur tape &quot;25&quot; + &quot;Entrée&quot;. </span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1">// Le &#39;\n&#39; reste en attente dans la mémoire.</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Nom : &quot;</span><span class="p">;</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="c1">// ❌ BUG : getline lit le &#39;\n&#39; restant et s&#39;arrête tout de suite.</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="n">std</span><span class="o">::</span><span class="n">getline</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="p">);</span><span class="w"> </span>
 </span></code></pre></div>
-<hr />
-<h3 id="etape-4-le-point-dentree-maincpp">Étape 4 : Le Point d'Entrée (<code>main.cpp</code>)</h3>
-<p><strong>Rôle : Lancer le programme, et c'est tout.</strong></p>
-<p>Le <code>main.cpp</code> doit être aussi simple que possible. Son seul but est de démarrer la logique principale du programme. Il n'a pas besoin de connaître les détails de la <code>struct Livre</code>, il a juste besoin de savoir quelle fonction appeler pour tout commencer.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// Fichier : main.cpp</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Exercices.hpp&quot;</span><span class="c1"> // On a juste besoin de connaître le &quot;menu des opérations&quot;.</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="n">executer_les_exercices</span><span class="p">();</span><span class="w"> </span><span class="c1">// On appuie sur le bouton &quot;Démarrer&quot;.</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">}</span>
+</div>
+<h3 id="la-solution-nettoyer-le-buffer">La Solution : Nettoyer le Buffer</h3>
+<p>Pour corriger cela, il faut <strong>ignorer</strong> le reste de la ligne (le <code>\n</code> restant) après chaque <code>cin &gt;&gt;</code> si vous comptez utiliser <code>getline</code> ensuite.</p>
+<div class="admonition success">
+<p class="admonition-title">La Correction</p>
+<p>Ajoutez cette ligne magique entre les deux lectures :</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;limits&gt;</span><span class="c1"> // Nécessaire pour numeric_limits</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1">// ...</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="c1">// 🧹 NETTOYAGE : On ignore tout jusqu&#39;au prochain retour à la ligne</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="p">.</span><span class="n">ignore</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">streamsize</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">(),</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">);</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Nom : &quot;</span><span class="p">;</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="n">std</span><span class="o">::</span><span class="n">getline</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="p">);</span><span class="w"> </span><span class="c1">// ✅ Fonctionne parfaitement</span>
 </span></code></pre></div>
-<hr />
-<h2 id="schema-visuel-des-inclusions">Schéma Visuel des Inclusions</h2>
-<p>Voici comment les fichiers dépendent les uns des autres. Une flèche <code>A -&gt; B</code> signifie <code>A inclut B</code>.</p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>           main.cpp  ---------------&gt; Exercices.hpp
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>                                          |
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Exercices.cpp  ----------------&gt; Exercices.hpp
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>                                          |
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>                                          v
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>                                      Livre.hpp
+<div class="admonition warning">
+<p class="admonition-title">Pourquoi pas juste <code>std::cin.ignore()</code> ?</p>
+</div>
+<p><code>std::cin.ignore()</code> tout seul n'ignore qu'un <strong>seul</strong> caractère.</p>
+<p>Si l'utilisateur a tapé <code>25 abc</code> puis <code>Entrée</code>, il restera encore <code>bc</code> et <code>\n</code> dans le buffer.</p>
+<p>La version avec <code>numeric_limits</code> est la version <strong>"blindée"</strong> : elle demande d'ignorer le nombre maximum de caractères possible jusqu'à trouver un retour à la ligne. C'est la seule façon de garantir un buffer vide.</p>
+</div>
+<h2 id="4-gestion-des-erreurs-de-saisie">4. Gestion des Erreurs de Saisie</h2>
+<p>Que se passe-t-il si l'utilisateur fait n'importe quoi alors que vous attendez un nombre ?</p>
+<h3 id="cas-a-lecture-partielle-45abc">Cas A : Lecture Partielle (<code>45abc</code>)</h3>
+<p>Si on demande un <code>int</code> et que l'utilisateur tape <code>45abc</code> :</p>
+<ol>
+<li><code>cin</code> lit <code>45</code> (✅ <strong>Succès</strong>).</li>
+<li><code>cin</code> s'arrête au <code>a</code> (car ce n'est pas un chiffre).</li>
+<li><strong>Résultat :</strong> La variable vaut <code>45</code>.</li>
+<li>⚠️ <strong>Problème :</strong> La chaîne <code>abc</code> reste dans le buffer pour la prochaine lecture. Cela causera probablement une erreur au prochain <code>cin</code>.</li>
+</ol>
+<h3 id="cas-b-echec-total-abc45">Cas B : Échec Total (<code>abc45</code>)</h3>
+<p>Si on demande un <code>int</code> et que l'utilisateur tape <code>abc45</code> :</p>
+<ol>
+<li><code>cin</code> voit <code>a</code> tout de suite.</li>
+<li>Il se met immédiatement en mode <strong>Erreur</strong> (le drapeau <code>failbit</code> s'active).</li>
+<li><strong>Résultat :</strong> La variable vaut 0 (ou reste inchangée).</li>
+<li>🛑 <strong>Danger :</strong> Tant que <code>cin</code> est en erreur ("fail state"), il refusera de lire quoi que ce soit d'autre. Il est "verrouillé".</li>
+</ol>
+<h3 id="la-solution-robuste-pattern-a-retenir">La Solution Robuste (Pattern à retenir)</h3>
+<p>Pour un programme solide, on utilise une boucle <code>while</code> qui vérifie l'état de <code>cin</code> après chaque tentative.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;limits&gt;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Entrez votre age : &quot;</span><span class="p">;</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="c1">// 1. La boucle gère L&#39;ÉCHEC (Type incorrect, ex: &quot;abc&quot;)</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">age</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Erreur, ce n&#39;est pas un nombre. Recommencez : &quot;</span><span class="p">;</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="p">.</span><span class="n">ignore</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">streamsize</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">(),</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">);</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">    </span><span class="c1">// 2. IMPORTANT : On gère le SUCCÈS (Nettoyage final)</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="c1">// On vide le buffer pour enlever le &#39;\n&#39; restant ou les déchets (ex: &quot;25abc&quot;)</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">    </span><span class="c1">// afin que la suite du programme (ex: un futur getline) fonctionne.</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="p">.</span><span class="n">ignore</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">streamsize</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">(),</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">);</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Age valide : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">    </span><span class="c1">// Ici, le buffer est propre, prêt pour un getline !</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="p">}</span>
 </span></code></pre></div>
-Comme vous pouvez le voir, <code>main.cpp</code> n'a pas besoin de connaître <code>Livre.hpp</code> directement. Il fait confiance à <code>Exercices.hpp</code> pour gérer cela.</p>
-<hr />
-<h2 id="la-compilation">La Compilation</h2>
-<p>Lors de la compilation, vous devez fournir <strong>tous les fichiers <code>.cpp</code></strong> au compilateur. Le compilateur les traduira en code machine, puis l'éditeur de liens (linker) les assemblera en un seul exécutable, en s'assurant que chaque appel de fonction (depuis <code>main</code> ou <code>Exercices.cpp</code>) trouve son implémentation correspondante.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>g++<span class="w"> </span>-std<span class="o">=</span>c++20<span class="w"> </span>-Wall<span class="w"> </span>-o<span class="w"> </span>mon_programme<span class="w"> </span>main.cpp<span class="w"> </span>Exercices.cpp
-</span></code></pre></div>
-<p>```</p>
+<h3 id="resume-des-commandes-de-nettoyage">Résumé des Commandes de Nettoyage</h3>
+<p>Ces deux commandes fonctionnent souvent en duo dans une gestion d'erreur robuste.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Commande</th>
+<th style="text-align: left;">Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>std::cin.clear()</code></td>
+<td style="text-align: left;"><strong>Réparer.</strong> Réinitialise les indicateurs d'erreur (comme <code>failbit</code>) pour sortir <code>cin</code> de son état de blocage et lui permettre de relire.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>std::cin.ignore(MAX, '\n')</code></td>
+<td style="text-align: left;"><strong>Vider.</strong> Jette tout ce qui traîne encore dans le buffer (la saisie fautive + le retour à la ligne) pour repartir sur des bases saines.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Note</p>
+<p>Dans ce tableau, <code>MAX</code> est un raccourci pour : <code>std::numeric_limits&lt;std::streamsize&gt;::max()</code>.</p>
+</div>
 
 
 
