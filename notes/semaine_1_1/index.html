@@ -759,9 +759,10 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="5. Manipulation des Chaînes de Caractères en C++">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#1-les-bases-de-stdstring" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -771,8 +772,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#2-operations-courantes" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -782,8 +783,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#3-copier-et-extraire-des-sous-chaines" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -792,8 +793,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. Copier et Extraire des Sous-Chaînes">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#copie-complete" class="md-nav__link">
@@ -817,12 +817,7 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#4-le-defi-des-accents-stdstring-vs-stdwstring" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -831,8 +826,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4. Le Défi des Accents : std::string vs std::wstring">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#la-solution-simple-pour-ce-cours-stdwstring" class="md-nav__link">
@@ -1317,7 +1311,7 @@
 <h2 id="5-manipulation-des-chaines-de-caracteres-en-c">5. Manipulation des Chaînes de Caractères en C++</h2>
 <p>En C++, le texte ne se gère pas avec des tableaux de <code>char</code> (trop dangereux), mais avec la classe standard <strong><code>std::string</code></strong>.</p>
 <hr />
-<h2 id="1-les-bases-de-stdstring">1. Les Bases de <code>std::string</code></h2>
+<h3 id="1-les-bases-de-stdstring">1. Les Bases de <code>std::string</code></h3>
 <p>Pour utiliser les chaînes, vous devez inclure <code>&lt;string&gt;</code>.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span><span class="c1"> // Indispensable</span>
@@ -1338,7 +1332,7 @@
 </span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="p">}</span>
 </span></code></pre></div>
 <hr />
-<h2 id="2-operations-courantes">2. Opérations Courantes</h2>
+<h3 id="2-operations-courantes">2. Opérations Courantes</h3>
 <p>Voici les méthodes que vous utiliserez dans 90% des cas avec <code>std::string</code>.</p>
 <table>
 <thead>
@@ -1395,7 +1389,7 @@
 </tbody>
 </table>
 <hr />
-<h2 id="3-copier-et-extraire-des-sous-chaines">3. Copier et Extraire des Sous-Chaînes</h2>
+<h3 id="3-copier-et-extraire-des-sous-chaines">3. Copier et Extraire des Sous-Chaînes</h3>
 <h3 id="copie-complete">Copie Complète</h3>
 <p>L'assignation <code>=</code> crée une copie entièrement nouvelle et indépendante.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
@@ -1434,7 +1428,7 @@
 </span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="p">}</span>
 </span></code></pre></div>
 <hr />
-<h2 id="4-le-defi-des-accents-stdstring-vs-stdwstring">4. Le Défi des Accents : <code>std::string</code> vs <code>std::wstring</code></h2>
+<h3 id="4-le-defi-des-accents-stdstring-vs-stdwstring">4. Le Défi des Accents : <code>std::string</code> vs <code>std::wstring</code></h3>
 <p>Gérer les accents en C++ est complexe car <code>std::string</code> a été conçu pour l'anglais. Pour C++, une chaîne n'est <strong>pas une liste de lettres</strong>, c'est une <strong>liste d'octets</strong>. Avec l'encodage moderne (UTF-8), un caractère accentué (<code>é</code>) pèse <strong>plusieurs octets</strong>.</p>
 <p><strong>Conséquence :</strong> Si vous prenez le mot <code>"été"</code>, C++ voit <strong>5 octets</strong> (2 pour le <code>é</code>, 1 pour le <code>t</code>, 2 pour le <code>é</code>).
 *   <code>"été".size()</code> renverra <code>5</code>.
