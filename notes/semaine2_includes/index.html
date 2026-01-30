@@ -8,13 +8,9 @@
       
       
       
-        <link rel="canonical" href="https://tousignantsimon-p3.github.io/notes/semaine_1_4/">
+        <link rel="canonical" href="https://tousignantsimon-p3.github.io/notes/semaine2_includes/">
       
       
-        <link rel="prev" href="../semaine_1_3/">
-      
-      
-        <link rel="next" href="../../exercices/exercice_semaine_1_1/">
       
       
         
@@ -25,7 +21,7 @@
     
     
       
-        <title>Compilation C++20 - Cours de Programmation 3</title>
+        <title>Organisation du Code : Headers, Implémentations et main - Cours de Programmation 3</title>
       
     
     
@@ -143,7 +139,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#guide-de-compilation-en-c20" class="md-skip">
+        <a href="#organisation-du-code-headers-implementations-et-main" class="md-skip">
           Aller au contenu
         </a>
       
@@ -179,7 +175,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Compilation C++20
+              Organisation du Code : Headers, Implémentations et main
             
           </span>
         </div>
@@ -358,12 +354,10 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../semaine_1/" class="md-tabs__link">
           
   
@@ -561,29 +555,24 @@
       
   
   
-    
   
   
-  
     
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
@@ -601,7 +590,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -756,37 +745,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Compilation C++20
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../semaine_1_4/" class="md-nav__link">
         
   
   
@@ -802,109 +764,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-quest-ce-que-la-compilation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Qu'est-ce que la Compilation ?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-la-commande-de-compilation-essentielle" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. La Commande de Compilation Essentielle
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-exemples-concrets" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Exemples Concrets
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. Exemples Concrets">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cas-1-un-projet-avec-un-seul-fichier" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cas 1 : Un Projet avec un Seul Fichier
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cas-2-un-projet-avec-plusieurs-fichiers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cas 2 : Un Projet avec Plusieurs Fichiers
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-executer-votre-programme" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Exécuter votre Programme
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-ca-ne-compile-pas-gerer-les-erreurs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. "Ça ne compile pas !" - Gérer les Erreurs
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1078,75 +937,104 @@
   
 
 
-<h1 id="guide-de-compilation-en-c20">Guide de Compilation en C++20</h1>
-<p>Ce document explique comment transformer votre code source (<code>.cpp</code>, <code>.hpp</code>) en un programme exécutable à l'aide du compilateur <code>g++</code> et du standard C++20.</p>
+<h1 id="organisation-du-code-headers-implementations-et-main">Organisation du Code : Headers, Implémentations et <code>main</code></h1>
+<p>En C++, une bonne organisation des fichiers est essentielle pour créer un projet lisible, maintenable et facile à faire évoluer. Le principe directeur est le <strong>Principe de Responsabilité Unique</strong> : chaque fichier doit avoir un seul et unique but.</p>
+<p>Cette note explique comment structurer le code en séparant les données, les déclarations de fonctions et le point d'entrée du programme.</p>
 <hr />
-<h2 id="1-quest-ce-que-la-compilation">1. Qu'est-ce que la Compilation ?</h2>
-<p>La compilation est le processus qui <strong>traduit</strong> votre code C++, lisible par un humain, en <strong>code machine</strong>, compréhensible par l'ordinateur. L'outil qui réalise cette traduction est appelé un <strong>compilateur</strong>. Dans ce cours, nous utiliserons <code>g++</code>, le compilateur C++ du projet GNU, l'un des plus populaires.</p>
-<p><img alt="Diagramme de compilation" src="../images/compilation.jpg" /></p>
+<h2 id="le-scenario">Le Scénario</h2>
+<p>Nous voulons créer une <code>struct Livre</code>, écrire des fonctions pour la manipuler (nos "exercices"), et lancer le tout depuis un <code>main</code>.</p>
+<p>Voici la structure de fichiers idéale :
+- <code>Livre.hpp</code> : Définit ce qu'EST un <code>Livre</code>.
+- <code>Exercices.hpp</code> : Déclare ce qu'on PEUT FAIRE avec les livres.
+- <code>Exercices.cpp</code> : Explique COMMENT on fait ces actions.
+- <code>main.cpp</code> : Lance le programme.</p>
 <hr />
-<h2 id="2-la-commande-de-compilation-essentielle">2. La Commande de Compilation Essentielle</h2>
-<p>Pour compiler, vous ouvrirez un terminal (ou une console) et taperez une commande qui ressemble à ceci :</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>g++<span class="w"> </span><span class="o">[</span>options<span class="o">]</span><span class="w"> </span>-o<span class="w"> </span><span class="o">[</span>nom_executable<span class="o">]</span><span class="w"> </span><span class="o">[</span>vos_fichiers.cpp<span class="o">]</span>
+<h3 id="etape-1-le-fichier-de-donnees-livrehpp">Étape 1 : Le Fichier de Données (<code>Livre.hpp</code>)</h3>
+<p><strong>Rôle : Exclusivement définir la structure des données.</strong></p>
+<p>Ce fichier est le "moule" ou le "plan". Il ne contient que la définition de la <code>struct</code>. Il ne sait rien des fonctions qui l'utiliseront. C'est la brique de base de notre programme.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Fichier : Livre.hpp</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">#pragma once</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1">// La seule et unique responsabilité de ce fichier est de définir la struct Livre.</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">struct</span><span class="w"> </span><span class="nc">Livre</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">titre</span><span class="p">;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">auteur</span><span class="p">;</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">annee_publication</span><span class="p">;</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">};</span>
 </span></code></pre></div>
-<p>Détaillons chaque partie :</p>
-<ul>
-<li><strong><code>g++</code></strong> : C'est l'appel au compilateur lui-même.</li>
-<li><strong><code>[options]</code></strong> : Ce sont des "drapeaux" (flags) qui modifient le comportement du compilateur. Les deux plus importants pour nous sont :<ul>
-<li><strong><code>-std=c++20</code></strong> : C'est le drapeau <strong>crucial</strong> qui dit à <code>g++</code> d'utiliser le standard C++20. Sans cela, les fonctionnalités modernes du langage ne seront pas disponibles.</li>
-<li><strong><code>-Wall</code></strong> : (Abréviation de "Warnings All") C'est une option très fortement recommandée qui active presque tous les avertissements (<code>warnings</code>). Le compilateur vous signalera des erreurs potentielles dans votre code, même si elles ne l'empêchent pas de compiler. C'est un filet de sécurité indispensable.</li>
-</ul>
-</li>
-<li><strong><code>-o [nom_executable]</code></strong> : L'option <code>-o</code> (pour "output") vous permet de nommer votre programme final. Si vous l'omettez, le fichier de sortie s'appellera <code>a.out</code> (sur Linux/macOS) ou <code>a.exe</code> (sur Windows).</li>
-<li><strong><code>[vos_fichiers.cpp]</code></strong> : C'est la liste de <strong>tous vos fichiers <code>.cpp</code></strong>, séparés par des espaces. Vous n'avez pas besoin d'inclure les fichiers <code>.hpp</code>, car ils sont gérés via les directives <code>#include</code> dans vos fichiers <code>.cpp</code>.</li>
-</ul>
 <hr />
-<h2 id="3-exemples-concrets">3. Exemples Concrets</h2>
-<h3 id="cas-1-un-projet-avec-un-seul-fichier">Cas 1 : Un Projet avec un Seul Fichier</h3>
-<p>Imaginons que vous avez un seul fichier <code>main.cpp</code>.</p>
-<p><strong>Commande :</strong>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>g++<span class="w"> </span>-std<span class="o">=</span>c++20<span class="w"> </span>-Wall<span class="w"> </span>-o<span class="w"> </span>mon_programme<span class="w"> </span>main.cpp
+<h3 id="etape-2-le-fichier-dactions-exerciceshpp">Étape 2 : Le Fichier d'Actions (<code>Exercices.hpp</code>)</h3>
+<p><strong>Rôle : Déclarer les fonctions (l'"API" de nos exercices).</strong></p>
+<p>Ce fichier contient les <strong>signatures</strong> (prototypes) des fonctions. C'est le "menu des opérations" disponibles. Comme ces opérations travaillent sur des <code>Livre</code>, ce fichier <strong>doit inclure <code>Livre.hpp</code></strong> pour savoir ce qu'est un <code>Livre</code>.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// Fichier : Exercices.hpp</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="cp">#pragma once</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Livre.hpp&quot;</span><span class="c1"> // Dépendance : on a besoin de connaître la struct Livre.</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1">// Déclarations (promesses) des fonctions que nous allons offrir.</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="kt">void</span><span class="w"> </span><span class="nf">afficher_livre</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Livre</span><span class="o">&amp;</span><span class="w"> </span><span class="n">l</span><span class="p">);</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="kt">void</span><span class="w"> </span><span class="nf">corriger_annee</span><span class="p">(</span><span class="n">Livre</span><span class="o">&amp;</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nouvelle_annee</span><span class="p">);</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">Livre</span><span class="w"> </span><span class="nf">creer_best_seller</span><span class="p">();</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c1">// Une fonction &quot;chef d&#39;orchestre&quot; qui exécute tous nos exercices.</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="kt">void</span><span class="w"> </span><span class="nf">executer_les_exercices</span><span class="p">();</span>
 </span></code></pre></div>
--   Ceci créera un exécutable nommé <code>mon_programme</code>.</p>
-<h3 id="cas-2-un-projet-avec-plusieurs-fichiers">Cas 2 : Un Projet avec Plusieurs Fichiers</h3>
-<p>Reprenons notre exemple <code>Commande</code>. Nous avons trois fichiers <code>.cpp</code> à compiler ensemble.</p>
-<p><strong>Commande :</strong>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>g++<span class="w"> </span>-std<span class="o">=</span>c++20<span class="w"> </span>-Wall<span class="w"> </span>-o<span class="w"> </span>exemple<span class="w"> </span>main.cpp<span class="w"> </span>Commande.cpp<span class="w"> </span>ServiceConnexion.cpp
-</span></code></pre></div>
--   <code>g++</code> va compiler chaque fichier <code>.cpp</code> et les lier ("link") ensemble pour créer un seul exécutable nommé <code>exemple</code>.</p>
 <hr />
-<h2 id="4-executer-votre-programme">4. Exécuter votre Programme</h2>
-<p>Une fois la compilation réussie (si la commande ne retourne aucune erreur), un nouveau fichier exécutable apparaîtra dans votre dossier.</p>
-<p>Pour l'exécuter dans le terminal :</p>
-<ul>
-<li>
-<p><strong>Sur Linux ou macOS :</strong>
-    <div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>./nom_executable<span class="w"> </span>
+<h3 id="etape-3-limplementation-exercicescpp">Étape 3 : L'Implémentation (<code>Exercices.cpp</code>)</h3>
+<p><strong>Rôle : Écrire le code (l'implémentation) des fonctions déclarées.</strong></p>
+<p>Ce fichier contient la "cuisine" de notre programme. Il fournit le code pour chaque fonction promise dans <code>Exercices.hpp</code>. Naturellement, il doit inclure son propre en-tête pour s'assurer que les définitions correspondent aux déclarations.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// Fichier : Exercices.cpp</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Exercices.hpp&quot;</span><span class="c1"> // On inclut le menu des fonctions à implémenter.</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;format&gt;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1">// Implémentation de la fonction d&#39;affichage</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="kt">void</span><span class="w"> </span><span class="nf">afficher_livre</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Livre</span><span class="o">&amp;</span><span class="w"> </span><span class="n">l</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="c1">// ... code pour afficher le livre ...</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">}</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="c1">// Implémentation de la fonction de correction</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="kt">void</span><span class="w"> </span><span class="nf">corriger_annee</span><span class="p">(</span><span class="n">Livre</span><span class="o">&amp;</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nouvelle_annee</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="n">l</span><span class="p">.</span><span class="n">annee_publication</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nouvelle_annee</span><span class="p">;</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="p">}</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="c1">// ... autres implémentations ...</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="c1">// Implémentation du chef d&#39;orchestre</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="kt">void</span><span class="w"> </span><span class="nf">executer_les_exercices</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;---&quot;</span><span class="w"> </span><span class="n">Lancement</span><span class="w"> </span><span class="n">des</span><span class="w"> </span><span class="n">exercices</span><span class="w"> </span><span class="o">---</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="s">&quot;;</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">    </span><span class="c1">// ... code qui appelle les autres fonctions et fait les exercices ...</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="p">}</span>
 </span></code></pre></div>
-    (Le <code>./</code> signifie "dans le dossier actuel")</p>
-</li>
-<li>
-<p><strong>Sur Windows (cmd ou PowerShell) :</strong>
-    <div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>.<span class="se">\n</span>om_executable.exe
-</span></code></pre></div></p>
-</li>
-</ul>
 <hr />
-<h2 id="5-ca-ne-compile-pas-gerer-les-erreurs">5. "Ça ne compile pas !" - Gérer les Erreurs</h2>
-<p>Il est normal d'avoir des erreurs de compilation. L'art de la programmation est de savoir les lire.</p>
-<p><strong>Les erreurs les plus courantes au début :</strong>
--   <strong>Oubli d'un point-virgule (<code>;</code>)</strong> à la fin d'une ligne.
--   <strong>Faute de frappe</strong> dans un nom de variable ou de fonction.
--   <strong>Accolade (<code>{</code> ou <code>}</code>) manquante.</strong>
--   <strong>Oubli d'inclure un en-tête</strong> (ex: <code>#include &lt;string&gt;</code> pour utiliser <code>std::string</code>).</p>
-<p>Lisez attentivement les messages d'erreur. <code>g++</code> vous donnera généralement le nom du fichier et le numéro de la ligne où l'erreur a été détectée.</p>
-<p><strong>Exemple de message d'erreur :</strong>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>main.cpp: In function &#39;int main()&#39;:
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>main.cpp:5:3: error: expected &#39;;&#39; before &#39;return&#39;
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>   return 0;
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>   ^~~~~~
+<h3 id="etape-4-le-point-dentree-maincpp">Étape 4 : Le Point d'Entrée (<code>main.cpp</code>)</h3>
+<p><strong>Rôle : Lancer le programme, et c'est tout.</strong></p>
+<p>Le <code>main.cpp</code> doit être aussi simple que possible. Son seul but est de démarrer la logique principale du programme. Il n'a pas besoin de connaître les détails de la <code>struct Livre</code>, il a juste besoin de savoir quelle fonction appeler pour tout commencer.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// Fichier : main.cpp</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Exercices.hpp&quot;</span><span class="c1"> // On a juste besoin de connaître le &quot;menu des opérations&quot;.</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="n">executer_les_exercices</span><span class="p">();</span><span class="w"> </span><span class="c1">// On appuie sur le bouton &quot;Démarrer&quot;.</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">}</span>
 </span></code></pre></div>
-Le compilateur nous dit qu'à la ligne 5 du fichier <code>main.cpp</code>, il s'attendait à un point-virgule avant le mot-clé <code>return</code>.</p>
+<hr />
+<h2 id="schema-visuel-des-inclusions">Schéma Visuel des Inclusions</h2>
+<p>Voici comment les fichiers dépendent les uns des autres. Une flèche <code>A -&gt; B</code> signifie <code>A inclut B</code>.</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>           main.cpp  ---------------&gt; Exercices.hpp
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>                                          |
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Exercices.cpp  ----------------&gt; Exercices.hpp
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>                                          |
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>                                          v
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>                                      Livre.hpp
+</span></code></pre></div>
+Comme vous pouvez le voir, <code>main.cpp</code> n'a pas besoin de connaître <code>Livre.hpp</code> directement. Il fait confiance à <code>Exercices.hpp</code> pour gérer cela.</p>
+<hr />
+<h2 id="la-compilation">La Compilation</h2>
+<p>Lors de la compilation, vous devez fournir <strong>tous les fichiers <code>.cpp</code></strong> au compilateur. Le compilateur les traduira en code machine, puis l'éditeur de liens (linker) les assemblera en un seul exécutable, en s'assurant que chaque appel de fonction (depuis <code>main</code> ou <code>Exercices.cpp</code>) trouve son implémentation correspondante.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>g++<span class="w"> </span>-std<span class="o">=</span>c++20<span class="w"> </span>-Wall<span class="w"> </span>-o<span class="w"> </span>mon_programme<span class="w"> </span>main.cpp<span class="w"> </span>Exercices.cpp
+</span></code></pre></div>
 <p>```</p>
 
 
