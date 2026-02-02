@@ -1104,169 +1104,169 @@
   <h1>Exercices supplémentaire semaine 1</h1>
 
 <h3 id="exercice-1-le-valideur-dacces-focus-cin-robuste-fonctions">Exercice 1 : Le Valideur d'Accès (Focus: <code>cin</code> robuste, fonctions)</h3>
-<p><strong>Objectif :</strong> Maîtriser la saisie numérique sécuritaire et l'appel de fonction simple.</p>
-<p><strong>Description :</strong>
-1.  Écrivez une fonction <code>bool est_majeur(int age)</code> qui retourne <code>true</code> si l'âge est de 18 ans ou plus, et <code>false</code> sinon.
-2.  Dans votre fonction <code>main</code>, demandez à l'utilisateur d'entrer son âge.
-3.  Votre <code>main</code> <strong>doit</strong> utiliser une boucle <code>while</code> (comme vu dans les notes) pour forcer l'utilisateur à entrer un nombre entier valide. Si l'utilisateur tape du texte, le programme doit afficher une erreur et redemander l'âge.
-4.  Une fois qu'un âge valide est entré, appelez la fonction <code>est_majeur</code> et affichez un message clair à l'utilisateur, par exemple : "Accès autorisé" ou "Accès refusé".</p>
-<p><strong>Concepts Pratiqués :</strong>
-- Boucle de saisie robuste (<code>while</code>, <code>cin.fail</code>, <code>cin.clear</code>, <code>cin.ignore</code>).
-- Fonctions avec <code>return</code>.
-- Passage par copie.</p>
+<p><strong>Objectif :</strong> Maîtriser la saisie numérique sécuritaire et l'appel de fonction simple.  </p>
+<p><strong>Description :</strong><br />
+1.  Écrivez une fonction <code>bool est_majeur(int age)</code> qui retourne <code>true</code> si l'âge est de 18 ans ou plus, et <code>false</code> sinon.<br />
+2.  Dans votre fonction <code>main</code>, demandez à l'utilisateur d'entrer son âge.<br />
+3.  Votre <code>main</code> <strong>doit</strong> utiliser une boucle <code>while</code> (comme vu dans les notes) pour forcer l'utilisateur à entrer un nombre entier valide. Si l'utilisateur tape du texte, le programme doit afficher une erreur et redemander l'âge.<br />
+4.  Une fois qu'un âge valide est entré, appelez la fonction <code>est_majeur</code> et affichez un message clair à l'utilisateur, par exemple : "Accès autorisé" ou "Accès refusé".  </p>
+<p><strong>Concepts Pratiqués :</strong><br />
+- Boucle de saisie robuste (<code>while</code>, <code>cin.fail</code>, <code>cin.clear</code>, <code>cin.ignore</code>).<br />
+- Fonctions avec <code>return</code>.<br />
+- Passage par copie.  </p>
 <hr />
 <h3 id="exercice-2-le-modificateur-de-profil-focus-passage-par-reference">Exercice 2 : Le Modificateur de Profil (Focus: Passage par référence)</h3>
-<p><strong>Objectif :</strong> Comprendre la différence fondamentale entre une fonction qui peut modifier une variable et une qui ne le peut pas.</p>
-<p><strong>Description :</strong>
-1.  Dans <code>main</code>, déclarez deux variables : <code>int score {1000};</code> et <code>int niveau {5};</code>.
-2.  Écrivez une fonction <code>void appliquer_bonus(int&amp; score_actuel)</code> qui prend un score <strong>par référence</strong> et lui ajoute 500 points.
-3.  Écrivez une fonction <code>void simuler_defaite(int score_copie)</code> qui prend un score <strong>par copie</strong>, lui enlève 200 points et affiche un message "Simulation : le score tombe à [nouveau score]".
-4.  Dans <code>main</code> :
-    -   Affichez le score et le niveau initiaux.
-    -   Appelez <code>simuler_defaite(score);</code>.
-    -   Affichez le score. (A-t-il changé ?)
+<p><strong>Objectif :</strong> Comprendre la différence fondamentale entre une fonction qui peut modifier une variable et une qui ne le peut pas.  </p>
+<p><strong>Description :</strong><br />
+1.  Dans <code>main</code>, déclarez deux variables : <code>int score {1000};</code> et <code>int niveau {5};</code>.<br />
+2.  Écrivez une fonction <code>void appliquer_bonus(int&amp; score_actuel)</code> qui prend un score <strong>par référence</strong> et lui ajoute 500 points.<br />
+3.  Écrivez une fonction <code>void simuler_defaite(int score_copie)</code> qui prend un score <strong>par copie</strong>, lui enlève 200 points et affiche un message "Simulation : le score tombe à [nouveau score]".<br />
+4.  Dans <code>main</code> :<br />
+    -   Affichez le score et le niveau initiaux.<br />
+    -   Appelez <code>simuler_defaite(score);</code>.<br />
+    -   Affichez le score. (A-t-il changé ?)<br />
     -   Appelez <code>appliquer_bonus(score);</code>.
-    -   Affichez le score final. (A-t-il changé ?)</p>
-<p><strong>Concepts Pratiqués :</strong>
-- Distinction claire entre passage par copie et par référence (<code>&amp;</code>).
-- Modification de l'état d'une variable du <code>main</code> depuis une fonction.</p>
+    -   Affichez le score final. (A-t-il changé ?)  </p>
+<p><strong>Concepts Pratiqués :</strong><br />
+- Distinction claire entre passage par copie et par référence (<code>&amp;</code>).<br />
+- Modification de l'état d'une variable du <code>main</code> depuis une fonction.  </p>
 <hr />
 <h3 id="exercice-3-lanalyseur-de-notes-focus-tableaux-stdssize">Exercice 3 : L'Analyseur de Notes (Focus: Tableaux, <code>std::ssize</code>)</h3>
-<p><strong>Objectif :</strong> Manipuler des tableaux et les passer à des fonctions pour analyse.</p>
-<p><strong>Description :</strong>
-Vous allez créer un petit programme d'analyse statistique pour un tableau de notes.
-1.  Dans <code>main</code>, initialisez un tableau de notes : <code>int notes[] {88, 76, 95, 54, 83, 65, 77};</code>.
-2.  Utilisez <code>std::ssize</code> pour obtenir la taille du tableau et la stocker dans une variable <code>taille</code>.
-3.  Créez une fonction <code>double calculer_moyenne(const int tableau[], int taille)</code> qui calcule et retourne la moyenne des notes.
-4.  Créez une fonction <code>int trouver_note_maximale(const int tableau[], int taille)</code> qui trouve et retourne la meilleure note.
-5.  Dans <code>main</code>, appelez vos deux fonctions avec le tableau <code>notes</code> et sa <code>taille</code>. Affichez les résultats de manière formatée (ex: "Moyenne: 78.2, Note maximale: 95").</p>
-<p><strong>Concepts Pratiqués :</strong>
-- Déclaration et initialisation de tableaux.
-- Utilisation de <code>std::ssize</code> (C++20).
-- Passage de tableaux (et de leur taille) à des fonctions.
-- Parcours de tableau avec une boucle <code>for</code>.</p>
+<p><strong>Objectif :</strong> Manipuler des tableaux et les passer à des fonctions pour analyse.  </p>
+<p><strong>Description :</strong><br />
+Vous allez créer un petit programme d'analyse statistique pour un tableau de notes.<br />
+1.  Dans <code>main</code>, initialisez un tableau de notes : <code>int notes[] {88, 76, 95, 54, 83, 65, 77};</code>.<br />
+2.  Utilisez <code>std::ssize</code> pour obtenir la taille du tableau et la stocker dans une variable <code>taille</code>.<br />
+3.  Créez une fonction <code>double calculer_moyenne(const int tableau[], int taille)</code> qui calcule et retourne la moyenne des notes.<br />
+4.  Créez une fonction <code>int trouver_note_maximale(const int tableau[], int taille)</code> qui trouve et retourne la meilleure note.<br />
+5.  Dans <code>main</code>, appelez vos deux fonctions avec le tableau <code>notes</code> et sa <code>taille</code>. Affichez les résultats de manière formatée (ex: "Moyenne: 78.2, Note maximale: 95").  </p>
+<p><strong>Concepts Pratiqués :</strong><br />
+- Déclaration et initialisation de tableaux.<br />
+- Utilisation de <code>std::ssize</code> (C++20).<br />
+- Passage de tableaux (et de leur taille) à des fonctions.<br />
+- Parcours de tableau avec une boucle <code>for</code>.  </p>
 <hr />
 <h3 id="exercice-4-linverseur-de-sequence-focus-algorithmique-sur-tableau">Exercice 4 : L'Inverseur de Séquence (Focus: Algorithmique sur tableau)</h3>
-<p><strong>Objectif :</strong> Modifier un tableau "en place" via une fonction.</p>
-<p><strong>Description :</strong>
-Le but est d'inverser l'ordre des éléments d'un tableau. Par exemple, <code>{10, 20, 30, 40, 50}</code> doit devenir <code>{50, 40, 30, 20, 10}</code>.
-1.  Écrivez une fonction <code>void afficher_tableau(const int tableau[], int taille)</code> qui affiche simplement le contenu d'un tableau sur une ligne.
-2.  Écrivez une fonction <code>void inverser_tableau(int tableau[], int taille)</code> qui inverse les éléments du tableau <em>in-place</em> (sans créer un deuxième tableau temporaire).
-3.  Dans <code>main</code> :
-    -   Déclarez un tableau, par exemple <code>int sequence[] {10, 20, 30, 40, 50};</code>.
-    -   Affichez le tableau original en utilisant votre fonction <code>afficher_tableau</code>.
-    -   Appelez <code>inverser_tableau</code>.
-    -   Affichez le tableau à nouveau pour prouver qu'il a bien été inversé.</p>
-<p><strong>Indice :</strong> Pour inverser, il suffit d'échanger le premier élément avec le dernier, le deuxième avec l'avant-dernier, et ainsi de suite, en s'arrêtant au milieu du tableau.</p>
-<p><strong>Concepts Pratiqués :</strong>
-- Algorithme simple (échange de variables).
-- Modification en place d'un tableau passé à une fonction.
-- Parcours de tableau.</p>
+<p><strong>Objectif :</strong> Modifier un tableau "en place" via une fonction.  </p>
+<p><strong>Description :</strong><br />
+Le but est d'inverser l'ordre des éléments d'un tableau. Par exemple, <code>{10, 20, 30, 40, 50}</code> doit devenir <code>{50, 40, 30, 20, 10}</code>.<br />
+1.  Écrivez une fonction <code>void afficher_tableau(const int tableau[], int taille)</code> qui affiche simplement le contenu d'un tableau sur une ligne.<br />
+2.  Écrivez une fonction <code>void inverser_tableau(int tableau[], int taille)</code> qui inverse les éléments du tableau <em>in-place</em> (sans créer un deuxième tableau temporaire).<br />
+3.  Dans <code>main</code> :<br />
+    -   Déclarez un tableau, par exemple <code>int sequence[] {10, 20, 30, 40, 50};</code>.<br />
+    -   Affichez le tableau original en utilisant votre fonction <code>afficher_tableau</code>.<br />
+    -   Appelez <code>inverser_tableau</code>.<br />
+    -   Affichez le tableau à nouveau pour prouver qu'il a bien été inversé.  </p>
+<p><strong>Indice :</strong> Pour inverser, il suffit d'échanger le premier élément avec le dernier, le deuxième avec l'avant-dernier, et ainsi de suite, en s'arrêtant au milieu du tableau.  </p>
+<p><strong>Concepts Pratiqués :</strong><br />
+- Algorithme simple (échange de variables).<br />
+- Modification en place d'un tableau passé à une fonction.<br />
+- Parcours de tableau.  </p>
 <hr />
 <h3 id="exercice-5-le-repertoire-telephonique-focus-combinaison-de-concepts">Exercice 5 : Le Répertoire Téléphonique (Focus: Combinaison de concepts)</h3>
-<p><strong>Objectif :</strong> Combiner la gestion de <code>string</code>, les tableaux et le nettoyage du buffer.</p>
-<p><strong>Description :</strong>
-Créez un mini-répertoire qui peut stocker 3 noms et 3 numéros de téléphone.
-1.  Dans <code>main</code>, déclarez deux tableaux statiques de taille 3 :
-    -   <code>std::string noms[3];</code>
-    -   <code>std::string telephones[3];</code>
-2.  Créez une boucle <code>for</code> qui s'exécute 3 fois. À chaque tour, elle doit :
-    -   Demander à l'utilisateur son <strong>âge</strong> (juste pour créer le piège de <code>cin</code> !).
-    -   Demander son <strong>nom complet</strong> (doit accepter les espaces).
-    -   Demander son <strong>numéro de téléphone</strong> (peut être stocké dans une <code>string</code>).
-    -   Stocker le nom et le téléphone dans les tableaux.
-    -   <strong>Attention :</strong> Assurez-vous de bien gérer le buffer de <code>cin</code> pour que la lecture du nom complet fonctionne après celle de l'âge !
-3.  Une fois les 3 contacts entrés, écrivez une fonction <code>void afficher_repertoire(const std::string noms[], const std::string telephones[], int taille)</code> qui affiche joliment la liste des contacts.
-4.  Appelez cette fonction depuis <code>main</code> pour afficher le résultat.</p>
-<p><strong>Concepts Pratiqués :</strong>
-- Combinaison de <code>cin &gt;&gt;</code> et <code>getline</code>.
-- <code>std::cin.ignore()</code>.
-- Tableaux de <code>std::string</code>.
-- Passage de plusieurs tableaux à une fonction.</p>
+<p><strong>Objectif :</strong> Combiner la gestion de <code>string</code>, les tableaux et le nettoyage du buffer.  </p>
+<p><strong>Description :</strong><br />
+Créez un mini-répertoire qui peut stocker 3 noms et 3 numéros de téléphone.<br />
+1.  Dans <code>main</code>, déclarez deux tableaux statiques de taille 3 :<br />
+    -   <code>std::string noms[3];</code><br />
+    -   <code>std::string telephones[3];</code><br />
+2.  Créez une boucle <code>for</code> qui s'exécute 3 fois. À chaque tour, elle doit :<br />
+    -   Demander à l'utilisateur son <strong>âge</strong> (juste pour créer le piège de <code>cin</code> !).<br />
+    -   Demander son <strong>nom complet</strong> (doit accepter les espaces).<br />
+    -   Demander son <strong>numéro de téléphone</strong> (peut être stocké dans une <code>string</code>).<br />
+    -   Stocker le nom et le téléphone dans les tableaux.<br />
+    -   <strong>Attention :</strong> Assurez-vous de bien gérer le buffer de <code>cin</code> pour que la lecture du nom complet fonctionne après celle de l'âge !<br />
+3.  Une fois les 3 contacts entrés, écrivez une fonction <code>void afficher_repertoire(const std::string noms[], const std::string telephones[], int taille)</code> qui affiche joliment la liste des contacts.<br />
+4.  Appelez cette fonction depuis <code>main</code> pour afficher le résultat.  </p>
+<p><strong>Concepts Pratiqués :</strong><br />
+- Combinaison de <code>cin &gt;&gt;</code> et <code>getline</code>.<br />
+- <code>std::cin.ignore()</code>.<br />
+- Tableaux de <code>std::string</code>.<br />
+- Passage de plusieurs tableaux à une fonction.  </p>
 <hr />
 <h3 id="exercice-6-le-menu-interactif-robuste">Exercice 6 : Le Menu Interactif Robuste</h3>
-<p><strong>Objectif :</strong> Créer une application complète et robuste avec un menu, en utilisant des fonctions et une gestion d'erreurs avancée.</p>
-<p><strong>Description :</strong>
-1.  Créez un programme qui affiche un menu à l'utilisateur :
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>--- MENU ---
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>1. Calculer l&#39;aire d&#39;un cercle
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2. Vérifier si un nombre est pair ou impair
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>3. Quitter
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Votre choix : 
+<p><strong>Objectif :</strong> Créer une application complète et robuste avec un menu, en utilisant des fonctions et une gestion d'erreurs avancée.  </p>
+<p><strong>Description :</strong><br />
+1.  Créez un programme qui affiche un menu à l'utilisateur :<br />
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>--- MENU ---  
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>1. Calculer l&#39;aire d&#39;un cercle  
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2. Vérifier si un nombre est pair ou impair  
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>3. Quitter  
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Votre choix :   
 </span></code></pre></div>
-2.  Le programme doit tourner en boucle et ré-afficher le menu tant que l'utilisateur ne choisit pas l'option 3.
-3.  La saisie du choix de menu doit être <strong>robuste</strong> : si l'utilisateur entre du texte ou un nombre invalide (ex: 5), le programme doit afficher une erreur et redemander le choix.
-4.  <strong>Option 1 :</strong> Appelle une fonction <code>calculer_aire_cercle()</code> qui demande à l'utilisateur un rayon (de type <code>double</code>), gère les erreurs de saisie pour le rayon, puis affiche l'aire (<code>π * rayon²</code>).
-5.  <strong>Option 2 :</strong> Appelle une fonction <code>verifier_parite()</code> qui demande un entier (en gérant les erreurs), puis affiche si le nombre est pair ou impair.
-6.  <strong>Option 3 :</strong> Termine le programme avec un message "Au revoir !".
-7.  Si l'utilisateur entre un nombre autre que 1, 2, ou 3, affichez un message "Option invalide".</p>
-<p><strong>Concepts Pratiqués :</strong>
-- Boucle <code>while</code> principale pour le menu.
-- Boucles <code>while</code> internes pour la saisie robuste.
-- Fonctions distinctes pour chaque action.
-- Logique conditionnelle (<code>if</code>/<code>else if</code>/<code>else</code>).</p>
+2.  Le programme doit tourner en boucle et ré-afficher le menu tant que l'utilisateur ne choisit pas l'option 3.<br />
+3.  La saisie du choix de menu doit être <strong>robuste</strong> : si l'utilisateur entre du texte ou un nombre invalide (ex: 5), le programme doit afficher une erreur et redemander le choix.<br />
+4.  <strong>Option 1 :</strong> Appelle une fonction <code>calculer_aire_cercle()</code> qui demande à l'utilisateur un rayon (de type <code>double</code>), gère les erreurs de saisie pour le rayon, puis affiche l'aire (<code>π * rayon²</code>).<br />
+5.  <strong>Option 2 :</strong> Appelle une fonction <code>verifier_parite()</code> qui demande un entier (en gérant les erreurs), puis affiche si le nombre est pair ou impair.<br />
+6.  <strong>Option 3 :</strong> Termine le programme avec un message "Au revoir !".<br />
+7.  Si l'utilisateur entre un nombre autre que 1, 2, ou 3, affichez un message "Option invalide".  </p>
+<p><strong>Concepts Pratiqués :</strong><br />
+- Boucle <code>while</code> principale pour le menu.<br />
+- Boucles <code>while</code> internes pour la saisie robuste.<br />
+- Fonctions distinctes pour chaque action.<br />
+- Logique conditionnelle (<code>if</code>/<code>else if</code>/<code>else</code>).  </p>
 <hr />
 <h3 id="exercice-7-statistiques-de-notes-avancees">Exercice 7 : Statistiques de Notes Avancées</h3>
-<p><strong>Objectif :</strong> Utiliser le passage par référence pour "retourner" plusieurs valeurs depuis une seule fonction.</p>
-<p><strong>Description :</strong>
-1.  Dans <code>main</code>, initialisez un tableau de notes : <code>int notes[] {88, 76, 95, 54, 83, 65, 77, 91};</code>.
-2.  Écrivez <strong>une seule</strong> fonction <code>void calculer_statistiques(const int tableau[], int taille, double&amp; moyenne, int&amp; note_max, int&amp; note_min)</code>.
-3.  Cette fonction ne retourne rien (<code>void</code>), mais elle calcule la moyenne, la note maximale et la note minimale et les place dans les variables passées <strong>par référence</strong> (<code>moyenne</code>, <code>note_max</code>, <code>note_min</code>).
-4.  Dans <code>main</code> :
-    -   Déclarez trois variables pour recevoir les résultats : <code>double moyenne_resultat {};</code>, <code>int max_resultat {};</code>, <code>int min_resultat {};</code>.
-    -   Appelez <code>calculer_statistiques</code> en lui passant le tableau et les trois variables par référence.
-    -   Affichez les valeurs des trois variables de résultats pour prouver que la fonction les a bien modifiées.</p>
-<p><strong>Concepts Pratiqués :</strong>
-- Paramètres de sortie (Output parameters) via le passage par référence.
-- Utilisation de <code>const</code> pour les paramètres d'entrée qui ne doivent pas être modifiés.
-- Algorithmique (trouver un min/max).</p>
+<p><strong>Objectif :</strong> Utiliser le passage par référence pour "retourner" plusieurs valeurs depuis une seule fonction.  </p>
+<p><strong>Description :</strong><br />
+1.  Dans <code>main</code>, initialisez un tableau de notes : <code>int notes[] {88, 76, 95, 54, 83, 65, 77, 91};</code>.<br />
+2.  Écrivez <strong>une seule</strong> fonction <code>void calculer_statistiques(const int tableau[], int taille, double&amp; moyenne, int&amp; note_max, int&amp; note_min)</code>.<br />
+3.  Cette fonction ne retourne rien (<code>void</code>), mais elle calcule la moyenne, la note maximale et la note minimale et les place dans les variables passées <strong>par référence</strong> (<code>moyenne</code>, <code>note_max</code>, <code>note_min</code>).<br />
+4.  Dans <code>main</code> :<br />
+    -   Déclarez trois variables pour recevoir les résultats : <code>double moyenne_resultat {};</code>, <code>int max_resultat {};</code>, <code>int min_resultat {};</code>.<br />
+    -   Appelez <code>calculer_statistiques</code> en lui passant le tableau et les trois variables par référence.<br />
+    -   Affichez les valeurs des trois variables de résultats pour prouver que la fonction les a bien modifiées.  </p>
+<p><strong>Concepts Pratiqués :</strong><br />
+- Paramètres de sortie (Output parameters) via le passage par référence.<br />
+- Utilisation de <code>const</code> pour les paramètres d'entrée qui ne doivent pas être modifiés.<br />
+- Algorithmique (trouver un min/max).  </p>
 <hr />
 <h3 id="exercice-8-le-palindrome">Exercice 8 : Le Palindrome</h3>
-<p><strong>Objectif :</strong> Implémenter un algorithme simple en manipulant une chaîne de caractères comme un tableau.</p>
-<p><strong>Description :</strong>
-Un palindrome est un mot qui se lit de la même manière à l'endroit et à l'envers (ex: "radar", "level", "kayak").
-1.  Écrivez une fonction <code>bool est_palindrome(const std::string&amp; mot)</code>.
-2.  À l'intérieur de cette fonction, utilisez une boucle pour comparer les caractères du mot. Comparez le premier avec le dernier, le deuxième avec l'avant-dernier, et ainsi de suite, en s'arrêtant au milieu. Si vous trouvez une paire de caractères qui ne correspond pas, la fonction peut immédiatement retourner <code>false</code>. Si la boucle se termine sans trouver de différence, le mot est un palindrome.
-    - <strong>Indice :</strong> Vous n'avez pas besoin de créer une deuxième chaîne inversée. Travaillez avec deux index (un qui part du début et un qui part de la fin).
-3.  Dans <code>main</code>, demandez un mot à l'utilisateur, appelez votre fonction et affichez le résultat (ex: "<code>radar</code> est un palindrome." ou "<code>bonjour</code> n'est pas un palindrome.").</p>
-<p><strong>Concepts Pratiqués :</strong>
-- Manipulation de <code>std::string</code> avec l'opérateur <code>[]</code>.
-- Logique algorithmique (deux pointeurs/index).
-- Retour anticipé (<code>return false;</code>) dès qu'une condition est remplie.</p>
+<p><strong>Objectif :</strong> Implémenter un algorithme simple en manipulant une chaîne de caractères comme un tableau.  </p>
+<p><strong>Description :</strong><br />
+Un palindrome est un mot qui se lit de la même manière à l'endroit et à l'envers (ex: "radar", "level", "kayak").<br />
+1.  Écrivez une fonction <code>bool est_palindrome(const std::string&amp; mot)</code>.<br />
+2.  À l'intérieur de cette fonction, utilisez une boucle pour comparer les caractères du mot. Comparez le premier avec le dernier, le deuxième avec l'avant-dernier, et ainsi de suite, en s'arrêtant au milieu. Si vous trouvez une paire de caractères qui ne correspond pas, la fonction peut immédiatement retourner <code>false</code>. Si la boucle se termine sans trouver de différence, le mot est un palindrome.<br />
+    - <strong>Indice :</strong> Vous n'avez pas besoin de créer une deuxième chaîne inversée. Travaillez avec deux index (un qui part du début et un qui part de la fin).<br />
+3.  Dans <code>main</code>, demandez un mot à l'utilisateur, appelez votre fonction et affichez le résultat (ex: "<code>radar</code> est un palindrome." ou "<code>bonjour</code> n'est pas un palindrome.").  </p>
+<p><strong>Concepts Pratiqués :</strong><br />
+- Manipulation de <code>std::string</code> avec l'opérateur <code>[]</code>.<br />
+- Logique algorithmique (deux pointeurs/index).<br />
+- Retour anticipé (<code>return false;</code>) dès qu'une condition est remplie.  </p>
 <hr />
 <h3 id="exercice-9-le-trieur-de-tableau-tri-a-bulles">Exercice 9 : Le Trieur de Tableau (Tri à Bulles)</h3>
-<p><strong>Objectif :</strong> Implémenter un algorithme de tri simple, un classique de l'informatique.</p>
-<p><strong>Description :</strong>
-Le tri à bulles consiste à parcourir un tableau plusieurs fois. À chaque passage, on compare les éléments adjacents (l'élément <code>i</code> et <code>i+1</code>) et on les échange s'ils sont dans le mauvais ordre. On répète ces passages jusqu'à ce que le tableau soit trié.
-1.  Dans <code>main</code>, déclarez un tableau non trié : <code>int tableau[] {5, 1, 4, 2, 8, 3};</code>.
-2.  Créez une fonction <code>void tri_a_bulles(int tableau[], int taille)</code>.
-3.  Dans cette fonction, implémentez l'algorithme :
-    -   Vous aurez besoin d'une boucle <code>for</code> imbriquée dans une autre.
-    -   La boucle externe contrôle le nombre de passages.
-    -   La boucle interne parcourt le tableau et compare les paires d'éléments.
-    -   Si <code>tableau[j]</code> est plus grand que <code>tableau[j+1]</code>, vous devez les échanger. Pour cela, vous pouvez utiliser une fonction <code>void echange(int&amp; a, int&amp; b)</code> que vous écrirez également (revoyez le passage par référence !).
-4.  Dans <code>main</code>, affichez le tableau, appelez la fonction de tri, puis affichez à nouveau le tableau pour montrer qu'il est maintenant trié.</p>
-<p><strong>Concepts Pratiqués :</strong>
-- Algorithme de tri.
-- Boucles imbriquées.
-- Modification en place d'un tableau.
-- Fonction utilitaire (helper function) avec passage par référence.</p>
+<p><strong>Objectif :</strong> Implémenter un algorithme de tri simple, un classique de l'informatique.  </p>
+<p><strong>Description :</strong><br />
+Le tri à bulles consiste à parcourir un tableau plusieurs fois. À chaque passage, on compare les éléments adjacents (l'élément <code>i</code> et <code>i+1</code>) et on les échange s'ils sont dans le mauvais ordre. On répète ces passages jusqu'à ce que le tableau soit trié.<br />
+1.  Dans <code>main</code>, déclarez un tableau non trié : <code>int tableau[] {5, 1, 4, 2, 8, 3};</code>.<br />
+2.  Créez une fonction <code>void tri_a_bulles(int tableau[], int taille)</code>.<br />
+3.  Dans cette fonction, implémentez l'algorithme :<br />
+    -   Vous aurez besoin d'une boucle <code>for</code> imbriquée dans une autre.<br />
+    -   La boucle externe contrôle le nombre de passages.<br />
+    -   La boucle interne parcourt le tableau et compare les paires d'éléments.<br />
+    -   Si <code>tableau[j]</code> est plus grand que <code>tableau[j+1]</code>, vous devez les échanger. Pour cela, vous pouvez utiliser une fonction <code>void echange(int&amp; a, int&amp; b)</code> que vous écrirez également (revoyez le passage par référence !).<br />
+4.  Dans <code>main</code>, affichez le tableau, appelez la fonction de tri, puis affichez à nouveau le tableau pour montrer qu'il est maintenant trié.  </p>
+<p><strong>Concepts Pratiqués :</strong><br />
+- Algorithme de tri.<br />
+- Boucles imbriquées.<br />
+- Modification en place d'un tableau.<br />
+- Fonction utilitaire (helper function) avec passage par référence.  </p>
 <hr />
 <h3 id="exercice-10-fusion-de-tableaux-tries">Exercice 10 : Fusion de Tableaux Triés</h3>
-<p><strong>Objectif :</strong> Manipuler plusieurs tableaux et gérer plusieurs index simultanément.</p>
-<p><strong>Description :</strong>
+<p><strong>Objectif :</strong> Manipuler plusieurs tableaux et gérer plusieurs index simultanément.  </p>
+<p><strong>Description :</strong><br />
 C'est une étape clé de l'algorithme de "tri fusion" (merge sort).
-1.  Dans <code>main</code>, déclarez deux tableaux déjà triés :
-    -   <code>int tab1[] {10, 30, 50, 70};</code>
-    -   <code>int tab2[] {20, 40, 60};</code>
-2.  Créez une fonction <code>void fusionner(const int tab1[], int taille1, const int tab2[], int taille2, int resultat[])</code>.
-3.  Cette fonction reçoit les deux tableaux sources et un troisième tableau <code>resultat</code> (qui doit être assez grand pour contenir tous les éléments). Elle doit remplir <code>resultat</code> en piochant intelligemment dans <code>tab1</code> et <code>tab2</code> pour que <code>resultat</code> soit aussi trié.
-    -   <strong>Indice :</strong> Vous aurez besoin de trois variables d'index : une pour votre position dans <code>tab1</code>, une pour <code>tab2</code>, et une pour <code>resultat</code>.
-4.  Dans <code>main</code>, déclarez un tableau <code>resultat</code> de la bonne taille, appelez votre fonction, puis affichez le tableau <code>resultat</code> pour vérifier le travail. Le résultat attendu est <code>{10, 20, 30, 40, 50, 60, 70}</code>.</p>
-<p><strong>Concepts Pratiqués :</strong>
-- Algorithme de fusion.
-- Gestion de plusieurs index.
-- Utilisation d'un tableau comme "paramètre de sortie" (le tableau <code>resultat</code> est modifié).</p>
+1.  Dans <code>main</code>, déclarez deux tableaux déjà triés :<br />
+    -   <code>int tab1[] {10, 30, 50, 70};</code><br />
+    -   <code>int tab2[] {20, 40, 60};</code><br />
+2.  Créez une fonction <code>void fusionner(const int tab1[], int taille1, const int tab2[], int taille2, int resultat[])</code>.<br />
+3.  Cette fonction reçoit les deux tableaux sources et un troisième tableau <code>resultat</code> (qui doit être assez grand pour contenir tous les éléments). Elle doit remplir <code>resultat</code> en piochant intelligemment dans <code>tab1</code> et <code>tab2</code> pour que <code>resultat</code> soit aussi trié.<br />
+    -   <strong>Indice :</strong> Vous aurez besoin de trois variables d'index : une pour votre position dans <code>tab1</code>, une pour <code>tab2</code>, et une pour <code>resultat</code>.<br />
+4.  Dans <code>main</code>, déclarez un tableau <code>resultat</code> de la bonne taille, appelez votre fonction, puis affichez le tableau <code>resultat</code> pour vérifier le travail. Le résultat attendu est <code>{10, 20, 30, 40, 50, 60, 70}</code>.  </p>
+<p><strong>Concepts Pratiqués :</strong><br />
+- Algorithme de fusion.<br />
+- Gestion de plusieurs index.<br />
+- Utilisation d'un tableau comme "paramètre de sortie" (le tableau <code>resultat</code> est modifié).  </p>
 
 
 
