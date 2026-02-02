@@ -1102,25 +1102,25 @@ Dans <code>main</code>, initialisez un tableau (ex: <code>int tableau[] {10, 20,
 Dans <code>main</code>, déclarez un tableau comme <code>int tableau[] {1, 2, 3, 4, 5};</code>, affichez-le, appelez la fonction, puis affichez-le à nouveau pour voir le changement.</p>
 <hr />
 <h3 id="bloc-4-c-moderne-stdspan-vector">Bloc 4 : C++ Moderne (std::span &amp; Vector)</h3>
-<p><strong>Exercice 16 : La Règle d'Or (std::span)</strong> - <strong>Objectif :</strong> Remplacer le couple <code>(tableau, taille)</code> par <code>std::span</code>.<br />
-- <strong>Tâche :</strong>
-  1. Reprenez votre fonction <code>calculer_somme</code> de l'exercice 13.
-  2. Changez sa signature pour qu'elle prenne un <code>std::span&lt;const int&gt;</code> au lieu d'un tableau et une taille.
-  3. Dans <code>main</code>, créez un tableau brut (<code>int t[]...</code>).
-  4. Appelez la fonction. Remarquez que vous n'avez plus besoin de passer la taille manuellement !</p>
-<p><strong>Exercice 17 : Optimisation avec Référence Constante</strong> - <strong>Objectif :</strong> Éviter les copies inutiles sur les gros objets.<br />
-- <strong>Tâche :</strong>
-  1. Écrivez une fonction <code>afficher_message(std::string message)</code> (par copie).
-  2. Modifiez-la pour utiliser le passage par <strong>référence constante</strong> (<code>const std::string&amp;</code>).
-  3. Ajoutez un <code>cout</code> dans la fonction pour vérifier que le message s'affiche bien.
-  <em>Question :</em> À l'utilisation dans le <code>main</code>, est-ce que le code d'appel change ? (Réponse attendue : Non, c'est transparent, mais plus rapide).</p>
-<p><strong>Exercice 18 : Vecteur Dynamique et Span</strong> - <strong>Objectif :</strong> Utiliser un tableau qui peut grandir (<code>vector</code>) avec une fonction moderne.<br />
-- <strong>Tâche :</strong>
-  1. Incluez <code>&lt;vector&gt;</code>.
-  2. Créez un <code>std::vector&lt;int&gt;</code> vide.
-  3. Utilisez une boucle <code>while</code> pour demander des nombres à l'utilisateur. Ajoutez-les au vecteur avec <code>.push_back()</code>. Arrêtez quand il tape -1.
+<p><strong>Exercice 16 : La Règle d'Or (std::span)</strong> - <strong>Objectif :</strong>   Remplacer le couple <code>(tableau, taille)</code> par <code>std::span</code>.<br />
+- <strong>Tâche :</strong><br />
+  1. Reprenez votre fonction <code>calculer_somme</code> de l'exercice 13.<br />
+  2. Changez sa signature pour qu'elle prenne un <code>std::span&lt;const int&gt;</code> au lieu d'un tableau et une taille.<br />
+  3. Dans <code>main</code>, créez un tableau brut (<code>int t[]...</code>).<br />
+  4. Appelez la fonction. Remarquez que vous n'avez plus besoin de passer la taille manuellement !  </p>
+<p><strong>Exercice 17 : Optimisation avec Référence Constante</strong> -   <strong>Objectif :</strong> Éviter les copies inutiles sur les gros objets.<br />
+- <strong>Tâche :</strong><br />
+  1. Écrivez une fonction <code>afficher_message(std::string message)</code> (par copie).<br />
+  2. Modifiez-la pour utiliser le passage par <strong>référence constante</strong> (<code>const std::string&amp;</code>).<br />
+  3. Ajoutez un <code>cout</code> dans la fonction pour vérifier que le message s'affiche bien.<br />
+<em>Question :</em> À l'utilisation dans le <code>main</code>, est-ce que le code d'appel change ? (Réponse attendue : Non, c'est transparent, mais plus rapide).  </p>
+<p><strong>Exercice 18 : Vecteur Dynamique et Span</strong> - <strong>Objectif :</strong>   Utiliser un tableau qui peut grandir (<code>vector</code>) avec une fonction moderne.  <br />
+- <strong>Tâche :</strong><br />
+  1. Incluez <code>&lt;vector&gt;</code>.<br />
+  2. Créez un <code>std::vector&lt;int&gt;</code> vide.<br />
+  3. Utilisez une boucle <code>while</code> pour demander des nombres à l'utilisateur. Ajoutez-les au vecteur avec <code>.push_back()</code>. Arrêtez quand il tape -1.<br />
   4. Appelez votre fonction <code>calculer_somme</code> (celle avec le <code>std::span</code> de l'exercice 16) en lui passant ce vecteur.
-  <em>Observation :</em> Notez que le <code>span</code> accepte aussi bien le tableau brut (Ex 16) que le vecteur (Ex 18).</p>
+  <em>Observation :</em> Notez que le <code>span</code> accepte aussi bien le tableau brut (Ex 16) que le vecteur (Ex 18).  </p>
 
 
 
