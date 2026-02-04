@@ -1199,18 +1199,18 @@
 
 
 <h1 id="allocation-de-struct-pile-stack-vs-tas-heap">Allocation de <code>struct</code> : Pile (Stack) vs. Tas (Heap)</h1>
-<p>En C++, la gestion de la mémoire est un concept fondamental, et comprendre la différence entre allouer des données sur la pile d'appel (stack) et sur le tas (heap) est crucial, surtout lorsqu'il s'agit de <code>struct</code> (ou de classes).</p>
+<p>En C++, la gestion de la mémoire est un concept fondamental, et comprendre la différence entre allouer des données sur la pile d'appel (stack) et sur le tas (heap) est crucial, surtout lorsqu'il s'agit de <code>struct</code> (ou de classes).  </p>
 <h2 id="1-allocation-sur-la-pile-stack">1. Allocation sur la Pile (Stack)</h2>
-<p>Lorsqu'une variable (y compris une instance de <code>struct</code>) est déclarée directement à l'intérieur d'une fonction sans utiliser <code>new</code>, elle est allouée sur la pile d'appel.</p>
+<p>Lorsqu'une variable (y compris une instance de <code>struct</code>) est déclarée directement à l'intérieur d'une fonction sans utiliser <code>new</code>, elle est allouée sur la pile d'appel.  </p>
 <h3 id="caracteristiques">Caractéristiques :</h3>
 <ul>
-<li><strong>Durée de vie automatique (Automatic Storage Duration) :</strong> L'objet est créé à l'entrée du bloc où il est déclaré et détruit automatiquement à la sortie de ce bloc (généralement la fin de la fonction).</li>
-<li><strong>Rapide :</strong> L'allocation et la désallocation sont très rapides car elles impliquent de simples ajustements du pointeur de pile.</li>
-<li><strong>Taille fixe :</strong> La taille de l'objet doit être connue à la compilation.</li>
-<li><strong>Mémoire limitée :</strong> La pile a une taille limitée (souvent quelques Mo), et une allocation excessive peut entraîner un "stack overflow".</li>
+<li><strong>Durée de vie automatique (Automatic Storage Duration) :</strong> L'objet est créé à l'entrée du bloc où il est déclaré et détruit automatiquement à la sortie de ce bloc (généralement la fin de la fonction).  </li>
+<li><strong>Rapide :</strong> L'allocation et la désallocation sont très rapides car elles impliquent de simples ajustements du pointeur de pile.  </li>
+<li><strong>Taille fixe :</strong> La taille de l'objet doit être connue à la compilation.  </li>
+<li><strong>Mémoire limitée :</strong> La pile a une taille limitée (souvent quelques Mo), et une allocation excessive peut entraîner un "stack overflow".  </li>
 </ul>
 <h3 id="exemple">Exemple :</h3>
-<p>Considérons une simple <code>struct</code> <code>Point</code>.</p>
+<p>Considérons une simple <code>struct</code> <code>Point</code>.  </p>
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">Point</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
@@ -1228,17 +1228,17 @@
 </span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p">}</span><span class="w"> </span><span class="c1">// &lt;-- &#39;p1&#39; est détruit ici</span>
 </span></code></pre></div>
 <h2 id="2-allocation-sur-le-tas-heap">2. Allocation sur le Tas (Heap)</h2>
-<p>L'allocation sur le tas, ou mémoire dynamique, est effectuée explicitement par le programmeur à l'aide de l'opérateur <code>new</code>.</p>
+<p>L'allocation sur le tas, ou mémoire dynamique, est effectuée explicitement par le programmeur à l'aide de l'opérateur <code>new</code>.  </p>
 <h3 id="caracteristiques_1">Caractéristiques :</h3>
 <ul>
-<li><strong>Durée de vie dynamique (Dynamic Storage Duration) :</strong> L'objet est créé et existe jusqu'à ce qu'il soit explicitement détruit par l'opérateur <code>delete</code>. Si <code>delete</code> n'est pas appelé, il y a une fuite de mémoire.</li>
-<li><strong>Plus lente :</strong> L'allocation et la désallocation sont plus lentes que sur la pile car elles impliquent la recherche d'espace mémoire disponible.</li>
-<li><strong>Taille variable :</strong> La taille de l'objet peut être déterminée à l'exécution.</li>
-<li><strong>Mémoire plus grande :</strong> Le tas est généralement beaucoup plus grand que la pile (limité par la mémoire vive disponible).</li>
-<li><strong>Pointeurs :</strong> L'opérateur <code>new</code> renvoie un pointeur vers l'objet alloué sur le tas.</li>
+<li><strong>Durée de vie dynamique (Dynamic Storage Duration) :</strong> L'objet est créé et existe jusqu'à ce qu'il soit explicitement détruit par l'opérateur <code>delete</code>. Si <code>delete</code> n'est pas appelé, il y a une fuite de mémoire.  </li>
+<li><strong>Plus lente :</strong> L'allocation et la désallocation sont plus lentes que sur la pile car elles impliquent la recherche d'espace mémoire disponible.  </li>
+<li><strong>Taille variable :</strong> La taille de l'objet peut être déterminée à l'exécution.  </li>
+<li><strong>Mémoire plus grande :</strong> Le tas est généralement beaucoup plus grand que la pile (limité par la mémoire vive disponible).  </li>
+<li><strong>Pointeurs :</strong> L'opérateur <code>new</code> renvoie un pointeur vers l'objet alloué sur le tas.  </li>
 </ul>
 <h3 id="exemple_1">Exemple :</h3>
-<p>Reprenons notre <code>struct</code> <code>Point</code>.</p>
+<p>Reprenons notre <code>struct</code> <code>Point</code>.  </p>
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">Point</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
@@ -1305,10 +1305,10 @@
 </tbody>
 </table>
 <h2 id="4-les-dangers-des-pointeurs-standards-bruts">4. Les Dangers des Pointeurs Standards (bruts)</h2>
-<p>Comme illustré avec <code>new</code> et <code>delete</code>, la gestion manuelle de la mémoire sur le tas avec des pointeurs standards (dits "bruts" ou "raw pointers") est sujette aux erreurs :
-- <strong>Fuites de mémoire (Memory Leaks) :</strong> Oubli de <code>delete</code>.
-- <strong>Pointeurs invalides (Dangling Pointers) :</strong> Utilisation d'un pointeur après que la mémoire qu'il pointait ait été libérée.
-- <strong>Double libération (Double Free) :</strong> Tenter de libérer la même mémoire deux fois.</p>
+<p>Comme illustré avec <code>new</code> et <code>delete</code>, la gestion manuelle de la mémoire sur le tas avec des pointeurs standards (dits "bruts" ou "raw pointers") est sujette aux erreurs :  <br />
+- <strong>Fuites de mémoire (Memory Leaks) :</strong> Oubli de <code>delete</code>.  <br />
+- <strong>Pointeurs invalides (Dangling Pointers) :</strong> Utilisation d'un pointeur après que la mémoire qu'il pointait ait été libérée.  <br />
+- <strong>Double libération (Double Free) :</strong> Tenter de libérer la même mémoire deux fois.    </p>
 <p>Bien que nous nous concentrions sur les pointeurs standards pour le moment, il est important de savoir que C++ moderne offre une solution beaucoup plus sûre et robuste pour la gestion de la mémoire dynamique : les <strong>pointeurs intelligents (smart pointers)</strong>. Ceux-ci gèrent automatiquement la libération de la mémoire, éliminant ainsi la plupart des erreurs mentionnées ci-dessus. Nous explorerons ce sujet plus en détail ultérieurement.</p>
 
 
