@@ -586,10 +586,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#12-initialisation-uniforme-avec-les-accolades" class="md-nav__link">
+  <a href="#12-encapsulation-et-accesseurs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2. Initialisation Uniforme avec les Accolades {}
+        1.2. Encapsulation et Accesseurs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-initialisation-uniforme-avec-les-accolades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Initialisation Uniforme avec les Accolades {}
       
     </span>
   </a>
@@ -1427,9 +1438,14 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>Variables</strong></td>
+<td style="text-align: left;"><strong>Variables Locales</strong></td>
 <td style="text-align: left;"><code>snake_case</code></td>
 <td style="text-align: left;"><code>nombre_etudiants</code>, <code>index_courant</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Attributs Membres (privés)</strong></td>
+<td style="text-align: left;"><code>snake_case_</code></td>
+<td style="text-align: left;"><code>nombre_etudiants_</code>, <code>index_courant_</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Fonctions</strong></td>
@@ -1448,7 +1464,10 @@
 </tr>
 </tbody>
 </table>
-<h3 id="12-initialisation-uniforme-avec-les-accolades">1.2. Initialisation Uniforme avec les Accolades <code>{}</code></h3>
+<h3 id="12-encapsulation-et-accesseurs">1.2. Encapsulation et Accesseurs</h3>
+<p>Les attributs membres des classes et structures doivent être déclarés <code>private</code> ou <code>protected</code> et accessibles via des méthodes accesseurs (getters/setters).
+L'utilisation de variables membres publiques est fortement déconseillée afin de respecter les principes d'encapsulation. Si, dans des cas exceptionnels, une variable membre publique est nécessaire, elle ne doit <strong>pas</strong> utiliser le suffixe <code>_</code>.</p>
+<h3 id="13-initialisation-uniforme-avec-les-accolades">1.3. Initialisation Uniforme avec les Accolades <code>{}</code></h3>
 <p><strong>Règle :</strong> Pour initialiser toute variable, utilisez <strong>toujours</strong> la syntaxe avec accolades <code>{}</code> (Uniform Initialization).</p>
 <p><strong>Pourquoi ?</strong>
 - <strong>Sécurité :</strong> Empêche les conversions de type risquées (ex: <code>int x {5.5};</code> génère une erreur de compilation).
