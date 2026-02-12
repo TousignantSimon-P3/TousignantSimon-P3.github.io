@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://tousignantsimon-p3.github.io/notes/semaine_2_1_passage_copie_reference/">
+        <link rel="canonical" href="https://tousignantsimon-p3.github.io/notes/semaine_4_3_tests_unitaires/">
       
       
-        <link rel="prev" href="../../exercices/semaine_1_2_exercices_supplementaires/">
+        <link rel="prev" href="../semaine_4_2_compilation/">
       
       
-        <link rel="next" href="../semaine_2_2_les_structs/">
+        <link rel="next" href="../../exercices/examen_formatif/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Passage par Copie et Référence - Cours de Programmation 3</title>
+        <title>Tests Unitaires - Cours de Programmation 3</title>
       
     
     
@@ -143,7 +143,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#les-3-facons-de-passer-des-parametres" class="md-skip">
+        <a href="#les-tests-unitaires-avec-catch2" class="md-skip">
           Aller au contenu
         </a>
       
@@ -179,7 +179,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Passage par Copie et Référence
+              Tests Unitaires
             
           </span>
         </div>
@@ -378,13 +378,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../semaine_2_1_passage_copie_reference/" class="md-tabs__link">
           
   
   
@@ -420,10 +418,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../semaine_4_2_compilation/" class="md-tabs__link">
           
   
@@ -874,29 +874,24 @@
       
   
   
-    
   
   
-  
     
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   
@@ -914,7 +909,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -929,37 +924,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Passage par Copie et Référence
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../semaine_2_1_passage_copie_reference/" class="md-nav__link">
         
   
   
@@ -975,98 +943,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-passage-par-copie-pass-by-value" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Passage par Copie (Pass-by-Value)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-passage-par-reference-pass-by-reference" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Passage par Référence (Pass-by-Reference)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. Passage par Référence (Pass-by-Reference)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a-reference-modifiable-type" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A. Référence Modifiable (Type&amp;)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#b-reference-constante-const-type-le-standard" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        B. Référence Constante (const Type&amp;) 🌟 LE STANDARD
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-passage-par-pointeur-pass-by-pointer" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Passage par Pointeur (Pass-by-Pointer)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-le-cas-special-des-tableaux-c" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. Le Cas Spécial des Tableaux C
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1252,24 +1128,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
             
   
   
@@ -1287,7 +1168,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1330,10 +1211,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../semaine_4_3_tests_unitaires/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tests Unitaires
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1349,6 +1257,120 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-la-regle-dor-un-test-un-comportement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. La règle d'or : Un test = Un comportement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-structure-dun-fichier-de-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Structure d'un fichier de test
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-les-outils-indispensables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Les outils indispensables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Les outils indispensables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-require-lassertion-de-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. REQUIRE (L'assertion de base)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-info-le-message-personnalise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. INFO (Le message personnalisé)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-gestion-des-exceptions-les-echecs-attendus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Gestion des exceptions (Les échecs attendus)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-exemple-recapitulatif-complet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Exemple Récapitulatif Complet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-pourquoi-cette-approche" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Pourquoi cette approche ?
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1466,202 +1488,87 @@
   
 
 
-<h1 id="les-3-facons-de-passer-des-parametres">Les 3 Façons de Passer des Paramètres</h1>
-<p>En C++, il y a trois manières de transmettre une variable à une fonction. Choisir la bonne méthode est essentiel pour la performance et la sécurité de votre code.</p>
+<h1 id="les-tests-unitaires-avec-catch2">Les Tests Unitaires avec Catch2</h1>
+<p>Le test unitaire consiste à vérifier une seule "unité" de code (généralement une méthode ou une fonction) de manière isolée. L'objectif est de s'assurer que chaque petit morceau de logique fonctionne parfaitement avant de les assembler.</p>
 <hr />
-<h2 id="1-passage-par-copie-pass-by-value">1. Passage par Copie (Pass-by-Value)</h2>
-<p><strong>"Je te donne une photocopie."</strong></p>
-<p>C'est le comportement par défaut pour les types simples (<code>int</code>, <code>char</code>, <code>bool</code>, <code>float</code>).</p>
-<ul>
-<li><strong>Mécanisme :</strong> La fonction crée une nouvelle variable et copie la valeur de l'originale dedans.</li>
-<li><strong>Conséquence :</strong> Si la fonction modifie la variable, l'originale ne change pas.</li>
-<li><strong>Coût :</strong> Rapide pour les petits nombres, mais très lent pour les gros objets (comme une image ou un long texte) car il faut tout dupliquer octet par octet.</li>
-</ul>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kt">void</span><span class="w"> </span><span class="nf">copie</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span><span class="w"> </span><span class="c1">// Modifie uniquement la photocopie locale</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Dans la fonction : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="n">copie</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Dans le main : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Affiche 10 (intact)</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p">}</span>
+<h2 id="1-la-regle-dor-un-test-un-comportement">1. La règle d'or : Un test = Un comportement</h2>
+<p>En Programmation 3, nous privilégions l'utilisation d'un <code>TEST_CASE</code> distinct pour chaque règle d'affaire. Cela permet d'identifier précisément quelle règle est brisée sans que les autres tests ne soient affectés.</p>
+<h2 id="2-structure-dun-fichier-de-test">2. Structure d'un fichier de test</h2>
+<p>Chaque fichier de test doit commencer par ces deux lignes (dans un seul de vos fichiers de projet) pour que Catch2 génère son propre <code>main()</code>.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#define CATCH_CONFIG_MAIN</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;catch.hpp&quot;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;CompteBancaire.hpp&quot;</span>
 </span></code></pre></div>
-<h2 id="2-passage-par-reference-pass-by-reference">2. Passage par Référence (Pass-by-Reference)</h2>
-<p><strong>"Je te donne accès à mon fichier Google Doc original."</strong></p>
-<p>On utilise le symbole <code>&amp;</code>. La fonction ne crée <strong>aucune</strong> nouvelle variable. Elle travaille directement sur la mémoire de l'original.</p>
-<h3 id="a-reference-modifiable-type">A. Référence Modifiable (<code>Type&amp;</code>)</h3>
-<p>Utilisé quand la fonction <strong>DOIT</strong> modifier l'original.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">modifier</span><span class="p">(</span><span class="kt">int</span><span class="o">&amp;</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span><span class="w"> </span><span class="c1">// Modifie la VRAIE variable du main</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">}</span>
-</span></code></pre></div>
-<h3 id="b-reference-constante-const-type-le-standard">B. Référence Constante (<code>const Type&amp;</code>) 🌟 LE STANDARD</h3>
-<p>C'est la méthode reine du C++ pour les objets complexes (<code>std::string</code>, <code>std::vector</code>...). Elle combine le meilleur des deux mondes :</p>
-<ol>
-<li><strong>Vitesse</strong> de la référence (pas de copie).</li>
-<li><strong>Sécurité</strong> de la copie (interdiction de modifier l'original).</li>
-</ol>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1">// &quot;const&quot; + &quot;&amp;&quot; = Je regarde l&#39;original, mais je n&#39;ai pas le droit de toucher</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="kt">void</span><span class="w"> </span><span class="nf">afficher</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">texte</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">texte</span><span class="p">;</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="c1">// 🛑 ERREUR DE COMPILATION : </span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="c1">// texte = &quot;Salut&quot;; // Interdit ! On est en lecture seule.</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="p">}</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">{</span>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">allo</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;hello&quot;</span><span class="p">};</span>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">    </span><span class="n">afficher</span><span class="p">(</span><span class="n">allo</span><span class="p">);</span>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="p">}</span>
-</span></code></pre></div>
-<h2 id="3-passage-par-pointeur-pass-by-pointer">3. Passage par Pointeur (Pass-by-Pointer)</h2>
-<p><strong>"Je te donne l'adresse GPS de ma maison."</strong></p>
-<p>C'est l'ancêtre de la référence, hérité du langage C. On utilise le symbole <code>*</code> pour déclarer le pointeur et <code>&amp;</code> pour récupérer l'adresse d'une variable.</p>
-<ul>
-<li><strong>Mécanisme :</strong> La fonction reçoit l'<strong>adresse mémoire</strong> (un nombre hexadécimal) de la variable, pas la variable elle-même.</li>
-<li><strong>Syntaxe :</strong> C'est plus lourd à utiliser. Il faut "déréférencer" le pointeur avec l'étoile <code>*</code> pour accéder à la valeur stockée à cette adresse.</li>
-<li><strong>La Différence Clé :</strong> Un pointeur peut être vide (<strong><code>nullptr</code></strong>). Une référence, elle, doit toujours être liée à une variable existante.</li>
-</ul>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// La fonction attend une adresse (int*)</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kt">void</span><span class="w"> </span><span class="nf">remiseAZero</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="w"> </span><span class="n">ptr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="c1">// Sécurité : on vérifie que l&#39;adresse existe (n&#39;est pas nulle)</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ptr</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">        </span><span class="o">*</span><span class="n">ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// On va à l&#39;adresse pointée et on écrit 0</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">}</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">note</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="c1">// Appel : On envoie l&#39;adresse de &#39;note&#39; avec &#39;&amp;&#39;</span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="n">remiseAZero</span><span class="p">(</span><span class="o">&amp;</span><span class="n">note</span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="p">}</span>
-</span></code></pre></div>
-<p>## 4. Le Grand Récapitulatif</p>
-<p>Voici le tableau de synthèse pour savoir quelle méthode utiliser en un coup d'œil.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Méthode</th>
-<th style="text-align: left;">Syntaxe (Déclaration)</th>
-<th style="text-align: left;">Syntaxe (Appel)</th>
-<th style="text-align: center;">Modifie Original ?</th>
-<th style="text-align: center;">Peut être Null ?</th>
-<th style="text-align: left;">Usage Recommandé</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>Copie</strong></td>
-<td style="text-align: left;"><code>void f(int a)</code></td>
-<td style="text-align: left;"><code>f(a)</code></td>
-<td style="text-align: center;">❌ Non</td>
-<td style="text-align: center;">❌ Non</td>
-<td style="text-align: left;">Petits types simples (<code>int</code>, <code>bool</code>, <code>char</code>).</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Référence</strong></td>
-<td style="text-align: left;"><code>void f(int&amp; a)</code></td>
-<td style="text-align: left;"><code>f(a)</code></td>
-<td style="text-align: center;">✅ Oui</td>
-<td style="text-align: center;">❌ Non</td>
-<td style="text-align: left;">Quand la fonction <strong>doit</strong> modifier la variable.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Réf. Const</strong></td>
-<td style="text-align: left;"><code>void f(const int&amp; a)</code></td>
-<td style="text-align: left;"><code>f(a)</code></td>
-<td style="text-align: center;">❌ Non</td>
-<td style="text-align: center;">❌ Non</td>
-<td style="text-align: left;"><strong>Standard</strong> pour les objets (<code>string</code>, <code>vector</code>) en lecture seule.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Pointeur</strong></td>
-<td style="text-align: left;"><code>void f(int* a)</code></td>
-<td style="text-align: left;"><code>f(&amp;a)</code></td>
-<td style="text-align: center;">✅ Oui</td>
-<td style="text-align: center;">✅ Oui</td>
-<td style="text-align: left;">Données optionnelles ou héritage du C.</td>
-</tr>
-</tbody>
-</table>
-<p>## 5. Guide de Décision : Quoi utiliser quand ?</p>
-<p>C'est la question la plus importante. Suivez cet algorithme mental pour choisir le bon type de paramètre.</p>
-<div class="admonition tip">
-<p class="admonition-title">L'Algorithme de Choix</p>
-<ol>
-<li>
-<p><strong>La variable est-elle "petite" ?</strong> (<code>int</code>, <code>double</code>, <code>char</code>, <code>bool</code>)
-    👉 <strong>Utilisez la COPIE.</strong> (Ex: <code>void setAge(int age)</code>)
-    <em>C'est plus simple et le processeur gère ça très vite.</em></p>
-</li>
-<li>
-<p><strong>La variable est "grosse"</strong> (<code>string</code>, <code>vector</code>) <strong>et je veux juste la lire ?</strong>
-    👉 <strong>Utilisez la RÉFÉRENCE CONSTANTE.</strong> (Ex: <code>void afficher(const std::string&amp; nom)</code>)
-    <em>C'est rapide (zéro copie) et sûr.</em></p>
-</li>
-<li>
-<p><strong>La fonction doit-elle modifier l'original ?</strong>
-    👉 <strong>Utilisez la RÉFÉRENCE.</strong> (Ex: <code>void monterNiveau(Joueur&amp; j)</code>)</p>
-</li>
-<li>
-<p><strong>La donnée est-elle optionnelle</strong> (peut ne pas exister) ?
-    👉 <strong>Utilisez le POINTEUR.</strong> (Ex: <code>void cibler(Ennemi* cible)</code>)
-    <em>Cela permet de passer <code>nullptr</code> pour dire "rien".</em></p>
-</li>
-</ol>
-</div>
 <hr />
-<h2 id="6-le-cas-special-des-tableaux-c">6. Le Cas Spécial des Tableaux C</h2>
-<p>Attention : Les tableaux de style C (<code>int tab[]</code>) sont des traîtres !</p>
-<div class="admonition warning">
-<p class="admonition-title">Le Piège du Decay (Dégénérescence)</p>
-<p>Même si vous ne mettez pas de <code>&amp;</code>, un tableau C passé à une fonction se comporte <strong>toujours</strong> comme un pointeur. Il n'est <strong>jamais</strong> copié.</p>
-<p>Cela signifie que la fonction peut modifier votre tableau original sans prévenir.</p>
-</div>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">// Ceci modifie le VRAI tableau, même sans &#39;&amp;&#39; !</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kt">void</span><span class="w"> </span><span class="nf">hack</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">tab</span><span class="p">[])</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="n">tab</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// Le tableau du main est modifié</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">}</span>
+<h2 id="3-les-outils-indispensables">3. Les outils indispensables</h2>
+<h3 id="a-require-lassertion-de-base">A. REQUIRE (L'assertion de base)</h3>
+<p>Vérifie une condition. Si elle est fausse, le test s'arrête immédiatement.
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Le solde initial est respecté&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[initialisation]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">CompteBancaire</span><span class="w"> </span><span class="n">c</span><span class="p">(</span><span class="s">&quot;Simon&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">100.0</span><span class="p">);</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">getSolde</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">100.0</span><span class="p">);</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<h3 id="b-info-le-message-personnalise">B. INFO (Le message personnalisé)</h3>
+<p>Permet d'afficher un message d'explication <strong>uniquement si le test échoue</strong>. Très utile pour le débogage.
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Dépôt de fonds&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[transaction]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">CompteBancaire</span><span class="w"> </span><span class="n">c</span><span class="p">(</span><span class="s">&quot;Simon&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">100.0</span><span class="p">);</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">montant</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">50.0</span><span class="p">;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="n">c</span><span class="p">.</span><span class="n">deposer</span><span class="p">(</span><span class="n">montant</span><span class="p">);</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="n">INFO</span><span class="p">(</span><span class="s">&quot;Le solde après un dépôt de &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">montant</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; devrait être de 150.0&quot;</span><span class="p">);</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">getSolde</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">150.0</span><span class="p">);</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<h3 id="c-gestion-des-exceptions-les-echecs-attendus">C. Gestion des exceptions (Les échecs attendus)</h3>
+<p>Souvent, on veut tester que notre code <strong>bloque</strong> les mauvaises actions.</p>
+<ul>
+<li><strong><code>REQUIRE_THROWS</code></strong> : Vérifie qu'une exception est lancée (peu importe laquelle).</li>
+<li><strong><code>REQUIRE_THROWS_AS</code></strong> : Vérifie qu'une exception d'un <strong>type précis</strong> est lancée (plus rigoureux).</li>
+</ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Sécurité : Retrait supérieur au solde&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[securite]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">CompteBancaire</span><span class="w"> </span><span class="n">c</span><span class="p">(</span><span class="s">&quot;Simon&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">100.0</span><span class="p">);</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="n">INFO</span><span class="p">(</span><span class="s">&quot;Tenter de retirer 200$ alors qu&#39;on a 100$ doit lever une erreur&quot;</span><span class="p">);</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="n">REQUIRE_THROWS_AS</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">retirer</span><span class="p">(</span><span class="mf">200.0</span><span class="p">),</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">);</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p">}</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Sécurité : Dépôt négatif interdit&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[securite]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="n">CompteBancaire</span><span class="w"> </span><span class="n">c</span><span class="p">(</span><span class="s">&quot;Simon&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">100.0</span><span class="p">);</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="c1">// On s&#39;assure qu&#39;une exception est lancée, sans préciser le type</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="n">REQUIRE_THROWS</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">deposer</span><span class="p">(</span><span class="mf">-50.0</span><span class="p">));</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="p">}</span>
 </span></code></pre></div>
-<div class="admonition success">
-<p class="admonition-title">Note : La Solution Moderne</p>
-<p>C'est pour cela qu'en <strong>C++ moderne</strong>, on préfère <code>std::vector</code> ou <code>std::span</code> qui sont plus sûrs.</p>
-</div>
-<h1 id="exemple-des-pointeurs-vu-en-classe">Exemple des pointeurs vu en classe.</h1>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="c1"> //instruction de précompilation</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="kt">void</span><span class="w"> </span><span class="nf">fonction_quelconque</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="w"> </span><span class="n">le_pointeur_de_int</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//j&#39;ai oublié de dire qu&#39;en c++ c&#39;est la casse &quot;serpent&quot;</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; entrée de fonction &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; adresse où pointe le pointeur : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">le_pointeur_de_int</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; la valeur par déréférencement : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">*</span><span class="n">le_pointeur_de_int</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="c1">// déréférencer -&gt; enlever la référence et tomber sur le type en dessous, int dans notre cas</span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="c1">//modification de la valeur</span>
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="o">*</span><span class="n">le_pointeur_de_int</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">//x2 la valeur</span>
-</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; Fin de fonction &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="p">}</span>
-</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>
-</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="p">};</span>
-</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;adresse de a &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">//ici pas besoin de rien de spécial pour a</span>
-</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>
-</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;valeur de a avant l&#39;appel de fonction &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">//ici pas besoin de rien de spécial pour a</span>
-</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="w">    </span><span class="n">fonction_quelconque</span><span class="p">(</span><span class="o">&amp;</span><span class="n">a</span><span class="p">);</span><span class="w"> </span><span class="c1">//appel de la fonction avec l&#39;adresse de a</span>
-</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;valeur de a après l&#39;appel de fonction &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="c1">//ici pas besoin de rien de spécial pour a</span>
-</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>
-</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="w">    </span><span class="c1">//preuve que la fonction reçoit un pointeur</span>
-</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="w">    </span><span class="kt">int</span><span class="o">*</span><span class="w"> </span><span class="n">a_ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="c1">//déclaration d&#39;un pointeur sur l&#39;adresse de la variable a</span>
-</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="w">    </span><span class="n">fonction_quelconque</span><span class="p">(</span><span class="n">a_ptr</span><span class="p">);</span>
-</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="p">}</span>
+<hr />
+<h2 id="4-exemple-recapitulatif-complet">4. Exemple Récapitulatif Complet</h2>
+<p>Voici à quoi devrait ressembler un fichier de tests professionnel et facile à maintenir :</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cp">#define CATCH_CONFIG_MAIN</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;catch.hpp&quot;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;CompteBancaire.hpp&quot;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Initialisation du titulaire&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[unitaire][init]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="n">CompteBancaire</span><span class="w"> </span><span class="n">c</span><span class="p">(</span><span class="s">&quot;Alice&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">100.0</span><span class="p">);</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">getTitulaire</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Alice&quot;</span><span class="p">);</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="p">}</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Calcul du solde après retrait&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[unitaire][calcul]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="n">CompteBancaire</span><span class="w"> </span><span class="n">c</span><span class="p">(</span><span class="s">&quot;Alice&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">100.0</span><span class="p">);</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span><span class="n">c</span><span class="p">.</span><span class="n">retirer</span><span class="p">(</span><span class="mf">30.0</span><span class="p">);</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">getSolde</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">70.0</span><span class="p">);</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="p">}</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Erreur lors d&#39;un solde initial négatif&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[unitaire][erreur]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="n">INFO</span><span class="p">(</span><span class="s">&quot;Le constructeur doit empêcher la création d&#39;un compte débiteur&quot;</span><span class="p">);</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">    </span><span class="n">REQUIRE_THROWS_AS</span><span class="p">(</span><span class="n">CompteBancaire</span><span class="p">(</span><span class="s">&quot;Bob&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">-10.0</span><span class="p">),</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">invalid_argument</span><span class="p">);</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="p">}</span>
 </span></code></pre></div>
+<h2 id="5-pourquoi-cette-approche">5. Pourquoi cette approche ?</h2>
+<ol>
+<li><strong>Indépendance</strong> : Si le test du retrait échoue, vous savez que le problème vient de la méthode <code>retirer()</code> et non du constructeur ou du dépôt.</li>
+<li><strong>Rapidité</strong> : Vous pouvez lancer uniquement les tests d'erreurs avec la commande : <code>./tests_app [erreur]</code>.</li>
+<li><strong>Clarté</strong> : Les titres des <code>TEST_CASE</code> servent de documentation pour votre code.</li>
+</ol>
 
 
 
