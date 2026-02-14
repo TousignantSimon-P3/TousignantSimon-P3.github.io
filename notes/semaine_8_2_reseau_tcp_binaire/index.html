@@ -446,7 +446,7 @@
           
   
   
-  Phase 0 : Conception Objet (Semaine 5)
+  Phase 0 : Conception Objet 
 
         </a>
       </li>
@@ -466,7 +466,7 @@
           
   
   
-  Phase 1 : Stockage et Fichiers (Semaine 6)
+  Phase 1 : Stockage et Fichiers 
 
         </a>
       </li>
@@ -486,7 +486,7 @@
           
   
   
-  Phase 2 : Étude de Cas (Semaine 7)
+  Phase 2 : Étude de Cas 
 
         </a>
       </li>
@@ -508,7 +508,7 @@
           
   
   
-  Phase 3 : Communication Réseau (Semaine 8)
+  Phase 3 : Communication Réseau 
 
         </a>
       </li>
@@ -528,7 +528,7 @@
           
   
   
-  Phase 4 : L'Aboutissement (Semaine 9)
+  Phase 4 : L'Aboutissement 
 
         </a>
       </li>
@@ -1365,7 +1365,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 0 : Conception Objet (Semaine 5)
+    Phase 0 : Conception Objet 
   
 
     
@@ -1381,7 +1381,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 0 : Conception Objet (Semaine 5)
+    Phase 0 : Conception Objet 
   
 
           </label>
@@ -1478,7 +1478,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 1 : Stockage et Fichiers (Semaine 6)
+    Phase 1 : Stockage et Fichiers 
   
 
     
@@ -1494,7 +1494,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 1 : Stockage et Fichiers (Semaine 6)
+    Phase 1 : Stockage et Fichiers 
   
 
           </label>
@@ -1591,7 +1591,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 2 : Étude de Cas (Semaine 7)
+    Phase 2 : Étude de Cas 
   
 
     
@@ -1607,7 +1607,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 2 : Étude de Cas (Semaine 7)
+    Phase 2 : Étude de Cas 
   
 
           </label>
@@ -1709,7 +1709,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 3 : Communication Réseau (Semaine 8)
+    Phase 3 : Communication Réseau 
   
 
     
@@ -1725,7 +1725,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 3 : Communication Réseau (Semaine 8)
+    Phase 3 : Communication Réseau 
   
 
           </label>
@@ -2052,7 +2052,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 4 : L'Aboutissement (Semaine 9)
+    Phase 4 : L'Aboutissement 
   
 
     
@@ -2068,7 +2068,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 4 : L'Aboutissement (Semaine 9)
+    Phase 4 : L'Aboutissement 
   
 
           </label>
@@ -2215,147 +2215,147 @@
 
 
 <h1 id="communication-reseau-tcp-binaire">Communication Réseau : TCP (Binaire)</h1>
-<p>Envoyer des données binaires (comme une structure) est beaucoup plus efficace que le texte, mais demande de la rigueur sur l'organisation de la mémoire.</p>
+<p>Envoyer des données binaires (comme une structure) est beaucoup plus efficace que le texte, mais demande de la rigueur sur l'organisation de la mémoire.  </p>
 <h2 id="1-definition-de-la-structure">1. Définition de la structure</h2>
-<p>Comme pour les fichiers BMP, on doit s'assurer que le compilateur n'ajoute pas de padding et que les chaînes de caractères ont une taille fixe.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstdint&gt;</span>
+<p>Comme pour les fichiers BMP, on doit s'assurer que le compilateur n'ajoute pas de padding et que les chaînes de caractères ont une taille fixe.  </p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstdint&gt;</span><span class="c1">  </span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cp">#pragma pack(push, 1)</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">struct</span><span class="w"> </span><span class="nc">ClientData</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">nom</span><span class="p">[</span><span class="mi">50</span><span class="p">];</span><span class="w">          </span><span class="c1">// Taille fixe pour le binaire</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">prenom</span><span class="p">[</span><span class="mi">50</span><span class="p">];</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">anneeNaissance</span><span class="p">;</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">moisNaissance</span><span class="p">;</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">jourNaissance</span><span class="p">;</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">};</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="cp">#pragma pack(pop)</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cp">#pragma pack(push, 1)  </span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">struct</span><span class="w"> </span><span class="nc">ClientData</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">nom</span><span class="p">[</span><span class="mi">50</span><span class="p">];</span><span class="w">          </span><span class="c1">// Taille fixe pour le binaire  </span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">prenom</span><span class="p">[</span><span class="mi">50</span><span class="p">];</span><span class="w">  </span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">anneeNaissance</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">moisNaissance</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">jourNaissance</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">};</span><span class="w">  </span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="cp">#pragma pack(pop)  </span>
 </span></code></pre></div>
 <h2 id="2-pourquoi-des-tableaux-char50">2. Pourquoi des tableaux <code>char[50]</code> ?</h2>
-<p>Comme vu dans les notes sur les fichiers binaires, on ne peut pas envoyer une <code>std::string</code> directement car elle contient un pointeur vers la RAM. En utilisant <code>char[50]</code>, les caractères sont stockés <strong>directement à l'intérieur</strong> de la structure.</p>
+<p>Comme vu dans les notes sur les fichiers binaires, on ne peut pas envoyer une <code>std::string</code> directement car elle contient un pointeur vers la RAM. En utilisant <code>char[50]</code>, les caractères sont stockés <strong>directement à l'intérieur</strong> de la structure.  </p>
 <h2 id="3-exemple-avec-sfml-network">3. Exemple avec SFML-Network</h2>
 <h3 id="cote-client-envoi">Côté Client (Envoi)</h3>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// Méthode moderne et propre (Initialisation par accolades)</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">ClientData</span><span class="w"> </span><span class="n">donnee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;Dupont&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Jean&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1995</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">};</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// Méthode moderne et propre (Initialisation par accolades)  </span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">ClientData</span><span class="w"> </span><span class="n">donnee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;Dupont&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Jean&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1995</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">};</span><span class="w">  </span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">// OU si la structure existe déjà, on utilise strcpy :</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1">// strcpy(donnee.nom, &quot;Dupont&quot;); </span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">// OU si la structure existe déjà, on utilise strcpy :  </span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1">// strcpy(donnee.nom, &quot;Dupont&quot;);  </span>
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">sf</span><span class="o">::</span><span class="n">TcpSocket</span><span class="w"> </span><span class="n">socket</span><span class="p">;</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">socket</span><span class="p">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">53000</span><span class="p">);</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">sf</span><span class="o">::</span><span class="n">TcpSocket</span><span class="w"> </span><span class="n">socket</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">socket</span><span class="p">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">53000</span><span class="p">);</span><span class="w">  </span>
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c1">// On envoie la structure brute (castée en char*)</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">socket</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="o">&amp;</span><span class="n">donnee</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">ClientData</span><span class="p">));</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c1">// On envoie la structure brute (castée en char*)  </span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">socket</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="o">&amp;</span><span class="n">donnee</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">ClientData</span><span class="p">));</span><span class="w">  </span>
 </span></code></pre></div>
 <h3 id="cote-serveur-reception">Côté Serveur (Réception)</h3>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">sf</span><span class="o">::</span><span class="n">TcpListener</span><span class="w"> </span><span class="n">listener</span><span class="p">;</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">listener</span><span class="p">.</span><span class="n">listen</span><span class="p">(</span><span class="mi">53000</span><span class="p">);</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">sf</span><span class="o">::</span><span class="n">TcpListener</span><span class="w"> </span><span class="n">listener</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">listener</span><span class="p">.</span><span class="n">listen</span><span class="p">(</span><span class="mi">53000</span><span class="p">);</span><span class="w">  </span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">sf</span><span class="o">::</span><span class="n">TcpSocket</span><span class="w"> </span><span class="n">client</span><span class="p">;</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">listener</span><span class="p">.</span><span class="n">accept</span><span class="p">(</span><span class="n">client</span><span class="p">);</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">sf</span><span class="o">::</span><span class="n">TcpSocket</span><span class="w"> </span><span class="n">client</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">listener</span><span class="p">.</span><span class="n">accept</span><span class="p">(</span><span class="n">client</span><span class="p">);</span><span class="w">  </span>
 </span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">ClientData</span><span class="w"> </span><span class="n">donneeRecue</span><span class="p">;</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="n">nbOctetsRecus</span><span class="p">;</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">ClientData</span><span class="w"> </span><span class="n">donneeRecue</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="n">nbOctetsRecus</span><span class="p">;</span><span class="w">  </span>
 </span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="c1">// On lit directement dans la structure</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">client</span><span class="p">.</span><span class="n">receive</span><span class="p">(</span><span class="o">&amp;</span><span class="n">donneeRecue</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">ClientData</span><span class="p">),</span><span class="w"> </span><span class="n">nbOctetsRecus</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">sf</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="c1">// VÉRIFICATION :</span>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nbOctetsRecus</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">ClientData</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Attention : Données incomplètes !&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Client : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">donneeRecue</span><span class="p">.</span><span class="n">prenom</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">donneeRecue</span><span class="p">.</span><span class="n">nom</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="p">}</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="c1">// On lit directement dans la structure  </span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">client</span><span class="p">.</span><span class="n">receive</span><span class="p">(</span><span class="o">&amp;</span><span class="n">donneeRecue</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">ClientData</span><span class="p">),</span><span class="w"> </span><span class="n">nbOctetsRecus</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">sf</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="c1">// VÉRIFICATION :  </span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nbOctetsRecus</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">ClientData</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Attention : Données incomplètes !&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Client : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">donneeRecue</span><span class="p">.</span><span class="n">prenom</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">donneeRecue</span><span class="p">.</span><span class="n">nom</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">    </span><span class="p">}</span><span class="w">  </span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="p">}</span><span class="w">  </span>
 </span></code></pre></div>
 <h3 id="a-quoi-sert-le-parametre-nboctetsrecus">À quoi sert le paramètre <code>nbOctetsRecus</code> ?</h3>
-<p>C'est une variable remplie par SFML qui vous indique le nombre <strong>réel</strong> d'octets qui viennent d'arriver.
-*   <strong>Attention</strong> : <code>sf::Socket::Done</code> signifie que l'appel a réussi, mais <strong>pas forcément</strong> que toutes les données demandées sont arrivées. Le réseau peut livrer une structure de 100 octets en plusieurs morceaux.</p>
+<p>C'est une variable remplie par SFML qui vous indique le nombre <strong>réel</strong> d'octets qui viennent d'arriver.<br />
+<em>   </em><em>Attention</em><em> : <code>sf::Socket::Done</code> signifie que l'appel a réussi, mais </em><em>pas forcément</em>* que toutes les données demandées sont arrivées. Le réseau peut livrer une structure de 100 octets en plusieurs morceaux.  </p>
 <h3 id="gerer-les-lectures-partielles-encapsulation">Gérer les lectures partielles (Encapsulation)</h3>
-<p>Dans un programme professionnel, on isole cette logique dans une fonction dédiée :</p>
-<p><div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">ClientData</span><span class="w"> </span><span class="nf">recevoirClient</span><span class="p">(</span><span class="n">sf</span><span class="o">::</span><span class="n">TcpSocket</span><span class="o">&amp;</span><span class="w"> </span><span class="n">socket</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">ClientData</span><span class="w"> </span><span class="n">structure_client</span><span class="p">;</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="n">totalRecu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="n">tailleCible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">ClientData</span><span class="p">);</span>
+<p>Dans un programme professionnel, on isole cette logique dans une fonction dédiée :  </p>
+<p><div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">ClientData</span><span class="w"> </span><span class="nf">recevoirClient</span><span class="p">(</span><span class="n">sf</span><span class="o">::</span><span class="n">TcpSocket</span><span class="o">&amp;</span><span class="w"> </span><span class="n">socket</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">ClientData</span><span class="w"> </span><span class="n">structure_client</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="n">totalRecu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="n">tailleCible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">ClientData</span><span class="p">);</span><span class="w">  </span>
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">totalRecu</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">tailleCible</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="n">nbLusCetteFois</span><span class="p">;</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">totalRecu</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">tailleCible</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="n">nbLusCetteFois</span><span class="p">;</span><span class="w">  </span>
 </span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">        </span><span class="c1">// 1. Calculer où écrire</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">        </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">destination</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">structure_client</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">totalRecu</span><span class="p">;</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">        </span><span class="c1">// 1. Calculer où écrire  </span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">        </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">destination</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">structure_client</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">totalRecu</span><span class="p">;</span><span class="w">  </span>
 </span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">        </span><span class="c1">// 2. Calculer le reste à recevoir</span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="n">reste</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tailleCible</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">totalRecu</span><span class="p">;</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">        </span><span class="c1">// 2. Calculer le reste à recevoir  </span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="n">reste</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tailleCible</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">totalRecu</span><span class="p">;</span><span class="w">  </span>
 </span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">        </span><span class="c1">// 3. Réception</span>
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">        </span><span class="n">sf</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Status</span><span class="w"> </span><span class="n">etat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">socket</span><span class="p">.</span><span class="n">receive</span><span class="p">(</span><span class="n">destination</span><span class="p">,</span><span class="w"> </span><span class="n">reste</span><span class="p">,</span><span class="w"> </span><span class="n">nbLusCetteFois</span><span class="p">);</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">        </span><span class="c1">// 3. Réception  </span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">        </span><span class="n">sf</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Status</span><span class="w"> </span><span class="n">etat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">socket</span><span class="p">.</span><span class="n">receive</span><span class="p">(</span><span class="n">destination</span><span class="p">,</span><span class="w"> </span><span class="n">reste</span><span class="p">,</span><span class="w"> </span><span class="n">nbLusCetteFois</span><span class="p">);</span><span class="w">  </span>
 </span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">        </span><span class="c1">// 4. Gestion des anomalies</span>
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">etat</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">sf</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Disconnected</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">&quot;Déconnexion brutale pendant la réception.&quot;</span><span class="p">);</span>
-</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">etat</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">sf</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">&quot;Erreur réseau technique.&quot;</span><span class="p">);</span>
-</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">        </span><span class="c1">// 4. Gestion des anomalies  </span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">etat</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">sf</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Disconnected</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">&quot;Déconnexion brutale pendant la réception.&quot;</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">etat</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">sf</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">&quot;Erreur réseau technique.&quot;</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">        </span><span class="p">}</span><span class="w">  </span>
 </span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>
-</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">        </span><span class="n">totalRecu</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">nbLusCetteFois</span><span class="p">;</span>
-</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">        </span><span class="n">totalRecu</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">nbLusCetteFois</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">    </span><span class="p">}</span><span class="w">  </span>
 </span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>
-</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="w">    </span><span class="c1">// Le contrat est rempli : on a reçu 100% des octets attendus</span>
-</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">structure_client</span><span class="p">;</span>
-</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a><span class="p">}</span>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="w">    </span><span class="c1">// Le contrat est rempli : on a reçu 100% des octets attendus  </span>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">structure_client</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a><span class="p">}</span><span class="w">  </span>
 </span></code></pre></div>
-<em>Note : L'utilisation d'exceptions permet d'arrêter proprement le traitement si le "tuyau" réseau est coupé.</em></p>
+<em>Note : L'utilisation d'exceptions permet d'arrêter proprement le traitement si le "tuyau" réseau est coupé.</em>  </p>
 <h3 id="pourquoi-utiliser-une-exception-ici">Pourquoi utiliser une exception ici ?</h3>
-<p>On applique le principe du <strong>"Tout ou rien"</strong> :
-*   Une structure binaire est un <strong>contrat</strong>. Si vous attendez un <code>ClientData</code>, vous avez besoin de chaque octet pour que l'objet soit valide.
-*   <strong>Le danger du retour partiel</strong> : Si vous retournez la structure alors qu'elle n'est qu'à moitié remplie, le reste contient des données aléatoires (déchets de la RAM). Utiliser ces données provoquera des bugs imprévisibles.
-*   <strong>L'avantage de l'exception</strong> : Elle garantit que si le code continue après la boucle, c'est que les données sont <strong>100% complètes et fiables</strong>.</p>
+<p>On applique le principe du <strong>"Tout ou rien"</strong> :<br />
+<em>   Une structure binaire est un </em><em>contrat</em><em>. Si vous attendez un <code>ClientData</code>, vous avez besoin de chaque octet pour que l'objet soit valide.<br />
+</em>   <strong>Le danger du retour partiel</strong> : Si vous retournez la structure alors qu'elle n'est qu'à moitié remplie, le reste contient des données aléatoires (déchets de la RAM). Utiliser ces données provoquera des bugs imprévisibles.<br />
+<em>   </em><em>L'avantage de l'exception</em><em> : Elle garantit que si le code continue après la boucle, c'est que les données sont </em><em>100% complètes et fiables</em>*.  </p>
 <h2 id="4-points-de-vigilance">4. Points de vigilance</h2>
 <h3 id="1-lendianness-lordre-des-octets">1. L'Endianness (L'ordre des octets)</h3>
-<p>C'est la façon dont le processeur range les octets d'un nombre (comme un <code>int</code>) dans la RAM.</p>
-<p>Imaginez le nombre hexadécimal <code>0x12345678</code> (4 octets) :</p>
+<p>C'est la façon dont le processeur range les octets d'un nombre (comme un <code>int</code>) dans la RAM.  </p>
+<p>Imaginez le nombre hexadécimal <code>0x12345678</code> (4 octets) :  </p>
 <ul>
-<li><strong>Grand-boutiste (Big-endian)</strong> : On écrit dans l'ordre de lecture habituel.<ul>
-<li>Mémoire : <code>[12][34][56][78]</code></li>
-<li>C'est l'ordre utilisé par le réseau ("Network Byte Order").</li>
+<li><strong>Grand-boutiste (Big-endian)</strong> : On écrit dans l'ordre de lecture habituel.  <ul>
+<li>Mémoire : <code>[12][34][56][78]</code>  </li>
+<li>C'est l'ordre utilisé par le réseau ("Network Byte Order").  </li>
 </ul>
 </li>
-<li><strong>Petit-boutiste (Little-endian)</strong> : On met le "petit bout" (l'unité) en premier.<ul>
-<li>Mémoire : <code>[78][56][34][12]</code></li>
-<li>C'est l'ordre utilisé par la quasi-totalité de nos PC actuels (Intel/AMD).</li>
+<li><strong>Petit-boutiste (Little-endian)</strong> : On met le "petit bout" (l'unité) en premier.  <ul>
+<li>Mémoire : <code>[78][56][34][12]</code>  </li>
+<li>C'est l'ordre utilisé par la quasi-totalité de nos PC actuels (Intel/AMD).  </li>
 </ul>
 </li>
 </ul>
 <blockquote>
-<p><strong>Le saviez-vous ?</strong> Même les nouveaux Mac (puces M1/M2/M3) utilisent le <strong>Petit-boutiste</strong>. Bien que leur architecture (ARM) soit capable de gérer les deux modes, Apple a choisi de rester en Petit-boutiste pour assurer une compatibilité parfaite avec les programmes PC et les anciens Mac Intel.</p>
+<p><strong>Le saviez-vous ?</strong> Même les nouveaux Mac (puces M1/M2/M3) utilisent le <strong>Petit-boutiste</strong>. Bien que leur architecture (ARM) soit capable de gérer les deux modes, Apple a choisi de rester en Petit-boutiste pour assurer une compatibilité parfaite avec les programmes PC et les anciens Mac Intel.  </p>
 </blockquote>
-<p><strong>Le danger</strong> : Si un PC (petit-boutiste) envoie un <code>int</code> à un serveur (grand-boutiste), le nombre sera totalement inversé à l'arrivée !
-<em>Note : Pour ce cours, on travaille souvent entre PC, donc tout le monde est en Petit-boutiste.</em></p>
+<p><strong>Le danger</strong> : Si un PC (petit-boutiste) envoie un <code>int</code> à un serveur (grand-boutiste), le nombre sera totalement inversé à l'arrivée !<br />
+<em>Note : Pour ce cours, on travaille souvent entre PC, donc tout le monde est en Petit-boutiste.</em>  </p>
 <h3 id="2-taille-du-message">2. Taille du message</h3>
-<p>On doit savoir exactement combien d'octets lire ou utiliser un délimiteur.</p>
+<p>On doit savoir exactement combien d'octets lire ou utiliser un délimiteur.  </p>
 <h3 id="3-evolution">3. Évolution</h3>
-<p>Si vous changez la <code>struct</code>, recompilez les deux programmes.</p>
+<p>Si vous changez la <code>struct</code>, recompilez les deux programmes.  </p>
 <h2 id="5-serialisation-manuelle-taille-dynamique">5. Sérialisation manuelle (Taille dynamique)</h2>
-<p>Si vous voulez éviter les tableaux de taille fixe pour optimiser la bande passante.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">// --- CÔTÉ CLIENT (ÉCRITURE) ---</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="hll"><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Texte dynamique&quot;</span><span class="p">;</span>
-</span></span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kt">uint32_t</span><span class="w"> </span><span class="n">taille</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">uint32_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">message</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="hll"><span class="n">socket</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="o">&amp;</span><span class="n">taille</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">taille</span><span class="p">));</span><span class="w"> </span><span class="c1">// 1. Envoi taille</span>
-</span></span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">socket</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="n">message</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span><span class="w"> </span><span class="n">taille</span><span class="p">);</span><span class="w">  </span><span class="c1">// 2. Envoi contenu</span>
+<p>Si vous voulez éviter les tableaux de taille fixe pour optimiser la bande passante.  </p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">// --- CÔTÉ CLIENT (ÉCRITURE) ---  </span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="hll"><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Texte dynamique&quot;</span><span class="p">;</span><span class="w">  </span>
+</span></span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kt">uint32_t</span><span class="w"> </span><span class="n">taille</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">uint32_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">message</span><span class="p">.</span><span class="n">size</span><span class="p">());</span><span class="w">  </span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="hll"><span class="n">socket</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="o">&amp;</span><span class="n">taille</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">taille</span><span class="p">));</span><span class="w"> </span><span class="c1">// 1. Envoi taille  </span>
+</span></span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">socket</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="n">message</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span><span class="w"> </span><span class="n">taille</span><span class="p">);</span><span class="w">  </span><span class="c1">// 2. Envoi contenu  </span>
 </span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1">// --- CÔTÉ SERVEUR (LECTURE) ---</span>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="kt">uint32_t</span><span class="w"> </span><span class="n">tailleRecue</span><span class="p">;</span>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="n">nbOctets</span><span class="p">;</span>
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">socket</span><span class="p">.</span><span class="n">receive</span><span class="p">(</span><span class="o">&amp;</span><span class="n">tailleRecue</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">tailleRecue</span><span class="p">),</span><span class="w"> </span><span class="n">nbOctets</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">sf</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">messageRecu</span><span class="p">;</span>
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span><span class="n">messageRecu</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">tailleRecue</span><span class="p">);</span>
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="n">socket</span><span class="p">.</span><span class="n">receive</span><span class="p">(</span><span class="o">&amp;</span><span class="n">messageRecu</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">tailleRecue</span><span class="p">,</span><span class="w"> </span><span class="n">nbOctets</span><span class="p">);</span>
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Reçu : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">messageRecu</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="p">}</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1">// --- CÔTÉ SERVEUR (LECTURE) ---  </span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="kt">uint32_t</span><span class="w"> </span><span class="n">tailleRecue</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="n">nbOctets</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">socket</span><span class="p">.</span><span class="n">receive</span><span class="p">(</span><span class="o">&amp;</span><span class="n">tailleRecue</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">tailleRecue</span><span class="p">),</span><span class="w"> </span><span class="n">nbOctets</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">sf</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">messageRecu</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span><span class="n">messageRecu</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">tailleRecue</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="n">socket</span><span class="p">.</span><span class="n">receive</span><span class="p">(</span><span class="o">&amp;</span><span class="n">messageRecu</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">tailleRecue</span><span class="p">,</span><span class="w"> </span><span class="n">nbOctets</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Reçu : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">messageRecu</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="p">}</span><span class="w">  </span>
 </span></code></pre></div>
 <h3 id="pourquoi-3-parametres-dans-receive">Pourquoi 3 paramètres dans <code>receive</code> ?</h3>
 <ol>
-<li><strong>Le pointeur (<code>&amp;variable</code>)</strong> : Où poser le colis.</li>
-<li><strong>La taille (<code>sizeof</code>)</strong> : Taille de la boîte aux lettres.</li>
-<li><strong>La variable (<code>nbOctetsRecus</code>)</strong> : Le bon de livraison (rempli par la fonction).</li>
+<li><strong>Le pointeur (<code>&amp;variable</code>)</strong> : Où poser le colis.  </li>
+<li><strong>La taille (<code>sizeof</code>)</strong> : Taille de la boîte aux lettres.  </li>
+<li><strong>La variable (<code>nbOctetsRecus</code>)</strong> : Le bon de livraison (rempli par la fonction).  </li>
 </ol>
 <h3 id="comparaison-des-approches">Comparaison des approches</h3>
 <table>

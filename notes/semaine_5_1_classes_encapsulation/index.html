@@ -448,7 +448,7 @@
           
   
   
-  Phase 0 : Conception Objet (Semaine 5)
+  Phase 0 : Conception Objet 
 
         </a>
       </li>
@@ -468,7 +468,7 @@
           
   
   
-  Phase 1 : Stockage et Fichiers (Semaine 6)
+  Phase 1 : Stockage et Fichiers 
 
         </a>
       </li>
@@ -488,7 +488,7 @@
           
   
   
-  Phase 2 : Étude de Cas (Semaine 7)
+  Phase 2 : Étude de Cas 
 
         </a>
       </li>
@@ -508,7 +508,7 @@
           
   
   
-  Phase 3 : Communication Réseau (Semaine 8)
+  Phase 3 : Communication Réseau 
 
         </a>
       </li>
@@ -528,7 +528,7 @@
           
   
   
-  Phase 4 : L'Aboutissement (Semaine 9)
+  Phase 4 : L'Aboutissement 
 
         </a>
       </li>
@@ -1370,7 +1370,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 0 : Conception Objet (Semaine 5)
+    Phase 0 : Conception Objet 
   
 
     
@@ -1386,7 +1386,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 0 : Conception Objet (Semaine 5)
+    Phase 0 : Conception Objet 
   
 
           </label>
@@ -1635,7 +1635,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 1 : Stockage et Fichiers (Semaine 6)
+    Phase 1 : Stockage et Fichiers 
   
 
     
@@ -1651,7 +1651,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 1 : Stockage et Fichiers (Semaine 6)
+    Phase 1 : Stockage et Fichiers 
   
 
           </label>
@@ -1748,7 +1748,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 2 : Étude de Cas (Semaine 7)
+    Phase 2 : Étude de Cas 
   
 
     
@@ -1764,7 +1764,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 2 : Étude de Cas (Semaine 7)
+    Phase 2 : Étude de Cas 
   
 
           </label>
@@ -1861,7 +1861,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 3 : Communication Réseau (Semaine 8)
+    Phase 3 : Communication Réseau 
   
 
     
@@ -1877,7 +1877,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 3 : Communication Réseau (Semaine 8)
+    Phase 3 : Communication Réseau 
   
 
           </label>
@@ -1974,7 +1974,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 4 : L'Aboutissement (Semaine 9)
+    Phase 4 : L'Aboutissement 
   
 
     
@@ -1990,7 +1990,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 4 : L'Aboutissement (Semaine 9)
+    Phase 4 : L'Aboutissement 
   
 
           </label>
@@ -2137,131 +2137,131 @@
 
 
 <h1 id="conception-de-classes-en-c">Conception de Classes en C++</h1>
-<p>Ce guide explique comment transformer une structure de données en une classe robuste en utilisant l'encapsulation (privé/public), les accesseurs et les constructeurs.</p>
+<p>Ce guide explique comment transformer une structure de données en une classe robuste en utilisant l'encapsulation (privé/public), les accesseurs et les constructeurs.  </p>
 <h2 id="1-utilisation-de-stdchrono-c20">1. Utilisation de <code>std::chrono</code> (C++20)</h2>
-<p>Depuis C++20, la bibliothèque <code>&lt;chrono&gt;</code> est devenue l'outil officiel pour gérer les dates. Nous utiliserons <code>std::chrono::year_month_day</code>.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;chrono&gt;</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="o">::</span><span class="nn">chrono</span><span class="p">;</span>
+<p>Depuis C++20, la bibliothèque <code>&lt;chrono&gt;</code> est devenue l'outil officiel pour gérer les dates. Nous utiliserons <code>std::chrono::year_month_day</code>.  </p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;chrono&gt;</span><span class="c1">  </span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="o">::</span><span class="nn">chrono</span><span class="p">;</span><span class="w">  </span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">// Exemple de création d&#39;une date :</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1">// year_month_day naissance = 1995y / August / 14d;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">// Exemple de création d&#39;une date :  </span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1">// year_month_day naissance = 1995y / August / 14d;  </span>
 </span></code></pre></div>
 <h2 id="2-le-fichier-den-tete-clienthpp">2. Le fichier d'en-tête (<code>Client.hpp</code>)</h2>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">#pragma once</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">#pragma once  </span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;chrono&gt;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span><span class="c1">  </span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;chrono&gt;</span><span class="c1">  </span>
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">class</span><span class="w"> </span><span class="nc">Client</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">public</span><span class="o">:</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="c1">// 1. Constructeur paramétré</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="n">Client</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">year_month_day</span><span class="w"> </span><span class="n">naissance</span><span class="p">);</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">class</span><span class="w"> </span><span class="nc">Client</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">public</span><span class="o">:</span><span class="w">  </span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="c1">// 1. Constructeur paramétré  </span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="n">Client</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">year_month_day</span><span class="w"> </span><span class="n">naissance</span><span class="p">);</span><span class="w">  </span>
 </span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="c1">// 2. Constructeur de copie</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="c1">// Essentiel pour garantir une duplication propre de l&#39;objet</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="n">Client</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Client</span><span class="o">&amp;</span><span class="w"> </span><span class="n">autre</span><span class="p">);</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="c1">// 2. Constructeur de copie  </span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="c1">// Essentiel pour garantir une duplication propre de l&#39;objet  </span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="n">Client</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Client</span><span class="o">&amp;</span><span class="w"> </span><span class="n">autre</span><span class="p">);</span><span class="w">  </span>
 </span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="c1">// 3. Destructeur</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="c1">// Appelé automatiquement quand l&#39;objet sort du scope</span>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="o">~</span><span class="n">Client</span><span class="p">();</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="c1">// 3. Destructeur  </span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="c1">// Appelé automatiquement quand l&#39;objet sort du scope  </span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="o">~</span><span class="n">Client</span><span class="p">();</span><span class="w">  </span>
 </span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="c1">// 4. Accesseurs (Getters) - Toujours &#39;const&#39; car ils ne modifient rien</span>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">getNom</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">getPrenom</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">year_month_day</span><span class="w"> </span><span class="nf">getDateNaissance</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="c1">// 4. Accesseurs (Getters) - Toujours &#39;const&#39; car ils ne modifient rien  </span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">getNom</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">getPrenom</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">year_month_day</span><span class="w"> </span><span class="nf">getDateNaissance</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w">  </span>
 </span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">    </span><span class="c1">// 5. Mutateurs (Setters) - Permettent de modifier avec contrôle</span>
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setNom</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">nom</span><span class="p">);</span>
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setPrenom</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">prenom</span><span class="p">);</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">    </span><span class="c1">// 5. Mutateurs (Setters) - Permettent de modifier avec contrôle  </span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setNom</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">nom</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setPrenom</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">prenom</span><span class="p">);</span><span class="w">  </span>
 </span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>
-</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="k">private</span><span class="o">:</span>
-</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">    </span><span class="c1">// Les données sont privées : personne ne peut les modifier par erreur</span>
-</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">m_nom</span><span class="p">;</span>
-</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">m_prenom</span><span class="p">;</span>
-</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">year_month_day</span><span class="w"> </span><span class="n">m_dateNaissance</span><span class="p">;</span>
-</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="p">};</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="k">private</span><span class="o">:</span><span class="w">  </span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">    </span><span class="c1">// Les données sont privées : personne ne peut les modifier par erreur  </span>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">m_nom</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">m_prenom</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">year_month_day</span><span class="w"> </span><span class="n">m_dateNaissance</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="p">};</span><span class="w">  </span>
 </span></code></pre></div>
 <h2 id="3-limplementation-clientcpp">3. L'implémentation (<code>Client.cpp</code>)</h2>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Client.hpp&quot;</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Client.hpp&quot;</span><span class="c1">  </span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1">// On utilise std::chrono pour la clarté</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="o">::</span><span class="nn">chrono</span><span class="p">;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1">// On utilise std::chrono pour la clarté  </span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="o">::</span><span class="nn">chrono</span><span class="p">;</span><span class="w">  </span>
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1">// Constructeur : on initialise les membres via la liste d&#39;initialisation (plus rapide)</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">Client</span><span class="o">::</span><span class="n">Client</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="n">year_month_day</span><span class="w"> </span><span class="n">naissance</span><span class="p">)</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">m_nom</span><span class="p">{</span><span class="n">nom</span><span class="p">},</span><span class="w"> </span><span class="n">m_prenom</span><span class="p">{</span><span class="n">prenom</span><span class="p">},</span><span class="w"> </span><span class="n">m_dateNaissance</span><span class="p">{</span><span class="n">naissance</span><span class="p">}</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">}</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1">// Constructeur : on initialise les membres via la liste d&#39;initialisation (plus rapide)  </span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">Client</span><span class="o">::</span><span class="n">Client</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="n">year_month_day</span><span class="w"> </span><span class="n">naissance</span><span class="p">)</span><span class="w">  </span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">m_nom</span><span class="p">{</span><span class="n">nom</span><span class="p">},</span><span class="w"> </span><span class="n">m_prenom</span><span class="p">{</span><span class="n">prenom</span><span class="p">},</span><span class="w"> </span><span class="n">m_dateNaissance</span><span class="p">{</span><span class="n">naissance</span><span class="p">}</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">}</span><span class="w">  </span>
 </span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="c1">// Constructeur de copie</span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="n">Client</span><span class="o">::</span><span class="n">Client</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Client</span><span class="o">&amp;</span><span class="w"> </span><span class="n">autre</span><span class="p">)</span>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">m_nom</span><span class="p">{</span><span class="n">autre</span><span class="p">.</span><span class="n">m_nom</span><span class="p">},</span><span class="w"> </span><span class="n">m_prenom</span><span class="p">{</span><span class="n">autre</span><span class="p">.</span><span class="n">m_prenom</span><span class="p">},</span><span class="w"> </span><span class="n">m_dateNaissance</span><span class="p">{</span><span class="n">autre</span><span class="p">.</span><span class="n">m_dateNaissance</span><span class="p">}</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="p">}</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="c1">// Constructeur de copie  </span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="n">Client</span><span class="o">::</span><span class="n">Client</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Client</span><span class="o">&amp;</span><span class="w"> </span><span class="n">autre</span><span class="p">)</span><span class="w">  </span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">m_nom</span><span class="p">{</span><span class="n">autre</span><span class="p">.</span><span class="n">m_nom</span><span class="p">},</span><span class="w"> </span><span class="n">m_prenom</span><span class="p">{</span><span class="n">autre</span><span class="p">.</span><span class="n">m_prenom</span><span class="p">},</span><span class="w"> </span><span class="n">m_dateNaissance</span><span class="p">{</span><span class="n">autre</span><span class="p">.</span><span class="n">m_dateNaissance</span><span class="p">}</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="p">}</span><span class="w">  </span>
 </span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="c1">// Destructeur (vide ici car std::string gère sa propre mémoire)</span>
-</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="n">Client</span><span class="o">::~</span><span class="n">Client</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="p">}</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="c1">// Destructeur (vide ici car std::string gère sa propre mémoire)  </span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="n">Client</span><span class="o">::~</span><span class="n">Client</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="p">}</span><span class="w">  </span>
 </span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>
-</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="c1">// Getters</span>
-</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">Client</span><span class="o">::</span><span class="n">getNom</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">m_nom</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">Client</span><span class="o">::</span><span class="n">getPrenom</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">m_prenom</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="n">year_month_day</span><span class="w"> </span><span class="n">Client</span><span class="o">::</span><span class="n">getDateNaissance</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">m_dateNaissance</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="c1">// Getters  </span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">Client</span><span class="o">::</span><span class="n">getNom</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">m_nom</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w">  </span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">Client</span><span class="o">::</span><span class="n">getPrenom</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">m_prenom</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w">  </span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="n">year_month_day</span><span class="w"> </span><span class="n">Client</span><span class="o">::</span><span class="n">getDateNaissance</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">m_dateNaissance</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w">  </span>
 </span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>
-</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="c1">// Setters</span>
-</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="kt">void</span><span class="w"> </span><span class="n">Client</span><span class="o">::</span><span class="n">setNom</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">nom</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">m_nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="kt">void</span><span class="w"> </span><span class="n">Client</span><span class="o">::</span><span class="n">setPrenom</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">prenom</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">m_prenom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prenom</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="c1">// Setters  </span>
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="kt">void</span><span class="w"> </span><span class="n">Client</span><span class="o">::</span><span class="n">setNom</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">nom</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">m_nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w">  </span>
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="kt">void</span><span class="w"> </span><span class="n">Client</span><span class="o">::</span><span class="n">setPrenom</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">prenom</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">m_prenom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prenom</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w">  </span>
 </span></code></pre></div>
 <h2 id="4-concepts-cles-pour-les-etudiants">4. Concepts clés pour les étudiants</h2>
 <h3 id="lencapsulation-prive-vs-public">L'Encapsulation (Privé vs Public)</h3>
 <ul>
-<li><strong><code>private</code></strong> : C'est le coffre-fort. Seules les méthodes de la classe peuvent toucher à ces variables. Cela empêche un utilisateur de mettre un mois à <code>99</code> ou une année à <code>-5</code>.</li>
-<li><strong><code>public</code></strong> : C'est l'interface. Ce sont les boutons que l'utilisateur peut presser pour interagir avec l'objet.</li>
+<li><strong><code>private</code></strong> : C'est le coffre-fort. Seules les méthodes de la classe peuvent toucher à ces variables. Cela empêche un utilisateur de mettre un mois à <code>99</code> ou une année à <code>-5</code>.  </li>
+<li><strong><code>public</code></strong> : C'est l'interface. Ce sont les boutons que l'utilisateur peut presser pour interagir avec l'objet.  </li>
 </ul>
 <h3 id="le-constructeur-de-copie">Le Constructeur de Copie</h3>
-<p>En C++, quand vous passez un objet à une fonction par valeur, le compilateur crée une copie. Le constructeur de copie définit <strong>comment</strong> cette copie doit être faite. Pour des types simples ou <code>std::string</code>, le comportement par défaut suffit, mais l'écrire explicitement est une excellente pratique d'apprentissage.</p>
+<p>En C++, quand vous passez un objet à une fonction par valeur, le compilateur crée une copie. Le constructeur de copie définit <strong>comment</strong> cette copie doit être faite. Pour des types simples ou <code>std::string</code>, le comportement par défaut suffit, mais l'écrire explicitement est une excellente pratique d'apprentissage.  </p>
 <h3 id="le-destructeur">Le Destructeur</h3>
-<p>C'est le "ménage" automatique. Dès qu'une variable <code>Client</code> locale à une fonction n'est plus utilisée, le destructeur est appelé pour libérer les ressources.</p>
+<p>C'est le "ménage" automatique. Dès qu'une variable <code>Client</code> locale à une fonction n'est plus utilisée, le destructeur est appelé pour libérer les ressources.  </p>
 <h2 id="5-exemple-dutilisation-maincpp">5. Exemple d'utilisation (<code>main.cpp</code>)</h2>
-<p>Voici comment créer un client en utilisant la syntaxe moderne de C++20 pour les dates.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Client.hpp&quot;</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<p>Voici comment créer un client en utilisant la syntaxe moderne de C++20 pour les dates.  </p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Client.hpp&quot;</span><span class="c1">  </span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="c1">  </span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="o">::</span><span class="nn">chrono</span><span class="p">;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="o">::</span><span class="nn">chrono</span><span class="p">;</span><span class="w">  </span>
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="c1">// Création d&#39;une date avec les littéraux (y pour year, d pour day)</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="c1">// Notez l&#39;ordre très lisible : Année / Mois / Jour</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="n">year_month_day</span><span class="w"> </span><span class="n">dateNaissance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2000</span><span class="n">y</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">March</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">12</span><span class="n">d</span><span class="p">;</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="c1">// Création d&#39;une date avec les littéraux (y pour year, d pour day)  </span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="c1">// Notez l&#39;ordre très lisible : Année / Mois / Jour  </span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="n">year_month_day</span><span class="w"> </span><span class="n">dateNaissance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2000</span><span class="n">y</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">March</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">12</span><span class="n">d</span><span class="p">;</span><span class="w">  </span>
 </span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="c1">// Instanciation du client</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="n">Client</span><span class="w"> </span><span class="n">nouveauClient</span><span class="p">{</span><span class="s">&quot;Gagnon&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Alexandre&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dateNaissance</span><span class="p">};</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="c1">// Instanciation du client  </span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="n">Client</span><span class="w"> </span><span class="n">nouveauClient</span><span class="p">{</span><span class="s">&quot;Gagnon&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Alexandre&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dateNaissance</span><span class="p">};</span><span class="w">  </span>
 </span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">    </span><span class="c1">// Affichage des informations</span>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Client créé : &quot;</span><span class="w"> </span>
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">nouveauClient</span><span class="p">.</span><span class="n">getPrenom</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span>
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">nouveauClient</span><span class="p">.</span><span class="n">getNom</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">    </span><span class="c1">// Affichage des informations  </span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Client créé : &quot;</span><span class="w">  </span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">nouveauClient</span><span class="p">.</span><span class="n">getPrenom</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w">  </span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">nouveauClient</span><span class="p">.</span><span class="n">getNom</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">  </span>
 </span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="p">}</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="p">}</span><span class="w">  </span>
 </span></code></pre></div>
 <h2 id="6-saisie-utilisateur-vers-chrono">6. Saisie utilisateur vers Chrono</h2>
-<p>Si vous devez demander une date à l'utilisateur, vous récupérez d'abord des entiers (<code>int</code>), puis vous les convertissez explicitement dans les types de <code>chrono</code>.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">;</span>
+<p>Si vous devez demander une date à l'utilisateur, vous récupérez d'abord des entiers (<code>int</code>), puis vous les convertissez explicitement dans les types de <code>chrono</code>.  </p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">;</span><span class="w">  </span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Annee de naissance : &quot;</span><span class="p">;</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="c1">// Lecture de l&#39;entier (ex: 1998)</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Annee de naissance : &quot;</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="c1">// Lecture de l&#39;entier (ex: 1998)  </span>
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Mois (1-12) : &quot;</span><span class="p">;</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">m</span><span class="p">;</span><span class="w"> </span><span class="c1">// Lecture de l&#39;entier (ex: 05)</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Mois (1-12) : &quot;</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">m</span><span class="p">;</span><span class="w"> </span><span class="c1">// Lecture de l&#39;entier (ex: 05)  </span>
 </span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Jour (1-31) : &quot;</span><span class="p">;</span>
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">j</span><span class="p">;</span><span class="w"> </span><span class="c1">// Lecture de l&#39;entier (ex: 22)</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Jour (1-31) : &quot;</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">j</span><span class="p">;</span><span class="w"> </span><span class="c1">// Lecture de l&#39;entier (ex: 22)  </span>
 </span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="c1">// Transformation des entiers vers les types officiels de chrono</span>
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="c1">// On utilise le transtypage explicite : year(a), month(m), day(j)</span>
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="n">year_month_day</span><span class="w"> </span><span class="n">dateSaisie</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">year</span><span class="p">{</span><span class="n">a</span><span class="p">},</span><span class="w"> </span><span class="n">month</span><span class="p">{</span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">)},</span><span class="w"> </span><span class="n">day</span><span class="p">{</span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="o">&gt;</span><span class="p">(</span><span class="n">j</span><span class="p">)}</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="c1">// Transformation des entiers vers les types officiels de chrono  </span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="c1">// On utilise le transtypage explicite : year(a), month(m), day(j)  </span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="n">year_month_day</span><span class="w"> </span><span class="n">dateSaisie</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">year</span><span class="p">{</span><span class="n">a</span><span class="p">},</span><span class="w"> </span><span class="n">month</span><span class="p">{</span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">)},</span><span class="w"> </span><span class="n">day</span><span class="p">{</span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="o">&gt;</span><span class="p">(</span><span class="n">j</span><span class="p">)}</span><span class="w"> </span><span class="p">};</span><span class="w">  </span>
 </span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>
-</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="c1">// On peut maintenant créer notre client</span>
-</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="n">Client</span><span class="w"> </span><span class="n">clientSaisi</span><span class="p">{</span><span class="s">&quot;Nom&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Prenom&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dateSaisie</span><span class="p">};</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="c1">// On peut maintenant créer notre client  </span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="n">Client</span><span class="w"> </span><span class="n">clientSaisi</span><span class="p">{</span><span class="s">&quot;Nom&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Prenom&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dateSaisie</span><span class="p">};</span><span class="w">  </span>
 </span></code></pre></div>
 
 

@@ -448,7 +448,7 @@
           
   
   
-  Phase 0 : Conception Objet (Semaine 5)
+  Phase 0 : Conception Objet 
 
         </a>
       </li>
@@ -468,7 +468,7 @@
           
   
   
-  Phase 1 : Stockage et Fichiers (Semaine 6)
+  Phase 1 : Stockage et Fichiers 
 
         </a>
       </li>
@@ -488,7 +488,7 @@
           
   
   
-  Phase 2 : Étude de Cas (Semaine 7)
+  Phase 2 : Étude de Cas 
 
         </a>
       </li>
@@ -508,7 +508,7 @@
           
   
   
-  Phase 3 : Communication Réseau (Semaine 8)
+  Phase 3 : Communication Réseau 
 
         </a>
       </li>
@@ -528,7 +528,7 @@
           
   
   
-  Phase 4 : L'Aboutissement (Semaine 9)
+  Phase 4 : L'Aboutissement 
 
         </a>
       </li>
@@ -1511,7 +1511,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 0 : Conception Objet (Semaine 5)
+    Phase 0 : Conception Objet 
   
 
     
@@ -1527,7 +1527,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 0 : Conception Objet (Semaine 5)
+    Phase 0 : Conception Objet 
   
 
           </label>
@@ -1624,7 +1624,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 1 : Stockage et Fichiers (Semaine 6)
+    Phase 1 : Stockage et Fichiers 
   
 
     
@@ -1640,7 +1640,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 1 : Stockage et Fichiers (Semaine 6)
+    Phase 1 : Stockage et Fichiers 
   
 
           </label>
@@ -1737,7 +1737,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 2 : Étude de Cas (Semaine 7)
+    Phase 2 : Étude de Cas 
   
 
     
@@ -1753,7 +1753,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 2 : Étude de Cas (Semaine 7)
+    Phase 2 : Étude de Cas 
   
 
           </label>
@@ -1850,7 +1850,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 3 : Communication Réseau (Semaine 8)
+    Phase 3 : Communication Réseau 
   
 
     
@@ -1866,7 +1866,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 3 : Communication Réseau (Semaine 8)
+    Phase 3 : Communication Réseau 
   
 
           </label>
@@ -1963,7 +1963,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 4 : L'Aboutissement (Semaine 9)
+    Phase 4 : L'Aboutissement 
   
 
     
@@ -1979,7 +1979,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 4 : L'Aboutissement (Semaine 9)
+    Phase 4 : L'Aboutissement 
   
 
           </label>
@@ -2126,85 +2126,85 @@
 
 
 <h1 id="les-tests-unitaires-avec-catch2">Les Tests Unitaires avec Catch2</h1>
-<p>Le test unitaire consiste à vérifier une seule "unité" de code (généralement une méthode ou une fonction) de manière isolée. L'objectif est de s'assurer que chaque petit morceau de logique fonctionne parfaitement avant de les assembler.</p>
+<p>Le test unitaire consiste à vérifier une seule "unité" de code (généralement une méthode ou une fonction) de manière isolée. L'objectif est de s'assurer que chaque petit morceau de logique fonctionne parfaitement avant de les assembler.  </p>
 <hr />
 <h2 id="1-la-regle-dor-un-test-un-comportement">1. La règle d'or : Un test = Un comportement</h2>
-<p>En Programmation 3, nous privilégions l'utilisation d'un <code>TEST_CASE</code> distinct pour chaque règle d'affaire. Cela permet d'identifier précisément quelle règle est brisée sans que les autres tests ne soient affectés.</p>
+<p>En Programmation 3, nous privilégions l'utilisation d'un <code>TEST_CASE</code> distinct pour chaque règle d'affaire. Cela permet d'identifier précisément quelle règle est brisée sans que les autres tests ne soient affectés.  </p>
 <h2 id="2-structure-dun-fichier-de-test">2. Structure d'un fichier de test</h2>
-<p>Chaque fichier de test doit commencer par ces deux lignes (dans un seul de vos fichiers de projet) pour que Catch2 génère son propre <code>main()</code>.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#define CATCH_CONFIG_MAIN</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;catch.hpp&quot;</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;CompteBancaire.hpp&quot;</span>
+<p>Chaque fichier de test doit commencer par ces deux lignes (dans un seul de vos fichiers de projet) pour que Catch2 génère son propre <code>main()</code>.  </p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#define CATCH_CONFIG_MAIN  </span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;catch.hpp&quot;</span><span class="c1">  </span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;CompteBancaire.hpp&quot;</span><span class="c1">  </span>
 </span></code></pre></div>
 <hr />
 <h2 id="3-les-outils-indispensables">3. Les outils indispensables</h2>
 <h3 id="a-require-lassertion-de-base">A. REQUIRE (L'assertion de base)</h3>
-<p>Vérifie une condition. Si elle est fausse, le test s'arrête immédiatement.
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Le solde initial est respecté&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[initialisation]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">CompteBancaire</span><span class="w"> </span><span class="n">c</span><span class="p">(</span><span class="s">&quot;Simon&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">100.0</span><span class="p">);</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">getSolde</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">100.0</span><span class="p">);</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">}</span>
+<p>Vérifie une condition. Si elle est fausse, le test s'arrête immédiatement.<br />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Le solde initial est respecté&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[initialisation]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">CompteBancaire</span><span class="w"> </span><span class="n">c</span><span class="p">(</span><span class="s">&quot;Simon&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">100.0</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">getSolde</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">100.0</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">}</span><span class="w">  </span>
 </span></code></pre></div></p>
 <h3 id="b-info-le-message-personnalise">B. INFO (Le message personnalisé)</h3>
-<p>Permet d'afficher un message d'explication <strong>uniquement si le test échoue</strong>. Très utile pour le débogage.
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Dépôt de fonds&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[transaction]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">CompteBancaire</span><span class="w"> </span><span class="n">c</span><span class="p">(</span><span class="s">&quot;Simon&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">100.0</span><span class="p">);</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">montant</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">50.0</span><span class="p">;</span>
+<p>Permet d'afficher un message d'explication <strong>uniquement si le test échoue</strong>. Très utile pour le débogage.<br />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Dépôt de fonds&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[transaction]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">CompteBancaire</span><span class="w"> </span><span class="n">c</span><span class="p">(</span><span class="s">&quot;Simon&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">100.0</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">montant</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">50.0</span><span class="p">;</span><span class="w">  </span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="n">c</span><span class="p">.</span><span class="n">deposer</span><span class="p">(</span><span class="n">montant</span><span class="p">);</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="n">c</span><span class="p">.</span><span class="n">deposer</span><span class="p">(</span><span class="n">montant</span><span class="p">);</span><span class="w">  </span>
 </span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="n">INFO</span><span class="p">(</span><span class="s">&quot;Le solde après un dépôt de &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">montant</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; devrait être de 150.0&quot;</span><span class="p">);</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">getSolde</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">150.0</span><span class="p">);</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">}</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="n">INFO</span><span class="p">(</span><span class="s">&quot;Le solde après un dépôt de &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">montant</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; devrait être de 150.0&quot;</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">getSolde</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">150.0</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">}</span><span class="w">  </span>
 </span></code></pre></div></p>
 <h3 id="c-gestion-des-exceptions-les-echecs-attendus">C. Gestion des exceptions (Les échecs attendus)</h3>
-<p>Souvent, on veut tester que notre code <strong>bloque</strong> les mauvaises actions.</p>
+<p>Souvent, on veut tester que notre code <strong>bloque</strong> les mauvaises actions.  </p>
 <ul>
-<li><strong><code>REQUIRE_THROWS</code></strong> : Vérifie qu'une exception est lancée (peu importe laquelle).</li>
-<li><strong><code>REQUIRE_THROWS_AS</code></strong> : Vérifie qu'une exception d'un <strong>type précis</strong> est lancée (plus rigoureux).</li>
+<li><strong><code>REQUIRE_THROWS</code></strong> : Vérifie qu'une exception est lancée (peu importe laquelle).  </li>
+<li><strong><code>REQUIRE_THROWS_AS</code></strong> : Vérifie qu'une exception d'un <strong>type précis</strong> est lancée (plus rigoureux).  </li>
 </ul>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Sécurité : Retrait supérieur au solde&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[securite]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">CompteBancaire</span><span class="w"> </span><span class="n">c</span><span class="p">(</span><span class="s">&quot;Simon&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">100.0</span><span class="p">);</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Sécurité : Retrait supérieur au solde&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[securite]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">CompteBancaire</span><span class="w"> </span><span class="n">c</span><span class="p">(</span><span class="s">&quot;Simon&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">100.0</span><span class="p">);</span><span class="w">  </span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="n">INFO</span><span class="p">(</span><span class="s">&quot;Tenter de retirer 200$ alors qu&#39;on a 100$ doit lever une erreur&quot;</span><span class="p">);</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="n">REQUIRE_THROWS_AS</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">retirer</span><span class="p">(</span><span class="mf">200.0</span><span class="p">),</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">);</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p">}</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="n">INFO</span><span class="p">(</span><span class="s">&quot;Tenter de retirer 200$ alors qu&#39;on a 100$ doit lever une erreur&quot;</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="n">REQUIRE_THROWS_AS</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">retirer</span><span class="p">(</span><span class="mf">200.0</span><span class="p">),</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p">}</span><span class="w">  </span>
 </span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Sécurité : Dépôt négatif interdit&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[securite]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="n">CompteBancaire</span><span class="w"> </span><span class="n">c</span><span class="p">(</span><span class="s">&quot;Simon&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">100.0</span><span class="p">);</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Sécurité : Dépôt négatif interdit&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[securite]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="n">CompteBancaire</span><span class="w"> </span><span class="n">c</span><span class="p">(</span><span class="s">&quot;Simon&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">100.0</span><span class="p">);</span><span class="w">  </span>
 </span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="c1">// On s&#39;assure qu&#39;une exception est lancée, sans préciser le type</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="n">REQUIRE_THROWS</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">deposer</span><span class="p">(</span><span class="mf">-50.0</span><span class="p">));</span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="p">}</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="c1">// On s&#39;assure qu&#39;une exception est lancée, sans préciser le type  </span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="n">REQUIRE_THROWS</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">deposer</span><span class="p">(</span><span class="mf">-50.0</span><span class="p">));</span><span class="w">  </span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="p">}</span><span class="w">  </span>
 </span></code></pre></div>
 <hr />
 <h2 id="4-exemple-recapitulatif-complet">4. Exemple Récapitulatif Complet</h2>
-<p>Voici à quoi devrait ressembler un fichier de tests professionnel et facile à maintenir :</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cp">#define CATCH_CONFIG_MAIN</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;catch.hpp&quot;</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;CompteBancaire.hpp&quot;</span>
+<p>Voici à quoi devrait ressembler un fichier de tests professionnel et facile à maintenir :  </p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cp">#define CATCH_CONFIG_MAIN  </span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;catch.hpp&quot;</span><span class="c1">  </span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;CompteBancaire.hpp&quot;</span><span class="c1">  </span>
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Initialisation du titulaire&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[unitaire][init]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="n">CompteBancaire</span><span class="w"> </span><span class="n">c</span><span class="p">(</span><span class="s">&quot;Alice&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">100.0</span><span class="p">);</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">getTitulaire</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Alice&quot;</span><span class="p">);</span>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="p">}</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Initialisation du titulaire&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[unitaire][init]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="n">CompteBancaire</span><span class="w"> </span><span class="n">c</span><span class="p">(</span><span class="s">&quot;Alice&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">100.0</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">getTitulaire</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Alice&quot;</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="p">}</span><span class="w">  </span>
 </span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Calcul du solde après retrait&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[unitaire][calcul]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="n">CompteBancaire</span><span class="w"> </span><span class="n">c</span><span class="p">(</span><span class="s">&quot;Alice&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">100.0</span><span class="p">);</span>
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span><span class="n">c</span><span class="p">.</span><span class="n">retirer</span><span class="p">(</span><span class="mf">30.0</span><span class="p">);</span>
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">getSolde</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">70.0</span><span class="p">);</span>
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="p">}</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Calcul du solde après retrait&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[unitaire][calcul]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="n">CompteBancaire</span><span class="w"> </span><span class="n">c</span><span class="p">(</span><span class="s">&quot;Alice&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">100.0</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span><span class="n">c</span><span class="p">.</span><span class="n">retirer</span><span class="p">(</span><span class="mf">30.0</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">getSolde</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">70.0</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="p">}</span><span class="w">  </span>
 </span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>
-</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Erreur lors d&#39;un solde initial négatif&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[unitaire][erreur]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="n">INFO</span><span class="p">(</span><span class="s">&quot;Le constructeur doit empêcher la création d&#39;un compte débiteur&quot;</span><span class="p">);</span>
-</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">    </span><span class="n">REQUIRE_THROWS_AS</span><span class="p">(</span><span class="n">CompteBancaire</span><span class="p">(</span><span class="s">&quot;Bob&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">-10.0</span><span class="p">),</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">invalid_argument</span><span class="p">);</span>
-</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="p">}</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Erreur lors d&#39;un solde initial négatif&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[unitaire][erreur]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="n">INFO</span><span class="p">(</span><span class="s">&quot;Le constructeur doit empêcher la création d&#39;un compte débiteur&quot;</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">    </span><span class="n">REQUIRE_THROWS_AS</span><span class="p">(</span><span class="n">CompteBancaire</span><span class="p">(</span><span class="s">&quot;Bob&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">-10.0</span><span class="p">),</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">invalid_argument</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="p">}</span><span class="w">  </span>
 </span></code></pre></div>
 <h2 id="5-pourquoi-cette-approche">5. Pourquoi cette approche ?</h2>
 <ol>
-<li><strong>Indépendance</strong> : Si le test du retrait échoue, vous savez que le problème vient de la méthode <code>retirer()</code> et non du constructeur ou du dépôt.</li>
-<li><strong>Rapidité</strong> : Vous pouvez lancer uniquement les tests d'erreurs avec la commande : <code>./tests_app [erreur]</code>.</li>
-<li><strong>Clarté</strong> : Les titres des <code>TEST_CASE</code> servent de documentation pour votre code.</li>
+<li><strong>Indépendance</strong> : Si le test du retrait échoue, vous savez que le problème vient de la méthode <code>retirer()</code> et non du constructeur ou du dépôt.  </li>
+<li><strong>Rapidité</strong> : Vous pouvez lancer uniquement les tests d'erreurs avec la commande : <code>./tests_app [erreur]</code>.  </li>
+<li><strong>Clarté</strong> : Les titres des <code>TEST_CASE</code> servent de documentation pour votre code.  </li>
 </ol>
 
 

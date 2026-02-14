@@ -446,7 +446,7 @@
           
   
   
-  Phase 0 : Conception Objet (Semaine 5)
+  Phase 0 : Conception Objet 
 
         </a>
       </li>
@@ -466,7 +466,7 @@
           
   
   
-  Phase 1 : Stockage et Fichiers (Semaine 6)
+  Phase 1 : Stockage et Fichiers 
 
         </a>
       </li>
@@ -486,7 +486,7 @@
           
   
   
-  Phase 2 : Étude de Cas (Semaine 7)
+  Phase 2 : Étude de Cas 
 
         </a>
       </li>
@@ -508,7 +508,7 @@
           
   
   
-  Phase 3 : Communication Réseau (Semaine 8)
+  Phase 3 : Communication Réseau 
 
         </a>
       </li>
@@ -528,7 +528,7 @@
           
   
   
-  Phase 4 : L'Aboutissement (Semaine 9)
+  Phase 4 : L'Aboutissement 
 
         </a>
       </li>
@@ -1365,7 +1365,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 0 : Conception Objet (Semaine 5)
+    Phase 0 : Conception Objet 
   
 
     
@@ -1381,7 +1381,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 0 : Conception Objet (Semaine 5)
+    Phase 0 : Conception Objet 
   
 
           </label>
@@ -1478,7 +1478,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 1 : Stockage et Fichiers (Semaine 6)
+    Phase 1 : Stockage et Fichiers 
   
 
     
@@ -1494,7 +1494,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 1 : Stockage et Fichiers (Semaine 6)
+    Phase 1 : Stockage et Fichiers 
   
 
           </label>
@@ -1591,7 +1591,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 2 : Étude de Cas (Semaine 7)
+    Phase 2 : Étude de Cas 
   
 
     
@@ -1607,7 +1607,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 2 : Étude de Cas (Semaine 7)
+    Phase 2 : Étude de Cas 
   
 
           </label>
@@ -1709,7 +1709,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 3 : Communication Réseau (Semaine 8)
+    Phase 3 : Communication Réseau 
   
 
     
@@ -1725,7 +1725,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 3 : Communication Réseau (Semaine 8)
+    Phase 3 : Communication Réseau 
   
 
           </label>
@@ -2002,7 +2002,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 4 : L'Aboutissement (Semaine 9)
+    Phase 4 : L'Aboutissement 
   
 
     
@@ -2018,7 +2018,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 4 : L'Aboutissement (Semaine 9)
+    Phase 4 : L'Aboutissement 
   
 
           </label>
@@ -2165,12 +2165,12 @@
 
 
 <h1 id="communication-reseau-tcp-texte">Communication Réseau : TCP (Texte)</h1>
-<p>La communication par réseau (Sockets/TCP) peut être vue comme un fichier que l'on lit et écrit en temps réel entre deux machines.</p>
+<p>La communication par réseau (Sockets/TCP) peut être vue comme un fichier que l'on lit et écrit en temps réel entre deux machines.  </p>
 <h2 id="1-concepts-de-base">1. Concepts de base</h2>
 <ul>
-<li><strong>Adresse IP</strong> : L'adresse de la "maison" (ex: <code>127.0.0.1</code> pour soi-même).</li>
-<li><strong>Port</strong> : La "porte" d'entrée spécifique à l'application (ex: <code>8080</code>).</li>
-<li><strong>Socket</strong> : Le point de connexion (le "tuyau") entre le client et le serveur.</li>
+<li><strong>Adresse IP</strong> : L'adresse de la "maison" (ex: <code>127.0.0.1</code> pour soi-même).  </li>
+<li><strong>Port</strong> : La "porte" d'entrée spécifique à l'application (ex: <code>8080</code>).  </li>
+<li><strong>Socket</strong> : Le point de connexion (le "tuyau") entre le client et le serveur.  </li>
 </ul>
 <h2 id="2-analogie-avec-les-fichiers">2. Analogie avec les fichiers</h2>
 <table>
@@ -2205,75 +2205,75 @@
 </tbody>
 </table>
 <h2 id="3-lecture-et-ecriture-de-texte">3. Lecture et Écriture de Texte</h2>
-<p>Contrairement à un fichier qui a une fin (EOF), une connexion réseau reste ouverte. Il faut donc une convention pour savoir quand s'arrêter de lire.</p>
+<p>Contrairement à un fichier qui a une fin (EOF), une connexion réseau reste ouverte. Il faut donc une convention pour savoir quand s'arrêter de lire.  </p>
 <h3 id="a-le-delimiteur-standard-n">A. Le délimiteur standard : <code>\n</code></h3>
-<p>C'est la méthode la plus simple et la plus universelle. On choisit généralement le caractère <strong><code>\n</code></strong> (ASCII 10).
-*   <strong>Pourquoi ?</strong> Parce que cela permet de traiter le flux réseau comme une succession de lignes.
-*   <strong>Alternative :</strong> Certains protocoles utilisent <strong><code>\r\n</code></strong> (CRLF) ou l'octet nul <strong><code>\0</code></strong>.</p>
+<p>C'est la méthode la plus simple et la plus universelle. On choisit généralement le caractère <strong><code>\n</code></strong> (ASCII 10).<br />
+<em>   </em><em>Pourquoi ?</em><em> Parce que cela permet de traiter le flux réseau comme une succession de lignes.<br />
+</em>   <strong>Alternative :</strong> Certains protocoles utilisent <strong><code>\r\n</code></strong> (CRLF) ou l'octet nul <strong><code>\0</code></strong>.  </p>
 <h3 id="b-le-probleme-du-decoupage-fragmentation">B. Le problème du "Découpage" (Fragmentation)</h3>
-<p><strong>C'est le piège numéro 1 pour les étudiants.</strong> 
-En TCP, si vous envoyez "Bonjourn", le destinataire pourrait recevoir <code>"Bon"</code> au premier appel de <code>receive()</code>, puis <code>"jour\n"</code> au second. </p>
-<p><strong>La solution technique :</strong>
-Il faut créer un mécanisme qui accumule les données dans un tampon (<code>std::string</code>) jusqu'à ce qu'un <code>\n</code> soit détecté.</p>
+<p><strong>C'est le piège numéro 1 pour les étudiants.</strong><br />
+En TCP, si vous envoyez "Bonjourn", le destinataire pourrait recevoir <code>"Bon"</code> au premier appel de <code>receive()</code>, puis <code>"jour\n"</code> au second.  </p>
+<p><strong>La solution technique :</strong><br />
+Il faut créer un mécanisme qui accumule les données dans un tampon (<code>std::string</code>) jusqu'à ce qu'un <code>\n</code> soit détecté.  </p>
 <h2 id="4-les-paquets-sfml-une-alternative-plus-simple">4. Les Paquets SFML (Une alternative plus simple)</h2>
-<p>SFML propose une classe <code>sf::Packet</code> qui règle ce problème automatiquement en gérant elle-même la taille des messages. C'est idéal entre deux programmes SFML, mais incompatible si vous communiquez avec un programme externe (ex: un serveur Web ou une application Python) qui attend du texte brut.</p>
+<p>SFML propose une classe <code>sf::Packet</code> qui règle ce problème automatiquement en gérant elle-même la taille des messages. C'est idéal entre deux programmes SFML, mais incompatible si vous communiquez avec un programme externe (ex: un serveur Web ou une application Python) qui attend du texte brut.  </p>
 <h2 id="5-bibliotheques-suggerees">5. Bibliothèques suggérées</h2>
-<p>Le C++ standard n'a pas encore de bibliothèque réseau native simple (en attente de standardisation).
-*   <strong>SFML-network</strong> : La plus simple pour débuter (orientée objet, très proche des fichiers).
-*   <strong>Asio (ou Boost.Asio)</strong> : Le standard de l'industrie, puissant mais complexe.
-*   <strong>Sockets Berkeley / WinSock</strong> : L'API système (C). Difficile car très bas niveau, mais permet de comprendre comment l'OS gère le réseau.</p>
+<p>Le C++ standard n'a pas encore de bibliothèque réseau native simple (en attente de standardisation).<br />
+<em>   </em><em>SFML-network</em><em> : La plus simple pour débuter (orientée objet, très proche des fichiers).<br />
+</em>   <strong>Asio (ou Boost.Asio)</strong> : Le standard de l'industrie, puissant mais complexe.<br />
+<em>   </em><em>Sockets Berkeley / WinSock</em>* : L'API système (C). Difficile car très bas niveau, mais permet de comprendre comment l'OS gère le réseau.  </p>
 <h2 id="5-exemple-avec-sfml-network">5. Exemple avec SFML-Network</h2>
 <h3 id="cote-serveur-ecoute-et-repond">Côté Serveur (Écoute et répond)</h3>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SFML/Network.hpp&gt;</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SFML/Network.hpp&gt;</span><span class="c1">  </span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="c1">  </span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span><span class="c1">  </span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="n">sf</span><span class="o">::</span><span class="n">TcpListener</span><span class="w"> </span><span class="n">listener</span><span class="p">;</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="c1">// On écoute sur le port 53000</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">listener</span><span class="p">.</span><span class="n">listen</span><span class="p">(</span><span class="mi">53000</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">sf</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="n">sf</span><span class="o">::</span><span class="n">TcpListener</span><span class="w"> </span><span class="n">listener</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="c1">// On écoute sur le port 53000  </span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">listener</span><span class="p">.</span><span class="n">listen</span><span class="p">(</span><span class="mi">53000</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">sf</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w">  </span>
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="n">sf</span><span class="o">::</span><span class="n">TcpSocket</span><span class="w"> </span><span class="n">client</span><span class="p">;</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">listener</span><span class="p">.</span><span class="n">accept</span><span class="p">(</span><span class="n">client</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">sf</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="n">sf</span><span class="o">::</span><span class="n">TcpSocket</span><span class="w"> </span><span class="n">client</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">listener</span><span class="p">.</span><span class="n">accept</span><span class="p">(</span><span class="n">client</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">sf</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w">  </span>
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Client connecté : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="n">getRemoteAddress</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Client connecté : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="n">getRemoteAddress</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">  </span>
 </span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="c1">// Réception d&#39;un message</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">buffer</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="n">received</span><span class="p">;</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">client</span><span class="p">.</span><span class="n">receive</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="n">received</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">sf</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Message reçu : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">buffer</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="c1">// Réception d&#39;un message  </span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">buffer</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span><span class="w">  </span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="n">received</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">client</span><span class="p">.</span><span class="n">receive</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="n">received</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">sf</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Message reçu : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">buffer</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="p">}</span><span class="w">  </span>
 </span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="c1">// Envoi d&#39;une réponse</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">reponse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Bien reçu !</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">    </span><span class="n">client</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="n">reponse</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span><span class="w"> </span><span class="n">reponse</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="c1">// Envoi d&#39;une réponse  </span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">reponse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Bien reçu !</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">    </span><span class="n">client</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="n">reponse</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span><span class="w"> </span><span class="n">reponse</span><span class="p">.</span><span class="n">size</span><span class="p">());</span><span class="w">  </span>
 </span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="p">}</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="p">}</span><span class="w">  </span>
 </span></code></pre></div>
 <h3 id="cote-client-se-connecte-et-envoie">Côté Client (Se connecte et envoie)</h3>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SFML/Network.hpp&gt;</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SFML/Network.hpp&gt;</span><span class="c1">  </span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="c1">  </span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="n">sf</span><span class="o">::</span><span class="n">TcpSocket</span><span class="w"> </span><span class="n">socket</span><span class="p">;</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="c1">// On se connecte au serveur sur la même machine</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="n">sf</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Status</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">socket</span><span class="p">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">53000</span><span class="p">);</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">status</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">sf</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="n">sf</span><span class="o">::</span><span class="n">TcpSocket</span><span class="w"> </span><span class="n">socket</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="c1">// On se connecte au serveur sur la même machine  </span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="n">sf</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Status</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">socket</span><span class="p">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">53000</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">status</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">sf</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w">  </span>
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="c1">// Envoi de texte</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Salut serveur !&quot;</span><span class="p">;</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="n">socket</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="n">message</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span><span class="w"> </span><span class="n">message</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="c1">// Envoi de texte  </span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Salut serveur !&quot;</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="n">socket</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="n">message</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span><span class="w"> </span><span class="n">message</span><span class="p">.</span><span class="n">size</span><span class="p">());</span><span class="w">  </span>
 </span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="p">}</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="p">}</span><span class="w">  </span>
 </span></code></pre></div>
 <h2 id="6-exemple-de-protocole-simple-client-serveur">6. Exemple de protocole simple (Client-Serveur)</h2>
 <ol>
-<li><strong>Client</strong> : Envoie une commande (ex: <code>GET_TIME</code>).</li>
-<li><strong>Serveur</strong> : Reçoit la ligne, l'analyse, et renvoie la réponse terminée par un <code></code>.</li>
-<li><strong>Client</strong> : Lit jusqu'au <code></code> pour obtenir sa réponse.</li>
+<li><strong>Client</strong> : Envoie une commande (ex: <code>GET_TIME</code>).  </li>
+<li><strong>Serveur</strong> : Reçoit la ligne, l'analyse, et renvoie la réponse terminée par un <code></code>.  </li>
+<li><strong>Client</strong> : Lit jusqu'au <code></code> pour obtenir sa réponse.  </li>
 </ol>
 
 

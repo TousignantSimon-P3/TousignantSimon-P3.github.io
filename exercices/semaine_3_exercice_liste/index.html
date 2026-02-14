@@ -448,7 +448,7 @@
           
   
   
-  Phase 0 : Conception Objet (Semaine 5)
+  Phase 0 : Conception Objet 
 
         </a>
       </li>
@@ -468,7 +468,7 @@
           
   
   
-  Phase 1 : Stockage et Fichiers (Semaine 6)
+  Phase 1 : Stockage et Fichiers 
 
         </a>
       </li>
@@ -488,7 +488,7 @@
           
   
   
-  Phase 2 : Étude de Cas (Semaine 7)
+  Phase 2 : Étude de Cas 
 
         </a>
       </li>
@@ -508,7 +508,7 @@
           
   
   
-  Phase 3 : Communication Réseau (Semaine 8)
+  Phase 3 : Communication Réseau 
 
         </a>
       </li>
@@ -528,7 +528,7 @@
           
   
   
-  Phase 4 : L'Aboutissement (Semaine 9)
+  Phase 4 : L'Aboutissement 
 
         </a>
       </li>
@@ -1472,7 +1472,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 0 : Conception Objet (Semaine 5)
+    Phase 0 : Conception Objet 
   
 
     
@@ -1488,7 +1488,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 0 : Conception Objet (Semaine 5)
+    Phase 0 : Conception Objet 
   
 
           </label>
@@ -1585,7 +1585,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 1 : Stockage et Fichiers (Semaine 6)
+    Phase 1 : Stockage et Fichiers 
   
 
     
@@ -1601,7 +1601,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 1 : Stockage et Fichiers (Semaine 6)
+    Phase 1 : Stockage et Fichiers 
   
 
           </label>
@@ -1698,7 +1698,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 2 : Étude de Cas (Semaine 7)
+    Phase 2 : Étude de Cas 
   
 
     
@@ -1714,7 +1714,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 2 : Étude de Cas (Semaine 7)
+    Phase 2 : Étude de Cas 
   
 
           </label>
@@ -1811,7 +1811,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 3 : Communication Réseau (Semaine 8)
+    Phase 3 : Communication Réseau 
   
 
     
@@ -1827,7 +1827,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 3 : Communication Réseau (Semaine 8)
+    Phase 3 : Communication Réseau 
   
 
           </label>
@@ -1924,7 +1924,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 4 : L'Aboutissement (Semaine 9)
+    Phase 4 : L'Aboutissement 
   
 
     
@@ -1940,7 +1940,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 4 : L'Aboutissement (Semaine 9)
+    Phase 4 : L'Aboutissement 
   
 
           </label>
@@ -2087,22 +2087,22 @@
 
 
 <h1 id="exercice-de-la-semaine-3-implementation-dune-liste-chainee-simple">Exercice de la Semaine 3 : Implémentation d'une Liste Chaînée Simple</h1>
-<p><strong>Objectif :</strong> Comprendre les principes fondamentaux des structures de données dynamiques en implémentant une liste chaînée simple en C++.</p>
-<p><strong>Contexte :</strong> Une liste chaînée est une structure de données linéaire où les éléments ne sont pas stockés à des emplacements mémoire contigus. Chaque élément (appelé "nœud") contient la donnée et un pointeur vers le nœud suivant dans la séquence.</p>
+<p><strong>Objectif :</strong> Comprendre les principes fondamentaux des structures de données dynamiques en implémentant une liste chaînée simple en C++.  </p>
+<p><strong>Contexte :</strong> Une liste chaînée est une structure de données linéaire où les éléments ne sont pas stockés à des emplacements mémoire contigus. Chaque élément (appelé "nœud") contient la donnée et un pointeur vers le nœud suivant dans la séquence.  </p>
 <hr />
 <h3 id="instructions-generales">Instructions Générales :</h3>
 <ol>
 <li>Acceptez l'invitation suivante : https://classroom.github.com/a/0Jm7odXx  </li>
-<li>Dans toutes vos implémentations, utilisez <code>nullptr</code> pour représenter un pointeur nul. (pas de pointeur intelligent)</li>
-<li>Vos <code>struct</code> ne doivent pas contenir de constructeur explicite.</li>
-<li>Pour toutes les opérations qui tentent d'accéder ou de modifier un index hors des limites valides de la liste, vous devrez lever une exception de type <code>std::out_of_range</code>. Pour les opérations sur une liste vide, levez une exception de type <code>std::runtime_error</code>.</li>
+<li>Dans toutes vos implémentations, utilisez <code>nullptr</code> pour représenter un pointeur nul. (pas de pointeur intelligent)  </li>
+<li>Vos <code>struct</code> ne doivent pas contenir de constructeur explicite.  </li>
+<li>Pour toutes les opérations qui tentent d'accéder ou de modifier un index hors des limites valides de la liste, vous devrez lever une exception de type <code>std::out_of_range</code>. Pour les opérations sur une liste vide, levez une exception de type <code>std::runtime_error</code>.  </li>
 </ol>
 <hr />
 <h3 id="partie-1-la-structure-de-base-nud">Partie 1 : La Structure de Base (Nœud)</h3>
 <ol>
 <li><strong>Créez un fichier d'en-tête <code>Noeud.hpp</code></strong>.  </li>
-<li>Dans ce fichier, définissez une <code>struct</code> nommée <code>Noeud</code> qui contiendra :<ul>
-<li>Un membre <code>int valeur</code> pour stocker la donnée entière.</li>
+<li>Dans ce fichier, définissez une <code>struct</code> nommée <code>Noeud</code> qui contiendra :  <ul>
+<li>Un membre <code>int valeur</code> pour stocker la donnée entière.  </li>
 <li>Un pointeur sur le Noeud suivant.  </li>
 <li>Une liste chainée se termine quand le dernier pointeur est nul.  </li>
 </ul>
@@ -2110,103 +2110,103 @@
 </ol>
 <h3 id="partie-2-la-structure-de-la-liste-chainee">Partie 2 : La Structure de la Liste Chaînée</h3>
 <ol>
-<li><strong>Créez un fichier d'en-tête <code>ListeChainee.hpp</code></strong>.</li>
-<li>Dans ce fichier, définissez une <code>struct</code> nommée <code>ListeChainee</code> qui contiendra :<ul>
-<li>Un membre qui pointe sur le premier Noeud qui sera un pointeur nommé tête. Il devra être initialisé à <code>nullptr</code>.</li>
-<li>Un membre <code>int compte</code> pour garder une trace du nombre d'éléments dans la liste. Il devra être initialisé à <code>0</code>.</li>
+<li><strong>Créez un fichier d'en-tête <code>ListeChainee.hpp</code></strong>.  </li>
+<li>Dans ce fichier, définissez une <code>struct</code> nommée <code>ListeChainee</code> qui contiendra :  <ul>
+<li>Un membre qui pointe sur le premier Noeud qui sera un pointeur nommé tête. Il devra être initialisé à <code>nullptr</code>.  </li>
+<li>Un membre <code>int compte</code> pour garder une trace du nombre d'éléments dans la liste. Il devra être initialisé à <code>0</code>.  </li>
 </ul>
 </li>
 </ol>
 <h3 id="partie-3-les-fonctions-utilitaires-api-de-la-liste">Partie 3 : Les Fonctions Utilitaires (API de la Liste)</h3>
 <ol>
-<li><strong>Créez un fichier d'en-tête <code>liste_outils.hpp</code></strong>.</li>
+<li><strong>Créez un fichier d'en-tête <code>liste_outils.hpp</code></strong>.  </li>
 <li>
-<p>Dans ce fichier, implémentez les fonctions suivantes. Ces fonctions devront opérer sur une référence de <code>ListeChainee</code>.</p>
+<p>Dans ce fichier, implémentez les fonctions suivantes. Ces fonctions devront opérer sur une référence de <code>ListeChainee</code>.  </p>
 <ul>
 <li>
-<p><code>ListeChainee* creer_liste_vide();</code></p>
+<p><code>ListeChainee* creer_liste_vide();</code>  </p>
 <ul>
-<li>Retourne une <code>ListeChainee</code> nouvellement initialisée (vide).</li>
+<li>Retourne une <code>ListeChainee</code> nouvellement initialisée (vide).  </li>
 </ul>
 </li>
 <li>
-<p><code>void effacer_toute_la_liste(ListeChainee&amp; liste);</code></p>
+<p><code>void effacer_toute_la_liste(ListeChainee&amp; liste);</code>  </p>
 <ul>
-<li>Libère toute la mémoire allouée dynamiquement pour les nœuds de la liste et réinitialise la liste à un état vide.</li>
+<li>Libère toute la mémoire allouée dynamiquement pour les nœuds de la liste et réinitialise la liste à un état vide.  </li>
 </ul>
 </li>
 <li>
-<p><code>void ajouter_valeur_debut(ListeChainee&amp; liste, int valeur);</code></p>
+<p><code>void ajouter_valeur_debut(ListeChainee&amp; liste, int valeur);</code>  </p>
 <ul>
-<li>Ajoute un nouveau nœud avec la <code>valeur</code> au début de la liste.</li>
+<li>Ajoute un nouveau nœud avec la <code>valeur</code> au début de la liste.  </li>
 </ul>
 </li>
 <li>
-<p><code>void ajouter_valeur_fin(ListeChainee&amp; liste, int valeur);</code></p>
+<p><code>void ajouter_valeur_fin(ListeChainee&amp; liste, int valeur);</code>  </p>
 <ul>
-<li>Ajoute un nouveau nœud avec la <code>valeur</code> à la fin de la liste.</li>
+<li>Ajoute un nouveau nœud avec la <code>valeur</code> à la fin de la liste.  </li>
 </ul>
 </li>
 <li>
-<p><code>void ajouter_valeur_index(ListeChainee&amp; liste, int valeur, int index);</code></p>
+<p><code>void ajouter_valeur_index(ListeChainee&amp; liste, int valeur, int index);</code>  </p>
 <ul>
-<li>Ajoute un nouveau nœud avec la <code>valeur</code> à l'index spécifié.</li>
-<li>Si <code>index &lt;= 0</code>, ajoute au début (index 0).</li>
-<li>Si <code>index &gt;= liste.compte</code>, ajoute à la fin.</li>
+<li>Ajoute un nouveau nœud avec la <code>valeur</code> à l'index spécifié.  </li>
+<li>Si <code>index &lt;= 0</code>, ajoute au début (index 0).  </li>
+<li>Si <code>index &gt;= liste.compte</code>, ajoute à la fin.  </li>
 </ul>
 </li>
 <li>
-<p><code>int retirer_valeur_debut(ListeChainee&amp; liste);</code></p>
+<p><code>int retirer_valeur_debut(ListeChainee&amp; liste);</code>  </p>
 <ul>
-<li>Retire le premier nœud et retourne sa <code>valeur</code>.</li>
-<li>Lève <code>std::runtime_error</code> si la liste est vide.</li>
+<li>Retire le premier nœud et retourne sa <code>valeur</code>.  </li>
+<li>Lève <code>std::runtime_error</code> si la liste est vide.  </li>
 </ul>
 </li>
 <li>
-<p><code>int retirer_valeur_fin(ListeChainee&amp; liste);</code></p>
+<p><code>int retirer_valeur_fin(ListeChainee&amp; liste);</code>  </p>
 <ul>
-<li>Retire le dernier nœud et retourne sa <code>valeur</code>.</li>
-<li>Lève <code>std::runtime_error</code> si la liste est vide.</li>
+<li>Retire le dernier nœud et retourne sa <code>valeur</code>.  </li>
+<li>Lève <code>std::runtime_error</code> si la liste est vide.  </li>
 </ul>
 </li>
 <li>
-<p><code>int retirer_valeur_index(ListeChainee&amp; liste, int index);</code></p>
+<p><code>int retirer_valeur_index(ListeChainee&amp; liste, int index);</code>  </p>
 <ul>
-<li>Retire le nœud à l'index spécifié et retourne sa <code>valeur</code>.</li>
-<li>Lève <code>std::out_of_range</code> si l'index est invalide (négatif ou supérieur/égal au nombre d'éléments) ou si la liste est vide.</li>
+<li>Retire le nœud à l'index spécifié et retourne sa <code>valeur</code>.  </li>
+<li>Lève <code>std::out_of_range</code> si l'index est invalide (négatif ou supérieur/égal au nombre d'éléments) ou si la liste est vide.  </li>
 </ul>
 </li>
 <li>
-<p><code>int regarder_valeur_debut(const ListeChainee&amp; liste);</code></p>
+<p><code>int regarder_valeur_debut(const ListeChainee&amp; liste);</code>  </p>
 <ul>
-<li>Retourne (sans retirer) la <code>valeur</code> du nœud au début de la liste.</li>
-<li>Lève <code>std::runtime_error</code> si la liste est vide.</li>
+<li>Retourne (sans retirer) la <code>valeur</code> du nœud au début de la liste.  </li>
+<li>Lève <code>std::runtime_error</code> si la liste est vide.  </li>
 </ul>
 </li>
 <li>
-<p><code>int regarder_valeur_fin(const ListeChainee&amp; liste);</code></p>
+<p><code>int regarder_valeur_fin(const ListeChainee&amp; liste);</code>  </p>
 <ul>
-<li>Retourne (sans retirer) la <code>valeur</code> du nœud à la fin de la liste.</li>
-<li>Lève <code>std::runtime_error</code> si la liste est vide.</li>
+<li>Retourne (sans retirer) la <code>valeur</code> du nœud à la fin de la liste.  </li>
+<li>Lève <code>std::runtime_error</code> si la liste est vide.  </li>
 </ul>
 </li>
 <li>
-<p><code>int regarder_valeur_index(const ListeChainee&amp; liste, int index);</code></p>
+<p><code>int regarder_valeur_index(const ListeChainee&amp; liste, int index);</code>  </p>
 <ul>
-<li>Retourne (sans retirer) la <code>valeur</code> du nœud à l'index spécifié.</li>
-<li>Lève <code>std::out_of_range</code> si l'index est invalide (négatif ou supérieur/égal au nombre d'éléments) ou si la liste est vide.</li>
+<li>Retourne (sans retirer) la <code>valeur</code> du nœud à l'index spécifié.  </li>
+<li>Lève <code>std::out_of_range</code> si l'index est invalide (négatif ou supérieur/égal au nombre d'éléments) ou si la liste est vide.  </li>
 </ul>
 </li>
 <li>
-<p><code>std::vector&lt;int&gt; to_array(const ListeChainee&amp; liste);</code></p>
+<p><code>std::vector&lt;int&gt; to_array(const ListeChainee&amp; liste);</code>  </p>
 <ul>
-<li>Crée et retourne un <code>std::vector&lt;int&gt;</code> contenant toutes les valeurs de la liste dans l'ordre actuel.</li>
+<li>Crée et retourne un <code>std::vector&lt;int&gt;</code> contenant toutes les valeurs de la liste dans l'ordre actuel.  </li>
 </ul>
 </li>
 <li>
-<p><strong>(Optionnel) <code>void afficher_liste(const ListeChainee&amp; liste);</code></strong></p>
+<p><strong>(Optionnel) <code>void afficher_liste(const ListeChainee&amp; liste);</code></strong>  </p>
 <ul>
-<li>Affiche les éléments de la liste dans la console, par exemple : <code>[10, 20, 30]</code>.</li>
+<li>Affiche les éléments de la liste dans la console, par exemple : <code>[10, 20, 30]</code>.  </li>
 </ul>
 </li>
 </ul>
@@ -2215,14 +2215,14 @@
 <h3 id="partie-4-demonstration-et-tests-maincpp">Partie 4 : Démonstration et Tests (<code>main.cpp</code>)</h3>
 <ol>
 <li><strong>Créez un fichier <code>main.cpp</code></strong>.  </li>
-<li>Dans ce fichier, écrivez le code qui :<ul>
-<li>Crée une <code>ListeChainee</code> vide en utilisant <code>creer_liste_vide()</code>.</li>
-<li>Ajoute plusieurs éléments en utilisant <code>ajouter_valeur_debut</code>, <code>ajouter_valeur_fin</code>, et <code>ajouter_valeur_index</code>.</li>
-<li>Teste les fonctions de consultation (<code>regarder_valeur_debut</code>, <code>regarder_valeur_fin</code>, <code>regarder_valeur_index</code>) et affiche les résultats.</li>
-<li>Retire des éléments en utilisant <code>retirer_valeur_debut</code>, <code>retirer_valeur_fin</code>, et <code>retirer_valeur_index</code>.</li>
-<li>Affiche l'état de la liste (nombre d'éléments, contenu via <code>to_array</code> ou <code>afficher_liste</code>) après chaque opération significative.</li>
-<li>Implémente des blocs <code>try-catch</code> pour tester et gérer les cas d'erreur (tentative de retirer/regarder dans une liste vide, index invalide).</li>
-<li>À la fin, utilise <code>effacer_toute_la_liste</code> pour libérer proprement toute la mémoire.</li>
+<li>Dans ce fichier, écrivez le code qui :  <ul>
+<li>Crée une <code>ListeChainee</code> vide en utilisant <code>creer_liste_vide()</code>.  </li>
+<li>Ajoute plusieurs éléments en utilisant <code>ajouter_valeur_debut</code>, <code>ajouter_valeur_fin</code>, et <code>ajouter_valeur_index</code>.  </li>
+<li>Teste les fonctions de consultation (<code>regarder_valeur_debut</code>, <code>regarder_valeur_fin</code>, <code>regarder_valeur_index</code>) et affiche les résultats.  </li>
+<li>Retire des éléments en utilisant <code>retirer_valeur_debut</code>, <code>retirer_valeur_fin</code>, et <code>retirer_valeur_index</code>.  </li>
+<li>Affiche l'état de la liste (nombre d'éléments, contenu via <code>to_array</code> ou <code>afficher_liste</code>) après chaque opération significative.  </li>
+<li>Implémente des blocs <code>try-catch</code> pour tester et gérer les cas d'erreur (tentative de retirer/regarder dans une liste vide, index invalide).  </li>
+<li>À la fin, utilise <code>effacer_toute_la_liste</code> pour libérer proprement toute la mémoire.  </li>
 </ul>
 </li>
 </ol>

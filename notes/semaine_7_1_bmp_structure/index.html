@@ -446,7 +446,7 @@
           
   
   
-  Phase 0 : Conception Objet (Semaine 5)
+  Phase 0 : Conception Objet 
 
         </a>
       </li>
@@ -466,7 +466,7 @@
           
   
   
-  Phase 1 : Stockage et Fichiers (Semaine 6)
+  Phase 1 : Stockage et Fichiers 
 
         </a>
       </li>
@@ -488,7 +488,7 @@
           
   
   
-  Phase 2 : Étude de Cas (Semaine 7)
+  Phase 2 : Étude de Cas 
 
         </a>
       </li>
@@ -508,7 +508,7 @@
           
   
   
-  Phase 3 : Communication Réseau (Semaine 8)
+  Phase 3 : Communication Réseau 
 
         </a>
       </li>
@@ -528,7 +528,7 @@
           
   
   
-  Phase 4 : L'Aboutissement (Semaine 9)
+  Phase 4 : L'Aboutissement 
 
         </a>
       </li>
@@ -1365,7 +1365,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 0 : Conception Objet (Semaine 5)
+    Phase 0 : Conception Objet 
   
 
     
@@ -1381,7 +1381,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 0 : Conception Objet (Semaine 5)
+    Phase 0 : Conception Objet 
   
 
           </label>
@@ -1478,7 +1478,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 1 : Stockage et Fichiers (Semaine 6)
+    Phase 1 : Stockage et Fichiers 
   
 
     
@@ -1494,7 +1494,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 1 : Stockage et Fichiers (Semaine 6)
+    Phase 1 : Stockage et Fichiers 
   
 
           </label>
@@ -1596,7 +1596,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 2 : Étude de Cas (Semaine 7)
+    Phase 2 : Étude de Cas 
   
 
     
@@ -1612,7 +1612,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 2 : Étude de Cas (Semaine 7)
+    Phase 2 : Étude de Cas 
   
 
           </label>
@@ -1817,7 +1817,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 3 : Communication Réseau (Semaine 8)
+    Phase 3 : Communication Réseau 
   
 
     
@@ -1833,7 +1833,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 3 : Communication Réseau (Semaine 8)
+    Phase 3 : Communication Réseau 
   
 
           </label>
@@ -1930,7 +1930,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 4 : L'Aboutissement (Semaine 9)
+    Phase 4 : L'Aboutissement 
   
 
     
@@ -1946,7 +1946,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 4 : L'Aboutissement (Semaine 9)
+    Phase 4 : L'Aboutissement 
   
 
           </label>
@@ -2093,39 +2093,39 @@
 
 
 <h1 id="format-bmp-les-entetes">Format BMP : Les Entêtes</h1>
-<p>Une image BMP commence par deux structures d'entêtes cruciales qui définissent le format et les dimensions.</p>
+<p>Une image BMP commence par deux structures d'entêtes cruciales qui définissent le format et les dimensions.  </p>
 <h2 id="1-le-file-header-14-octets">1. Le File Header (14 octets)</h2>
-<p>Il contient les informations générales sur le fichier.
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#pragma pack(push, 1)</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">struct</span><span class="w"> </span><span class="nc">BMPFileHeader</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">file_type</span><span class="p">{</span><span class="mh">0x4D42</span><span class="p">};</span><span class="w"> </span><span class="c1">// Signature : Toujours &quot;BM&quot; (0x4D42 en petit boutiste)</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">file_size</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w">      </span><span class="c1">// Taille totale du fichier en octets</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">reserved1</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w">      </span><span class="c1">// Inutilisé (0)</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">reserved2</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w">      </span><span class="c1">// Inutilisé (0)</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">offset_data</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w">    </span><span class="c1">// Adresse où commencent les pixels (souvent 54)</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">};</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="cp">#pragma pack(pop)</span>
+<p>Il contient les informations générales sur le fichier.<br />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#pragma pack(push, 1)  </span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">struct</span><span class="w"> </span><span class="nc">BMPFileHeader</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">file_type</span><span class="p">{</span><span class="mh">0x4D42</span><span class="p">};</span><span class="w"> </span><span class="c1">// Signature : Toujours &quot;BM&quot; (0x4D42 en petit boutiste)  </span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">file_size</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w">      </span><span class="c1">// Taille totale du fichier en octets  </span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">reserved1</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w">      </span><span class="c1">// Inutilisé (0)  </span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">reserved2</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w">      </span><span class="c1">// Inutilisé (0)  </span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">offset_data</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w">    </span><span class="c1">// Adresse où commencent les pixels (souvent 54)  </span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">};</span><span class="w">  </span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="cp">#pragma pack(pop)  </span>
 </span></code></pre></div></p>
 <h2 id="2-le-dib-header-40-octets-version-courante">2. Le DIB Header (40 octets - version courante)</h2>
-<p>Il contient les détails techniques de l'image (Bitmap Info Header).
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">#pragma pack(push, 1)</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">struct</span><span class="w"> </span><span class="nc">BMPInfoHeader</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">size</span><span class="p">{</span><span class="mi">40</span><span class="p">};</span><span class="w">          </span><span class="c1">// Taille de cette structure (toujours 40)</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w">  </span><span class="n">width</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w">          </span><span class="c1">// Largeur de l&#39;image en pixels</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w">  </span><span class="n">height</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w">         </span><span class="c1">// Hauteur de l&#39;image en pixels</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">planes</span><span class="p">{</span><span class="mi">1</span><span class="p">};</span><span class="w">         </span><span class="c1">// Toujours 1</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">bit_count</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w">      </span><span class="c1">// 24 pour BGR (3 octets/pixel), 32 pour BGRA</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">compression</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w">    </span><span class="c1">// 0 pour aucune compression (BI_RGB)</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">size_image</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w">     </span><span class="c1">// Taille des pixels seuls (avec le padding)</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w">  </span><span class="n">x_pixels_per_meter</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w">  </span><span class="n">y_pixels_per_meter</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">colors_used</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">colors_important</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="p">};</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="cp">#pragma pack(pop)</span>
+<p>Il contient les détails techniques de l'image (Bitmap Info Header).<br />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">#pragma pack(push, 1)  </span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">struct</span><span class="w"> </span><span class="nc">BMPInfoHeader</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">size</span><span class="p">{</span><span class="mi">40</span><span class="p">};</span><span class="w">          </span><span class="c1">// Taille de cette structure (toujours 40)  </span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w">  </span><span class="n">width</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w">          </span><span class="c1">// Largeur de l&#39;image en pixels  </span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w">  </span><span class="n">height</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w">         </span><span class="c1">// Hauteur de l&#39;image en pixels  </span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">planes</span><span class="p">{</span><span class="mi">1</span><span class="p">};</span><span class="w">         </span><span class="c1">// Toujours 1  </span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">bit_count</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w">      </span><span class="c1">// 24 pour BGR (3 octets/pixel), 32 pour BGRA  </span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">compression</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w">    </span><span class="c1">// 0 pour aucune compression (BI_RGB)  </span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">size_image</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w">     </span><span class="c1">// Taille des pixels seuls (avec le padding)  </span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w">  </span><span class="n">x_pixels_per_meter</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w">  </span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="kt">int32_t</span><span class="w">  </span><span class="n">y_pixels_per_meter</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w">  </span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">colors_used</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w">  </span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">colors_important</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w">  </span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="p">};</span><span class="w">  </span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="cp">#pragma pack(pop)  </span>
 </span></code></pre></div></p>
 <h2 id="3-exemple-concret-image-100x100-pixels-24-bit">3. Exemple concret : Image 100x100 pixels (24-bit)</h2>
-<p>Voici les valeurs que vous trouveriez dans les structures pour une image simple de 100x100 pixels sans compression :</p>
+<p>Voici les valeurs que vous trouveriez dans les structures pour une image simple de 100x100 pixels sans compression :  </p>
 <table>
 <thead>
 <tr>
@@ -2173,18 +2173,18 @@
 </tbody>
 </table>
 <h3 id="pourquoi-54-octets-pour-loffset">Pourquoi 54 octets pour l'offset ?</h3>
-<p>Le chiffre 54 vient de l'addition des deux structures d'entête obligatoires :
-*   <code>BMPFileHeader</code> : <strong>14 octets</strong>
-*   <code>BMPInfoHeader</code> : <strong>40 octets</strong>
-*   <strong>Total : 54 octets</strong></p>
-<p><strong>Attention :</strong> Bien que 54 soit la valeur la plus courante, il ne faut jamais l'utiliser "en dur" (hardcoded) dans votre code. Utilisez toujours la variable <code>offset_data</code> lue dans le fichier. Certains fichiers BMP plus complexes (avec une palette de couleurs ou des métadonnées supplémentaires) peuvent avoir un offset beaucoup plus grand.</p>
+<p>Le chiffre 54 vient de l'addition des deux structures d'entête obligatoires :<br />
+<em>   <code>BMPFileHeader</code> : </em><em>14 octets</em><em><br />
+</em>   <code>BMPInfoHeader</code> : <strong>40 octets</strong><br />
+<em>   </em><em>Total : 54 octets</em>*  </p>
+<p><strong>Attention :</strong> Bien que 54 soit la valeur la plus courante, il ne faut jamais l'utiliser "en dur" (hardcoded) dans votre code. Utilisez toujours la variable <code>offset_data</code> lue dans le fichier. Certains fichiers BMP plus complexes (avec une palette de couleurs ou des métadonnées supplémentaires) peuvent avoir un offset beaucoup plus grand.  </p>
 <blockquote>
-<p><strong>Note sur la lecture hexadécimale :</strong> Si vous ouvrez le fichier dans un éditeur hexadécimal, les premiers octets seront : <code>42 4D</code> (BM), suivis de la taille du fichier en <em>petit boutiste</em> (Little Endian).</p>
+<p><strong>Note sur la lecture hexadécimale :</strong> Si vous ouvrez le fichier dans un éditeur hexadécimal, les premiers octets seront : <code>42 4D</code> (BM), suivis de la taille du fichier en <em>petit boutiste</em> (Little Endian).  </p>
 </blockquote>
 <h2 id="4-fonctions-de-lecture">4. Fonctions de lecture</h2>
-<p>L'objectif est de créer des fonctions modulaires :
-*   <code>void lireFileHeader(std::ifstream&amp; f, BMPFileHeader&amp; h);</code>
-*   <code>void lireInfoHeader(std::ifstream&amp; f, BMPInfoHeader&amp; h);</code></p>
+<p>L'objectif est de créer des fonctions modulaires :<br />
+<em>   <code>void lireFileHeader(std::ifstream&amp; f, BMPFileHeader&amp; h);</code><br />
+</em>   <code>void lireInfoHeader(std::ifstream&amp; f, BMPInfoHeader&amp; h);</code>  </p>
 
 
 

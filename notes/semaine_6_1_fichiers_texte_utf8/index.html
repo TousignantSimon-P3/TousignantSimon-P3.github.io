@@ -446,7 +446,7 @@
           
   
   
-  Phase 0 : Conception Objet (Semaine 5)
+  Phase 0 : Conception Objet 
 
         </a>
       </li>
@@ -468,7 +468,7 @@
           
   
   
-  Phase 1 : Stockage et Fichiers (Semaine 6)
+  Phase 1 : Stockage et Fichiers 
 
         </a>
       </li>
@@ -488,7 +488,7 @@
           
   
   
-  Phase 2 : Étude de Cas (Semaine 7)
+  Phase 2 : Étude de Cas 
 
         </a>
       </li>
@@ -508,7 +508,7 @@
           
   
   
-  Phase 3 : Communication Réseau (Semaine 8)
+  Phase 3 : Communication Réseau 
 
         </a>
       </li>
@@ -528,7 +528,7 @@
           
   
   
-  Phase 4 : L'Aboutissement (Semaine 9)
+  Phase 4 : L'Aboutissement 
 
         </a>
       </li>
@@ -1365,7 +1365,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 0 : Conception Objet (Semaine 5)
+    Phase 0 : Conception Objet 
   
 
     
@@ -1381,7 +1381,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 0 : Conception Objet (Semaine 5)
+    Phase 0 : Conception Objet 
   
 
           </label>
@@ -1483,7 +1483,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 1 : Stockage et Fichiers (Semaine 6)
+    Phase 1 : Stockage et Fichiers 
   
 
     
@@ -1499,7 +1499,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 1 : Stockage et Fichiers (Semaine 6)
+    Phase 1 : Stockage et Fichiers 
   
 
           </label>
@@ -1715,7 +1715,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 2 : Étude de Cas (Semaine 7)
+    Phase 2 : Étude de Cas 
   
 
     
@@ -1731,7 +1731,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 2 : Étude de Cas (Semaine 7)
+    Phase 2 : Étude de Cas 
   
 
           </label>
@@ -1828,7 +1828,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 3 : Communication Réseau (Semaine 8)
+    Phase 3 : Communication Réseau 
   
 
     
@@ -1844,7 +1844,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 3 : Communication Réseau (Semaine 8)
+    Phase 3 : Communication Réseau 
   
 
           </label>
@@ -1941,7 +1941,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 4 : L'Aboutissement (Semaine 9)
+    Phase 4 : L'Aboutissement 
   
 
     
@@ -1957,7 +1957,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 4 : L'Aboutissement (Semaine 9)
+    Phase 4 : L'Aboutissement 
   
 
           </label>
@@ -2104,107 +2104,107 @@
 
 
 <h1 id="les-fichiers-texte-en-c">Les Fichiers Texte en C++</h1>
-<p>La manipulation de fichiers texte est essentielle pour la persistance de données lisibles par l'humain.</p>
+<p>La manipulation de fichiers texte est essentielle pour la persistance de données lisibles par l'humain.  </p>
 <h2 id="1-flux-standards">1. Flux Standards</h2>
-<p>En C++, on utilise la bibliothèque <code>&lt;fstream&gt;</code> :
-*   <code>std::ofstream</code> : Pour l'écriture (Output File Stream).
-*   <code>std::ifstream</code> : Pour la lecture (Input File Stream).
-*   <code>std::fstream</code> : Pour les deux.</p>
+<p>En C++, on utilise la bibliothèque <code>&lt;fstream&gt;</code> :<br />
+<em>   <code>std::ofstream</code> : Pour l'écriture (Output File Stream).<br />
+</em>   <code>std::ifstream</code> : Pour la lecture (Input File Stream).<br />
+*   <code>std::fstream</code> : Pour les deux.  </p>
 <h2 id="2-encodage-et-unicode">2. Encodage et Unicode</h2>
 <ul>
-<li><strong>UTF-8</strong> : C'est la norme moderne. En C++, un <code>std::string</code> peut stocker de l'UTF-8.</li>
-<li><strong>Affichage</strong> : Attention, la console Windows (cmd) nécessite souvent une configuration spécifique (<code>chcp 65001</code>) pour afficher correctement les caractères accentués.</li>
+<li><strong>UTF-8</strong> : C'est la norme moderne. En C++, un <code>std::string</code> peut stocker de l'UTF-8.  </li>
+<li><strong>Affichage</strong> : Attention, la console Windows (cmd) nécessite souvent une configuration spécifique (<code>chcp 65001</code>) pour afficher correctement les caractères accentués.  </li>
 </ul>
 <h2 id="3-portabilite-et-fins-de-ligne-r-n">3. Portabilité et Fins de ligne (r, n)</h2>
-<p>Les systèmes d'exploitation ne s'accordent pas sur la façon de marquer la fin d'une ligne.</p>
+<p>Les systèmes d'exploitation ne s'accordent pas sur la façon de marquer la fin d'une ligne.  </p>
 <ul>
-<li><strong>LF (Line Feed)</strong> : <code>\n</code>. Valeur ASCII <strong>10</strong> (0x0A). Utilisé par Linux et macOS.</li>
-<li><strong>CR (Carriage Return)</strong> : <code>\r</code>. Valeur ASCII <strong>13</strong> (0x0D). Utilisé historiquement par les vieux Mac.</li>
-<li><strong>CRLF</strong> : <code>\r\n</code>. Suite des deux caractères (13 puis 10). Utilisé par Windows.</li>
+<li><strong>LF (Line Feed)</strong> : <code>\n</code>. Valeur ASCII <strong>10</strong> (0x0A). Utilisé par Linux et macOS.  </li>
+<li><strong>CR (Carriage Return)</strong> : <code>\r</code>. Valeur ASCII <strong>13</strong> (0x0D). Utilisé historiquement par les vieux Mac.  </li>
+<li><strong>CRLF</strong> : <code>\r\n</code>. Suite des deux caractères (13 puis 10). Utilisé par Windows.  </li>
 </ul>
 <h3 id="pourquoi-est-ce-important">Pourquoi est-ce important ?</h3>
-<p>Si vous écrivez un fichier sur Windows et l'ouvrez sur Linux, certains éditeurs afficheront des caractères <code>^M</code> à la fin de chaque ligne (représentant le <code>\r</code>). Inversement, un fichier Linux ouvert dans de vieux outils Windows s'afficherait sur une seule ligne.</p>
-<p><strong>Le standard universel :</strong> Aujourd'hui, la majorité des outils (Git, VS Code, etc.) préfèrent le format <strong>LF (<code>\n</code>)</strong> et l'encodage <strong>UTF-8</strong>.</p>
+<p>Si vous écrivez un fichier sur Windows et l'ouvrez sur Linux, certains éditeurs afficheront des caractères <code>^M</code> à la fin de chaque ligne (représentant le <code>\r</code>). Inversement, un fichier Linux ouvert dans de vieux outils Windows s'afficherait sur une seule ligne.  </p>
+<p><strong>Le standard universel :</strong> Aujourd'hui, la majorité des outils (Git, VS Code, etc.) préfèrent le format <strong>LF (<code>\n</code>)</strong> et l'encodage <strong>UTF-8</strong>.  </p>
 <h2 id="4-encodage-stdstring-vs-stdwstring">4. Encodage : std::string vs std::wstring</h2>
-<p>Pour qu'un fichier soit "universel", il doit utiliser un encodage compris par tous les systèmes.</p>
+<p>Pour qu'un fichier soit "universel", il doit utiliser un encodage compris par tous les systèmes.  </p>
 <ul>
-<li><strong>UTF-8 (Standard recommandé)</strong> :<ul>
-<li>Utilise <code>std::string</code>.</li>
-<li>Compatible avec l'ASCII (les 127 premiers caractères sont identiques).</li>
-<li>C'est le format universel du Web et de la majorité des systèmes modernes.</li>
+<li><strong>UTF-8 (Standard recommandé)</strong> :  <ul>
+<li>Utilise <code>std::string</code>.  </li>
+<li>Compatible avec l'ASCII (les 127 premiers caractères sont identiques).  </li>
+<li>C'est le format universel du Web et de la majorité des systèmes modernes.  </li>
 </ul>
 </li>
-<li><strong>Gestion des caractères spéciaux (é, è, à, Arabe, etc.)</strong> :<ul>
-<li>En UTF-8, un caractère peut occuper <strong>plus d'un octet</strong> dans un <code>std::string</code>. Par exemple, 'é' occupe 2 octets, alors qu'un caractère arabe comme 'ش' peut en occuper 2 ou 3.</li>
-<li><strong>Attention</strong> : <code>maString.length()</code> renvoie le nombre d'octets, pas le nombre de caractères visibles.</li>
-<li><strong>Le dilemme (La chèvre et le chou)</strong> : Comment avoir l'universalité de l'UTF-8 tout en sachant combien il y a de caractères ?<ul>
-<li>En UTF-8, les octets de "continuation" commencent par les bits <code>10</code>. On peut donc compter uniquement les octets qui ne sont pas des continuations pour obtenir le nombre de <strong>points de code</strong> (caractères).
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span>
+<li><strong>Gestion des caractères spéciaux (é, è, à, Arabe, etc.)</strong> :  <ul>
+<li>En UTF-8, un caractère peut occuper <strong>plus d'un octet</strong> dans un <code>std::string</code>. Par exemple, 'é' occupe 2 octets, alors qu'un caractère arabe comme 'ش' peut en occuper 2 ou 3.  </li>
+<li><strong>Attention</strong> : <code>maString.length()</code> renvoie le nombre d'octets, pas le nombre de caractères visibles.  </li>
+<li><strong>Le dilemme (La chèvre et le chou)</strong> : Comment avoir l'universalité de l'UTF-8 tout en sachant combien il y a de caractères ?  <ul>
+<li>En UTF-8, les octets de "continuation" commencent par les bits <code>10</code>. On peut donc compter uniquement les octets qui ne sont pas des continuations pour obtenir le nombre de <strong>points de code</strong> (caractères).<br />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span><span class="c1">  </span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kt">size_t</span><span class="w"> </span><span class="nf">compterCaracteres</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">count_if</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="p">[](</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xC0</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mh">0x80</span><span class="p">;</span><span class="w"> </span><span class="c1">// On ignore les octets de continuation</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="p">});</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">}</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kt">size_t</span><span class="w"> </span><span class="nf">compterCaracteres</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">count_if</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="p">[](</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xC0</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mh">0x80</span><span class="p">;</span><span class="w"> </span><span class="c1">// On ignore les octets de continuation  </span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="p">});</span><span class="w">  </span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">}</span><span class="w">  </span>
 </span></code></pre></div></li>
 </ul>
 </li>
 <li>
-<p><strong>Bibliothèques spécialisées</strong> : Pour des projets plus complexes, on évite de réinventer la roue :</p>
+<p><strong>Bibliothèques spécialisées</strong> : Pour des projets plus complexes, on évite de réinventer la roue :  </p>
 <ul>
-<li><strong>utf8cpp</strong> (<a href="https://github.com/nemtrif/utfcpp">GitHub : nemtrif/utfcpp</a>) : Une bibliothèque légère (header-only) très populaire.</li>
+<li><strong>utf8cpp</strong> (<a href="https://github.com/nemtrif/utfcpp">GitHub : nemtrif/utfcpp</a>) : Une bibliothèque légère (header-only) très populaire.  </li>
 </ul>
-<p><strong>Exemple avec utf8cpp :</strong>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;utf8.h&quot;</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<p><strong>Exemple avec utf8cpp :</strong><br />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;utf8.h&quot;</span><span class="c1">  </span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span><span class="c1">  </span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="c1">  </span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="kt">void</span><span class="w"> </span><span class="nf">exempleUTF8</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Héllò ش&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// UTF-8</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="kt">void</span><span class="w"> </span><span class="nf">exempleUTF8</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Héllò ش&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// UTF-8  </span>
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="c1">// 1. Compter les vrais caractères (distance)</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">nb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">utf8</span><span class="o">::</span><span class="n">distance</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="c1">// 1. Compter les vrais caractères (distance)  </span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">nb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">utf8</span><span class="o">::</span><span class="n">distance</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">());</span><span class="w">  </span>
 </span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="c1">// 2. Vérifier si la chaîne est valide</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">valide</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">utf8</span><span class="o">::</span><span class="n">is_valid</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="c1">// 2. Vérifier si la chaîne est valide  </span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">valide</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">utf8</span><span class="o">::</span><span class="n">is_valid</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">());</span><span class="w">  </span>
 </span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="c1">// 3. Parcourir les points de code</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">it</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">        </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">cp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">utf8</span><span class="o">::</span><span class="n">next</span><span class="p">(</span><span class="n">it</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">        </span><span class="c1">// cp contient la valeur numérique du caractère (ex: 0x00E9 pour &#39;é&#39;)</span>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="p">}</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="c1">// 3. Parcourir les points de code  </span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span><span class="w">  </span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">it</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">        </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">cp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">utf8</span><span class="o">::</span><span class="n">next</span><span class="p">(</span><span class="n">it</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">());</span><span class="w">  </span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">        </span><span class="c1">// cp contient la valeur numérique du caractère (ex: 0x00E9 pour &#39;é&#39;)  </span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="p">}</span><span class="w">  </span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="p">}</span><span class="w">  </span>
 </span></code></pre></div>
-*   <strong>ICU</strong> : Le standard professionnel absolu, mais très lourd à intégrer.
-    *   <strong>Affichage Windows</strong> : Pour voir ces caractères en console, il faut forcer l'encodage UTF-8 au début du programme :
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">#ifdef _WIN32</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">system</span><span class="p">(</span><span class="s">&quot;chcp 65001 &gt; nul&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Force la console Windows en UTF-8</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="cp">#endif</span>
+*   <strong>ICU</strong> : Le standard professionnel absolu, mais très lourd à intégrer.<br />
+    *   <strong>Affichage Windows</strong> : Pour voir ces caractères en console, il faut forcer l'encodage UTF-8 au début du programme :<br />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">#ifdef _WIN32  </span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">system</span><span class="p">(</span><span class="s">&quot;chcp 65001 &gt; nul&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Force la console Windows en UTF-8  </span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="cp">#endif  </span>
 </span></code></pre></div>
-*   <strong>UTF-16 / wstring</strong> :
-    *   Utilise <code>std::wstring</code> et <code>wchar_t</code>.
-    *   <strong>Problème de portabilité</strong> : La taille de <code>wchar_t</code> change selon le système (2 octets sur Windows, 4 octets sur Linux).
-    *   <strong>À éviter</strong> pour le stockage de fichiers si vous visez l'interopérabilité.</p>
+*   <strong>UTF-16 / wstring</strong> :<br />
+    *   Utilise <code>std::wstring</code> et <code>wchar_t</code>.<br />
+    *   <strong>Problème de portabilité</strong> : La taille de <code>wchar_t</code> change selon le système (2 octets sur Windows, 4 octets sur Linux).<br />
+    *   <strong>À éviter</strong> pour le stockage de fichiers si vous visez l'interopérabilité.  </p>
 </li>
 </ul>
 </li>
 </ul>
-<p><strong>Conseil :</strong> Utilisez toujours <code>std::string</code> avec de l'UTF-8 pour garantir que vos fichiers soient lisibles partout sans conversion complexe.</p>
+<p><strong>Conseil :</strong> Utilisez toujours <code>std::string</code> avec de l'UTF-8 pour garantir que vos fichiers soient lisibles partout sans conversion complexe.  </p>
 <h2 id="5-exemple-de-lecture-securisee">5. Exemple de lecture sécurisée</h2>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;fstream&gt;</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="c1">  </span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;fstream&gt;</span><span class="c1">  </span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span><span class="c1">  </span>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="kt">void</span><span class="w"> </span><span class="nf">lireTexte</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">chemin</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">ifstream</span><span class="w"> </span><span class="n">fichier</span><span class="p">(</span><span class="n">chemin</span><span class="p">);</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fichier</span><span class="p">.</span><span class="n">is_open</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">ligne</span><span class="p">;</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">getline</span><span class="p">(</span><span class="n">fichier</span><span class="p">,</span><span class="w"> </span><span class="n">ligne</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">ligne</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">        </span><span class="p">}</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="p">}</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="kt">void</span><span class="w"> </span><span class="nf">lireTexte</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">chemin</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">ifstream</span><span class="w"> </span><span class="n">fichier</span><span class="p">(</span><span class="n">chemin</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fichier</span><span class="p">.</span><span class="n">is_open</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">ligne</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">getline</span><span class="p">(</span><span class="n">fichier</span><span class="p">,</span><span class="w"> </span><span class="n">ligne</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">ligne</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">        </span><span class="p">}</span><span class="w">  </span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="p">}</span><span class="w">  </span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="p">}</span><span class="w">  </span>
 </span></code></pre></div>
 
 

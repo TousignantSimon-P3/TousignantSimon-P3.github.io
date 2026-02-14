@@ -448,7 +448,7 @@
           
   
   
-  Phase 0 : Conception Objet (Semaine 5)
+  Phase 0 : Conception Objet 
 
         </a>
       </li>
@@ -468,7 +468,7 @@
           
   
   
-  Phase 1 : Stockage et Fichiers (Semaine 6)
+  Phase 1 : Stockage et Fichiers 
 
         </a>
       </li>
@@ -488,7 +488,7 @@
           
   
   
-  Phase 2 : Étude de Cas (Semaine 7)
+  Phase 2 : Étude de Cas 
 
         </a>
       </li>
@@ -508,7 +508,7 @@
           
   
   
-  Phase 3 : Communication Réseau (Semaine 8)
+  Phase 3 : Communication Réseau 
 
         </a>
       </li>
@@ -528,7 +528,7 @@
           
   
   
-  Phase 4 : L'Aboutissement (Semaine 9)
+  Phase 4 : L'Aboutissement 
 
         </a>
       </li>
@@ -1370,7 +1370,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 0 : Conception Objet (Semaine 5)
+    Phase 0 : Conception Objet 
   
 
     
@@ -1386,7 +1386,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 0 : Conception Objet (Semaine 5)
+    Phase 0 : Conception Objet 
   
 
           </label>
@@ -1585,7 +1585,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 1 : Stockage et Fichiers (Semaine 6)
+    Phase 1 : Stockage et Fichiers 
   
 
     
@@ -1601,7 +1601,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 1 : Stockage et Fichiers (Semaine 6)
+    Phase 1 : Stockage et Fichiers 
   
 
           </label>
@@ -1698,7 +1698,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 2 : Étude de Cas (Semaine 7)
+    Phase 2 : Étude de Cas 
   
 
     
@@ -1714,7 +1714,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 2 : Étude de Cas (Semaine 7)
+    Phase 2 : Étude de Cas 
   
 
           </label>
@@ -1811,7 +1811,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 3 : Communication Réseau (Semaine 8)
+    Phase 3 : Communication Réseau 
   
 
     
@@ -1827,7 +1827,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 3 : Communication Réseau (Semaine 8)
+    Phase 3 : Communication Réseau 
   
 
           </label>
@@ -1924,7 +1924,7 @@
   <span class="md-ellipsis">
     
   
-    Phase 4 : L'Aboutissement (Semaine 9)
+    Phase 4 : L'Aboutissement 
   
 
     
@@ -1940,7 +1940,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Phase 4 : L'Aboutissement (Semaine 9)
+    Phase 4 : L'Aboutissement 
   
 
           </label>
@@ -2087,80 +2087,80 @@
 
 
 <h1 id="les-tests-unitaires-client-avec-catch2">Les Tests Unitaires (Client) avec Catch2</h1>
-<p>Le test unitaire consiste à vérifier une seule "unité" de code (généralement une méthode ou une fonction) de manière isolée.</p>
+<p>Le test unitaire consiste à vérifier une seule "unité" de code (généralement une méthode ou une fonction) de manière isolée.  </p>
 <hr />
 <h2 id="1-structure-dun-fichier-de-test">1. Structure d'un fichier de test</h2>
-<p>Chaque fichier de test doit commencer par ces deux lignes (dans un seul de vos fichiers de projet) pour que Catch2 génère son propre <code>main()</code>.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#define CATCH_CONFIG_MAIN</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;catch.hpp&quot;</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Client.hpp&quot;</span>
+<p>Chaque fichier de test doit commencer par ces deux lignes (dans un seul de vos fichiers de projet) pour que Catch2 génère son propre <code>main()</code>.  </p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#define CATCH_CONFIG_MAIN  </span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;catch.hpp&quot;</span><span class="c1">  </span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Client.hpp&quot;</span><span class="c1">  </span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="o">::</span><span class="nn">chrono</span><span class="p">;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="o">::</span><span class="nn">chrono</span><span class="p">;</span><span class="w">  </span>
 </span></code></pre></div>
 <hr />
 <h2 id="2-les-tests-de-base-require">2. Les tests de base (REQUIRE)</h2>
-<p>On vérifie que les informations passées au constructeur sont bien stockées et récupérables.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Initialisation d&#39;un client&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[client][init]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">year_month_day</span><span class="w"> </span><span class="n">date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1990</span><span class="n">y</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">May</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">15</span><span class="n">d</span><span class="p">;</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">Client</span><span class="w"> </span><span class="n">c</span><span class="p">(</span><span class="s">&quot;Tremblay&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Jean&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">);</span>
+<p>On vérifie que les informations passées au constructeur sont bien stockées et récupérables.  </p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Initialisation d&#39;un client&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[client][init]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">year_month_day</span><span class="w"> </span><span class="n">date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1990</span><span class="n">y</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">May</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">15</span><span class="n">d</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">Client</span><span class="w"> </span><span class="n">c</span><span class="p">(</span><span class="s">&quot;Tremblay&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Jean&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">);</span><span class="w">  </span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">getNom</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Tremblay&quot;</span><span class="p">);</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">getPrenom</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Jean&quot;</span><span class="p">);</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">getDateNaissance</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">date</span><span class="p">);</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">}</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">getNom</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Tremblay&quot;</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">getPrenom</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Jean&quot;</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">getDateNaissance</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">date</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">}</span><span class="w">  </span>
 </span></code></pre></div>
 <hr />
 <h2 id="3-tester-les-modifications-setters">3. Tester les modifications (Setters)</h2>
-<p>On s'assure que changer une valeur fonctionne et n'affecte pas les autres membres.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Modification du nom d&#39;un client&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[client][mutation]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">Client</span><span class="w"> </span><span class="n">c</span><span class="p">(</span><span class="s">&quot;Tremblay&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Jean&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1990</span><span class="n">y</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">May</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">15</span><span class="n">d</span><span class="p">);</span>
+<p>On s'assure que changer une valeur fonctionne et n'affecte pas les autres membres.  </p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Modification du nom d&#39;un client&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[client][mutation]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">Client</span><span class="w"> </span><span class="n">c</span><span class="p">(</span><span class="s">&quot;Tremblay&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Jean&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1990</span><span class="n">y</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">May</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">15</span><span class="n">d</span><span class="p">);</span><span class="w">  </span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">c</span><span class="p">.</span><span class="n">setNom</span><span class="p">(</span><span class="s">&quot;Bouchard&quot;</span><span class="p">);</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">c</span><span class="p">.</span><span class="n">setNom</span><span class="p">(</span><span class="s">&quot;Bouchard&quot;</span><span class="p">);</span><span class="w">  </span>
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">INFO</span><span class="p">(</span><span class="s">&quot;Le nom devrait être Bouchard après l&#39;appel à setNom&quot;</span><span class="p">);</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">getNom</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Bouchard&quot;</span><span class="p">);</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">getPrenom</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Jean&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// On vérifie que le prénom n&#39;a pas bougé</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">}</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">INFO</span><span class="p">(</span><span class="s">&quot;Le nom devrait être Bouchard après l&#39;appel à setNom&quot;</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">getNom</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Bouchard&quot;</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">getPrenom</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Jean&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// On vérifie que le prénom n&#39;a pas bougé  </span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">}</span><span class="w">  </span>
 </span></code></pre></div>
 <hr />
 <h2 id="4-tester-la-robustesse-exceptions">4. Tester la robustesse (Exceptions)</h2>
-<p>Si nous ajoutons des validations (ex: pas de nom vide), nous devons tester que la classe réagit correctement.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// Imaginons que le constructeur doive lancer une erreur si le nom est vide</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Sécurité : Nom vide interdit&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[client][securite]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">year_month_day</span><span class="w"> </span><span class="n">date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1990</span><span class="n">y</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">May</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">15</span><span class="n">d</span><span class="p">;</span>
+<p>Si nous ajoutons des validations (ex: pas de nom vide), nous devons tester que la classe réagit correctement.  </p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// Imaginons que le constructeur doive lancer une erreur si le nom est vide  </span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Sécurité : Nom vide interdit&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[client][securite]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">year_month_day</span><span class="w"> </span><span class="n">date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1990</span><span class="n">y</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">May</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">15</span><span class="n">d</span><span class="p">;</span><span class="w">  </span>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="n">INFO</span><span class="p">(</span><span class="s">&quot;Le constructeur doit lancer une exception si le nom est vide&quot;</span><span class="p">);</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="n">REQUIRE_THROWS_AS</span><span class="p">(</span><span class="n">Client</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Jean&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">),</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">invalid_argument</span><span class="p">);</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">}</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="n">INFO</span><span class="p">(</span><span class="s">&quot;Le constructeur doit lancer une exception si le nom est vide&quot;</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="n">REQUIRE_THROWS_AS</span><span class="p">(</span><span class="n">Client</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Jean&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">),</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">invalid_argument</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">}</span><span class="w">  </span>
 </span></code></pre></div>
 <hr />
 <h2 id="5-exemple-recapitulatif-complet">5. Exemple Récapitulatif Complet</h2>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cp">#define CATCH_CONFIG_MAIN</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;catch.hpp&quot;</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Client.hpp&quot;</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cp">#define CATCH_CONFIG_MAIN  </span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;catch.hpp&quot;</span><span class="c1">  </span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Client.hpp&quot;</span><span class="c1">  </span>
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="o">::</span><span class="nn">chrono</span><span class="p">;</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="o">::</span><span class="nn">chrono</span><span class="p">;</span><span class="w">  </span>
 </span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Vérification des informations de naissance&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[client][date]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="n">year_month_day</span><span class="w"> </span><span class="n">date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1985</span><span class="n">y</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">December</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">25</span><span class="n">d</span><span class="p">;</span>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="n">Client</span><span class="w"> </span><span class="n">c</span><span class="p">(</span><span class="s">&quot;Noel&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Papa&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">);</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Vérification des informations de naissance&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[client][date]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="n">year_month_day</span><span class="w"> </span><span class="n">date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1985</span><span class="n">y</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">December</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">25</span><span class="n">d</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="n">Client</span><span class="w"> </span><span class="n">c</span><span class="p">(</span><span class="s">&quot;Noel&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Papa&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">);</span><span class="w">  </span>
 </span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">getDateNaissance</span><span class="p">().</span><span class="n">year</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1985</span><span class="n">y</span><span class="p">);</span>
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">getDateNaissance</span><span class="p">().</span><span class="n">month</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">December</span><span class="p">);</span>
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">getDateNaissance</span><span class="p">().</span><span class="n">day</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">25</span><span class="n">d</span><span class="p">);</span>
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="p">}</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">getDateNaissance</span><span class="p">().</span><span class="n">year</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1985</span><span class="n">y</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">getDateNaissance</span><span class="p">().</span><span class="n">month</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">December</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">getDateNaissance</span><span class="p">().</span><span class="n">day</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">25</span><span class="n">d</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="p">}</span><span class="w">  </span>
 </span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>
-</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Test du constructeur de copie&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[client][copie]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="n">Client</span><span class="w"> </span><span class="n">original</span><span class="p">(</span><span class="s">&quot;Dupont&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Marie&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2000</span><span class="n">y</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">January</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1</span><span class="n">d</span><span class="p">);</span>
-</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">    </span><span class="n">Client</span><span class="w"> </span><span class="nf">copie</span><span class="p">(</span><span class="n">original</span><span class="p">);</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Test du constructeur de copie&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[client][copie]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="n">Client</span><span class="w"> </span><span class="n">original</span><span class="p">(</span><span class="s">&quot;Dupont&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Marie&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2000</span><span class="n">y</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">January</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1</span><span class="n">d</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">    </span><span class="n">Client</span><span class="w"> </span><span class="nf">copie</span><span class="p">(</span><span class="n">original</span><span class="p">);</span><span class="w">  </span>
 </span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>
-</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">copie</span><span class="p">.</span><span class="n">getNom</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">original</span><span class="p">.</span><span class="n">getNom</span><span class="p">());</span>
-</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">copie</span><span class="p">.</span><span class="n">getPrenom</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">original</span><span class="p">.</span><span class="n">getPrenom</span><span class="p">());</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">copie</span><span class="p">.</span><span class="n">getNom</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">original</span><span class="p">.</span><span class="n">getNom</span><span class="p">());</span><span class="w">  </span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">copie</span><span class="p">.</span><span class="n">getPrenom</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">original</span><span class="p">.</span><span class="n">getPrenom</span><span class="p">());</span><span class="w">  </span>
 </span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>
-</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">    </span><span class="c1">// On modifie la copie pour s&#39;assurer qu&#39;elles sont indépendantes</span>
-</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">    </span><span class="n">copie</span><span class="p">.</span><span class="n">setNom</span><span class="p">(</span><span class="s">&quot;Lavoie&quot;</span><span class="p">);</span>
-</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">copie</span><span class="p">.</span><span class="n">getNom</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">original</span><span class="p">.</span><span class="n">getNom</span><span class="p">());</span>
-</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="p">}</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">    </span><span class="c1">// On modifie la copie pour s&#39;assurer qu&#39;elles sont indépendantes  </span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">    </span><span class="n">copie</span><span class="p">.</span><span class="n">setNom</span><span class="p">(</span><span class="s">&quot;Lavoie&quot;</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">copie</span><span class="p">.</span><span class="n">getNom</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">original</span><span class="p">.</span><span class="n">getNom</span><span class="p">());</span><span class="w">  </span>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="p">}</span><span class="w">  </span>
 </span></code></pre></div>
 
 
