@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://tousignantsimon-p3.github.io/notes/semaine_1_3_gestion_saisie_cin/">
+        <link rel="canonical" href="https://tousignantsimon-p3.github.io/notes/semaine_5_1_classes_encapsulation/">
       
       
-        <link rel="prev" href="../semaine_1_2_tableau/">
+        <link rel="prev" href="../semaine_4_3_tests_unitaires/">
       
       
-        <link rel="next" href="../semaine_1_4_compilation_cpp20/">
+        <link rel="next" href="../semaine_5_2_tests_unitaires_objet/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Gestion de la Saisie (std::cin) - Cours de Programmation 3</title>
+        <title>Classes et Encapsulation - Cours de Programmation 3</title>
       
     
     
@@ -143,7 +143,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#entrees-utilisateur-avec-stdcin" class="md-skip">
+        <a href="#conception-de-classes-en-c" class="md-skip">
           Aller au contenu
         </a>
       
@@ -179,7 +179,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Gestion de la Saisie (std::cin)
+              Classes et Encapsulation
             
           </span>
         </div>
@@ -358,12 +358,10 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../semaine_1_0_introduction/" class="md-tabs__link">
           
   
@@ -440,11 +438,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../semaine_5_1_classes_encapsulation/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -721,29 +721,24 @@
       
   
   
-    
   
   
-  
     
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
@@ -761,7 +756,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -860,37 +855,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Gestion de la Saisie (std::cin)
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../semaine_1_3_gestion_saisie_cin/" class="md-nav__link">
         
   
   
@@ -906,176 +874,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-les-bases-flux-et-buffer" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Les Bases : Flux et Buffer
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-les-deux-facons-de-lire" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Les Deux Façons de Lire
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. Les Deux Façons de Lire">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a-lire-un-mot-ou-un-nombre" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A. Lire un mot ou un nombre (&gt;&gt;)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#b-lire-une-ligne-complete-stdgetline" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        B. Lire une ligne complète (std::getline)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-le-piege-classique-melanger-et-getline" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Le Piège Classique : Mélanger &gt;&gt; et getline ⚠️
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. Le Piège Classique : Mélanger &gt;&gt; et getline ⚠️">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#le-scenario" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Le Scénario
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#la-solution-nettoyer-le-buffer" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        La Solution : Nettoyer le Buffer
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-gestion-des-erreurs-de-saisie" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Gestion des Erreurs de Saisie
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. Gestion des Erreurs de Saisie">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cas-a-lecture-partielle-45abc" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cas A : Lecture Partielle (45abc)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cas-b-echec-total-abc45" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cas B : Échec Total (abc45)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#la-solution-robuste-pattern-a-retenir" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        La Solution Robuste (Pattern à retenir)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resume-des-commandes-de-nettoyage" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Résumé des Commandes de Nettoyage
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1543,24 +1341,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
         
           
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
             
   
   
@@ -1578,7 +1381,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1593,10 +1396,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../semaine_5_1_classes_encapsulation/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Classes et Encapsulation
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1612,6 +1442,131 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-utilisation-de-stdchrono-c20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Utilisation de std::chrono (C++20)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-le-fichier-den-tete-clienthpp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Le fichier d'en-tête (Client.hpp)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-limplementation-clientcpp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. L'implémentation (Client.cpp)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-concepts-cles-pour-les-etudiants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Concepts clés pour les étudiants
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Concepts clés pour les étudiants">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lencapsulation-prive-vs-public" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L'Encapsulation (Privé vs Public)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-constructeur-de-copie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le Constructeur de Copie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-destructeur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le Destructeur
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-exemple-dutilisation-maincpp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Exemple d'utilisation (main.cpp)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-saisie-utilisateur-vers-chrono" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Saisie utilisateur vers Chrono
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2181,153 +2136,133 @@
   
 
 
-<h1 id="entrees-utilisateur-avec-stdcin">Entrées Utilisateur avec <code>std::cin</code></h1>
-<p>Cette section explique comment récupérer des informations de l'utilisateur via la console en utilisant la bibliothèque <code>&lt;iostream&gt;</code>.</p>
-<hr />
-<h2 id="1-les-bases-flux-et-buffer">1. Les Bases : Flux et Buffer</h2>
-<p>En C++, les entrées clavier ne vont pas directement dans vos variables. Elles passent par un <strong>flux d'entrée</strong> (<code>std::cin</code>) et une zone d'attente appelée le <strong>Buffer</strong>.</p>
+<h1 id="conception-de-classes-en-c">Conception de Classes en C++</h1>
+<p>Ce guide explique comment transformer une structure de données en une classe robuste en utilisant l'encapsulation (privé/public), les accesseurs et les constructeurs.</p>
+<h2 id="1-utilisation-de-stdchrono-c20">1. Utilisation de <code>std::chrono</code> (C++20)</h2>
+<p>Depuis C++20, la bibliothèque <code>&lt;chrono&gt;</code> est devenue l'outil officiel pour gérer les dates. Nous utiliserons <code>std::chrono::year_month_day</code>.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;chrono&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="o">::</span><span class="nn">chrono</span><span class="p">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">// Exemple de création d&#39;une date :</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1">// year_month_day naissance = 1995y / August / 14d;</span>
+</span></code></pre></div>
+<h2 id="2-le-fichier-den-tete-clienthpp">2. Le fichier d'en-tête (<code>Client.hpp</code>)</h2>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">#pragma once</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;chrono&gt;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">class</span><span class="w"> </span><span class="nc">Client</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">public</span><span class="o">:</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="c1">// 1. Constructeur paramétré</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="n">Client</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">year_month_day</span><span class="w"> </span><span class="n">naissance</span><span class="p">);</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="c1">// 2. Constructeur de copie</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="c1">// Essentiel pour garantir une duplication propre de l&#39;objet</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="n">Client</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Client</span><span class="o">&amp;</span><span class="w"> </span><span class="n">autre</span><span class="p">);</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="c1">// 3. Destructeur</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="c1">// Appelé automatiquement quand l&#39;objet sort du scope</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="o">~</span><span class="n">Client</span><span class="p">();</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="c1">// 4. Accesseurs (Getters) - Toujours &#39;const&#39; car ils ne modifient rien</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">getNom</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">getPrenom</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">year_month_day</span><span class="w"> </span><span class="nf">getDateNaissance</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">    </span><span class="c1">// 5. Mutateurs (Setters) - Permettent de modifier avec contrôle</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setNom</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">nom</span><span class="p">);</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setPrenom</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">prenom</span><span class="p">);</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="k">private</span><span class="o">:</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">    </span><span class="c1">// Les données sont privées : personne ne peut les modifier par erreur</span>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">m_nom</span><span class="p">;</span>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">m_prenom</span><span class="p">;</span>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">year_month_day</span><span class="w"> </span><span class="n">m_dateNaissance</span><span class="p">;</span>
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="p">};</span>
+</span></code></pre></div>
+<h2 id="3-limplementation-clientcpp">3. L'implémentation (<code>Client.cpp</code>)</h2>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Client.hpp&quot;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1">// On utilise std::chrono pour la clarté</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="o">::</span><span class="nn">chrono</span><span class="p">;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1">// Constructeur : on initialise les membres via la liste d&#39;initialisation (plus rapide)</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">Client</span><span class="o">::</span><span class="n">Client</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="n">year_month_day</span><span class="w"> </span><span class="n">naissance</span><span class="p">)</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">m_nom</span><span class="p">{</span><span class="n">nom</span><span class="p">},</span><span class="w"> </span><span class="n">m_prenom</span><span class="p">{</span><span class="n">prenom</span><span class="p">},</span><span class="w"> </span><span class="n">m_dateNaissance</span><span class="p">{</span><span class="n">naissance</span><span class="p">}</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">}</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="c1">// Constructeur de copie</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="n">Client</span><span class="o">::</span><span class="n">Client</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Client</span><span class="o">&amp;</span><span class="w"> </span><span class="n">autre</span><span class="p">)</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">m_nom</span><span class="p">{</span><span class="n">autre</span><span class="p">.</span><span class="n">m_nom</span><span class="p">},</span><span class="w"> </span><span class="n">m_prenom</span><span class="p">{</span><span class="n">autre</span><span class="p">.</span><span class="n">m_prenom</span><span class="p">},</span><span class="w"> </span><span class="n">m_dateNaissance</span><span class="p">{</span><span class="n">autre</span><span class="p">.</span><span class="n">m_dateNaissance</span><span class="p">}</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="p">}</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="c1">// Destructeur (vide ici car std::string gère sa propre mémoire)</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="n">Client</span><span class="o">::~</span><span class="n">Client</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="p">}</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="c1">// Getters</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">Client</span><span class="o">::</span><span class="n">getNom</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">m_nom</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">Client</span><span class="o">::</span><span class="n">getPrenom</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">m_prenom</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="n">year_month_day</span><span class="w"> </span><span class="n">Client</span><span class="o">::</span><span class="n">getDateNaissance</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">m_dateNaissance</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="c1">// Setters</span>
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="kt">void</span><span class="w"> </span><span class="n">Client</span><span class="o">::</span><span class="n">setNom</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">nom</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">m_nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="kt">void</span><span class="w"> </span><span class="n">Client</span><span class="o">::</span><span class="n">setPrenom</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">prenom</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">m_prenom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prenom</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="4-concepts-cles-pour-les-etudiants">4. Concepts clés pour les étudiants</h2>
+<h3 id="lencapsulation-prive-vs-public">L'Encapsulation (Privé vs Public)</h3>
 <ul>
-<li><strong><code>std::cin</code></strong> : Le flux qui lit le clavier.</li>
-<li><strong>Buffer</strong> : Une salle d'attente où les caractères s'empilent quand vous tapez.</li>
-<li><strong><code>std::endl</code></strong> : Pour l'affichage (<code>cout</code>), cela fait un retour à la ligne (<code>\n</code>) et force l'affichage immédiat.</li>
+<li><strong><code>private</code></strong> : C'est le coffre-fort. Seules les méthodes de la classe peuvent toucher à ces variables. Cela empêche un utilisateur de mettre un mois à <code>99</code> ou une année à <code>-5</code>.</li>
+<li><strong><code>public</code></strong> : C'est l'interface. Ce sont les boutons que l'utilisateur peut presser pour interagir avec l'objet.</li>
 </ul>
-<hr />
-<h2 id="2-les-deux-facons-de-lire">2. Les Deux Façons de Lire</h2>
-<p>Il existe deux outils principaux selon ce que vous voulez lire.</p>
-<h3 id="a-lire-un-mot-ou-un-nombre">A. Lire un mot ou un nombre (<code>&gt;&gt;</code>)</h3>
-<p>L'opérateur d'extraction <code>&gt;&gt;</code> lit des données jusqu'au premier "espace blanc" (Espace, Tabulation, ou Entrée).</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">age</span><span class="p">;</span><span class="w"> </span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1">// Si je tape &quot;25&quot; + Entrée :</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">// -&gt; &#39;25&#39; va dans la variable.</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1">// -&gt; &#39;\n&#39; (Entrée) RESTE dans le buffer.</span>
-</span></code></pre></div>
-<h3 id="b-lire-une-ligne-complete-stdgetline">B. Lire une ligne complète (<code>std::getline</code>)</h3>
-<p>Cette fonction lit tout jusqu'au retour à la ligne (n). Elle est indispensable pour lire des phrases avec des espaces.  </p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">std</span><span class="o">::</span><span class="n">getline</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="p">);</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1">// Elle consomme le texte ET le &#39;\n&#39;, puis jette le &#39;\n&#39;.</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">// Le buffer est propre après son passage.</span>
-</span></code></pre></div>
-<h2 id="3-le-piege-classique-melanger-et-getline">3. Le Piège Classique : Mélanger <code>&gt;&gt;</code> et <code>getline</code> ⚠️</h2>
-<p>C'est l'erreur <strong>n°1</strong> des débutants en C++.</p>
-<h3 id="le-scenario">Le Scénario</h3>
-<ol>
-<li>Vous demandez un âge avec <code>std::cin &gt;&gt; age</code>.</li>
-<li>L'utilisateur tape <code>25</code> et appuie sur <code>Entrée</code>.</li>
-<li><code>cin</code> extrait le nombre <code>25</code>.</li>
-<li>🛑 <strong>Problème :</strong> Le caractère de saut de ligne <code>\n</code> (correspondant à la touche Entrée) <strong>reste dans le buffer</strong>.</li>
-<li>Vous appelez <code>std::getline</code> pour demander le nom.</li>
-<li><code>getline</code> regarde le buffer, voit le <code>\n</code> qui traîne immédiatement, pense que l'utilisateur a entré une ligne vide, et s'arrête.</li>
-</ol>
-<p><strong>Résultat :</strong> Le programme "saute" la demande du nom et ne vous laisse rien écrire.</p>
-<div class="admonition failure">
-<p class="admonition-title">Exemple du Code Problématique</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Age : &quot;</span><span class="p">;</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">age</span><span class="p">;</span><span class="w"> </span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1">// L&#39;utilisateur tape &quot;25&quot; + &quot;Entrée&quot;. </span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1">// Le &#39;\n&#39; reste en attente dans la mémoire.</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Nom : &quot;</span><span class="p">;</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="c1">// ❌ BUG : getline lit le &#39;\n&#39; restant et s&#39;arrête tout de suite.</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="n">std</span><span class="o">::</span><span class="n">getline</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="p">);</span><span class="w"> </span>
-</span></code></pre></div>
-</div>
-<h3 id="la-solution-nettoyer-le-buffer">La Solution : Nettoyer le Buffer</h3>
-<p>Pour corriger cela, il faut <strong>ignorer</strong> le reste de la ligne (le <code>\n</code> restant) après chaque <code>cin &gt;&gt;</code> si vous comptez utiliser <code>getline</code> ensuite.</p>
-<div class="admonition success">
-<p class="admonition-title">La Correction</p>
-<p>Ajoutez cette ligne magique entre les deux lectures :</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;limits&gt;</span><span class="c1"> // Nécessaire pour numeric_limits</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1">// ...</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<h3 id="le-constructeur-de-copie">Le Constructeur de Copie</h3>
+<p>En C++, quand vous passez un objet à une fonction par valeur, le compilateur crée une copie. Le constructeur de copie définit <strong>comment</strong> cette copie doit être faite. Pour des types simples ou <code>std::string</code>, le comportement par défaut suffit, mais l'écrire explicitement est une excellente pratique d'apprentissage.</p>
+<h3 id="le-destructeur">Le Destructeur</h3>
+<p>C'est le "ménage" automatique. Dès qu'une variable <code>Client</code> locale à une fonction n'est plus utilisée, le destructeur est appelé pour libérer les ressources.</p>
+<h2 id="5-exemple-dutilisation-maincpp">5. Exemple d'utilisation (<code>main.cpp</code>)</h2>
+<p>Voici comment créer un client en utilisant la syntaxe moderne de C++20 pour les dates.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Client.hpp&quot;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="o">::</span><span class="nn">chrono</span><span class="p">;</span>
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="c1">// 🧹 NETTOYAGE : On ignore tout jusqu&#39;au prochain retour à la ligne</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="p">.</span><span class="n">ignore</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">streamsize</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">(),</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">);</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Nom : &quot;</span><span class="p">;</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="n">std</span><span class="o">::</span><span class="n">getline</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="p">);</span><span class="w"> </span><span class="c1">// ✅ Fonctionne parfaitement</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="c1">// Création d&#39;une date avec les littéraux (y pour year, d pour day)</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="c1">// Notez l&#39;ordre très lisible : Année / Mois / Jour</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="n">year_month_day</span><span class="w"> </span><span class="n">dateNaissance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2000</span><span class="n">y</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">March</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">12</span><span class="n">d</span><span class="p">;</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="c1">// Instanciation du client</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="n">Client</span><span class="w"> </span><span class="n">nouveauClient</span><span class="p">{</span><span class="s">&quot;Gagnon&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Alexandre&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dateNaissance</span><span class="p">};</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">    </span><span class="c1">// Affichage des informations</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Client créé : &quot;</span><span class="w"> </span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">nouveauClient</span><span class="p">.</span><span class="n">getPrenom</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">nouveauClient</span><span class="p">.</span><span class="n">getNom</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="p">}</span>
 </span></code></pre></div>
-<div class="admonition warning">
-<p class="admonition-title">Pourquoi pas juste <code>std::cin.ignore()</code> ?</p>
-</div>
-<p><code>std::cin.ignore()</code> tout seul n'ignore qu'un <strong>seul</strong> caractère.</p>
-<p>Si l'utilisateur a tapé <code>25 abc</code> puis <code>Entrée</code>, il restera encore <code>bc</code> et <code>\n</code> dans le buffer.</p>
-<p>La version avec <code>numeric_limits</code> est la version <strong>"blindée"</strong> : elle demande d'ignorer le nombre maximum de caractères possible jusqu'à trouver un retour à la ligne. C'est la seule façon de garantir un buffer vide.</p>
-</div>
-<h2 id="4-gestion-des-erreurs-de-saisie">4. Gestion des Erreurs de Saisie</h2>
-<p>Que se passe-t-il si l'utilisateur fait n'importe quoi alors que vous attendez un nombre ?</p>
-<h3 id="cas-a-lecture-partielle-45abc">Cas A : Lecture Partielle (<code>45abc</code>)</h3>
-<p>Si on demande un <code>int</code> et que l'utilisateur tape <code>45abc</code> :</p>
-<ol>
-<li><code>cin</code> lit <code>45</code> (✅ <strong>Succès</strong>).</li>
-<li><code>cin</code> s'arrête au <code>a</code> (car ce n'est pas un chiffre).</li>
-<li><strong>Résultat :</strong> La variable vaut <code>45</code>.</li>
-<li>⚠️ <strong>Problème :</strong> La chaîne <code>abc</code> reste dans le buffer pour la prochaine lecture. Cela causera probablement une erreur au prochain <code>cin</code>.</li>
-</ol>
-<h3 id="cas-b-echec-total-abc45">Cas B : Échec Total (<code>abc45</code>)</h3>
-<p>Si on demande un <code>int</code> et que l'utilisateur tape <code>abc45</code> :</p>
-<ol>
-<li><code>cin</code> voit <code>a</code> tout de suite.</li>
-<li>Il se met immédiatement en mode <strong>Erreur</strong> (le drapeau <code>failbit</code> s'active).</li>
-<li><strong>Résultat :</strong> La variable vaut 0 (ou reste inchangée).</li>
-<li>🛑 <strong>Danger :</strong> Tant que <code>cin</code> est en erreur ("fail state"), il refusera de lire quoi que ce soit d'autre. Il est "verrouillé".</li>
-</ol>
-<h3 id="la-solution-robuste-pattern-a-retenir">La Solution Robuste (Pattern à retenir)</h3>
-<p>Pour un programme solide, on utilise une boucle <code>while</code> qui vérifie l'état de <code>cin</code> après chaque tentative.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;limits&gt;</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Entrez votre age : &quot;</span><span class="p">;</span>
+<h2 id="6-saisie-utilisateur-vers-chrono">6. Saisie utilisateur vers Chrono</h2>
+<p>Si vous devez demander une date à l'utilisateur, vous récupérez d'abord des entiers (<code>int</code>), puis vous les convertissez explicitement dans les types de <code>chrono</code>.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Annee de naissance : &quot;</span><span class="p">;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="c1">// Lecture de l&#39;entier (ex: 1998)</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Mois (1-12) : &quot;</span><span class="p">;</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">m</span><span class="p">;</span><span class="w"> </span><span class="c1">// Lecture de l&#39;entier (ex: 05)</span>
 </span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="c1">// 1. La boucle gère L&#39;ÉCHEC (Type incorrect, ex: &quot;abc&quot;)</span>
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">age</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Erreur, ce n&#39;est pas un nombre. Recommencez : &quot;</span><span class="p">;</span>
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="p">.</span><span class="n">ignore</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">streamsize</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">(),</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">);</span>
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Jour (1-31) : &quot;</span><span class="p">;</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">j</span><span class="p">;</span><span class="w"> </span><span class="c1">// Lecture de l&#39;entier (ex: 22)</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="c1">// Transformation des entiers vers les types officiels de chrono</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="c1">// On utilise le transtypage explicite : year(a), month(m), day(j)</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="n">year_month_day</span><span class="w"> </span><span class="n">dateSaisie</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">year</span><span class="p">{</span><span class="n">a</span><span class="p">},</span><span class="w"> </span><span class="n">month</span><span class="p">{</span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m</span><span class="p">)},</span><span class="w"> </span><span class="n">day</span><span class="p">{</span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="o">&gt;</span><span class="p">(</span><span class="n">j</span><span class="p">)}</span><span class="w"> </span><span class="p">};</span>
 </span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>
-</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">    </span><span class="c1">// 2. IMPORTANT : On gère le SUCCÈS (Nettoyage final)</span>
-</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="c1">// On vide le buffer pour enlever le &#39;\n&#39; restant ou les déchets (ex: &quot;25abc&quot;)</span>
-</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">    </span><span class="c1">// afin que la suite du programme (ex: un futur getline) fonctionne.</span>
-</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="p">.</span><span class="n">ignore</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">streamsize</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">(),</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">);</span>
-</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>
-</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Age valide : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
-</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>
-</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">    </span><span class="c1">// Ici, le buffer est propre, prêt pour un getline !</span>
-</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="p">}</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="c1">// On peut maintenant créer notre client</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="n">Client</span><span class="w"> </span><span class="n">clientSaisi</span><span class="p">{</span><span class="s">&quot;Nom&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Prenom&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dateSaisie</span><span class="p">};</span>
 </span></code></pre></div>
-<h3 id="resume-des-commandes-de-nettoyage">Résumé des Commandes de Nettoyage</h3>
-<p>Ces deux commandes fonctionnent souvent en duo dans une gestion d'erreur robuste.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Commande</th>
-<th style="text-align: left;">Rôle</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>std::cin.clear()</code></td>
-<td style="text-align: left;"><strong>Réparer.</strong> Réinitialise les indicateurs d'erreur (comme <code>failbit</code>) pour sortir <code>cin</code> de son état de blocage et lui permettre de relire.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>std::cin.ignore(MAX, '\n')</code></td>
-<td style="text-align: left;"><strong>Vider.</strong> Jette tout ce qui traîne encore dans le buffer (la saisie fautive + le retour à la ligne) pour repartir sur des bases saines.</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition tip">
-<p class="admonition-title">Note</p>
-<p>Dans ce tableau, <code>MAX</code> est un raccourci pour : <code>std::numeric_limits&lt;std::streamsize&gt;::max()</code>.</p>
-</div>
 
 
 
