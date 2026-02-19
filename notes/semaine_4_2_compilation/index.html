@@ -1351,10 +1351,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-creer-votre-point-dentree-teststest_maincpp" class="md-nav__link">
+  <a href="#2-creer-votre-point-dentree-testsmain_testcpp" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Créer VOTRE point d'entrée (tests/test_main.cpp)
+        2. Créer VOTRE point d'entrée (tests/main_test.cpp)
       
     </span>
   </a>
@@ -2303,9 +2303,9 @@
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>mkdir<span class="w"> </span>lib<span class="w">  </span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>wget<span class="w"> </span>https://github.com/catchorg/Catch2/releases/download/v2.13.10/catch.hpp<span class="w"> </span>-O<span class="w"> </span>lib/catch.hpp<span class="w"> </span>&lt;--<span class="w"> </span>mettre<span class="w"> </span>le<span class="w"> </span>catch.hpp<span class="w"> </span>dans<span class="w"> </span>le<span class="w"> </span>dossier<span class="w"> </span>lib<span class="w"> </span>du<span class="w"> </span>projet<span class="w">  </span>
 </span></code></pre></div>
-<h3 id="2-creer-votre-point-dentree-teststest_maincpp">2. Créer VOTRE point d'entrée (<code>tests/test_main.cpp</code>)</h3>
+<h3 id="2-creer-votre-point-dentree-testsmain_testcpp">2. Créer VOTRE point d'entrée (<code>tests/main_test.cpp</code>)</h3>
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="cp">#define CATCH_CONFIG_MAIN  </span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../lib/catch.hpp&quot;</span><span class="c1">  </span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;catch.hpp&quot;</span><span class="c1">  </span>
 </span></code></pre></div>
 <p><strong>Structure complète :</strong><br />
 <div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ProjetBanque/  
@@ -2317,7 +2317,7 @@
 </span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>├── lib/  
 </span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>│   └── catch.hpp        &lt;-- La librairie téléchargée (ne pas toucher)  
 </span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>└── tests/  
-</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>    ├── test_main.cpp    &lt;-- Possède le main() des TESTS  
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>    ├── main_test.cpp    &lt;-- Possède le main() des TESTS  
 </span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>    └── test_Banque.cpp  &lt;-- Vos TEST_CASE unitaires pour Banque  
 </span></code></pre></div></p>
 <p><strong>🔨 Compilation et Exécution (Le cauchemar) :</strong><br />
@@ -2326,7 +2326,7 @@ Il faut maintenant deux commandes différentes car on ne peut pas mélanger les 
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>g++<span class="w"> </span>-Wall<span class="w"> </span>-std<span class="o">=</span>c++20<span class="w">  </span>-I<span class="w"> </span>include<span class="w"> </span>src/main.cpp<span class="w"> </span>src/Banque.cpp<span class="w"> </span>-o<span class="w"> </span>app<span class="w">  </span>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1"># 2. Compiler les Tests (Notez l&#39;ajout de -I lib)  </span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>g++<span class="w"> </span>-Wall<span class="w"> </span>-std<span class="o">=</span>c++20<span class="w">  </span>-I<span class="w"> </span>include<span class="w"> </span>-I<span class="w"> </span>lib<span class="w"> </span>tests/test_main.cpp<span class="w"> </span>tests/test_Banque.cpp<span class="w"> </span>src/Banque.cpp<span class="w"> </span>-o<span class="w"> </span>tests_app<span class="w">  </span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>g++<span class="w"> </span>-Wall<span class="w"> </span>-std<span class="o">=</span>c++20<span class="w">  </span>-I<span class="w"> </span>include<span class="w"> </span>-I<span class="w"> </span>lib<span class="w"> </span>tests/main_test.cpp<span class="w"> </span>tests/test_Banque.cpp<span class="w"> </span>src/Banque.cpp<span class="w"> </span>-o<span class="w"> </span>tests_app<span class="w">  </span>
 </span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
 </span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="c1"># Lancer les tests  </span>
 </span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>./tests_app<span class="w">  </span>
@@ -2347,7 +2347,7 @@ CMake génère énormément de fichiers temporaires (Makefiles, fichiers .o, cac
 </span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
 </span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="c"># On doit tout lister à la main... pénible si on a 50 fichiers !  </span>
 </span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="nb">add_executable</span><span class="p">(</span><span class="s">app</span><span class="w"> </span><span class="s">src/main.cpp</span><span class="w"> </span><span class="s">src/Banque.cpp</span><span class="w"> </span><span class="s">src/Compte.cpp</span><span class="p">)</span><span class="w">  </span>
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="nb">add_executable</span><span class="p">(</span><span class="s">tests_app</span><span class="w"> </span><span class="s">tests/test_main.cpp</span><span class="w"> </span><span class="s">tests/test_Banque.cpp</span><span class="w"> </span><span class="s">src/Banque.cpp</span><span class="w"> </span><span class="s">src/Compte.cpp</span><span class="p">)</span><span class="w">  </span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="nb">add_executable</span><span class="p">(</span><span class="s">tests_app</span><span class="w"> </span><span class="s">tests/main_test.cpp</span><span class="w"> </span><span class="s">tests/test_Banque.cpp</span><span class="w"> </span><span class="s">src/Banque.cpp</span><span class="w"> </span><span class="s">src/Compte.cpp</span><span class="p">)</span><span class="w">  </span>
 </span></code></pre></div></p>
 <p><strong>🔨 Compilation et Exécution :</strong><br />
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>mkdir<span class="w"> </span>build<span class="w">      </span><span class="c1"># 1. On crée le dossier de compilation  </span>
