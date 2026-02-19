@@ -1397,10 +1397,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#b-vos-fichiers-de-tests-ex-test_classe1cpp-test_classe2cpp" class="md-nav__link">
+  <a href="#b-vos-fichiers-de-tests-ex-test_liste_chaineecpp-test_pilecpp" class="md-nav__link">
     <span class="md-ellipsis">
       
-        B. Vos Fichiers de Tests (ex: test_classe1.cpp, test_classe2.cpp)
+        B. Vos Fichiers de Tests (ex: test_liste_chainee.cpp, test_pile.cpp)
       
     </span>
   </a>
@@ -2386,14 +2386,14 @@
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    │   ├── lib/  
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    │   │   └── catch.hpp    &lt;-- Catch2 pour vos tests  
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    │   ├── main_test.cpp    &lt;-- UNIQUE Moteur de test (le &quot;main&quot;)
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    │   ├── test_classe1.cpp &lt;-- Tests pour la classe 1
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    │   └── test_classe2.cpp &lt;-- Tests pour la classe 2
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    │   ├── test_liste_chainee.cpp &lt;-- Tests pour la ListeChainee
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    │   └── test_pile.cpp          &lt;-- Tests pour la Pile
 </span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    └── test_commun/         &lt;-- BOÎTE 2 : LE SOUS-MODULE (Dépôt du groupe)
 </span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>        ├── lib/ 
 </span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>        │   └── catch.hpp    &lt;-- Catch2 interne au groupe  
 </span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>        ├── main_test.cpp    &lt;-- Moteur de test du groupe  
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>        ├── test_classe1.cpp &lt;-- Tests partagés pour la classe 1
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>        └── test_classe2.cpp &lt;-- Tests partagés pour la classe 2
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>        ├── test_liste_chainee.cpp &lt;-- Tests partagés pour la ListeChainee
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>        └── test_pile.cpp          &lt;-- Tests partagés pour la Pile
 </span></code></pre></div>
 <h3 id="11-exemples-de-contenu-des-fichiers">1.1 Exemples de Contenu des Fichiers</h3>
 <p>Voici exactement ce que doivent contenir vos fichiers pour que Catch2 fonctionne correctement sans erreurs de "double main" ou de compilation lente.</p>
@@ -2402,45 +2402,48 @@
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">#define CATCH_CONFIG_MAIN  </span><span class="c1">// Génère le main() ICI SEULEMENT</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;catch.hpp&quot;</span>
 </span></code></pre></div></p>
-<h4 id="b-vos-fichiers-de-tests-ex-test_classe1cpp-test_classe2cpp">B. Vos Fichiers de Tests (ex: <code>test_classe1.cpp</code>, <code>test_classe2.cpp</code>)</h4>
+<h4 id="b-vos-fichiers-de-tests-ex-test_liste_chaineecpp-test_pilecpp">B. Vos Fichiers de Tests (ex: <code>test_liste_chainee.cpp</code>, <code>test_pile.cpp</code>)</h4>
 <p><strong>Règle d'or : 1 classe = 1 fichier de test.</strong> Cela garde votre projet propre et facile à lire.</p>
-<p><strong>Exemple : <code>test_classe1.cpp</code></strong>
+<p><strong>Exemple : <code>test_liste_chainee.cpp</code></strong>
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;catch.hpp&quot;</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Classe1.hpp&quot;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ListeChainee.hpp&quot;</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Test de base Classe1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[classe1]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="n">Classe1</span><span class="w"> </span><span class="n">c1</span><span class="p">;</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c1</span><span class="p">.</span><span class="n">fonctionAMethode</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Test de ajouterDebut&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[liste_chainee]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="n">ListeChainee</span><span class="w"> </span><span class="n">l</span><span class="p">;</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="nb">true</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span><span class="w"> </span><span class="c1">// On simule un test qui passe</span>
 </span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">}</span>
 </span></code></pre></div></p>
-<p><strong>Exemple : <code>test_classe2.cpp</code></strong>
+<p><strong>Exemple : <code>test_pile.cpp</code></strong>
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;catch.hpp&quot;</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Classe2.hpp&quot;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Pile.hpp&quot;</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Test de base Classe2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[classe2]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="n">Classe2</span><span class="w"> </span><span class="n">c2</span><span class="p">;</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c2</span><span class="p">.</span><span class="n">getValeur</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">}</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Test de base Pile&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[pile]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="n">Pile</span><span class="w"> </span><span class="n">p</span><span class="p">;</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="c1">// C&#39;est normal que ça plante ici, c&#39;est pour montrer l&#39;échec !</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="c1">// (Utile pour voir si Catch2 détecte bien les erreurs)</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="nb">true</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="p">}</span>
 </span></code></pre></div></p>
 <h4 id="c-les-fichiers-de-tests-communs-le-sous-module">C. Les Fichiers de Tests Communs (Le Sous-Module)</h4>
 <p>Le principe est <strong>exactement le même</strong> que pour vos tests personnels : 1 fichier par classe. Les fichiers sont simplement situés dans le dossier <code>test_commun</code>.</p>
-<p><strong>Exemple : <code>tests/test_commun/test_classe1.cpp</code></strong>
+<p><strong>Exemple : <code>tests/test_commun/test_liste_chainee.cpp</code></strong>
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;catch.hpp&quot;</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Classe1.hpp&quot;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ListeChainee.hpp&quot;</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Test de base Classe1 (Commun)&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[groupe]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="n">Classe1</span><span class="w"> </span><span class="n">c1</span><span class="p">;</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c1</span><span class="p">.</span><span class="n">fonctionAMethode</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Test de ajouterDebut (Commun)&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[groupe]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="n">ListeChainee</span><span class="w"> </span><span class="n">l</span><span class="p">;</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="nb">true</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
 </span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p">}</span>
 </span></code></pre></div></p>
-<p><strong>Exemple : <code>tests/test_commun/test_classe2.cpp</code></strong>
+<p><strong>Exemple : <code>tests/test_commun/test_pile.cpp</code></strong>
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;catch.hpp&quot;</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Classe2.hpp&quot;</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Pile.hpp&quot;</span>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Test de base Classe2 (Commun)&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[groupe]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="n">Classe2</span><span class="w"> </span><span class="n">c2</span><span class="p">;</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c2</span><span class="p">.</span><span class="n">getValeur</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">}</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Test de base Pile (Commun)&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[groupe]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="n">Pile</span><span class="w"> </span><span class="n">p</span><span class="p">;</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="c1">// On simule un échec pour l&#39;exemple</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="nb">true</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="p">}</span>
 </span></code></pre></div></p>
 <hr />
 <h2 id="2-configuration-cmake-symetrie-totale">2. Configuration CMake (Symétrie Totale)</h2>
