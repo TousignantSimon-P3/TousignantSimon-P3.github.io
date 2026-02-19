@@ -1397,10 +1397,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#b-vos-fichiers-de-tests-ex-test_calculatricecpp-test_banquecpp" class="md-nav__link">
+  <a href="#b-vos-fichiers-de-tests-ex-test_classe1cpp-test_classe2cpp" class="md-nav__link">
     <span class="md-ellipsis">
       
-        B. Vos Fichiers de Tests (ex: test_calculatrice.cpp, test_banque.cpp)
+        B. Vos Fichiers de Tests (ex: test_classe1.cpp, test_classe2.cpp)
       
     </span>
   </a>
@@ -1408,10 +1408,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#c-tests_groupecpp-le-sous-module" class="md-nav__link">
+  <a href="#c-les-fichiers-de-tests-communs-le-sous-module" class="md-nav__link">
     <span class="md-ellipsis">
       
-        C. tests_groupe.cpp (Le Sous-Module)
+        C. Les Fichiers de Tests Communs (Le Sous-Module)
       
     </span>
   </a>
@@ -2392,7 +2392,8 @@
 </span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>        ├── lib/ 
 </span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>        │   └── catch.hpp    &lt;-- Catch2 interne au groupe  
 </span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>        ├── main_test.cpp    &lt;-- Moteur de test du groupe  
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>        └── tests_groupe.cpp &lt;-- Tests partagés  
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>        ├── test_classe1.cpp &lt;-- Tests partagés pour la classe 1
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>        └── test_classe2.cpp &lt;-- Tests partagés pour la classe 2
 </span></code></pre></div>
 <h3 id="11-exemples-de-contenu-des-fichiers">1.1 Exemples de Contenu des Fichiers</h3>
 <p>Voici exactement ce que doivent contenir vos fichiers pour que Catch2 fonctionne correctement sans erreurs de "double main" ou de compilation lente.</p>
@@ -2401,79 +2402,89 @@
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">#define CATCH_CONFIG_MAIN  </span><span class="c1">// Génère le main() ICI SEULEMENT</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;catch.hpp&quot;</span>
 </span></code></pre></div></p>
-<h4 id="b-vos-fichiers-de-tests-ex-test_calculatricecpp-test_banquecpp">B. Vos Fichiers de Tests (ex: <code>test_calculatrice.cpp</code>, <code>test_banque.cpp</code>)</h4>
+<h4 id="b-vos-fichiers-de-tests-ex-test_classe1cpp-test_classe2cpp">B. Vos Fichiers de Tests (ex: <code>test_classe1.cpp</code>, <code>test_classe2.cpp</code>)</h4>
 <p><strong>Règle d'or : 1 classe = 1 fichier de test.</strong> Cela garde votre projet propre et facile à lire.</p>
-<p><strong>Exemple : <code>test_calculatrice.cpp</code></strong>
+<p><strong>Exemple : <code>test_classe1.cpp</code></strong>
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;catch.hpp&quot;</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Calculatrice.hpp&quot;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Classe1.hpp&quot;</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Addition simple&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[calculatrice]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="n">Calculatrice</span><span class="w"> </span><span class="n">calc</span><span class="p">;</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">calc</span><span class="p">.</span><span class="n">additionner</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Test de base Classe1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[classe1]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="n">Classe1</span><span class="w"> </span><span class="n">c1</span><span class="p">;</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c1</span><span class="p">.</span><span class="n">fonctionAMethode</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
 </span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">}</span>
 </span></code></pre></div></p>
-<p><strong>Exemple : <code>test_banque.cpp</code></strong>
+<p><strong>Exemple : <code>test_classe2.cpp</code></strong>
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;catch.hpp&quot;</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;CompteBancaire.hpp&quot;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Classe2.hpp&quot;</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Dépôt d&#39;argent&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[banque]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="n">CompteBancaire</span><span class="w"> </span><span class="nf">compte</span><span class="p">(</span><span class="mf">100.0</span><span class="p">);</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="n">compte</span><span class="p">.</span><span class="n">deposer</span><span class="p">(</span><span class="mf">50.0</span><span class="p">);</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">compte</span><span class="p">.</span><span class="n">getSolde</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">150.0</span><span class="p">);</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">}</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Test de base Classe2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[classe2]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="n">Classe2</span><span class="w"> </span><span class="n">c2</span><span class="p">;</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c2</span><span class="p">.</span><span class="n">getValeur</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">}</span>
 </span></code></pre></div></p>
-<h4 id="c-tests_groupecpp-le-sous-module">C. <code>tests_groupe.cpp</code> (Le Sous-Module)</h4>
-<p>Même principe, ce fichier contient les tests que vous partagez avec vos collègues.
+<h4 id="c-les-fichiers-de-tests-communs-le-sous-module">C. Les Fichiers de Tests Communs (Le Sous-Module)</h4>
+<p>Le principe est <strong>exactement le même</strong> que pour vos tests personnels : 1 fichier par classe. Les fichiers sont simplement situés dans le dossier <code>test_commun</code>.</p>
+<p><strong>Exemple : <code>tests/test_commun/test_classe1.cpp</code></strong>
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;catch.hpp&quot;</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ProjetCommun.hpp&quot;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Classe1.hpp&quot;</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Test d&#39;intégration partagé&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[groupe]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="p">}</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Test de base Classe1 (Commun)&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[groupe]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="n">Classe1</span><span class="w"> </span><span class="n">c1</span><span class="p">;</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c1</span><span class="p">.</span><span class="n">fonctionAMethode</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<p><strong>Exemple : <code>tests/test_commun/test_classe2.cpp</code></strong>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;catch.hpp&quot;</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Classe2.hpp&quot;</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Test de base Classe2 (Commun)&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[groupe]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="n">Classe2</span><span class="w"> </span><span class="n">c2</span><span class="p">;</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="n">REQUIRE</span><span class="p">(</span><span class="n">c2</span><span class="p">.</span><span class="n">getValeur</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">}</span>
 </span></code></pre></div></p>
 <hr />
 <h2 id="2-configuration-cmake-symetrie-totale">2. Configuration CMake (Symétrie Totale)</h2>
 <p>Le script <code>CMakeLists.txt</code> à la racine orchestre les trois cibles de manière isolée.</p>
-<div class="language-cmake highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span><span class="w"> </span><span class="s">3.10</span><span class="p">)</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">project</span><span class="p">(</span><span class="s">MonProjet</span><span class="p">)</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_STANDARD</span><span class="w"> </span><span class="s">20</span><span class="p">)</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_STANDARD_REQUIRED</span><span class="w"> </span><span class="s">ON</span><span class="p">)</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="c"># --- 1. LES SOURCES (La logique à tester) ---</span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="nb">file</span><span class="p">(</span><span class="s">GLOB</span><span class="w"> </span><span class="s">TOUT_SRC</span><span class="w"> </span><span class="s2">&quot;src/*.cpp&quot;</span><span class="p">)</span>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="nb">set</span><span class="p">(</span><span class="s">SRC_FICHIERS</span><span class="w"> </span><span class="o">${</span><span class="nv">TOUT_SRC</span><span class="o">}</span><span class="p">)</span>
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="nb">list</span><span class="p">(</span><span class="s">REMOVE_ITEM</span><span class="w"> </span><span class="s">SRC_FICHIERS</span><span class="w"> </span><span class="s2">&quot;${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp&quot;</span><span class="p">)</span>
-</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>
-</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="c"># --- 2. VOS TESTS (Boîte Privée) ---</span>
-</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="nb">file</span><span class="p">(</span><span class="s">GLOB</span><span class="w"> </span><span class="s">TEST_PERSO_FICHIERS</span><span class="w"> </span><span class="s2">&quot;tests/test_personnel/*.cpp&quot;</span><span class="p">)</span>
-</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>
-</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="c"># --- 3. TESTS DU GROUPE (Boîte Commune) ---</span>
-</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="nb">file</span><span class="p">(</span><span class="s">GLOB</span><span class="w"> </span><span class="s">TEST_COMMUN_FICHIERS</span><span class="w"> </span><span class="s2">&quot;tests/test_commun/*.cpp&quot;</span><span class="p">)</span>
-</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>
-</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="c"># --- CRÉATION DES EXÉCUTABLES ---</span>
-</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>
-</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="c"># A. L&#39;Application normale (./app)</span>
-</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="nb">add_executable</span><span class="p">(</span><span class="s">app</span><span class="w"> </span><span class="s">src/main.cpp</span><span class="w"> </span><span class="o">${</span><span class="nv">SRC_FICHIERS</span><span class="o">}</span><span class="p">)</span>
-</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="nb">target_include_directories</span><span class="p">(</span><span class="s">app</span><span class="w"> </span><span class="s">PRIVATE</span><span class="w"> </span><span class="s">include</span><span class="p">)</span>
-</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>
-</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="c"># B. Vos tests personnels (./test_perso)</span>
-</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="nb">if</span><span class="p">(</span><span class="s">TEST_PERSO_FICHIERS</span><span class="p">)</span>
-</span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="w">    </span><span class="nb">add_executable</span><span class="p">(</span><span class="s">test_perso</span><span class="w"> </span><span class="o">${</span><span class="nv">TEST_PERSO_FICHIERS</span><span class="o">}</span><span class="w"> </span><span class="o">${</span><span class="nv">SRC_FICHIERS</span><span class="o">}</span><span class="p">)</span>
-</span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="w">    </span><span class="c"># On utilise le lib INTERNE au dossier personnel</span>
-</span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a><span class="w">    </span><span class="nb">target_include_directories</span><span class="p">(</span><span class="s">test_perso</span><span class="w"> </span><span class="s">PRIVATE</span><span class="w"> </span><span class="s">include</span><span class="w"> </span><span class="s">tests/test_personnel/lib</span><span class="p">)</span>
-</span><span id="__span-5-29"><a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a><span class="nb">else</span><span class="p">()</span>
-</span><span id="__span-5-30"><a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a><span class="w">    </span><span class="nb">message</span><span class="p">(</span><span class="s">WARNING</span><span class="w"> </span><span class="s2">&quot;Dossier &#39;test_personnel&#39; vide.&quot;</span><span class="p">)</span>
-</span><span id="__span-5-31"><a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a><span class="nb">endif</span><span class="p">()</span>
-</span><span id="__span-5-32"><a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a>
-</span><span id="__span-5-33"><a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a><span class="c"># C. Les tests du groupe (./test_commun)</span>
-</span><span id="__span-5-34"><a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a><span class="nb">if</span><span class="p">(</span><span class="s">TEST_COMMUN_FICHIERS</span><span class="p">)</span>
-</span><span id="__span-5-35"><a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a><span class="w">    </span><span class="nb">add_executable</span><span class="p">(</span><span class="s">test_commun</span><span class="w"> </span><span class="o">${</span><span class="nv">TEST_COMMUN_FICHIERS</span><span class="o">}</span><span class="w"> </span><span class="o">${</span><span class="nv">SRC_FICHIERS</span><span class="o">}</span><span class="p">)</span>
-</span><span id="__span-5-36"><a id="__codelineno-5-36" name="__codelineno-5-36" href="#__codelineno-5-36"></a><span class="w">    </span><span class="c"># On utilise le lib INTERNE au sous-module</span>
-</span><span id="__span-5-37"><a id="__codelineno-5-37" name="__codelineno-5-37" href="#__codelineno-5-37"></a><span class="w">    </span><span class="nb">target_include_directories</span><span class="p">(</span><span class="s">test_commun</span><span class="w"> </span><span class="s">PRIVATE</span><span class="w"> </span><span class="s">include</span><span class="w"> </span><span class="s">tests/test_commun/lib</span><span class="p">)</span>
-</span><span id="__span-5-38"><a id="__codelineno-5-38" name="__codelineno-5-38" href="#__codelineno-5-38"></a><span class="nb">else</span><span class="p">()</span>
-</span><span id="__span-5-39"><a id="__codelineno-5-39" name="__codelineno-5-39" href="#__codelineno-5-39"></a><span class="w">    </span><span class="nb">message</span><span class="p">(</span><span class="s">WARNING</span><span class="w"> </span><span class="s2">&quot;Dossier &#39;test_commun&#39; absent ou vide.&quot;</span><span class="p">)</span>
-</span><span id="__span-5-40"><a id="__codelineno-5-40" name="__codelineno-5-40" href="#__codelineno-5-40"></a><span class="nb">endif</span><span class="p">()</span>
+<div class="language-cmake highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span><span class="w"> </span><span class="s">3.10</span><span class="p">)</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nb">project</span><span class="p">(</span><span class="s">MonProjet</span><span class="p">)</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_STANDARD</span><span class="w"> </span><span class="s">20</span><span class="p">)</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_STANDARD_REQUIRED</span><span class="w"> </span><span class="s">ON</span><span class="p">)</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="c"># --- 1. LES SOURCES (La logique à tester) ---</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="nb">file</span><span class="p">(</span><span class="s">GLOB</span><span class="w"> </span><span class="s">TOUT_SRC</span><span class="w"> </span><span class="s2">&quot;src/*.cpp&quot;</span><span class="p">)</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="nb">set</span><span class="p">(</span><span class="s">SRC_FICHIERS</span><span class="w"> </span><span class="o">${</span><span class="nv">TOUT_SRC</span><span class="o">}</span><span class="p">)</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="nb">list</span><span class="p">(</span><span class="s">REMOVE_ITEM</span><span class="w"> </span><span class="s">SRC_FICHIERS</span><span class="w"> </span><span class="s2">&quot;${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp&quot;</span><span class="p">)</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="c"># --- 2. VOS TESTS (Boîte Privée) ---</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="nb">file</span><span class="p">(</span><span class="s">GLOB</span><span class="w"> </span><span class="s">TEST_PERSO_FICHIERS</span><span class="w"> </span><span class="s2">&quot;tests/test_personnel/*.cpp&quot;</span><span class="p">)</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="c"># --- 3. TESTS DU GROUPE (Boîte Commune) ---</span>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="nb">file</span><span class="p">(</span><span class="s">GLOB</span><span class="w"> </span><span class="s">TEST_COMMUN_FICHIERS</span><span class="w"> </span><span class="s2">&quot;tests/test_commun/*.cpp&quot;</span><span class="p">)</span>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="c"># --- CRÉATION DES EXÉCUTABLES ---</span>
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="c"># A. L&#39;Application normale (./app)</span>
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="nb">add_executable</span><span class="p">(</span><span class="s">app</span><span class="w"> </span><span class="s">src/main.cpp</span><span class="w"> </span><span class="o">${</span><span class="nv">SRC_FICHIERS</span><span class="o">}</span><span class="p">)</span>
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="nb">target_include_directories</span><span class="p">(</span><span class="s">app</span><span class="w"> </span><span class="s">PRIVATE</span><span class="w"> </span><span class="s">include</span><span class="p">)</span>
+</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>
+</span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a><span class="c"># B. Vos tests personnels (./test_perso)</span>
+</span><span id="__span-6-25"><a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="nb">if</span><span class="p">(</span><span class="s">TEST_PERSO_FICHIERS</span><span class="p">)</span>
+</span><span id="__span-6-26"><a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="w">    </span><span class="nb">add_executable</span><span class="p">(</span><span class="s">test_perso</span><span class="w"> </span><span class="o">${</span><span class="nv">TEST_PERSO_FICHIERS</span><span class="o">}</span><span class="w"> </span><span class="o">${</span><span class="nv">SRC_FICHIERS</span><span class="o">}</span><span class="p">)</span>
+</span><span id="__span-6-27"><a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a><span class="w">    </span><span class="c"># On utilise le lib INTERNE au dossier personnel</span>
+</span><span id="__span-6-28"><a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a><span class="w">    </span><span class="nb">target_include_directories</span><span class="p">(</span><span class="s">test_perso</span><span class="w"> </span><span class="s">PRIVATE</span><span class="w"> </span><span class="s">include</span><span class="w"> </span><span class="s">tests/test_personnel/lib</span><span class="p">)</span>
+</span><span id="__span-6-29"><a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a><span class="nb">else</span><span class="p">()</span>
+</span><span id="__span-6-30"><a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a><span class="w">    </span><span class="nb">message</span><span class="p">(</span><span class="s">WARNING</span><span class="w"> </span><span class="s2">&quot;Dossier &#39;test_personnel&#39; vide.&quot;</span><span class="p">)</span>
+</span><span id="__span-6-31"><a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a><span class="nb">endif</span><span class="p">()</span>
+</span><span id="__span-6-32"><a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a>
+</span><span id="__span-6-33"><a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a><span class="c"># C. Les tests du groupe (./test_commun)</span>
+</span><span id="__span-6-34"><a id="__codelineno-6-34" name="__codelineno-6-34" href="#__codelineno-6-34"></a><span class="nb">if</span><span class="p">(</span><span class="s">TEST_COMMUN_FICHIERS</span><span class="p">)</span>
+</span><span id="__span-6-35"><a id="__codelineno-6-35" name="__codelineno-6-35" href="#__codelineno-6-35"></a><span class="w">    </span><span class="nb">add_executable</span><span class="p">(</span><span class="s">test_commun</span><span class="w"> </span><span class="o">${</span><span class="nv">TEST_COMMUN_FICHIERS</span><span class="o">}</span><span class="w"> </span><span class="o">${</span><span class="nv">SRC_FICHIERS</span><span class="o">}</span><span class="p">)</span>
+</span><span id="__span-6-36"><a id="__codelineno-6-36" name="__codelineno-6-36" href="#__codelineno-6-36"></a><span class="w">    </span><span class="c"># On utilise le lib INTERNE au sous-module</span>
+</span><span id="__span-6-37"><a id="__codelineno-6-37" name="__codelineno-6-37" href="#__codelineno-6-37"></a><span class="w">    </span><span class="nb">target_include_directories</span><span class="p">(</span><span class="s">test_commun</span><span class="w"> </span><span class="s">PRIVATE</span><span class="w"> </span><span class="s">include</span><span class="w"> </span><span class="s">tests/test_commun/lib</span><span class="p">)</span>
+</span><span id="__span-6-38"><a id="__codelineno-6-38" name="__codelineno-6-38" href="#__codelineno-6-38"></a><span class="nb">else</span><span class="p">()</span>
+</span><span id="__span-6-39"><a id="__codelineno-6-39" name="__codelineno-6-39" href="#__codelineno-6-39"></a><span class="w">    </span><span class="nb">message</span><span class="p">(</span><span class="s">WARNING</span><span class="w"> </span><span class="s2">&quot;Dossier &#39;test_commun&#39; absent ou vide.&quot;</span><span class="p">)</span>
+</span><span id="__span-6-40"><a id="__codelineno-6-40" name="__codelineno-6-40" href="#__codelineno-6-40"></a><span class="nb">endif</span><span class="p">()</span>
 </span></code></pre></div>
 <hr />
 <h2 id="3-pourquoi-cette-methode">3. Pourquoi cette méthode ?</h2>
@@ -2484,8 +2495,8 @@
 </ol>
 <hr />
 <h2 id="4-rappel-git-ajouter-le-sous-module">4. Rappel Git : Ajouter le Sous-Module</h2>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git<span class="w"> </span>submodule<span class="w"> </span>add<span class="w"> </span>&lt;URL_DU_DEPOT_DE_TESTS&gt;<span class="w"> </span>tests/test_commun
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>git<span class="w"> </span>submodule<span class="w"> </span>update<span class="w"> </span>--init<span class="w"> </span>--recursive
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>git<span class="w"> </span>submodule<span class="w"> </span>add<span class="w"> </span>&lt;URL_DU_DEPOT_DE_TESTS&gt;<span class="w"> </span>tests/test_commun
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>git<span class="w"> </span>submodule<span class="w"> </span>update<span class="w"> </span>--init<span class="w"> </span>--recursive
 </span></code></pre></div>
 <hr />
 <h2 id="5-workflow-de-contribution-scenario">5. Workflow de Contribution (Scénario)</h2>
@@ -2496,19 +2507,19 @@ Cependant, nous suivons un <strong>contrat social</strong> : tout changement doi
 </blockquote>
 <h3 id="etape-1-se-deplacer-dans-le-sous-module">Étape 1 : Se déplacer dans le sous-module</h3>
 <p>Le dossier <code>test_commun</code> est un dépôt Git indépendant. Vous devez "entrer" dedans pour utiliser Git sur ce dépôt précis.
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">cd</span><span class="w"> </span>tests/test_commun
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">cd</span><span class="w"> </span>tests/test_commun
 </span></code></pre></div></p>
 <h3 id="etape-2-creer-une-branche-de-contribution">Étape 2 : Créer une branche de contribution</h3>
 <p>Ne travaillez jamais directement sur la branche principale (<code>main</code>). Créez une branche avec votre nom et le sujet du test.
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>ajout_test_validation_solde_simon
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>ajout_test_validation_solde_simon
 </span></code></pre></div></p>
 <h3 id="etape-3-ajouter-votre-test">Étape 3 : Ajouter votre test</h3>
 <p>Copiez votre fichier <code>.cpp</code> (ou créez-en un nouveau) dans ce dossier. 
 <strong>Rappel :</strong> Vérifiez que le test compile avec <code>./test_commun</code> avant de partager !</p>
 <h3 id="etape-4-envoyer-votre-test-au-groupe">Étape 4 : Envoyer votre test au groupe</h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>git<span class="w"> </span>add<span class="w"> </span>mon_nouveau_test.cpp
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Ajout du test de validation du solde&quot;</span>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>ajout_test_validation_solde_simon
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>git<span class="w"> </span>add<span class="w"> </span>mon_nouveau_test.cpp
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Ajout du test de validation du solde&quot;</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>ajout_test_validation_solde_simon
 </span></code></pre></div>
 <h3 id="etape-5-creer-la-pull-request-pr">Étape 5 : Créer la Pull Request (PR)</h3>
 <p>Une fois votre branche envoyée sur GitHub :
@@ -2535,7 +2546,7 @@ Cependant, nous suivons un <strong>contrat social</strong> : tout changement doi
 </ul>
 <h3 id="etape-7-revenir-a-votre-projet">Étape 7 : Revenir à votre projet</h3>
 <p>N'oubliez pas de ressortir du dossier pour revenir à la racine de votre projet principal.
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">cd</span><span class="w"> </span>../..
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nb">cd</span><span class="w"> </span>../..
 </span></code></pre></div></p>
 
 
