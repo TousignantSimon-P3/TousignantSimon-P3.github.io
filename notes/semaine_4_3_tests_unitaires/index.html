@@ -2375,11 +2375,11 @@
     Un test peut avoir autant d'étiquettes que vous voulez. On les colle simplement les unes après les autres.</li>
 </ul>
 <p><strong>Pourquoi les utiliser ?</strong><br />
-Cela permet de filtrer l'exécution depuis la ligne de commande sans recompiler :
-*   <code>./test_perso [classe1]</code> : Lance uniquement les tests de la Classe 1.
-*   <code>./test_perso [unitaire]</code> : Lance tous les tests marqués comme unitaires.
-*   <code>./test_perso [classe1][unitaire]</code> : Lance les tests qui ont <strong>les deux</strong> étiquettes.
-*   <code>./test_perso ~[erreur]</code> : Lance tous les tests <strong>sauf</strong> ceux marqués <code>[erreur]</code>.</p>
+Cela permet de filtrer l'exécution depuis la ligne de commande sans recompiler :<br />
+<em>   <code>./test_perso [classe1]</code> : Lance uniquement les tests de la Classe 1. <br />
+</em>   <code>./test_perso [unitaire]</code> : Lance tous les tests marqués comme unitaires.<br />
+<em>   <code>./test_perso [classe1][unitaire]</code> : Lance les tests qui ont </em><em>les deux</em><em> étiquettes.<br />
+</em>   <code>./test_perso ~[bidon]</code> : Lance tous les tests <strong>sauf</strong> ceux marqués <code>[bidon]</code>.  </p>
 <hr />
 <h2 id="4-exemple-recapitulatif-complet">4. Exemple Récapitulatif Complet</h2>
 <p>Voici à quoi devrait ressembler un fichier de tests professionnel et facile à maintenir (exemple de <code>test_classe1.cpp</code>) :  </p>
