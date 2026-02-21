@@ -2344,7 +2344,7 @@
 </span></code></pre></div>
 <h2 id="3-pourquoi-ces-methodes">3. Pourquoi ces méthodes ?</h2>
 <h3 id="le-constructeur-de-copie">Le Constructeur de Copie</h3>
-<p>Il est essentiel si vous passez vos objets par valeur. Bien que <code>std::string</code> gère sa propre copie, il est important que les étudiants comprennent que si la classe contenait des pointeurs bruts (<code>char*</code>), un constructeur de copie serait <strong>obligatoire</strong> pour éviter que deux objets pointent vers la même zone mémoire (ce qui causerait un crash au destructeur).  </p>
+<p>Il est essentiel si vous passez vos objets par valeur. Bien que <code>std::string</code> gère sa propre copie, il est important de  comprendre que si la classe contenait des pointeurs bruts (<code>char*</code>), un constructeur de copie serait <strong>obligatoire</strong> pour éviter que deux objets pointent vers la même zone mémoire (ce qui causerait un crash au destructeur).  </p>
 <h3 id="la-serialisation-manuelle">La Sérialisation Manuelle</h3>
 <p>On utilise la technique <strong>"Taille + Données"</strong> pour les membres dont la dimension peut varier (<code>std::string</code>). Pour les types fixes comme <code>DateTime</code> ou les <code>int</code>, on écrit directement le bloc binaire.  </p>
 <h3 id="utilisation-avec-un-fichier">Utilisation avec un fichier</h3>
