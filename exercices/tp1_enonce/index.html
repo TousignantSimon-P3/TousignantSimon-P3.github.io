@@ -2553,15 +2553,15 @@
 </ul>
 <h3 id="methodes">Méthodes</h3>
 <ul>
-<li><code>ajouter_valeur_debut()</code></li>
-<li><code>ajouter_valeur_fin()</code></li>
+<li><code>ajouter_valeur_debut(int)</code></li>
+<li><code>ajouter_valeur_fin(int)</code></li>
 <li><code>ajouter_valeur_index(valeur, index)</code></li>
-<li><code>retirer_valeur_debut()</code></li>
-<li><code>retirer_valeur_fin()</code></li>
-<li><code>retirer_valeur_index(index)</code></li>
-<li><code>regarder_valeur_debut()</code></li>
-<li><code>regarder_valeur_fin()</code></li>
-<li><code>regarder_valeur_index(index)</code></li>
+<li><code>retirer_valeur_debut():int</code></li>
+<li><code>retirer_valeur_fin():int</code></li>
+<li><code>retirer_valeur_index(index):int</code></li>
+<li><code>regarder_valeur_debut():int</code></li>
+<li><code>regarder_valeur_fin():int</code></li>
+<li><code>regarder_valeur_index(index):int</code></li>
 <li><code>to_array()</code> : Retourne un <code>std::vector</code> contenant les éléments.</li>
 <li><code>to_array_inverse()</code> : Retourne un <code>std::vector</code> contenant les éléments en ordre inverse.</li>
 <li><code>to_string()</code> : Retourne une <code>std::string</code> représentant la liste (format au choix).</li>
@@ -2569,8 +2569,8 @@
 </ul>
 <h3 id="accesseurs">Accesseurs</h3>
 <ul>
-<li><code>get_taille()</code> : Retourne la taille de la liste.</li>
-<li><code>vide()</code> : Retourne un booléen indiquant si la liste est vide.</li>
+<li><code>get_taille():int</code> : Retourne la taille de la liste.</li>
+<li><code>vide():bool</code> : Retourne un booléen indiquant si la liste est vide.</li>
 </ul>
 <hr />
 <h2 id="2-pile-stack">2. Pile (Stack)</h2>
@@ -2590,14 +2590,14 @@
 <h3 id="methodes_1">Méthodes</h3>
 <ul>
 <li><code>pousser(int)</code> : Ajoute un élément sur le dessus de la pile.</li>
-<li><code>retirer()</code> : Retire et retourne l'élément au sommet de la pile (retourne un <code>int</code>).</li>
-<li><code>observer()</code> : Retourne l'élément au sommet sans le retirer (retourne un <code>int</code>).</li>
-<li><code>to_array()</code> : Retourne un <code>std::vector</code> des éléments de la pile.</li>
+<li><code>retirer():int</code> : Retire et retourne l'élément au sommet de la pile (retourne un <code>int</code>).</li>
+<li><code>observer():int</code> : Retourne l'élément au sommet sans le retirer (retourne un <code>int</code>).</li>
+<li><code>to_array():std:vector</code> : Retourne un <code>std::vector</code> des éléments de la pile.</li>
 </ul>
 <h3 id="accesseurs_1">Accesseurs</h3>
 <ul>
-<li><code>vide()</code> : Retourne un booléen.</li>
-<li><code>get_taille()</code> : Retourne le nombre d'éléments.</li>
+<li><code>vide():bool</code> : Retourne un booléen.</li>
+<li><code>get_taille():int</code> : Retourne le nombre d'éléments.</li>
 </ul>
 <hr />
 <h2 id="3-file-queue">3. File (Queue)</h2>
@@ -2616,16 +2616,16 @@
 </ul>
 <h3 id="methodes_2">Méthodes</h3>
 <ul>
-<li><code>enfiler()</code> : Ajoute un élément à la fin de la file.</li>
-<li><code>defiler()</code> : Retire l'élément au début de la file.</li>
-<li><code>observer()</code> : Consulte l'élément au début de la file.</li>
-<li><code>to_array()</code> : Retourne un <code>std::vector</code> des éléments.</li>
+<li><code>enfiler(int)</code> : Ajoute un élément à la fin de la file.</li>
+<li><code>defiler():int</code> : Retire l'élément au début de la file.</li>
+<li><code>observer():int</code> : Consulte l'élément au début de la file.</li>
+<li><code>to_array():std:vector</code> : Retourne un <code>std::vector</code> des éléments.</li>
 </ul>
 <h3 id="accesseurs_2">Accesseurs</h3>
 <ul>
-<li><code>vide()</code> : Retourne un booléen.</li>
-<li><code>pleine()</code> : Retourne un booléen (si applicable selon l'implémentation).</li>
-<li><code>get_taille()</code> : Retourne le nombre d'éléments.</li>
+<li><code>vide():bool</code> : Retourne un booléen.</li>
+<li><code>pleine():bool</code> : Retourne un booléen (si applicable selon l'implémentation).</li>
+<li><code>get_taille():int</code> : Retourne le nombre d'éléments.</li>
 </ul>
 <hr />
 <h2 id="4-tests-unitaires">4. Tests Unitaires</h2>
@@ -2637,7 +2637,8 @@
 <h3 id="methodologie">Méthodologie</h3>
 <ul>
 <li>Utilisez la méthode <strong>AAA</strong> (Arranger, Agir, Affirmer).</li>
-<li><strong>Important :</strong> Un TP ne sera pas accepté si les tests ne sont pas complétés.</li>
+<li><strong>Important :</strong> Un TP ne sera pas accepté si les tests ne sont pas complétés.  </li>
+<li>Les fichiers de test unitaires doivent suivre le standard suivant : test_surnom_structure.cpp exemple. test_davethemagicalcheezewizard_liste_chainee.cpp</li>
 </ul>
 
 
