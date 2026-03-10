@@ -34,9 +34,9 @@ public:
     void traiter_commande(const ServiceConnexion& connexion);
 
 private:
-    // Attributs en snake_case
-    int id_commande_;
-    std::vector<Article> articles_;
+    // Attributs avec préfixe m_
+    int m_id_commande;
+    std::vector<Article> m_articles;
 
     // Méthodes privées en snake_case
     void envoyer_commande() const;

@@ -2650,10 +2650,10 @@
 <p>Cette classe représente un nœud de l'arbre. <strong>Tous ses attributs doivent être privés.</strong></p>
 <h3 id="attributs-prives">Attributs (Privés)</h3>
 <ul>
-<li><code>cle_</code> : La clé unique (entier).</li>
-<li><code>valeur_</code> : La valeur associée (entier).</li>
-<li><code>gauche_</code> : Pointeur vers l'enfant gauche.</li>
-<li><code>droite_</code> : Pointeur vers l'enfant droit.</li>
+<li><code>m_cle</code> : La clé unique (entier).</li>
+<li><code>m_valeur</code> : La valeur associée (entier).</li>
+<li><code>m_gauche</code> : Pointeur vers l'enfant gauche.</li>
+<li><code>m_droite</code> : Pointeur vers l'enfant droit.</li>
 </ul>
 <h3 id="methodes-publiques">Méthodes (Publiques)</h3>
 <p>Vous devez fournir les <strong>getters</strong> et <strong>setters</strong> nécessaires pour manipuler ces attributs. La logique spécifique à un nœud (comme les fonctions d'aide au parcours récursif) peut être implémentée ici.</p>
@@ -2663,8 +2663,8 @@
 <p><strong>Règle d'or d'encapsulation :</strong> Toutes les méthodes de <code>Abr</code> sont publiques pour permettre les tests, mais <strong>aucune ne doit retourner un pointeur vers un <code>NoeudArbre</code></strong>. L'utilisateur de la classe ne doit manipuler que des clés et des valeurs.</p>
 <h3 id="attributs-prives_1">Attributs (Privés)</h3>
 <ul>
-<li><code>racine_</code> : Pointeur vers le nœud racine de l'arbre.</li>
-<li><code>taille_</code> : Le nombre de nœuds présents dans l'arbre.</li>
+<li><code>m_racine</code> : Pointeur vers le nœud racine de l'arbre.</li>
+<li><code>m_taille</code> : Le nombre de nœuds présents dans l'arbre.</li>
 </ul>
 <h3 id="constructeurs-destructeur">Constructeurs / Destructeur</h3>
 <ul>

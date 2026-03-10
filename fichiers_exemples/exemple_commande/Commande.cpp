@@ -4,25 +4,25 @@
 // --- Implémentation de la classe Commande ---
 
 Commande::Commande(int id)
-    : id_commande_(id) {
+    : m_id_commande(id) {
     // Le constructeur initialise les valeurs par défaut.
     // L'utilisation de la liste d'initialisation est une bonne pratique.
 }
 
 void Commande::ajouter_article(const Article& article) {
-    if (articles_.size() < MAX_ARTICLES) {
-        articles_.push_back(article);
+    if (m_articles.size() < MAX_ARTICLES) {
+        m_articles.push_back(article);
     }
 }
 
 bool Commande::est_valide() const {
     // Une commande est valide si elle a un ID positif et n'est pas vide.
-    return id_commande_ > 0 && !articles_.empty();
+    return m_id_commande > 0 && !m_articles.empty();
 }
 
 bool Commande::a_du_stock() const {
     // Vérifie si tous les articles de la commande sont en stock.
-    for (const auto& article : articles_) {
+    for (const auto& article : m_articles) {
         if (article.quantite_en_stock <= 0) {
             return false; // Au moins un article est en rupture de stock
         }
@@ -31,7 +31,7 @@ bool Commande::a_du_stock() const {
 }
 
 void Commande::traiter_commande(const ServiceConnexion& connexion) {
-    std::cout << "--- Traitement de la commande " << id_commande_ << " ---" << std::endl;
+    std::cout << "--- Traitement de la commande " << m_id_commande << " ---" << std::endl;
 
     // Garde 1 : Validation de la commande elle-même
     if (!est_valide()) {
@@ -61,9 +61,9 @@ void Commande::traiter_commande(const ServiceConnexion& connexion) {
 // Méthodes privées
 
 void Commande::envoyer_commande() const {
-    std::cout << "SUCCES : La commande " << id_commande_ << " a ete envoyee avec succes." << std::endl;
+    std::cout << "SUCCES : La commande " << m_id_commande << " a ete envoyee avec succes." << std::endl;
 }
 
 void Commande::log_erreur(const std::string& message) const {
-    std::cout << "ERREUR (Cmd " << id_commande_ << "): " << message << std::endl;
+    std::cout << "ERREUR (Cmd " << m_id_commande << "): " << message << std::endl;
 }
