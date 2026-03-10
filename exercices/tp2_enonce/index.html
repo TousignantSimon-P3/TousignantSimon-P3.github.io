@@ -1599,10 +1599,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#attributs" class="md-nav__link">
+  <a href="#attributs-prives" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Attributs
+        Attributs (Privés)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methodes-publiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Méthodes (Publiques)
       
     </span>
   </a>
@@ -1627,10 +1638,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#attributs_1" class="md-nav__link">
+  <a href="#attributs-prives_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Attributs
+        Attributs (Privés)
       
     </span>
   </a>
@@ -1682,13 +1693,41 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#gestion-du-successeur-methodes-privees" class="md-nav__link">
+  <a href="#gestion-du-successeur-methode-daide" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Gestion du successeur (Méthodes privées)
+        Gestion du successeur (Méthode d'aide)
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Gestion du successeur (Méthode d&#39;aide)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#algorithme-de-detachement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithme de détachement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualisation-des-cas-de-detachement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualisation des cas de détachement
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2608,18 +2647,21 @@
 <p>Vous devez réaliser l'implémentation d'un Arbre Binaire de Recherche (ABR) permettant de stocker des paires Clé/Valeur (toutes deux des <code>int</code>). L'arbre doit garantir qu'aucune clé n'est présente en double.</p>
 <hr />
 <h2 id="1-classe-noeudarbre">1. Classe NoeudArbre</h2>
-<p>Cette classe (ou structure) représente un nœud de l'arbre.</p>
-<h3 id="attributs">Attributs</h3>
+<p>Cette classe représente un nœud de l'arbre. <strong>Tous ses attributs doivent être privés.</strong></p>
+<h3 id="attributs-prives">Attributs (Privés)</h3>
 <ul>
-<li><code>cle</code> : La clé unique (entier).</li>
-<li><code>valeur</code> : La valeur associée (entier).</li>
-<li><code>gauche</code> : Pointeur vers l'enfant gauche.</li>
-<li><code>droite</code> : Pointeur vers l'enfant droit.</li>
+<li><code>cle_</code> : La clé unique (entier).</li>
+<li><code>valeur_</code> : La valeur associée (entier).</li>
+<li><code>gauche_</code> : Pointeur vers l'enfant gauche.</li>
+<li><code>droite_</code> : Pointeur vers l'enfant droit.</li>
 </ul>
+<h3 id="methodes-publiques">Méthodes (Publiques)</h3>
+<p>Vous devez fournir les <strong>getters</strong> et <strong>setters</strong> nécessaires pour manipuler ces attributs. La logique spécifique à un nœud (comme les fonctions d'aide au parcours récursif) peut être implémentée ici.</p>
 <hr />
 <h2 id="2-classe-abr">2. Classe Abr</h2>
 <p>La classe principale gérant la structure de l'arbre.</p>
-<h3 id="attributs_1">Attributs</h3>
+<p><strong>Règle d'or d'encapsulation :</strong> Toutes les méthodes de <code>Abr</code> sont publiques pour permettre les tests, mais <strong>aucune ne doit retourner un pointeur vers un <code>NoeudArbre</code></strong>. L'utilisateur de la classe ne doit manipuler que des clés et des valeurs.</p>
+<h3 id="attributs-prives_1">Attributs (Privés)</h3>
 <ul>
 <li><code>racine_</code> : Pointeur vers le nœud racine de l'arbre.</li>
 <li><code>taille_</code> : Le nombre de nœuds présents dans l'arbre.</li>
@@ -2651,12 +2693,72 @@
 </li>
 <li><code>bool existe(int cle) const</code> : Retourne <code>true</code> si la clé est présente, <code>false</code> sinon.</li>
 </ul>
-<h3 id="gestion-du-successeur-methodes-privees">Gestion du successeur (Méthodes privées)</h3>
-<p>Ces méthodes sont internes et permettent de manipuler la structure de l'arbre sans copier les données. Elles sont essentielles pour une suppression performante (notamment pour des objets lourds comme des Bitmaps).</p>
+<h3 id="gestion-du-successeur-methode-daide">Gestion du successeur (Méthode d'aide)</h3>
+<p>Cette méthode est le cœur de la suppression d'un nœud à deux enfants. Elle doit trouver le remplaçant idéal (le plus petit nœud du sous-arbre droit) et le détacher de sa position d'origine.</p>
 <ul>
-<li><code>NoeudArbre* trouver_le_successeur(NoeudArbre* sous_arbre) private</code> : Retourne le pointeur vers le nœud possédant la plus petite clé dans le sous-arbre spécifié.</li>
-<li><code>NoeudArbre* detacher_le_successeur(NoeudArbre* parent_du_successeur) private</code> : Identifie le successeur, ajuste les pointeurs de son parent pour le "sortir" de l'arborescence, et retourne le pointeur du nœud détaché. Ce nœud pourra ensuite être réutilisé pour remplacer un nœud supprimé.</li>
+<li><code>NoeudArbre* detacher_successeur(NoeudArbre* noeud_a_retirer)</code>
+   <em>Note : Bien que cette méthode manipule des pointeurs en interne, elle ne doit pas être utilisée pour exposer les nœuds à l'utilisateur final de la classe.</em></li>
 </ul>
+<h4 id="algorithme-de-detachement">Algorithme de détachement</h4>
+<p>L'objectif est de "sortir" le successeur de l'arbre tout en recousant les liens de son parent. Voici la logique à implémenter :</p>
+<pre class="mermaid"><code>flowchart TD
+    Start["Début : detacher_successeur"] --&gt; Init["Initialiser : successeur et parent_du_successeur sur le nœud à retirer"]
+
+    Init --&gt; GoRight["Aller une fois à droite : courant = noeud_a_retirer.droite"]
+
+    GoRight --&gt; IsNull{"courant == nullptr ?"}
+    IsNull -- "Non" --&gt; Step["parent_du_successeur = successeur, successeur = courant, courant = courant.gauche"]
+    Step --&gt; IsNull
+
+    IsNull -- "Oui" --&gt; IsDirect{"Le successeur est-il l'enfant droit direct ?"}
+
+    IsDirect -- "Non (Plus loin)" --&gt; Reconnect["1. Détachement : Le parent_du_successeur court-circuite le successeur en adoptant son éventuel enfant droit : parent_du_successeur.gauche = successeur.droite"]
+
+    Reconnect --&gt; Graft["2. Héritage : Le successeur récupère toute la branche droite du nœud à retirer : successeur.droite = noeud_a_retirer.droite"]
+
+    Graft --&gt; Fin["Fin : Retourner successeur"]
+
+    IsDirect -- "Oui (Direct)" --&gt; Fin
+
+    style IsDirect fill:#f9f,stroke:#333,stroke-width:2px
+    style IsNull fill:#bbf,stroke:#333,stroke-width:2px</code></pre>
+<p><strong>Note importante :</strong> Si le successeur est l'enfant droit direct du nœud à retirer, l'algorithme est plus simple car il n'y a pas de "reconnexion" complexe à faire au sein du sous-arbre droit. Dans tous les cas, le successeur retourné sera ensuite greffé à la place du nœud supprimé par la méthode <code>retirer</code>.</p>
+<h4 id="visualisation-des-cas-de-detachement">Visualisation des cas de détachement</h4>
+<p>Voici les trois situations que votre code doit gérer lors de la recherche du successeur (le nœud en <strong>vert</strong> est le successeur, le <strong>orange</strong> est le nœud à retirer).</p>
+<p><strong>Cas 1 : Le successeur est l'enfant droit direct</strong><br />
+Le nœud 75 n'a pas d'enfant à gauche. Il est prêt à monter remplacer le 50 : on attachera alors le sous-arbre gauche de 50 au nœud 75.
+<pre class="mermaid"><code>graph TD
+    A1((50)) --- B1[sous-arbre quelconque ou nullptr]
+    A1 --- C1((75))
+    C1 --- D1[nullptr]
+    C1 --- E1((85))
+
+    style A1 fill:#f96
+    style C1 fill:#9f9</code></pre></p>
+<p><strong>Cas 2 : Le successeur est plus loin et est une feuille</strong><br />
+Le 60 est le plus petit (une feuille). La gauche du parent du successeur (75) pointe maintenant vers le nœud de droite du successeur (<code>nullptr</code> -&gt; vous allez voir dans le cas #3 pourquoi).
+<pre class="mermaid"><code>graph TD
+    A2((50)) --- B2[sous-arbre quelconque ou nullptr]
+    A2 --- C2((75))
+    C2 --- D2((60))
+    D2 --- G2[nullptr]
+    D2 --- E2[nullptr]
+    C2 --- F2[sous-arbre quelconque ou nullptr]
+
+    style A2 fill:#f96
+    style D2 fill:#9f9</code></pre>
+<strong>Cas 3 : Le successeur est plus loin (avec un enfant droit)</strong><br />
+On voit ici toute l'importance de la règle établie au cas #2 : le parent (75) doit toujours adopter l'enfant de <strong>droite</strong> du successeur (ici le 65). Comme le successeur est le plus petit, il n'a jamais d'enfant à gauche, mais il peut avoir une branche à sa droite. En faisant pointer <code>parent-&gt;gauche</code> vers <code>successeur-&gt;droite</code>, on "sauve" le 65 en le rattachant au reste de l'arbre avant de déplacer le 60.
+<pre class="mermaid"><code>graph TD
+    A3((50)) --- B3[sous-arbre quelconque ou nullptr]
+    A3 --- C3((75))
+    C3 --- D3((60))
+    D3 --- G3[nullptr]
+    D3 --- E3((65))
+    C3 --- F3[sous-arbre quelconque ou nullptr]
+
+    style A3 fill:#f96
+    style D3 fill:#9f9</code></pre></p>
 <hr />
 <h2 id="3-methodes-de-parcours">3. Méthodes de Parcours</h2>
 <p>Ces méthodes permettent d'extraire les éléments de l'arbre dans une <code>ListeChainee</code> (structure réalisée au TP1). </p>
@@ -2675,9 +2777,9 @@
 <h3 id="implementation-interne-recursivite">Implémentation Interne (Récursivité)</h3>
 <p>Pour respecter l'encapsulation, les méthodes publiques font appel à des fonctions d'aide récursives <strong>privées</strong> (dans <code>Abr</code> ou directement dans <code>NoeudArbre</code>). Ces méthodes de support doivent recevoir la liste par <strong>référence</strong> pour la remplir efficacement sans copies inutiles :</p>
 <ul>
-<li><code>void rec_en_ordre(ListeChainee&amp; liste)</code></li>
-<li><code>void rec_pre_ordre(ListeChainee&amp; liste)</code></li>
-<li><code>void rec_post_ordre(ListeChainee&amp; liste)</code></li>
+<li><code>void rec_en_ordre(ListeChainee&amp; liste) const</code></li>
+<li><code>void rec_pre_ordre(ListeChainee&amp; liste) const</code></li>
+<li><code>void rec_post_ordre(ListeChainee&amp; liste) const</code></li>
 </ul>
 <h3 id="exemple-de-resultats">Exemple de résultats</h3>
 <p>Pour l'arbre d'exemple suivant :

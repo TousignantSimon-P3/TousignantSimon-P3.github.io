@@ -53,55 +53,56 @@ article a[href^="https://"]::after
 
 /* ... (Garder tout votre contenu précédent inchangé) ... */
 
-/* --- NOUVEAU : Styles spécifiques pour l'horaire --- */
-
-/* Rend le tableau plus moderne (ombre, largeur, bordures) */
+/* --- Styles pour l'horaire (Méthode Wrapper) --- */
 .horaire {
   width: 100%;
-  display: table;
+  margin: 1em 0;
+  overflow-x: auto; /* Scroll sur mobile */
+}
+
+/* On cible le tableau À L'INTÉRIEUR du conteneur div */
+.horaire table {
+  width: 100%;
   border-collapse: collapse;
-  font-size: 0.85rem; /* Un peu plus compact */
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  display: table;
   border-radius: 4px;
-  overflow: hidden; /* Pour que les coins ronds fonctionnent sur l'entête */
+  overflow: hidden;
+  font-size: 0.85rem;
 }
 
-/* Style de l'entête (Header) avec la couleur Primaire (Indigo) */
 .horaire th {
-  background-color: var(--md-primary-fg-color);
-  color: #fff; /* Texte blanc forcé pour contraste */
+  background-color: var(--md-primary-fg-color); /* Indigo */
+  color: white !important;
   text-transform: uppercase;
-  font-weight: 700;
-  padding: 12px 8px;
+  font-weight: bold;
+  padding: 12px;
+  border-bottom: 2px solid rgba(0,0,0,0.1);
   text-align: left;
-  letter-spacing: 0.5px;
 }
 
-/* Style des cellules standards */
 .horaire td {
-  padding: 8px 10px;
-  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  padding: 10px;
   vertical-align: middle;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
 }
 
-/* Effet zébré léger pour la lisibilité (compatible dark mode) */
 .horaire tr:nth-child(even) {
   background-color: var(--md-default-fg-color--lightest);
 }
 
-/* Effet au survol de la souris */
 .horaire tr:hover {
   background-color: var(--md-accent-fg-color--transparent);
 }
 
-/* Centrer les colonnes : Semaine (1), Date (3), Remises (Dernière) */
+/* Centrage : Semaine, Date, Remises */
 .horaire td:nth-child(1),
 .horaire td:nth-child(3),
 .horaire td:last-child {
   text-align: center;
 }
 
-/* Police monospace pour les dates pour bien aligner les chiffres */
+/* Police monospace pour les dates */
 .horaire td:nth-child(3) {
   font-family: var(--md-code-font-family);
   font-weight: bold;
