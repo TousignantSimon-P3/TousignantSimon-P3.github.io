@@ -1710,6 +1710,39 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#interface-publique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interface Publique
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-dutilisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple d'utilisation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-interne-recursivite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implémentation Interne (Récursivité)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#exemple-de-resultats" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2626,19 +2659,33 @@
 </ul>
 <hr />
 <h2 id="3-methodes-de-parcours">3. Méthodes de Parcours</h2>
-<p>Ces méthodes permettent d'extraire les éléments de l'arbre dans une <code>ListeChainee</code> (structure réalisée au TP1). Notez que pour respecter l'encapsulation, ces méthodes sont publiques mais font appel à des fonctions d'aide récursives privées qui manipulent les <code>NoeudArbre*</code>.</p>
+<p>Ces méthodes permettent d'extraire les éléments de l'arbre dans une <code>ListeChainee</code> (structure réalisée au TP1). </p>
+<h3 id="interface-publique">Interface Publique</h3>
+<p>Elles retournent un objet <code>ListeChainee</code> contenant les valeurs des nœuds dans l'ordre demandé.</p>
 <ul>
-<li><code>void sortir_les_elements_en_ordre(ListeChainee&amp; liste) const</code></li>
-<li><code>void sortir_les_elements_en_pre_ordre(ListeChainee&amp; liste) const</code></li>
-<li><code>void sortir_les_elements_en_post_ordre(ListeChainee&amp; liste) const</code></li>
+<li><code>ListeChainee en_ordre() const</code></li>
+<li><code>ListeChainee pre_ordre() const</code></li>
+<li><code>ListeChainee post_ordre() const</code></li>
+</ul>
+<h3 id="exemple-dutilisation">Exemple d'utilisation</h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">Abr</span><span class="w"> </span><span class="n">monArbre</span><span class="p">;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1">// ... remplissage ...</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">ListeChainee</span><span class="w"> </span><span class="n">liste</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">monArbre</span><span class="p">.</span><span class="n">en_ordre</span><span class="p">();</span><span class="w"> </span><span class="c1">// Clair et net</span>
+</span></code></pre></div>
+<h3 id="implementation-interne-recursivite">Implémentation Interne (Récursivité)</h3>
+<p>Pour respecter l'encapsulation, les méthodes publiques font appel à des fonctions d'aide récursives <strong>privées</strong> (dans <code>Abr</code> ou directement dans <code>NoeudArbre</code>). Ces méthodes de support doivent recevoir la liste par <strong>référence</strong> pour la remplir efficacement sans copies inutiles :</p>
+<ul>
+<li><code>void rec_en_ordre(NoeudArbre* noeud, ListeChainee&amp; liste) const</code></li>
+<li><code>void rec_pre_ordre(NoeudArbre* noeud, ListeChainee&amp; liste) const</code></li>
+<li><code>void rec_post_ordre(NoeudArbre* noeud, ListeChainee&amp; liste) const</code></li>
 </ul>
 <h3 id="exemple-de-resultats">Exemple de résultats</h3>
 <p>Pour l'arbre d'exemple suivant :
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>         50
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>       /    \
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>     25      75
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    /  \    /  \
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>   10  30  60  85
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>         50
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>       /    \
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>     25      75
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    /  \    /  \
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>   10  30  60  85
 </span></code></pre></div></p>
 <p>Voici les séquences exactes que vos méthodes de parcours doivent produire dans la <code>ListeChainee</code> :</p>
 <ul>
