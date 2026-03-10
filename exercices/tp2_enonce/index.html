@@ -2675,9 +2675,9 @@
 <h3 id="implementation-interne-recursivite">Implémentation Interne (Récursivité)</h3>
 <p>Pour respecter l'encapsulation, les méthodes publiques font appel à des fonctions d'aide récursives <strong>privées</strong> (dans <code>Abr</code> ou directement dans <code>NoeudArbre</code>). Ces méthodes de support doivent recevoir la liste par <strong>référence</strong> pour la remplir efficacement sans copies inutiles :</p>
 <ul>
-<li><code>void rec_en_ordre(NoeudArbre* noeud, ListeChainee&amp; liste) const</code></li>
-<li><code>void rec_pre_ordre(NoeudArbre* noeud, ListeChainee&amp; liste) const</code></li>
-<li><code>void rec_post_ordre(NoeudArbre* noeud, ListeChainee&amp; liste) const</code></li>
+<li><code>void rec_en_ordre(ListeChainee&amp; liste)</code></li>
+<li><code>void rec_pre_ordre(ListeChainee&amp; liste)</code></li>
+<li><code>void rec_post_ordre(ListeChainee&amp; liste)</code></li>
 </ul>
 <h3 id="exemple-de-resultats">Exemple de résultats</h3>
 <p>Pour l'arbre d'exemple suivant :
