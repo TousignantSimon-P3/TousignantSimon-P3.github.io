@@ -2907,11 +2907,18 @@
 </span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="c"># ÉTAPE 5 : On lie notre programme avec la bibliothèque Qt</span>
 </span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">MVC_Client</span><span class="w"> </span><span class="s">PRIVATE</span><span class="w"> </span><span class="s">Qt6::Widgets</span><span class="p">)</span>
 </span></code></pre></div>
+<div class="admonition danger">
+<p class="admonition-title">Attention à l'ordre des commandes !</p>
+<p>Dans un fichier CMake "moderne", l'ordre est crucial :
+1.  On doit d'abord créer l'exécutable avec <strong><code>add_executable</code></strong>.
+2.  Ensuite seulement, on peut configurer cet exécutable avec les commandes commençant par <strong><code>target_</code></strong>.</p>
+<p>Si vous inversez l'ordre, CMake ne saura pas sur quelle "cible" appliquer les dossiers d'inclusion ou les bibliothèques et générera une erreur.</p>
+</div>
 <hr />
 <h2 id="pourquoi-target_include_directories">🧠 Pourquoi <code>target_include_directories</code> ?</h2>
-<p>En CMake "moderne", on évite les commandes globales. 
+<p>En CMake "moderne", on évite les commandes globales.
 *   <strong><code>include_directories(include)</code></strong> : Dit à tout le projet (même aux tests ou aux bibliothèques externes) de regarder dans <code>include/</code>.
-*   <strong><code>target_include_directories(MVC_Client PRIVATE include)</code></strong> : Dit uniquement à <strong>notre exécutable</strong> de regarder là. </p>
+*   <strong><code>target_include_directories(MVC_Client PRIVATE include)</code></strong> : Dit uniquement à <strong>notre exécutable</strong> de regarder là.</p>
 <p>C'est ce qu'on appelle la <strong>"Target-Based Architecture"</strong>. C'est beaucoup plus robuste et cela suit les principes d'encapsulation chers à <strong>Uncle Bob</strong>.</p>
 <hr />
 <h2 id="le-workflow-de-compilation">🛠️ Le Workflow de Compilation</h2>

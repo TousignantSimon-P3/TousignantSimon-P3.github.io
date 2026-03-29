@@ -3091,7 +3091,7 @@
 </ul>
 <h3 id="methodes-de-suppression">Méthodes de suppression</h3>
 <ul>
-<li><code>int retirer(int cle)</code> : Supprime le nœud correspondant à la clé et retourne sa valeur. <ul>
+<li><code>int retirer(int cle)</code> : Supprime le nœud correspondant à la clé et retourne sa valeur.<ul>
 <li><strong>Exception :</strong> Doit lever une exception <code>std::out_of_range</code> si la clé n'existe pas.</li>
 <li>La suppression doit gérer les trois cas : feuille, nœud à un enfant, nœud à deux enfants (utilisation du successeur).</li>
 </ul>
@@ -3138,8 +3138,8 @@
 <p><strong>Note importante :</strong> Si le successeur est l'enfant droit direct du nœud à retirer, l'algorithme est plus simple car il n'y a pas de "reconnexion" complexe à faire au sein du sous-arbre droit. Dans tous les cas, le successeur retourné sera ensuite greffé à la place du nœud supprimé par la méthode <code>retirer</code>.</p>
 <h4 id="visualisation-des-cas-de-detachement">Visualisation des cas de détachement</h4>
 <p>Voici les trois situations que votre code doit gérer lors de la recherche du successeur (le nœud en <strong>vert</strong> est le successeur, le <strong>orange</strong> est le nœud à retirer).</p>
-<p><strong>Cas 1 : Le successeur est l'enfant droit direct</strong><br />
-Le nœud 75 n'a pas d'enfant à gauche. Il est prêt à monter remplacer le 50 : on attachera alors le sous-arbre gauche de 50 au nœud 75.
+<p><strong>Cas 1 : Le successeur est l'enfant droit direct</strong>
+Le nœud 75 n'a pas d'enfant à gauche. Il est prêt à monter remplacer le 50 : on attachera alors le sous-arbre gauche de 50 au nœud 75.</p>
 <pre class="mermaid"><code>graph TD
     A1((50)) --- B1[sous-arbre quelconque ou nullptr]
     A1 --- C1((75))
@@ -3147,9 +3147,9 @@ Le nœud 75 n'a pas d'enfant à gauche. Il est prêt à monter remplacer le 50 :
     C1 --- E1((85))
 
     style A1 fill:#f96
-    style C1 fill:#9f9</code></pre></p>
-<p><strong>Cas 2 : Le successeur est plus loin et est une feuille</strong><br />
-Le 60 est le plus petit (une feuille). La gauche du parent du successeur (75) pointe maintenant vers le nœud de droite du successeur (<code>nullptr</code> -&gt; vous allez voir dans le cas #3 pourquoi).
+    style C1 fill:#9f9</code></pre>
+<p><strong>Cas 2 : Le successeur est plus loin et est une feuille</strong>
+Le 60 est le plus petit (une feuille). La gauche du parent du successeur (75) pointe maintenant vers le nœud de droite du successeur (<code>nullptr</code> -&gt; vous allez voir dans le cas #3 pourquoi).</p>
 <pre class="mermaid"><code>graph TD
     A2((50)) --- B2[sous-arbre quelconque ou nullptr]
     A2 --- C2((75))
@@ -3160,8 +3160,8 @@ Le 60 est le plus petit (une feuille). La gauche du parent du successeur (75) po
 
     style A2 fill:#f96
     style D2 fill:#9f9</code></pre>
-<strong>Cas 3 : Le successeur est plus loin (avec un enfant droit)</strong><br />
-On voit ici toute l'importance de la règle établie au cas #2 : le parent (75) doit toujours adopter l'enfant de <strong>droite</strong> du successeur (ici le 65). Comme le successeur est le plus petit, il n'a jamais d'enfant à gauche, mais il peut avoir une branche à sa droite. En faisant pointer <code>parent-&gt;gauche</code> vers <code>successeur-&gt;droite</code>, on "sauve" le 65 en le rattachant au reste de l'arbre avant de déplacer le 60.
+<p><strong>Cas 3 : Le successeur est plus loin (avec un enfant droit)</strong>
+On voit ici toute l'importance de la règle établie au cas #2 : le parent (75) doit toujours adopter l'enfant de <strong>droite</strong> du successeur (ici le 65). Comme le successeur est le plus petit, il n'a jamais d'enfant à gauche, mais il peut avoir une branche à sa droite. En faisant pointer <code>parent-&gt;gauche</code> vers <code>successeur-&gt;droite</code>, on "sauve" le 65 en le rattachant au reste de l'arbre avant de déplacer le 60.</p>
 <pre class="mermaid"><code>graph TD
     A3((50)) --- B3[sous-arbre quelconque ou nullptr]
     A3 --- C3((75))
@@ -3171,10 +3171,10 @@ On voit ici toute l'importance de la règle établie au cas #2 : le parent (75) 
     C3 --- F3[sous-arbre quelconque ou nullptr]
 
     style A3 fill:#f96
-    style D3 fill:#9f9</code></pre></p>
+    style D3 fill:#9f9</code></pre>
 <hr />
 <h2 id="3-methodes-de-parcours">3. Méthodes de Parcours</h2>
-<p>Ces méthodes permettent d'extraire les éléments de l'arbre dans une <code>ListeChainee</code> (structure réalisée au TP1). </p>
+<p>Ces méthodes permettent d'extraire les éléments de l'arbre dans une <code>ListeChainee</code> (structure réalisée au TP1).</p>
 <h3 id="interface-publique">Interface Publique</h3>
 <p>Elles retournent un objet <code>ListeChainee</code> contenant les valeurs des nœuds dans l'ordre demandé.</p>
 <ul>
@@ -3195,13 +3195,13 @@ On voit ici toute l'importance de la règle établie au cas #2 : le parent (75) 
 <li><code>void rec_post_ordre(ListeChainee&amp; liste) const</code></li>
 </ul>
 <h3 id="exemple-de-resultats">Exemple de résultats</h3>
-<p>Pour l'arbre d'exemple suivant :
+<p>Pour l'arbre d'exemple suivant :</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>         50
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>       /    \
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>     25      75
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    /  \    /  \
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>   10  30  60  85
-</span></code></pre></div></p>
+</span></code></pre></div>
 <p>Voici les séquences exactes que vos méthodes de parcours doivent produire dans la <code>ListeChainee</code> :</p>
 <ul>
 <li>

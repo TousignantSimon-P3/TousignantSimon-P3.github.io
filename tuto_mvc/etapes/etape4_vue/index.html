@@ -2892,12 +2892,12 @@
 <p>Nous allons maintenant construire l'interface graphique de notre application. Conformément à notre décision de rejeter le format XML (<code>.ui</code>), nous allons coder l'interface <strong>100% en C++</strong>.</p>
 <hr />
 <h2 id="la-hierarchie-des-objets-dans-qt">🏗️ La Hiérarchie des Objets dans Qt</h2>
-<p>Dans Qt, une interface est un <strong>Arbre d'objets</strong>. Chaque objet a un <strong>Parent</strong>. 
-*   Si vous supprimez le parent, tous les enfants sont automatiquement supprimés de la mémoire. 
+<p>Dans Qt, une interface est un <strong>Arbre d'objets</strong>. Chaque objet a un <strong>Parent</strong>.
+*   Si vous supprimez le parent, tous les enfants sont automatiquement supprimés de la mémoire.
 *   C'est la base de la gestion de mémoire dans Qt.</p>
 <hr />
 <h2 id="declaration-includeviewclientwindowhpp">🛠️ Déclaration : include/view/ClientWindow.hpp</h2>
-<p>Nous déclarons nos composants comme des membres privés. Ainsi, nous y avons accès partout dans la classe sans risque de collision.
+<p>Nous déclarons nos composants comme des membres privés. Ainsi, nous y avons accès partout dans la classe sans risque de collision.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#pragma once</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;QMainWindow&gt;</span><span class="c1">  // Équivalent C# : Form / Window</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;QLineEdit&gt;</span><span class="c1">    // Équivalent Web : &lt;input type=&quot;text&quot;&gt; | C# : TextBox</span>
@@ -2906,42 +2906,44 @@
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;QPushButton&gt;</span><span class="c1">  // Équivalent Web : &lt;button&gt;            | C# : Button</span>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">class</span><span class="w"> </span><span class="nc">ClientWindow</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">QMainWindow</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">...</span>
-</span></code></pre></div></p>
-<p>public:
-    explicit ClientWindow(QWidget *parent = nullptr);</p>
-<div class="language-text highlight"><pre><span></span><code>// Getters pour que le Contrôleur puisse lire les saisies
-QString getNom() const;
-QString getPrenom() const;
-QDate getDate() const;
-
-// Méthode pour mettre à jour l&#39;affichage
-void updateSummary(const QString&amp; texte);
-</code></pre></div>
-<p>signals:
-    // On définit un signal pour prévenir le Contrôleur d'un clic
-    void boutonAppliquerClique();</p>
-<p>private:
-    QLineEdit<em>   m_editNom;    // Zone de texte (Input)
-    QLineEdit</em>   m_editPrenom;
-    QDateEdit<em>   m_editDate;   // Sélecteur de date
-    QLabel</em>      m_labelSummary; // Label pour l'affichage (Output)
-    QPushButton* m_btnSave;    // Bouton d'action</p>
-<div class="language-text highlight"><pre><span></span><code>void setupUI(); // La méthode magique qui construit tout
-</code></pre></div>
-<p>};
-```</p>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="n">Q_OBJECT</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="k">public</span><span class="o">:</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="k">explicit</span><span class="w"> </span><span class="n">ClientWindow</span><span class="p">(</span><span class="n">QWidget</span><span class="w"> </span><span class="o">*</span><span class="n">parent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">nullptr</span><span class="p">);</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="c1">// Getters pour que le Contrôleur puisse lire les saisies</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="n">QString</span><span class="w"> </span><span class="nf">getNom</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="n">QString</span><span class="w"> </span><span class="nf">getPrenom</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="n">QDate</span><span class="w"> </span><span class="nf">getDate</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="c1">// Méthode pour mettre à jour l&#39;affichage</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">updateSummary</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">QString</span><span class="o">&amp;</span><span class="w"> </span><span class="n">texte</span><span class="p">);</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">afficherErreur</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">QString</span><span class="o">&amp;</span><span class="w"> </span><span class="n">message</span><span class="p">);</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="nl">signals</span><span class="p">:</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span><span class="c1">// On définit des signaux pour prévenir le Contrôleur</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">boutonAppliquerClique</span><span class="p">();</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">boutonErreurClique</span><span class="p">();</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="k">private</span><span class="o">:</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">    </span><span class="n">QLineEdit</span><span class="o">*</span><span class="w">   </span><span class="n">m_editNom</span><span class="p">;</span><span class="w">    </span><span class="c1">// Zone de texte (Input)</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">    </span><span class="n">QLineEdit</span><span class="o">*</span><span class="w">   </span><span class="n">m_editPrenom</span><span class="p">;</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">    </span><span class="n">QDateEdit</span><span class="o">*</span><span class="w">   </span><span class="n">m_editDate</span><span class="p">;</span><span class="w">   </span><span class="c1">// Sélecteur de date</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">    </span><span class="n">QLabel</span><span class="o">*</span><span class="w">      </span><span class="n">m_labelSummary</span><span class="p">;</span><span class="w"> </span><span class="c1">// Label pour l&#39;affichage (Output)</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">    </span><span class="n">QPushButton</span><span class="o">*</span><span class="w"> </span><span class="n">m_btnSave</span><span class="p">;</span><span class="w">    </span><span class="c1">// Bouton d&#39;action</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">    </span><span class="n">QPushButton</span><span class="o">*</span><span class="w"> </span><span class="n">m_btnError</span><span class="p">;</span><span class="w">   </span><span class="c1">// Bouton d&#39;erreur</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setupUI</span><span class="p">();</span><span class="w"> </span><span class="c1">// La méthode magique qui construit tout</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="p">};</span>
+</span></code></pre></div>
 <hr />
 <h2 id="implementation-pas-a-pas-srcviewclientwindowcpp">🛠️ Implémentation Pas à Pas : src/view/ClientWindow.cpp</h2>
-<p>La construction d'une interface Qt suit toujours la même recette en 3 étapes :
-</p>
+<p>La construction d'une interface Qt suit toujours la même recette en 3 étapes :</p>
 <h3 id="1-la-page-le-conteneur">1. La "Page" (Le Conteneur)</h3>
-<p>On commence par créer un widget qui servira de support (le fond de la fenêtre ou d'une section).
-
-<code>cpp
-void ClientWindow::setupUI() {
-    // ÉTAPE 1 : Le Conteneur principal (La page blanche)
-    auto* centralWidget = new QWidget(this);</code></p>
+<p>On commence par créer un widget qui servira de support (le fond de la fenêtre ou d'une section).</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">ClientWindow::setupUI</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="c1">// ÉTAPE 1 : Le Conteneur principal (La page blanche)</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">auto</span><span class="o">*</span><span class="w"> </span><span class="n">centralWidget</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">QWidget</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+</span></code></pre></div>
 <h3 id="2-le-canevas-le-layout">2. Le "Canevas" (Le Layout)</h3>
 <p>On définit comment les éléments seront rangés sur cette page (en ligne, en colonne, en grille).</p>
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">    </span><span class="c1">// ÉTAPE 2 : Le Canevas vertical (On empile les éléments)</span>
@@ -2963,10 +2965,12 @@ void ClientWindow::setupUI() {
 </span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="n">formLayout</span><span class="o">-&gt;</span><span class="n">addRow</span><span class="p">(</span><span class="s">&quot;Date de naissance :&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">m_editDate</span><span class="p">);</span>
 </span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
 </span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">    </span><span class="n">m_btnSave</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">QPushButton</span><span class="p">(</span><span class="s">&quot;Appliquer les modifications&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">);</span><span class="w"> </span><span class="c1">// Le bouton</span>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">    </span><span class="c1">// On assemble le tout sur le canevas principal</span>
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">    </span><span class="n">mainLayout</span><span class="o">-&gt;</span><span class="n">addWidget</span><span class="p">(</span><span class="n">groupSaisie</span><span class="p">);</span>
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">    </span><span class="n">mainLayout</span><span class="o">-&gt;</span><span class="n">addWidget</span><span class="p">(</span><span class="n">m_btnSave</span><span class="p">);</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">    </span><span class="n">m_btnError</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">QPushButton</span><span class="p">(</span><span class="s">&quot;Générer Erreur Volontaire&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">);</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">    </span><span class="c1">// On assemble le tout sur le canevas principal</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">    </span><span class="n">mainLayout</span><span class="o">-&gt;</span><span class="n">addWidget</span><span class="p">(</span><span class="n">groupSaisie</span><span class="p">);</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">    </span><span class="n">mainLayout</span><span class="o">-&gt;</span><span class="n">addWidget</span><span class="p">(</span><span class="n">m_btnSave</span><span class="p">);</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">    </span><span class="n">mainLayout</span><span class="o">-&gt;</span><span class="n">addWidget</span><span class="p">(</span><span class="n">m_btnError</span><span class="p">);</span>
 </span></code></pre></div>
 <h3 id="4-le-feedback-la-zone-de-retour">4. Le Feedback (La zone de retour)</h3>
 <p>On ajoute un dernier composant pour voir le résultat de nos actions.</p>

@@ -2860,33 +2860,33 @@
 
 
 <h1 id="format-bmp-pixels-et-padding">Format BMP : Pixels et Padding</h1>
-<p>Après les entêtes, on retrouve les données brutes des couleurs.  </p>
+<p>Après les entêtes, on retrouve les données brutes des couleurs.</p>
 <h2 id="1-organisation-bgr">1. Organisation BGR</h2>
-<p>Contrairement au format RGB habituel, le BMP stocke les couleurs dans l'ordre <strong>Blue, Green, Red</strong>.<br />
-<em>   Pour 24 bits : 3 octets par pixel (B, G, R).<br />
-</em>   Pour 32 bits : 4 octets par pixel (B, G, R, Alpha).  </p>
+<p>Contrairement au format RGB habituel, le BMP stocke les couleurs dans l'ordre <strong>Blue, Green, Red</strong>.
+*   Pour 24 bits : 3 octets par pixel (B, G, R).
+*   Pour 32 bits : 4 octets par pixel (B, G, R, Alpha).</p>
 <h2 id="2-le-concept-de-padding">2. Le concept de Padding</h2>
-<p>Dans un BMP, chaque ligne de pixels doit être un multiple de <strong>4 octets</strong>. Si la largeur de l'image ne remplit pas cette condition, on ajoute des octets vides (padding) à la fin de chaque ligne.  </p>
+<p>Dans un BMP, chaque ligne de pixels doit être un multiple de <strong>4 octets</strong>. Si la largeur de l'image ne remplit pas cette condition, on ajoute des octets vides (padding) à la fin de chaque ligne.</p>
 <h3 id="pourquoi-cette-formule-4-width-3-4-4">Pourquoi cette formule ? <code>(4 - (width * 3) % 4) % 4</code></h3>
-<p>L'objectif est de trouver combien d'octets il manque pour atteindre le prochain multiple de 4.  </p>
+<p>L'objectif est de trouver combien d'octets il manque pour atteindre le prochain multiple de 4.</p>
 <ol>
-<li><strong><code>width * 3</code></strong> : C'est le nombre d'octets "utiles" par ligne (pour du 24 bits). (Bleu, vert et rouge)  </li>
-<li><strong><code>(...) % 4</code></strong> : Le modulo 4 nous donne le "reste". Si une ligne fait 10 pixels (30 octets), <code>30 % 4 = 2</code>. Il y a 2 octets qui dépassent du dernier bloc de 4.  </li>
-<li><strong><code>4 - (...)</code></strong> : On calcule combien d'octets ajouter pour compléter le bloc. <code>4 - 2 = 2</code>. Il nous manque 2 octets de padding.  </li>
-<li><strong>Le dernier <code>% 4</code></strong> : C'est l'astuce mathématique pour le cas où la ligne est <strong>déjà</strong> parfaite. Si <code>width * 3</code> est 12, alors <code>12 % 4 = 0</code>. Sans ce dernier modulo, on ferait <code>4 - 0 = 4</code> octets de padding (ce qui est faux). Avec le <code>% 4</code>, on obtient bien <code>4 % 4 = 0</code>.  </li>
+<li><strong><code>width * 3</code></strong> : C'est le nombre d'octets "utiles" par ligne (pour du 24 bits). (Bleu, vert et rouge)</li>
+<li><strong><code>(...) % 4</code></strong> : Le modulo 4 nous donne le "reste". Si une ligne fait 10 pixels (30 octets), <code>30 % 4 = 2</code>. Il y a 2 octets qui dépassent du dernier bloc de 4.</li>
+<li><strong><code>4 - (...)</code></strong> : On calcule combien d'octets ajouter pour compléter le bloc. <code>4 - 2 = 2</code>. Il nous manque 2 octets de padding.</li>
+<li><strong>Le dernier <code>% 4</code></strong> : C'est l'astuce mathématique pour le cas où la ligne est <strong>déjà</strong> parfaite. Si <code>width * 3</code> est 12, alors <code>12 % 4 = 0</code>. Sans ce dernier modulo, on ferait <code>4 - 0 = 4</code> octets de padding (ce qui est faux). Avec le <code>% 4</code>, on obtient bien <code>4 % 4 = 0</code>.</li>
 </ol>
 <h2 id="3-le-format-32-bits-bgra-lalignement-gratuit">3. Le format 32 bits (BGRA) : L'alignement "gratuit"</h2>
-<p>Une question fréquente des étudiants est : "Pourquoi ne pas toujours utiliser le 32 bits ?".  </p>
-<p>En 32 bits (4 octets par pixel : Bleu, Vert, Rouge, Alpha), chaque pixel tombe déjà sur une frontière de 4 octets.<br />
-<em>   </em><em>Calcul</em><em> : <code>width * 4</code> sera </em><em>toujours</em><em> un multiple de 4.<br />
-</em>   <strong>Résultat</strong> : Le padding est toujours de <strong>0 octet</strong>.  </p>
-<p>Cela simplifie énormément le code de lecture (on lit tout d'un coup sans <code>seekg</code>), mais le fichier pèse 25% plus lourd sur le disque.  </p>
+<p>Une question fréquente des étudiants est : "Pourquoi ne pas toujours utiliser le 32 bits ?".</p>
+<p>En 32 bits (4 octets par pixel : Bleu, Vert, Rouge, Alpha), chaque pixel tombe déjà sur une frontière de 4 octets.
+*   <strong>Calcul</strong> : <code>width * 4</code> sera <strong>toujours</strong> un multiple de 4.
+*   <strong>Résultat</strong> : Le padding est toujours de <strong>0 octet</strong>.</p>
+<p>Cela simplifie énormément le code de lecture (on lit tout d'un coup sans <code>seekg</code>), mais le fichier pèse 25% plus lourd sur le disque.</p>
 <h2 id="4-lecture-des-pixels-24-bits">4. Lecture des pixels (24 bits)</h2>
-<p>La lecture doit tenir compte du padding :<br />
-1. Lire 3 octets (un pixel).<br />
-2. Répéter pour toute la largeur.<br />
-3. Sauter les octets de padding à la fin de la ligne avec <code>f.seekg(padding, std::ios::cur)</code>.<br />
-4. Passer à la ligne suivante.  </p>
+<p>La lecture doit tenir compte du padding :
+1. Lire 3 octets (un pixel).
+2. Répéter pour toute la largeur.
+3. Sauter les octets de padding à la fin de la ligne avec <code>f.seekg(padding, std::ios::cur)</code>.
+4. Passer à la ligne suivante.</p>
 
 
 

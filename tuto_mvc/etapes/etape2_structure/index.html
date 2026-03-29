@@ -2876,10 +2876,10 @@
 <hr />
 <h2 id="pourquoi-cette-complexite">🧐 Pourquoi cette complexité ?</h2>
 <h3 id="1-separation-du-contrat-et-de-la-cuisine">1. Séparation du Contrat et de la Cuisine</h3>
-<p>Le dossier <code>include/</code> contient les fichiers <code>.hpp</code>. C'est le <strong>contrat public</strong> : ce que les autres parties du programme ont besoin de connaître pour utiliser vos classes. 
+<p>Le dossier <code>include/</code> contient les fichiers <code>.hpp</code>. C'est le <strong>contrat public</strong> : ce que les autres parties du programme ont besoin de connaître pour utiliser vos classes.
 Le dossier <code>src/</code> contient les fichiers <code>.cpp</code>. C'est la <strong>cuisine interne</strong> : comment les choses sont faites. Si vous changez la cuisine, vous n'avez pas besoin de changer le contrat !</p>
 <h3 id="2-le-pattern-mvc-physiquement-separe">2. Le Pattern MVC Physiquement Séparé</h3>
-<p>En isolant les dossiers <code>model</code>, <code>view</code> et <code>controller</code>, on évite les <strong>dépendances cycliques</strong>. 
+<p>En isolant les dossiers <code>model</code>, <code>view</code> et <code>controller</code>, on évite les <strong>dépendances cycliques</strong>.
 - Le <strong>Modèle</strong> ne doit jamais inclure de fichiers venant de la <strong>Vue</strong>.
 - La <strong>Vue</strong> ne doit pas manipuler directement le <strong>Modèle</strong>.
 - Seul le <strong>Contrôleur</strong> a le droit de connaître les deux.</p>

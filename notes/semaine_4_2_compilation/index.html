@@ -2882,146 +2882,146 @@
 
 
 <h1 id="levolution-dun-projet-c-du-chaos-a-lautomatisation">L'Évolution d'un Projet C++ : Du Chaos à l'Automatisation</h1>
-<p>Ce guide suit l'évolution naturelle d'un projet C++. L'objectif est de comprendre que chaque "bonne pratique" naît d'une douleur ou d'une répétition inutile.  </p>
+<p>Ce guide suit l'évolution naturelle d'un projet C++. L'objectif est de comprendre que chaque "bonne pratique" naît d'une douleur ou d'une répétition inutile.</p>
 <hr />
 <h2 id="etape-1-le-vrac-tout-a-la-racine">Étape 1 : Le "Vrac" (Tout à la racine)</h2>
-<p>Au début, on met tout dans le même dossier. C'est simple, mais ça devient vite le bazar.  </p>
-<p><strong>Structure :</strong><br />
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ProjetBanque/  
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── main.cpp         &lt;-- Point d&#39;entrée de l&#39;application (contient le main)  
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── Banque.cpp       &lt;-- Implémentation de la classe Banque  
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>└── Banque.hpp       &lt;-- Déclaration de la classe (interface)  
-</span></code></pre></div></p>
-<p><strong>🔨 Compilation et Exécution :</strong><br />
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Compiler  </span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>g++<span class="w"> </span>-Wall<span class="w"> </span>-std<span class="o">=</span>c++20<span class="w"> </span>main.cpp<span class="w"> </span>Banque.cpp<span class="w"> </span>-o<span class="w"> </span>app<span class="w">  </span>
+<p>Au début, on met tout dans le même dossier. C'est simple, mais ça devient vite le bazar.</p>
+<p><strong>Structure :</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ProjetBanque/
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── main.cpp         &lt;-- Point d&#39;entrée de l&#39;application (contient le main)
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── Banque.cpp       &lt;-- Implémentation de la classe Banque
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>└── Banque.hpp       &lt;-- Déclaration de la classe (interface)
+</span></code></pre></div>
+<p><strong>🔨 Compilation et Exécution :</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Compiler</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>g++<span class="w"> </span>-Wall<span class="w"> </span>-std<span class="o">=</span>c++20<span class="w"> </span>main.cpp<span class="w"> </span>Banque.cpp<span class="w"> </span>-o<span class="w"> </span>app
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Lancer l&#39;application  </span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>./app<span class="w">  </span>
-</span></code></pre></div></p>
-<p><strong>🔴 Le point de friction :</strong> Dès que vous atteignez 10 fichiers, chercher un header au milieu des fichiers compilés devient un enfer visuel.  </p>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Lancer l&#39;application</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>./app
+</span></code></pre></div>
+<p><strong>🔴 Le point de friction :</strong> Dès que vous atteignez 10 fichiers, chercher un header au milieu des fichiers compilés devient un enfer visuel.</p>
 <hr />
 <h2 id="etape-2-lorganisation-src-et-include">Étape 2 : L'Organisation (src et include)</h2>
-<p>On sépare les intentions : ce qui est public (headers) et ce qui est privé (code).  </p>
-<p><strong>Structure :</strong><br />
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ProjetBanque/  
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>├── include/  
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>│   └── Banque.hpp   &lt;-- On range les définitions (.hpp) ici  
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>└── src/  
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    ├── main.cpp         &lt;-- Point d&#39;entrée principal  
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    └── Banque.cpp       &lt;-- Implémentation (.cpp)  
-</span></code></pre></div></p>
-<p><strong>🔨 Compilation et Exécution :</strong><br />
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Compiler (il faut dire au compilateur où est le dossier &#39;include&#39;)  </span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>g++<span class="w"> </span>-Wall<span class="w"> </span>-std<span class="o">=</span>c++20<span class="w"> </span>-I<span class="w"> </span>include<span class="w"> </span>src/main.cpp<span class="w"> </span>src/Banque.cpp<span class="w"> </span>-o<span class="w"> </span>app<span class="w">  </span>
+<p>On sépare les intentions : ce qui est public (headers) et ce qui est privé (code).</p>
+<p><strong>Structure :</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ProjetBanque/
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>├── include/
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>│   └── Banque.hpp   &lt;-- On range les définitions (.hpp) ici
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>└── src/
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    ├── main.cpp         &lt;-- Point d&#39;entrée principal
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    └── Banque.cpp       &lt;-- Implémentation (.cpp)
+</span></code></pre></div>
+<p><strong>🔨 Compilation et Exécution :</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Compiler (il faut dire au compilateur où est le dossier &#39;include&#39;)</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>g++<span class="w"> </span>-Wall<span class="w"> </span>-std<span class="o">=</span>c++20<span class="w"> </span>-I<span class="w"> </span>include<span class="w"> </span>src/main.cpp<span class="w"> </span>src/Banque.cpp<span class="w"> </span>-o<span class="w"> </span>app
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># Lancer  </span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>./app<span class="w">  </span>
-</span></code></pre></div></p>
-<p><strong>🟠 Le point de friction :</strong> Le paramètre <code>-I include</code> devient obligatoire. On commence à "configurer" au lieu de juste "coder".  </p>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># Lancer</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>./app
+</span></code></pre></div>
+<p><strong>🟠 Le point de friction :</strong> Le paramètre <code>-I include</code> devient obligatoire. On commence à "configurer" au lieu de juste "coder".</p>
 <hr />
 <h2 id="etape-3-larrivee-des-tests-le-point-de-rupture">Étape 3 : L'arrivée des Tests (Le point de rupture)</h2>
-<p>On veut tester notre classe <code>Banque</code> de manière pro avec la bibliothèque <strong>Catch2</strong>.  </p>
+<p>On veut tester notre classe <code>Banque</code> de manière pro avec la bibliothèque <strong>Catch2</strong>.</p>
 <h3 id="1-telecharger-la-bibliotheque-deja-existante">1. Télécharger la bibliothèque (Déjà existante)</h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>mkdir<span class="w"> </span>lib<span class="w">  </span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>wget<span class="w"> </span>https://github.com/catchorg/Catch2/releases/download/v2.13.10/catch.hpp<span class="w"> </span>-O<span class="w"> </span>lib/catch.hpp<span class="w"> </span>&lt;--<span class="w"> </span>mettre<span class="w"> </span>le<span class="w"> </span>catch.hpp<span class="w"> </span>dans<span class="w"> </span>le<span class="w"> </span>dossier<span class="w"> </span>lib<span class="w"> </span>du<span class="w"> </span>projet<span class="w">  </span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>mkdir<span class="w"> </span>lib
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>wget<span class="w"> </span>https://github.com/catchorg/Catch2/releases/download/v2.13.10/catch.hpp<span class="w"> </span>-O<span class="w"> </span>lib/catch.hpp<span class="w"> </span>&lt;--<span class="w"> </span>mettre<span class="w"> </span>le<span class="w"> </span>catch.hpp<span class="w"> </span>dans<span class="w"> </span>le<span class="w"> </span>dossier<span class="w"> </span>lib<span class="w"> </span>du<span class="w"> </span>projet
 </span></code></pre></div>
 <h3 id="2-creer-votre-point-dentree-testsmain_testcpp">2. Créer VOTRE point d'entrée (<code>tests/main_test.cpp</code>)</h3>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="cp">#define CATCH_CONFIG_MAIN  </span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;catch.hpp&quot;</span><span class="c1">  </span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="cp">#define CATCH_CONFIG_MAIN</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;catch.hpp&quot;</span>
 </span></code></pre></div>
-<p><strong>Structure complète :</strong><br />
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ProjetBanque/  
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>├── include/  
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>│   └── Banque.hpp       &lt;-- Déclaration de Banque  
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>├── src/  
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>│   ├── main.cpp         &lt;-- Possède le main() de l&#39;APPLICATION  
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>│   └── Banque.cpp       &lt;-- Code de Banque  
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>├── lib/  
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>│   └── catch.hpp        &lt;-- La librairie téléchargée (ne pas toucher)  
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>└── tests/  
-</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>    ├── main_test.cpp    &lt;-- Possède le main() des TESTS  
-</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>    └── test_Banque.cpp  &lt;-- Vos TEST_CASE unitaires pour Banque  
-</span></code></pre></div></p>
-<p><strong>🔨 Compilation et Exécution (Le cauchemar) :</strong><br />
-Il faut maintenant deux commandes différentes car on ne peut pas mélanger les deux fichiers contenant un <code>main()</code>.  </p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># 1. Compiler l&#39;Application  </span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>g++<span class="w"> </span>-Wall<span class="w"> </span>-std<span class="o">=</span>c++20<span class="w">  </span>-I<span class="w"> </span>include<span class="w"> </span>src/main.cpp<span class="w"> </span>src/Banque.cpp<span class="w"> </span>-o<span class="w"> </span>app<span class="w">  </span>
+<p><strong>Structure complète :</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ProjetBanque/
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>├── include/
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>│   └── Banque.hpp       &lt;-- Déclaration de Banque
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>├── src/
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>│   ├── main.cpp         &lt;-- Possède le main() de l&#39;APPLICATION
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>│   └── Banque.cpp       &lt;-- Code de Banque
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>├── lib/
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>│   └── catch.hpp        &lt;-- La librairie téléchargée (ne pas toucher)
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>└── tests/
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>    ├── main_test.cpp    &lt;-- Possède le main() des TESTS
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>    └── test_Banque.cpp  &lt;-- Vos TEST_CASE unitaires pour Banque
+</span></code></pre></div>
+<p><strong>🔨 Compilation et Exécution (Le cauchemar) :</strong>
+Il faut maintenant deux commandes différentes car on ne peut pas mélanger les deux fichiers contenant un <code>main()</code>.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># 1. Compiler l&#39;Application</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>g++<span class="w"> </span>-Wall<span class="w"> </span>-std<span class="o">=</span>c++20<span class="w">  </span>-I<span class="w"> </span>include<span class="w"> </span>src/main.cpp<span class="w"> </span>src/Banque.cpp<span class="w"> </span>-o<span class="w"> </span>app
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1"># 2. Compiler les Tests (Notez l&#39;ajout de -I lib)  </span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>g++<span class="w"> </span>-Wall<span class="w"> </span>-std<span class="o">=</span>c++20<span class="w">  </span>-I<span class="w"> </span>include<span class="w"> </span>-I<span class="w"> </span>lib<span class="w"> </span>tests/main_test.cpp<span class="w"> </span>tests/test_Banque.cpp<span class="w"> </span>src/Banque.cpp<span class="w"> </span>-o<span class="w"> </span>tests_app<span class="w">  </span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1"># 2. Compiler les Tests (Notez l&#39;ajout de -I lib)</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>g++<span class="w"> </span>-Wall<span class="w"> </span>-std<span class="o">=</span>c++20<span class="w">  </span>-I<span class="w"> </span>include<span class="w"> </span>-I<span class="w"> </span>lib<span class="w"> </span>tests/main_test.cpp<span class="w"> </span>tests/test_Banque.cpp<span class="w"> </span>src/Banque.cpp<span class="w"> </span>-o<span class="w"> </span>tests_app
 </span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="c1"># Lancer les tests  </span>
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>./tests_app<span class="w">  </span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="c1"># Lancer les tests</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>./tests_app
 </span></code></pre></div>
-<p><strong>🟡 Le point de friction :</strong> La commande est trop longue. Si vous ajoutez <code>Compte.cpp</code>, vous devez modifier vos deux commandes manuellement. C'est ici que l'on craque.  </p>
+<p><strong>🟡 Le point de friction :</strong> La commande est trop longue. Si vous ajoutez <code>Compte.cpp</code>, vous devez modifier vos deux commandes manuellement. C'est ici que l'on craque.</p>
 <hr />
 <h2 id="etape-4-lautomatisation-naive-cmake-rigide">Étape 4 : L'Automatisation Naïve (CMake rigide)</h2>
-<p>Plutôt que de taper ces lignes de 100 caractères, on confie la "recette" à CMake.  </p>
+<p>Plutôt que de taper ces lignes de 100 caractères, on confie la "recette" à CMake.</p>
 <blockquote>
-<p>⚠️ <strong>Nouveauté : Le dossier <code>build/</code></strong><br />
-CMake génère énormément de fichiers temporaires (Makefiles, fichiers .o, caches). Si on lance CMake à la racine, on pollue tout notre projet.<br />
-<strong>La règle d'or :</strong> On crée un dossier <code>build</code> qui servira de "poubelle de compilation". Tout ce qui est compilé ira dedans. Si on veut tout nettoyer, on supprime juste ce dossier.  </p>
+<p>⚠️ <strong>Nouveauté : Le dossier <code>build/</code></strong>
+CMake génère énormément de fichiers temporaires (Makefiles, fichiers .o, caches). Si on lance CMake à la racine, on pollue tout notre projet.
+<strong>La règle d'or :</strong> On crée un dossier <code>build</code> qui servira de "poubelle de compilation". Tout ce qui est compilé ira dedans. Si on veut tout nettoyer, on supprime juste ce dossier.</p>
 </blockquote>
-<p><strong>Fichier <code>CMakeLists.txt</code> :</strong><br />
-<div class="language-cmake highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span><span class="w"> </span><span class="s">3.10</span><span class="p">)</span><span class="w">  </span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nb">project</span><span class="p">(</span><span class="s">ProjetBanque</span><span class="p">)</span><span class="w">  </span>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="nb">include_directories</span><span class="p">(</span><span class="s">include</span><span class="w"> </span><span class="s">lib</span><span class="p">)</span><span class="w">  </span>
+<p><strong>Fichier <code>CMakeLists.txt</code> :</strong></p>
+<div class="language-cmake highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span><span class="w"> </span><span class="s">3.10</span><span class="p">)</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nb">project</span><span class="p">(</span><span class="s">ProjetBanque</span><span class="p">)</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="nb">include_directories</span><span class="p">(</span><span class="s">include</span><span class="w"> </span><span class="s">lib</span><span class="p">)</span>
 </span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="c"># On doit tout lister à la main... pénible si on a 50 fichiers !  </span>
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="nb">add_executable</span><span class="p">(</span><span class="s">app</span><span class="w"> </span><span class="s">src/main.cpp</span><span class="w"> </span><span class="s">src/Banque.cpp</span><span class="w"> </span><span class="s">src/Compte.cpp</span><span class="p">)</span><span class="w">  </span>
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="nb">add_executable</span><span class="p">(</span><span class="s">tests_app</span><span class="w"> </span><span class="s">tests/main_test.cpp</span><span class="w"> </span><span class="s">tests/test_Banque.cpp</span><span class="w"> </span><span class="s">src/Banque.cpp</span><span class="w"> </span><span class="s">src/Compte.cpp</span><span class="p">)</span><span class="w">  </span>
-</span></code></pre></div></p>
-<p><strong>🔨 Compilation et Exécution :</strong><br />
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>mkdir<span class="w"> </span>build<span class="w">      </span><span class="c1"># 1. On crée le dossier de compilation  </span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nb">cd</span><span class="w"> </span>build<span class="w">         </span><span class="c1"># 2. On entre dedans  </span>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>cmake<span class="w"> </span>..<span class="w">         </span><span class="c1"># 3. On demande à CMake de préparer la recette (.. veut dire &#39;cherche le CMakeLists au dessus&#39;) il va créer le fichier makefile pour la compilation  </span>
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>make<span class="w">             </span><span class="c1"># 4. On lance la compilation réelle  </span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="c"># On doit tout lister à la main... pénible si on a 50 fichiers !</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="nb">add_executable</span><span class="p">(</span><span class="s">app</span><span class="w"> </span><span class="s">src/main.cpp</span><span class="w"> </span><span class="s">src/Banque.cpp</span><span class="w"> </span><span class="s">src/Compte.cpp</span><span class="p">)</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="nb">add_executable</span><span class="p">(</span><span class="s">tests_app</span><span class="w"> </span><span class="s">tests/main_test.cpp</span><span class="w"> </span><span class="s">tests/test_Banque.cpp</span><span class="w"> </span><span class="s">src/Banque.cpp</span><span class="w"> </span><span class="s">src/Compte.cpp</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong>🔨 Compilation et Exécution :</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>mkdir<span class="w"> </span>build<span class="w">      </span><span class="c1"># 1. On crée le dossier de compilation</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nb">cd</span><span class="w"> </span>build<span class="w">         </span><span class="c1"># 2. On entre dedans</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>cmake<span class="w"> </span>..<span class="w">         </span><span class="c1"># 3. On demande à CMake de préparer la recette (.. veut dire &#39;cherche le CMakeLists au dessus&#39;) il va créer le fichier makefile pour la compilation</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>make<span class="w">             </span><span class="c1"># 4. On lance la compilation réelle</span>
 </span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
-</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="c1"># Lancer l&#39;un ou l&#39;autre (ils sont maintenant dans build/)  </span>
-</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>./app<span class="w">  </span>
-</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>./tests_app<span class="w">  </span>
-</span></code></pre></div></p>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="c1"># Lancer l&#39;un ou l&#39;autre (ils sont maintenant dans build/)</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>./app
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>./tests_app
+</span></code></pre></div>
 <hr />
 <h2 id="etape-5-la-solution-flexible-le-standard">Étape 5 : La Solution Flexible (Le Standard)</h2>
-<p>On utilise le scan automatique (<code>GLOB</code>) pour ne plus jamais toucher au fichier CMake.  </p>
-<p><strong>Fichier <code>CMakeLists.txt</code> final :</strong><br />
-<div class="language-cmake highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span><span class="w"> </span><span class="s">3.10</span><span class="p">)</span><span class="w">  </span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nb">project</span><span class="p">(</span><span class="s">ProjetBanque</span><span class="p">)</span><span class="w"> </span>
+<p>On utilise le scan automatique (<code>GLOB</code>) pour ne plus jamais toucher au fichier CMake.</p>
+<p><strong>Fichier <code>CMakeLists.txt</code> final :</strong></p>
+<div class="language-cmake highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span><span class="w"> </span><span class="s">3.10</span><span class="p">)</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nb">project</span><span class="p">(</span><span class="s">ProjetBanque</span><span class="p">)</span>
 </span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
 </span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_STANDARD</span><span class="w"> </span><span class="s">20</span><span class="p">)</span>
 </span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_STANDARD_REQUIRED</span><span class="w"> </span><span class="s">ON</span><span class="p">)</span>
 </span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
-</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="nb">include_directories</span><span class="p">(</span><span class="s">include</span><span class="w"> </span><span class="s">lib</span><span class="p">)</span><span class="w">  </span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="nb">include_directories</span><span class="p">(</span><span class="s">include</span><span class="w"> </span><span class="s">lib</span><span class="p">)</span>
 </span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>
-</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="c"># On scanne les dossiers automatiquement  </span>
-</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="nb">file</span><span class="p">(</span><span class="s">GLOB</span><span class="w"> </span><span class="s">SRC_FILES</span><span class="w"> </span><span class="s2">&quot;src/*.cpp&quot;</span><span class="p">)</span><span class="w">  </span>
-</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="nb">file</span><span class="p">(</span><span class="s">GLOB</span><span class="w"> </span><span class="s">TEST_FILES</span><span class="w"> </span><span class="s2">&quot;tests/*.cpp&quot;</span><span class="p">)</span><span class="w">  </span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="c"># On scanne les dossiers automatiquement</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="nb">file</span><span class="p">(</span><span class="s">GLOB</span><span class="w"> </span><span class="s">SRC_FILES</span><span class="w"> </span><span class="s2">&quot;src/*.cpp&quot;</span><span class="p">)</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="nb">file</span><span class="p">(</span><span class="s">GLOB</span><span class="w"> </span><span class="s">TEST_FILES</span><span class="w"> </span><span class="s2">&quot;tests/*.cpp&quot;</span><span class="p">)</span>
 </span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>
-</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="c"># On enlève le main de l&#39;app pour les tests (pour éviter le conflit)  </span>
-</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="nb">set</span><span class="p">(</span><span class="s">LIB_FILES</span><span class="w"> </span><span class="o">${</span><span class="nv">SRC_FILES</span><span class="o">}</span><span class="p">)</span><span class="w">  </span>
-</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="nb">list</span><span class="p">(</span><span class="s">REMOVE_ITEM</span><span class="w"> </span><span class="s">LIB_FILES</span><span class="w"> </span><span class="s2">&quot;${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp&quot;</span><span class="p">)</span><span class="w">  </span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="c"># On enlève le main de l&#39;app pour les tests (pour éviter le conflit)</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="nb">set</span><span class="p">(</span><span class="s">LIB_FILES</span><span class="w"> </span><span class="o">${</span><span class="nv">SRC_FILES</span><span class="o">}</span><span class="p">)</span>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="nb">list</span><span class="p">(</span><span class="s">REMOVE_ITEM</span><span class="w"> </span><span class="s">LIB_FILES</span><span class="w"> </span><span class="s2">&quot;${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp&quot;</span><span class="p">)</span>
 </span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>
-</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="c"># On définit les deux exécutables  </span>
-</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="nb">add_executable</span><span class="p">(</span><span class="s">app</span><span class="w"> </span><span class="s">src/main.cpp</span><span class="w"> </span><span class="o">${</span><span class="nv">LIB_FILES</span><span class="o">}</span><span class="p">)</span><span class="w">  </span>
-</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="nb">add_executable</span><span class="p">(</span><span class="s">tests_app</span><span class="w"> </span><span class="o">${</span><span class="nv">TEST_FILES</span><span class="o">}</span><span class="w"> </span><span class="o">${</span><span class="nv">LIB_FILES</span><span class="o">}</span><span class="p">)</span><span class="w">  </span>
-</span></code></pre></div></p>
-<p><strong>Structure finale :</strong><br />
-<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>ProjetBanque/  
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>├── build/               &lt;-- CRÉÉ PAR VOUS (mkdir) : Contient tout ce qui est généré (app, tests_app, etc.)  
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>├── include/             &lt;-- Tous vos headers (.hpp)  
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>├── src/                 &lt;-- Toute votre logique (.cpp)  
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>├── lib/                 &lt;-- Librairies externes (Catch2)  
-</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>├── tests/               &lt;-- Tous vos fichiers de tests  
-</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>└── CMakeLists.txt       &lt;-- Automatique et intelligent  
-</span></code></pre></div></p>
-<p><strong>🔨 Utilisation au quotidien :</strong><br />
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nb">cd</span><span class="w"> </span>build<span class="w">  </span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>make<span class="w">             </span><span class="c1"># Re-compile tout ce qui a changé  </span>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>./app<span class="w">            </span><span class="c1"># Lance l&#39;application bancaire  </span>
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>./tests_app<span class="w">      </span><span class="c1"># Lance la suite de tests  </span>
-</span></code></pre></div></p>
-<p><strong>🟢 Le résultat :</strong> Vous créez un fichier ? <code>make</code>. Vous ajoutez un test ? <code>make</code>. La structure est devenue invisible, robuste et automatique.  </p>
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="c"># On définit les deux exécutables</span>
+</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="nb">add_executable</span><span class="p">(</span><span class="s">app</span><span class="w"> </span><span class="s">src/main.cpp</span><span class="w"> </span><span class="o">${</span><span class="nv">LIB_FILES</span><span class="o">}</span><span class="p">)</span>
+</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="nb">add_executable</span><span class="p">(</span><span class="s">tests_app</span><span class="w"> </span><span class="o">${</span><span class="nv">TEST_FILES</span><span class="o">}</span><span class="w"> </span><span class="o">${</span><span class="nv">LIB_FILES</span><span class="o">}</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong>Structure finale :</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>ProjetBanque/
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>├── build/               &lt;-- CRÉÉ PAR VOUS (mkdir) : Contient tout ce qui est généré (app, tests_app, etc.)
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>├── include/             &lt;-- Tous vos headers (.hpp)
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>├── src/                 &lt;-- Toute votre logique (.cpp)
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>├── lib/                 &lt;-- Librairies externes (Catch2)
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>├── tests/               &lt;-- Tous vos fichiers de tests
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>└── CMakeLists.txt       &lt;-- Automatique et intelligent
+</span></code></pre></div>
+<p><strong>🔨 Utilisation au quotidien :</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nb">cd</span><span class="w"> </span>build
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>make<span class="w">             </span><span class="c1"># Re-compile tout ce qui a changé</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>./app<span class="w">            </span><span class="c1"># Lance l&#39;application bancaire</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>./tests_app<span class="w">      </span><span class="c1"># Lance la suite de tests</span>
+</span></code></pre></div>
+<p><strong>🟢 Le résultat :</strong> Vous créez un fichier ? <code>make</code>. Vous ajoutez un test ? <code>make</code>. La structure est devenue invisible, robuste et automatique.</p>
 
 
 

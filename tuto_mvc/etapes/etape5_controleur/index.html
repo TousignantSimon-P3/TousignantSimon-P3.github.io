@@ -2578,6 +2578,56 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#pourquoi-cest-le-controleur-qui-gere-les-slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧐 Pourquoi c'est le Contrôleur qui gère les slots ?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧐 Pourquoi c&#39;est le Contrôleur qui gère les slots ?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-pour-une-vue-aveugle-desaccouplement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Pour une Vue "Aveugle" (Désaccouplement)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-le-principe-de-la-vue-passive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Le principe de la "Vue Passive"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-centralisation-du-cablage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Centralisation du "Câblage"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#points-de-reflexion-pour-letudiant" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2878,7 +2928,7 @@
 
 
 <h1 id="etape-5-le-controleur-le-mediateur">Étape 5 : Le Contrôleur (Le Médiateur)</h1>
-<p>Le <strong>Contrôleur</strong> est le cerveau de votre application. Son rôle est de faire le pont entre la <strong>Vue</strong> (Qt) et le <strong>Modèle</strong> (Pur C++). </p>
+<p>Le <strong>Contrôleur</strong> est le cerveau de votre application. Son rôle est de faire le pont entre la <strong>Vue</strong> (Qt) et le <strong>Modèle</strong> (Pur C++).</p>
 <h2 id="pourquoi-un-mediateur">🧠 Pourquoi un "Médiateur" ?</h2>
 <p>Dans notre architecture "Uncle Bob", le Modèle ne connaît pas la Vue, et la Vue ne connaît pas le Modèle. C'est le Contrôleur qui gère tout :
 1.  Il écoute les actions de l'utilisateur sur la Vue.
@@ -2914,11 +2964,11 @@
 <h2 id="implementation-srccontrollerclientcontrollercpp">🛠️ Implémentation : src/controller/ClientController.cpp</h2>
 <h3 id="1-la-connexion-le-cablage">1. La Connexion (Le "Câblage")</h3>
 <p>Dans le constructeur, on branche le signal de la vue sur notre méthode de mise à jour.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">ClientController</span><span class="o">::</span><span class="n">ClientController</span><span class="p">(</span><span class="n">Client</span><span class="o">*</span><span class="w"> </span><span class="n">modele</span><span class="p">,</span><span class="w"> </span><span class="n">ClientWindow</span><span class="o">*</span><span class="w"> </span><span class="n">vue</span><span class="p">)</span><span class="w"> </span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">ClientController</span><span class="o">::</span><span class="n">ClientController</span><span class="p">(</span><span class="n">Client</span><span class="o">*</span><span class="w"> </span><span class="n">modele</span><span class="p">,</span><span class="w"> </span><span class="n">ClientWindow</span><span class="o">*</span><span class="w"> </span><span class="n">vue</span><span class="p">)</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">m_modele</span><span class="p">(</span><span class="n">modele</span><span class="p">),</span><span class="w"> </span><span class="n">m_vue</span><span class="p">(</span><span class="n">vue</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="c1">// On écoute la vue</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="n">connect</span><span class="p">(</span><span class="n">m_vue</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ClientWindow</span><span class="o">::</span><span class="n">boutonAppliquerClique</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="n">connect</span><span class="p">(</span><span class="n">m_vue</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ClientWindow</span><span class="o">::</span><span class="n">boutonAppliquerClique</span><span class="p">,</span>
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">            </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ClientController</span><span class="o">::</span><span class="n">mettreAJourModele</span><span class="p">);</span>
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">}</span>
 </span></code></pre></div>
@@ -2934,7 +2984,7 @@
 </span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="n">m_modele</span><span class="o">-&gt;</span><span class="n">setDate</span><span class="p">({</span><span class="n">d</span><span class="p">.</span><span class="n">day</span><span class="p">(),</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">month</span><span class="p">(),</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">year</span><span class="p">()});</span>
 </span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
 </span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="c1">// ÉTAPE CRUCIALE : On force le rafraîchissement de la vue</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="c1">// car le modèle est &quot;muet&quot; (Clean Architecture)</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="c1">// Le modèle étant un objet pur (muet), il ne peut pas le faire lui-même</span>
 </span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="n">rafraichirVue</span><span class="p">();</span>
 </span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="p">}</span>
 </span></code></pre></div>
@@ -2952,6 +3002,19 @@
 </span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="n">m_vue</span><span class="o">-&gt;</span><span class="n">updateSummary</span><span class="p">(</span><span class="n">resume</span><span class="p">);</span>
 </span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="p">}</span>
 </span></code></pre></div>
+<hr />
+<h2 id="pourquoi-cest-le-controleur-qui-gere-les-slots">🧐 Pourquoi c'est le Contrôleur qui gère les slots ?</h2>
+<p>On pourrait être tenté de donner un pointeur de <code>ClientController</code> à la <code>ClientWindow</code> pour qu'elle l'appelle directement. <strong>C'est une erreur d'architecture.</strong> Voici pourquoi nous laissons le Contrôleur faire les branchements :</p>
+<h3 id="1-pour-une-vue-aveugle-desaccouplement">1. Pour une Vue "Aveugle" (Désaccouplement)</h3>
+<p>Si la Vue appelait le Contrôleur, elle devrait connaître son existence (<code>#include</code>). En utilisant des signaux, la Vue ne sait pas <strong>qui</strong> l'écoute. Elle reste 100% graphique et pourra être réutilisée dans un autre projet sans modification.</p>
+<h3 id="2-le-principe-de-la-vue-passive">2. Le principe de la "Vue Passive"</h3>
+<p>En génie logiciel, on veut que l'interface soit la plus "bête" possible. Elle ne doit prendre aucune décision. Elle se contente de crier : <em>"Hé, le bouton a été cliqué !"</em>. C'est au Contrôleur (le cerveau) de décider de la suite des événements.</p>
+<h3 id="3-centralisation-du-cablage">3. Centralisation du "Câblage"</h3>
+<p>Le constructeur du Contrôleur sert de <strong>plan de câblage</strong>. En un coup d'œil, un développeur peut voir toutes les connexions entre l'interface et la logique, sans avoir à fouiller dans 15 fichiers de boutons différents.</p>
+<div class="admonition quote">
+<p class="admonition-title">L'analogie de la Star de cinéma</p>
+<p>Considérez la <strong>Vue</strong> comme une <strong>Star de cinéma</strong> : elle fait sa performance (affichage) et crie quand elle a besoin de quelque chose (signaux). Le <strong>Contrôleur</strong> est son <strong>Agent</strong> : il reste dans l'ombre, il l'écoute, et il prend toutes les décisions d'affaires pour elle.</p>
+</div>
 <hr />
 <h2 id="points-de-reflexion-pour-letudiant">🧠 Points de Réflexion pour l'Étudiant</h2>
 <ol>

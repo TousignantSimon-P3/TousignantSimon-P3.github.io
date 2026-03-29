@@ -2472,10 +2472,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#le-prix-a-payer-le-modele-est-muet" class="md-nav__link">
+  <a href="#le-role-du-modele-un-objet-muet" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🧠 Le prix à payer : Le Modèle est "Muet"
+        🧠 Le rôle du Modèle : Un objet "Muet"
       
     </span>
   </a>
@@ -2830,7 +2830,7 @@
 <h1 id="etape-3-le-modele-version-clean-architecture">Étape 3 : Le Modèle (Version "Clean Architecture")</h1>
 <p>Dans cette étape, nous allons suivre les principes d'<strong>Uncle Bob</strong> (Robert C. Martin). Nous voulons que notre <strong>Modèle</strong> soit le cœur pur de l'application, sans aucune dépendance envers un framework externe comme Qt.</p>
 <h2 id="pourquoi-pas-de-qt-dans-le-modele">🚫 Pourquoi pas de Qt dans le Modèle ?</h2>
-<p>Selon la <strong>Clean Architecture</strong>, un framework (comme Qt) est un <strong>détail d'implémentation</strong>. Votre logique métier (le <code>Client</code>) ne devrait jamais dépendre d'un détail. </p>
+<p>Selon la <strong>Clean Architecture</strong>, un framework (comme Qt) est un <strong>détail d'implémentation</strong>. Votre logique métier (le <code>Client</code>) ne devrait jamais dépendre d'un détail.</p>
 <p>En restant en <strong>C++ Standard Pur</strong> :
 1.  <strong>Testabilité</strong> : On peut tester le modèle sans charger tout le moteur Qt.
 2.  <strong>Portabilité</strong> : Votre classe peut être réutilisée dans un projet Console, un serveur, ou une application mobile.
@@ -2871,11 +2871,13 @@
 </span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="p">};</span>
 </span></code></pre></div>
 <hr />
-<h2 id="le-prix-a-payer-le-modele-est-muet">🧠 Le prix à payer : Le Modèle est "Muet"</h2>
-<p>Puisqu'il n'y a plus de signaux dans le modèle, celui-ci ne peut plus prévenir l'interface quand il change. </p>
-<p>C'est désormais le <strong>Contrôleur</strong> qui aura la lourde tâche d'orchestrer la synchronisation :
-1.  Il modifiera le modèle.
-2.  Il ordonnera immédiatement à la vue de se rafraîchir.</p>
+<h2 id="le-role-du-modele-un-objet-muet">🧠 Le rôle du Modèle : Un objet "Muet"</h2>
+<p>Dans cette architecture, le modèle est volontairement <strong>muet</strong> : il ne contient pas de signaux Qt. Cela signifie qu'il ne peut pas prévenir l'interface quand il change de lui-même.</p>
+<p>C'est le <strong>Contrôleur</strong> qui aura la tâche d'orchestrer la synchronisation :</p>
+<ol>
+<li>Il modifiera le modèle.</li>
+<li>Il ordonnera immédiatement à la vue de se rafraîchir.</li>
+</ol>
 <p>C'est ce qu'on appelle le rôle de <strong>Médiateur</strong>.</p>
 <div class="admonition quote">
 <p class="admonition-title">Uncle Bob dit :</p>
