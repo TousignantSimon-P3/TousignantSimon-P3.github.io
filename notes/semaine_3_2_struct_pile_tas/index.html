@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -2591,7 +2591,7 @@
 </span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
 </span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="c1">// Il est CRUCIAL de libérer la mémoire allouée sur le tas  </span>
 </span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="k">delete</span><span class="w"> </span><span class="n">p2</span><span class="p">;</span><span class="w"> </span><span class="c1">// &lt;-- &#39;Point&#39; est détruit ici, la mémoire est libérée  </span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span><span class="w"> </span><span class="c1">// Bonne pratique: éviter les pointeurs &quot;dangling&quot;  </span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">nullptr</span><span class="p">;</span><span class="w"> </span><span class="c1">// Bonne pratique: éviter les pointeurs &quot;dangling&quot;  </span>
 </span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="p">}</span><span class="w"> </span><span class="c1">// &lt;-- &#39;p2&#39; (le pointeur lui-même) est détruit ici (mais pas l&#39;objet s&#39;il n&#39;a pas été supprimé)  </span>
 </span></code></pre></div>
 <h2 id="3-quand-utiliser-quoi">3. Quand utiliser quoi ?</h2>
