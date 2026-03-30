@@ -2679,6 +2679,34 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saisie-de-texte-et-affichage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✍️ Saisie de Texte et Affichage
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✍️ Saisie de Texte et Affichage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qlabel-letiquette" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        QLabel (L'étiquette)
+      
+    </span>
+  </a>
+  
+</li>
+        
           <li class="md-nav__item">
   <a href="#qlineedit-le-textbox" class="md-nav__link">
     <span class="md-ellipsis">
@@ -2964,26 +2992,22 @@
 </span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">layoutSaisie</span><span class="o">-&gt;</span><span class="n">addWidget</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">QLineEdit</span><span class="p">(</span><span class="n">pageSaisie</span><span class="p">));</span><span class="w"> </span><span class="c1">// TextBox pour le Nom</span>
 </span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
 </span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="c1">// --- ÉTAPE 4 : Ajout de la page complète au système d&#39;onglets ---</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="n">tabs</span><span class="o">-&gt;</span><span class="n">addTab</span><span class="p">(</span><span class="n">pageSaisie</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;📝 Édition&quot;</span><span class="p">);</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="n">tabs</span><span class="o">-&gt;</span><span class="n">addTab</span><span class="p">(</span><span class="n">pageSaisie</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;📝 Édition&quot;</span><span class="p">);</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="c1">// --- Onglet 2 : Historique ou Liste (Même principe) ---</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="k">auto</span><span class="o">*</span><span class="w"> </span><span class="n">pageHistorique</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">QWidget</span><span class="p">();</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="k">auto</span><span class="o">*</span><span class="w"> </span><span class="n">layoutHist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">QVBoxLayout</span><span class="p">(</span><span class="n">pageHistorique</span><span class="p">);</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="n">layoutHist</span><span class="o">-&gt;</span><span class="n">addWidget</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">QLabel</span><span class="p">(</span><span class="s">&quot;Dernières modifications...&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">pageHistorique</span><span class="p">));</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="n">tabs</span><span class="o">-&gt;</span><span class="n">addTab</span><span class="p">(</span><span class="n">pageHistorique</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;📂 Historique&quot;</span><span class="p">);</span>
 </span></code></pre></div>
-<p>// --- Onglet 2 : Historique ou Liste ---
-auto<em> pageHistorique = new QWidget();
-auto</em> layoutHist = new QVBoxLayout(pageHistorique);
-layoutHist-&gt;addWidget(new QLabel("Dernières modifications...", pageHistorique));
-tabs-&gt;addTab(pageHistorique, "📂 Historique");</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>---
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>## ✍️ Saisie de Texte et Affichage
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>### `QLabel` (L&#39;étiquette)
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>Affiche du texte ou une image (non modifiable par l&#39;utilisateur).
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>- **Web :** `&lt;span&gt;` / `&lt;label&gt;`
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>- **C# :** `Label`
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>```cpp
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>auto* label = new QLabel(&quot;Bonjour le monde !&quot;, this);
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>label-&gt;setStyleSheet(&quot;font-weight: bold;&quot;); // On peut utiliser du CSS !
+<hr />
+<h2 id="saisie-de-texte-et-affichage">✍️ Saisie de Texte et Affichage</h2>
+<h3 id="qlabel-letiquette"><code>QLabel</code> (L'étiquette)</h3>
+<p>Affiche du texte ou une image (non modifiable par l'utilisateur).
+- <strong>Web :</strong> <code>&lt;span&gt;</code> / <code>&lt;label&gt;</code>
+- <strong>C# :</strong> <code>Label</code></p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">auto</span><span class="o">*</span><span class="w"> </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">QLabel</span><span class="p">(</span><span class="s">&quot;Bonjour le monde !&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">);</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">label</span><span class="o">-&gt;</span><span class="n">setStyleSheet</span><span class="p">(</span><span class="s">&quot;font-weight: bold;&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// On peut utiliser du CSS !</span>
 </span></code></pre></div>
 <h3 id="qlineedit-le-textbox"><code>QLineEdit</code> (Le TextBox)</h3>
 <p>Saisie d'une seule ligne de texte.
