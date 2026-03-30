@@ -2831,10 +2831,12 @@
 <p>Dans cette étape, nous allons suivre les principes d'<strong>Uncle Bob</strong> (Robert C. Martin). Nous voulons que notre <strong>Modèle</strong> soit le cœur pur de l'application, sans aucune dépendance envers un framework externe comme Qt.</p>
 <h2 id="pourquoi-pas-de-qt-dans-le-modele">🚫 Pourquoi pas de Qt dans le Modèle ?</h2>
 <p>Selon la <strong>Clean Architecture</strong>, un framework (comme Qt) est un <strong>détail d'implémentation</strong>. Votre logique métier (le <code>Client</code>) ne devrait jamais dépendre d'un détail.</p>
-<p>En restant en <strong>C++ Standard Pur</strong> :
-1.  <strong>Testabilité</strong> : On peut tester le modèle sans charger tout le moteur Qt.
-2.  <strong>Portabilité</strong> : Votre classe peut être réutilisée dans un projet Console, un serveur, ou une application mobile.
-3.  <strong>Indépendance</strong> : Si vous décidez de changer Qt pour un autre framework UI, votre modèle ne bouge pas d'un iota.</p>
+<p>En restant en <strong>C++ Standard Pur</strong> :</p>
+<ol>
+<li><strong>Testabilité</strong> : On peut tester le modèle sans charger tout le moteur Qt.</li>
+<li><strong>Portabilité</strong> : Votre classe peut être réutilisée dans un projet Console, un serveur, ou une application mobile.</li>
+<li><strong>Indépendance</strong> : Si vous décidez de changer Qt pour un autre framework UI, votre modèle ne bouge pas d'un iota.</li>
+</ol>
 <hr />
 <h2 id="le-modele-pur-includemodelclienthpp">📄 Le Modèle Pur : include/model/Client.hpp</h2>
 <p>Nous utilisons ici <code>std::string</code> et une structure simple pour la date. Remarquez l'absence de <code>QObject</code>.</p>
