@@ -2889,7 +2889,11 @@
 
 
 <h1 id="etape-4-la-vue-interface-graphique">Étape 4 : La Vue (Interface Graphique)</h1>
-<p>Nous allons maintenant construire l'interface graphique de notre application. Conformément à notre décision de rejeter le format XML (<code>.ui</code>), nous allons coder l'interface <strong>100% en C++</strong>.</p>
+<p>Nous allons maintenant construire l'interface graphique de notre application. Pour bien comprendre comment Qt gère la mémoire et l'agencement des éléments, nous allons coder l'interface <strong>100% en C++</strong>, sans utiliser l'outil visuel (<code>.ui</code>).</p>
+<div class="admonition info">
+<p class="admonition-title">Pourquoi coder à la main ?</p>
+<p>Bien que Qt propose un outil de dessin (Qt Designer), coder "à la main" vous permet de maîtriser chaque pointeur et de comprendre réellement le système de <strong>Parent/Enfant</strong> indispensable en C++.</p>
+</div>
 <hr />
 <h2 id="la-hierarchie-des-objets-dans-qt">🏗️ La Hiérarchie des Objets dans Qt</h2>
 <p>Dans Qt, une interface est un <strong>Arbre d'objets</strong>. Chaque objet a un <strong>Parent</strong>.
