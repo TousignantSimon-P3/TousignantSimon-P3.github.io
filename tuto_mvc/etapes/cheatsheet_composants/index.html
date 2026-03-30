@@ -2946,9 +2946,11 @@
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">layout</span><span class="o">-&gt;</span><span class="n">addWidget</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">QPushButton</span><span class="p">(</span><span class="s">&quot;Action&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">));</span>
 </span></code></pre></div>
 <h3 id="qtabwidget-les-onglets"><code>QTabWidget</code> (Les Onglets)</h3>
-<p>Permet de naviguer entre plusieurs pages. Chaque page est un <code>QWidget</code> qui contient son propre layout.
-- <strong>Web :</strong> Bootstrap Tabs / React Tabs
-- <strong>C# :</strong> <code>TabControl</code></p>
+<p>Permet de naviguer entre plusieurs pages. Chaque page est un <code>QWidget</code> qui contient son propre layout.</p>
+<ul>
+<li><strong>Web :</strong> Bootstrap Tabs / React Tabs</li>
+<li><strong>C# :</strong> <code>TabControl</code></li>
+</ul>
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">auto</span><span class="o">*</span><span class="w"> </span><span class="n">tabs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">QTabWidget</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1">// --- ÉTAPE 1 : Création de la &quot;page&quot; (un widget vide) ---</span>
@@ -3033,10 +3035,12 @@ tabs-&gt;addTab(pageHistorique, "📂 Historique");</p>
 </span></code></pre></div>
 <hr />
 <h2 id="rappel-sur-les-layouts">📏 Rappel sur les Layouts</h2>
-<p>Les widgets ne flottent pas au hasard. On les place dans des layouts :
-- <strong><code>QVBoxLayout</code></strong> : Empile les composants verticalement.
-- <strong><code>QHBoxLayout</code></strong> : Aligne les composants horizontalement.
-- <strong><code>QFormLayout</code></strong> : Aligne un label à gauche et un widget à droite (idéal pour les formulaires).</p>
+<p>Les widgets ne flottent pas au hasard. On les place dans des layouts :</p>
+<ul>
+<li><strong><code>QVBoxLayout</code></strong> : Empile les composants verticalement.</li>
+<li><strong><code>QHBoxLayout</code></strong> : Aligne les composants horizontalement.</li>
+<li><strong><code>QFormLayout</code></strong> : Aligne un label à gauche et un widget à droite (idéal pour les formulaires).</li>
+</ul>
 <div class="admonition tip">
 <p class="admonition-title">Astuce</p>
 <p>N'oubliez pas de passer <code>this</code> (le widget parent) au constructeur de chaque nouveau composant pour que Qt gère la mémoire automatiquement !</p>

@@ -2930,10 +2930,12 @@
 <h1 id="etape-5-le-controleur-le-mediateur">Étape 5 : Le Contrôleur (Le Médiateur)</h1>
 <p>Le <strong>Contrôleur</strong> est le cerveau de votre application. Son rôle est de faire le pont entre la <strong>Vue</strong> (Qt) et le <strong>Modèle</strong> (Pur C++).</p>
 <h2 id="pourquoi-un-mediateur">🧠 Pourquoi un "Médiateur" ?</h2>
-<p>Dans notre architecture "Uncle Bob", le Modèle ne connaît pas la Vue, et la Vue ne connaît pas le Modèle. C'est le Contrôleur qui gère tout :
-1.  Il écoute les actions de l'utilisateur sur la Vue.
-2.  Il traduit et envoie ces données au Modèle.
-3.  Il demande à la Vue de se rafraîchir pour montrer les nouvelles données.</p>
+<p>Dans notre architecture "Uncle Bob", le Modèle ne connaît pas la Vue, et la Vue ne connaît pas le Modèle. C'est le Contrôleur qui gère tout :</p>
+<ol>
+<li>Il écoute les actions de l'utilisateur sur la Vue.</li>
+<li>Il traduit et envoie ces données au Modèle.</li>
+<li>Il demande à la Vue de se rafraîchir pour montrer les nouvelles données.</li>
+</ol>
 <hr />
 <h2 id="declaration-includecontrollerclientcontrollerhpp">📄 Déclaration : include/controller/ClientController.hpp</h2>
 <p>Le contrôleur doit hériter de <code>QObject</code> pour pouvoir utiliser les <strong>Slots</strong> (les méthodes qui écoutent les signaux).</p>
