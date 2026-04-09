@@ -2068,6 +2068,90 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semaine_6_3_conversions_string_nombre/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conversions Chaînes/Nombres
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semaine_6_4_std_vector_avance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    std::vector Avancé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semaine_6_5_std_map/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    std::map : Dictionnaire
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -3127,29 +3211,43 @@
 </span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="kt">size_t</span><span class="w"> </span><span class="n">suivant</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lien</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="sc">&#39;|&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">premier_pipe</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// Cherche le suivant APRES l&#39;index 1</span>
 </span></code></pre></div></li>
 </ul>
+<div class="admonition info">
+<p class="admonition-title">Comprendre <code>std::string::npos</code></p>
+<p>Lorsqu'une recherche avec <code>find</code> ou <code>rfind</code> échoue, la fonction retourne une valeur spéciale nommée <strong><code>std::string::npos</code></strong>.
+*   <strong>Signification</strong> : "No Position".
+*   <strong>Valeur réelle</strong> : C'est la valeur maximale possible pour le type <code>size_t</code> (souvent -1 converti en non-signé).
+*   <strong>Usage</strong> : Il faut <strong>toujours</strong> vérifier si le résultat est différent de <code>npos</code> avant d'utiliser l'index trouvé.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Bonjour&quot;</span><span class="p">;</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kt">size_t</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="sc">&#39;z&#39;</span><span class="p">);</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pos</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">::</span><span class="n">npos</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Caractère non trouvé !&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="p">}</span>
+</span></code></pre></div>
+</div>
 <h3 id="expressions-regulieres-regex">Expressions Régulières (Regex)</h3>
 <p>La bibliothèque <code>&lt;regex&gt;</code> permet de valider et de découper une ligne en une seule opération.</p>
 <h4 id="utilisation-avec-des-groupes">Utilisation avec des Groupes</h4>
 <p>Les parenthèses dans le pattern définissent des "groupes" de capture que l'on peut récupérer individuellement.
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;regex&gt;</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">ligne</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;1|2|Aller au nord&quot;</span><span class="p">;</span>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="c1">// Pattern : (un ou plusieurs chiffres) | (un ou plusieurs chiffres) | (tout le reste)</span>
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="c1">// Le R&quot;(...)&quot; est un raw string pour éviter de doubler les antislashes</span>
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="n">std</span><span class="o">::</span><span class="n">regex</span><span class="w"> </span><span class="n">pattern</span><span class="p">(</span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s">(\d+)\|(\d+)\|(.*)</span><span class="dl">)</span><span class="s">&quot;</span><span class="p">);</span>
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="n">std</span><span class="o">::</span><span class="n">smatch</span><span class="w"> </span><span class="n">matches</span><span class="p">;</span>
-</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>
-</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">regex_match</span><span class="p">(</span><span class="n">ligne</span><span class="p">,</span><span class="w"> </span><span class="n">matches</span><span class="p">,</span><span class="w"> </span><span class="n">pattern</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">    </span><span class="c1">// matches[0] : Contient toute la ligne correspondante</span>
-</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">    </span><span class="c1">// matches[1] : Contient le 1er groupe (\d+) -&gt; &quot;1&quot;</span>
-</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">    </span><span class="c1">// matches[2] : Contient le 2e groupe (\d+)  -&gt; &quot;2&quot;</span>
-</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">    </span><span class="c1">// matches[3] : Contient le 3e groupe (.*)   -&gt; &quot;Aller au nord&quot;</span>
-</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>
-</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">id_src</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">stoi</span><span class="p">(</span><span class="n">matches</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
-</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">id_dest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">stoi</span><span class="p">(</span><span class="n">matches</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
-</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">texte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">matches</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
-</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="p">}</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;regex&gt;</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">ligne</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;1|2|Aller au nord&quot;</span><span class="p">;</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="c1">// Pattern : (un ou plusieurs chiffres) | (un ou plusieurs chiffres) | (tout le reste)</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="c1">// Le R&quot;(...)&quot; est un raw string pour éviter de doubler les antislashes</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="n">std</span><span class="o">::</span><span class="n">regex</span><span class="w"> </span><span class="n">pattern</span><span class="p">(</span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s">(\d+)\|(\d+)\|(.*)</span><span class="dl">)</span><span class="s">&quot;</span><span class="p">);</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="n">std</span><span class="o">::</span><span class="n">smatch</span><span class="w"> </span><span class="n">matches</span><span class="p">;</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">regex_match</span><span class="p">(</span><span class="n">ligne</span><span class="p">,</span><span class="w"> </span><span class="n">matches</span><span class="p">,</span><span class="w"> </span><span class="n">pattern</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">    </span><span class="c1">// matches[0] : Contient toute la ligne correspondante</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">    </span><span class="c1">// matches[1] : Contient le 1er groupe (\d+) -&gt; &quot;1&quot;</span>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">    </span><span class="c1">// matches[2] : Contient le 2e groupe (\d+)  -&gt; &quot;2&quot;</span>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">    </span><span class="c1">// matches[3] : Contient le 3e groupe (.*)   -&gt; &quot;Aller au nord&quot;</span>
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">id_src</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">stoi</span><span class="p">(</span><span class="n">matches</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">id_dest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">stoi</span><span class="p">(</span><span class="n">matches</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">texte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">matches</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+</span><span id="__span-9-19"><a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="p">}</span>
 </span></code></pre></div></p>
 <h3 id="equivalents-pour-stdwstring-caracteres-larges">Équivalents pour <code>std::wstring</code> (Caractères larges)</h3>
 <p>Si vous travaillez avec des <code>wstring</code> (souvent pour simplifier les accents sous Windows), les outils restent globalement identiques mais changent de type :</p>
@@ -3159,8 +3257,8 @@
 <li><strong>Littéraux</strong> : Ajoutez impérativement un <strong><code>L</code></strong> devant vos chaînes et caractères (ex: <code>L"1|2|Texte"</code>, <code>L'|'</code>).</li>
 <li><strong>Conversion</strong> : <code>std::stoi</code> est surchargé et accepte aussi bien les <code>string</code> que les <code>wstring</code>.</li>
 </ul>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1">// Exemple de regex wide</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">std</span><span class="o">::</span><span class="n">wregex</span><span class="w"> </span><span class="n">pattern</span><span class="p">(</span><span class="sa">LR</span><span class="s">&quot;</span><span class="dl">(</span><span class="s">(\d+)\|(\d+)\|(.*)</span><span class="dl">)</span><span class="s">&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// LR pour Wide + Raw string</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1">// Exemple de regex wide</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">std</span><span class="o">::</span><span class="n">wregex</span><span class="w"> </span><span class="n">pattern</span><span class="p">(</span><span class="sa">LR</span><span class="s">&quot;</span><span class="dl">(</span><span class="s">(\d+)\|(\d+)\|(.*)</span><span class="dl">)</span><span class="s">&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// LR pour Wide + Raw string</span>
 </span></code></pre></div>
 <h3 id="equivalents-avec-qstring-bibliotheque-qt">Équivalents avec <code>QString</code> (Bibliothèque Qt)</h3>
 <p>Si vous développez une application avec l'écosystème Qt, la classe <code>QString</code> est souvent le choix le plus puissant car elle gère l'Unicode nativement :</p>
@@ -3172,13 +3270,13 @@
 <li><strong>Conversion</strong> : <code>ligne.toInt()</code> (retourne 0 si échec) ou <code>ligne.toDouble()</code>.</li>
 <li><strong>Regex</strong> : Utilisez <code>QRegularExpression</code> pour le pattern et <code>QRegularExpressionMatch</code> pour les résultats.</li>
 </ul>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1">// Exemple de regex avec QString</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">QRegularExpression</span><span class="w"> </span><span class="n">pattern</span><span class="p">(</span><span class="s">&quot;(</span><span class="se">\\</span><span class="s">d+)</span><span class="se">\\</span><span class="s">|(</span><span class="se">\\</span><span class="s">d+)</span><span class="se">\\</span><span class="s">|(.*)&quot;</span><span class="p">);</span>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="n">QRegularExpressionMatch</span><span class="w"> </span><span class="n">match</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pattern</span><span class="p">.</span><span class="n">match</span><span class="p">(</span><span class="n">maQString</span><span class="p">);</span>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">match</span><span class="p">.</span><span class="n">hasMatch</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="n">QString</span><span class="w"> </span><span class="n">id_src</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">match</span><span class="p">.</span><span class="n">captured</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// Groupe 1</span>
-</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span><span class="n">QString</span><span class="w"> </span><span class="n">texte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">match</span><span class="p">.</span><span class="n">captured</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span><span class="w">  </span><span class="c1">// Groupe 3</span>
-</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="p">}</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1">// Exemple de regex avec QString</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">QRegularExpression</span><span class="w"> </span><span class="n">pattern</span><span class="p">(</span><span class="s">&quot;(</span><span class="se">\\</span><span class="s">d+)</span><span class="se">\\</span><span class="s">|(</span><span class="se">\\</span><span class="s">d+)</span><span class="se">\\</span><span class="s">|(.*)&quot;</span><span class="p">);</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="n">QRegularExpressionMatch</span><span class="w"> </span><span class="n">match</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pattern</span><span class="p">.</span><span class="n">match</span><span class="p">(</span><span class="n">maQString</span><span class="p">);</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">match</span><span class="p">.</span><span class="n">hasMatch</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="n">QString</span><span class="w"> </span><span class="n">id_src</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">match</span><span class="p">.</span><span class="n">captured</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// Groupe 1</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">    </span><span class="n">QString</span><span class="w"> </span><span class="n">texte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">match</span><span class="p">.</span><span class="n">captured</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span><span class="w">  </span><span class="c1">// Groupe 3</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="p">}</span>
 </span></code></pre></div>
 
 

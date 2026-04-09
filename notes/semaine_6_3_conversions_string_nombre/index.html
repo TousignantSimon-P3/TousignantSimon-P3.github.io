@@ -8,31 +8,31 @@
       
       
       
-        <link rel="canonical" href="https://tousignantsimon-p3.github.io/tuto_mvc/etapes/etape4_vue/">
+        <link rel="canonical" href="https://tousignantsimon-p3.github.io/notes/semaine_6_3_conversions_string_nombre/">
       
       
-        <link rel="prev" href="../etape3_modele/">
+        <link rel="prev" href="../semaine_6_2_fichiers_binaires_padding/">
       
       
-        <link rel="next" href="../etape5_controleur/">
+        <link rel="next" href="../semaine_6_4_std_vector_avance/">
       
       
         
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Étape 4 : La Vue (Interface) - Cours de Programmation 3</title>
+        <title>Conversions Chaînes/Nombres - Cours de Programmation 3</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
   
@@ -116,9 +116,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../css/extra.css">
+      <link rel="stylesheet" href="../../css/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -143,7 +143,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#etape-4-la-vue-interface-graphique" class="md-skip">
+        <a href="#conversions-entre-chaines-et-nombres" class="md-skip">
           Aller au contenu
         </a>
       
@@ -159,7 +159,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="../../.." title="Cours de Programmation 3" class="md-header__button md-logo" aria-label="Cours de Programmation 3" data-md-component="logo">
+    <a href="../.." title="Cours de Programmation 3" class="md-header__button md-logo" aria-label="Cours de Programmation 3" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M448 205.8c-14.8 9.8-31.8 17.7-49.5 24-47 16.8-108.7 26.2-174.5 26.2s-127.6-9.5-174.5-26.2c-17.6-6.3-34.7-14.2-49.5-24V288c0 44.2 100.3 80 224 80s224-35.8 224-80zm0-77.8V80c0-44.2-100.3-80-224-80S0 35.8 0 80v48c0 44.2 100.3 80 224 80s224-35.8 224-80m-49.5 261.8C351.6 406.5 289.9 416 224 416s-127.6-9.5-174.5-26.2c-17.6-6.3-34.7-14.2-49.5-24V432c0 44.2 100.3 80 224 80s224-35.8 224-80v-66.2c-14.8 9.8-31.8 17.7-49.5 24"/></svg>
@@ -179,7 +179,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Étape 4 : La Vue (Interface)
+              Conversions Chaînes/Nombres
             
           </span>
         </div>
@@ -284,7 +284,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -305,7 +305,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../conventions/" class="md-tabs__link">
+        <a href="../../conventions/" class="md-tabs__link">
           
   
   
@@ -332,7 +332,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../notes/semaine_1_0_introduction/" class="md-tabs__link">
+        <a href="../semaine_1_0_introduction/" class="md-tabs__link">
           
   
   
@@ -355,7 +355,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../exercices/tp1_enonce/" class="md-tabs__link">
+        <a href="../../exercices/tp1_enonce/" class="md-tabs__link">
           
   
   
@@ -375,7 +375,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../exercices/tp2_enonce/" class="md-tabs__link">
+        <a href="../../exercices/tp2_enonce/" class="md-tabs__link">
           
   
   
@@ -391,6 +391,8 @@
   
   
   
+    
+  
   
     
     
@@ -398,11 +400,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../notes/semaine_5_1_classes_encapsulation/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../semaine_5_1_classes_encapsulation/" class="md-tabs__link">
           
   
   
@@ -421,13 +425,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../tuto_mvc/" class="md-tabs__link">
           
   
   
@@ -447,7 +449,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../exercices/examen_formatif/" class="md-tabs__link">
+        <a href="../../exercices/examen_formatif/" class="md-tabs__link">
           
   
   
@@ -489,7 +491,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Cours de Programmation 3" class="md-nav__button md-logo" aria-label="Cours de Programmation 3" data-md-component="logo">
+    <a href="../.." title="Cours de Programmation 3" class="md-nav__button md-logo" aria-label="Cours de Programmation 3" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M448 205.8c-14.8 9.8-31.8 17.7-49.5 24-47 16.8-108.7 26.2-174.5 26.2s-127.6-9.5-174.5-26.2c-17.6-6.3-34.7-14.2-49.5-24V288c0 44.2 100.3 80 224 80s224-35.8 224-80zm0-77.8V80c0-44.2-100.3-80-224-80S0 35.8 0 80v48c0 44.2 100.3 80 224 80s224-35.8 224-80m-49.5 261.8C351.6 406.5 289.9 416 224 416s-127.6-9.5-174.5-26.2c-17.6-6.3-34.7-14.2-49.5-24V432c0 44.2 100.3 80 224 80s224-35.8 224-80v-66.2c-14.8 9.8-31.8 17.7-49.5 24"/></svg>
@@ -519,7 +521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -596,7 +598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../conventions/" class="md-nav__link">
+      <a href="../../conventions/" class="md-nav__link">
         
   
   
@@ -624,7 +626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ressources/" class="md-nav__link">
+      <a href="../../ressources/" class="md-nav__link">
         
   
   
@@ -652,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../horaire/" class="md-nav__link">
+      <a href="../../horaire/" class="md-nav__link">
         
   
   
@@ -787,7 +789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../notes/semaine_1_0_introduction/" class="md-nav__link">
+      <a href="../semaine_1_0_introduction/" class="md-nav__link">
         
   
   
@@ -815,7 +817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../notes/semaine_1_1_types_de_donnees/" class="md-nav__link">
+      <a href="../semaine_1_1_types_de_donnees/" class="md-nav__link">
         
   
   
@@ -843,7 +845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../notes/semaine_1_2_tableau/" class="md-nav__link">
+      <a href="../semaine_1_2_tableau/" class="md-nav__link">
         
   
   
@@ -871,7 +873,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../notes/semaine_1_3_gestion_saisie_cin/" class="md-nav__link">
+      <a href="../semaine_1_3_gestion_saisie_cin/" class="md-nav__link">
         
   
   
@@ -899,7 +901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../notes/semaine_1_4_compilation_cpp20/" class="md-nav__link">
+      <a href="../semaine_1_4_compilation_cpp20/" class="md-nav__link">
         
   
   
@@ -927,7 +929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../exercices/semaine_1_1_exercices/" class="md-nav__link">
+      <a href="../../exercices/semaine_1_1_exercices/" class="md-nav__link">
         
   
   
@@ -955,7 +957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../exercices/semaine_1_2_exercices_supplementaires/" class="md-nav__link">
+      <a href="../../exercices/semaine_1_2_exercices_supplementaires/" class="md-nav__link">
         
   
   
@@ -1041,7 +1043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../notes/semaine_2_1_passage_copie_reference/" class="md-nav__link">
+      <a href="../semaine_2_1_passage_copie_reference/" class="md-nav__link">
         
   
   
@@ -1069,7 +1071,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../notes/semaine_2_2_les_structs/" class="md-nav__link">
+      <a href="../semaine_2_2_les_structs/" class="md-nav__link">
         
   
   
@@ -1155,7 +1157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../notes/semaine_3_2_struct_pile_tas/" class="md-nav__link">
+      <a href="../semaine_3_2_struct_pile_tas/" class="md-nav__link">
         
   
   
@@ -1183,7 +1185,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../notes/semaine_3_3_gestion_exceptions/" class="md-nav__link">
+      <a href="../semaine_3_3_gestion_exceptions/" class="md-nav__link">
         
   
   
@@ -1211,7 +1213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../exercices/semaine_3_exercice_liste/" class="md-nav__link">
+      <a href="../../exercices/semaine_3_exercice_liste/" class="md-nav__link">
         
   
   
@@ -1297,7 +1299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../notes/semaine_4_2_compilation/" class="md-nav__link">
+      <a href="../semaine_4_2_compilation/" class="md-nav__link">
         
   
   
@@ -1325,7 +1327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../notes/semaine_4_3_tests_unitaires/" class="md-nav__link">
+      <a href="../semaine_4_3_tests_unitaires/" class="md-nav__link">
         
   
   
@@ -1353,7 +1355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../notes/semaine_4_4_tests_communs/" class="md-nav__link">
+      <a href="../semaine_4_4_tests_communs/" class="md-nav__link">
         
   
   
@@ -1446,7 +1448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../exercices/tp1_enonce/" class="md-nav__link">
+      <a href="../../exercices/tp1_enonce/" class="md-nav__link">
         
   
   
@@ -1531,7 +1533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../exercices/tp2_enonce/" class="md-nav__link">
+      <a href="../../exercices/tp2_enonce/" class="md-nav__link">
         
   
   
@@ -1563,24 +1565,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
   
@@ -1598,7 +1605,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1666,7 +1673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../notes/semaine_5_1_classes_encapsulation/" class="md-nav__link">
+      <a href="../semaine_5_1_classes_encapsulation/" class="md-nav__link">
         
   
   
@@ -1694,7 +1701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../notes/semaine_5_2_tests_unitaires_objet/" class="md-nav__link">
+      <a href="../semaine_5_2_tests_unitaires_objet/" class="md-nav__link">
         
   
   
@@ -1727,6 +1734,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1737,11 +1746,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" checked>
         
           
           <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
@@ -1762,7 +1771,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1780,7 +1789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../notes/semaine_6_1_fichiers_texte_utf8/" class="md-nav__link">
+      <a href="../semaine_6_1_fichiers_texte_utf8/" class="md-nav__link">
         
   
   
@@ -1808,7 +1817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../notes/semaine_6_2_fichiers_binaires_padding/" class="md-nav__link">
+      <a href="../semaine_6_2_fichiers_binaires_padding/" class="md-nav__link">
         
   
   
@@ -1833,10 +1842,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../notes/semaine_6_3_conversions_string_nombre/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conversions Chaînes/Nombres
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1852,6 +1888,204 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-la-methode-classique-stdstoi-stdstod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. La méthode classique : std::stoi, std::stod...
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. La méthode classique : std::stoi, std::stod...">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-et-gestion-derreur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple et Gestion d'erreur
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-la-methode-pro-c1720-charconv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. La méthode "Pro" (C++17/20) : &lt;charconv&gt;
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. La méthode &#34;Pro&#34; (C++17/20) : &lt;charconv&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stdfrom_chars-string-nombre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        std::from_chars (String ➔ Nombre)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bases-personnalisees-hexa-binaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bases personnalisées (Hexa, Binaire...)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parsing-iteratif-extraire-plusieurs-nombres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parsing itératif (Extraire plusieurs nombres)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdto_chars-nombre-string-ultra-rapide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        std::to_chars (Nombre ➔ String ultra-rapide)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-nombre-string-laboutissement-c20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Nombre ➔ String (L'aboutissement C++20)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Nombre ➔ String (L&#39;aboutissement C++20)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-base-stdto_string" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La base : std::to_string
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-standard-moderne-stdformat-c20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le standard moderne : std::format (C++20) 🌟
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-les-conversions-avec-qt-qstring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Les conversions avec Qt (QString)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Les conversions avec Qt (QString)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qstring-nombre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        QString ➔ Nombre
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nombre-qstring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nombre ➔ QString
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resume-quoi-utiliser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📜 Résumé : Quoi utiliser ?
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1864,7 +2098,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../notes/semaine_6_4_std_vector_avance/" class="md-nav__link">
+      <a href="../semaine_6_4_std_vector_avance/" class="md-nav__link">
         
   
   
@@ -1892,7 +2126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../notes/semaine_6_5_std_map/" class="md-nav__link">
+      <a href="../semaine_6_5_std_map/" class="md-nav__link">
         
   
   
@@ -1978,7 +2212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../notes/semaine_7_1_bmp_structure/" class="md-nav__link">
+      <a href="../semaine_7_1_bmp_structure/" class="md-nav__link">
         
   
   
@@ -2006,7 +2240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../notes/semaine_7_2_bmp_pixels_padding/" class="md-nav__link">
+      <a href="../semaine_7_2_bmp_pixels_padding/" class="md-nav__link">
         
   
   
@@ -2092,7 +2326,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../notes/semaine_8_1_reseau_tcp_texte/" class="md-nav__link">
+      <a href="../semaine_8_1_reseau_tcp_texte/" class="md-nav__link">
         
   
   
@@ -2120,7 +2354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../notes/semaine_8_2_reseau_tcp_binaire/" class="md-nav__link">
+      <a href="../semaine_8_2_reseau_tcp_binaire/" class="md-nav__link">
         
   
   
@@ -2206,7 +2440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../notes/semaine_9_1_serialisation_objet/" class="md-nav__link">
+      <a href="../semaine_9_1_serialisation_objet/" class="md-nav__link">
         
   
   
@@ -2292,7 +2526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../notes/semaine_9_1_generique/" class="md-nav__link">
+      <a href="../semaine_9_1_generique/" class="md-nav__link">
         
   
   
@@ -2332,29 +2566,24 @@
       
   
   
-    
   
   
-  
     
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
   
@@ -2372,7 +2601,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2390,7 +2619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
+      <a href="../../tuto_mvc/" class="md-nav__link">
         
   
   
@@ -2418,7 +2647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../etape1_installation/" class="md-nav__link">
+      <a href="../../tuto_mvc/etapes/etape1_installation/" class="md-nav__link">
         
   
   
@@ -2446,7 +2675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../etape2_structure/" class="md-nav__link">
+      <a href="../../tuto_mvc/etapes/etape2_structure/" class="md-nav__link">
         
   
   
@@ -2474,7 +2703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../etape3_modele/" class="md-nav__link">
+      <a href="../../tuto_mvc/etapes/etape3_modele/" class="md-nav__link">
         
   
   
@@ -2499,37 +2728,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Étape 4 : La Vue (Interface)
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../tuto_mvc/etapes/etape4_vue/" class="md-nav__link">
         
   
   
@@ -2545,120 +2747,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#la-hierarchie-des-objets-dans-qt" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🏗️ La Hiérarchie des Objets dans Qt
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#declaration-includeviewclientwindowhpp" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🛠️ Déclaration : include/view/ClientWindow.hpp
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#implementation-pas-a-pas-srcviewclientwindowcpp" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🛠️ Implémentation Pas à Pas : src/view/ClientWindow.cpp
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🛠️ Implémentation Pas à Pas : src/view/ClientWindow.cpp">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-la-page-le-conteneur" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. La "Page" (Le Conteneur)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-le-canevas-le-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Le "Canevas" (Le Layout)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-les-composants-les-widgets" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Les "Composants" (Les Widgets)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-le-feedback-la-zone-de-retour" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Le Feedback (La zone de retour)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#points-de-reflexion-pour-letudiant" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🧠 Points de Réflexion pour l'Étudiant
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2671,7 +2759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../etape5_controleur/" class="md-nav__link">
+      <a href="../../tuto_mvc/etapes/etape5_controleur/" class="md-nav__link">
         
   
   
@@ -2699,7 +2787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../etape6_main/" class="md-nav__link">
+      <a href="../../tuto_mvc/etapes/etape6_main/" class="md-nav__link">
         
   
   
@@ -2727,7 +2815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../etape7_cmake/" class="md-nav__link">
+      <a href="../../tuto_mvc/etapes/etape7_cmake/" class="md-nav__link">
         
   
   
@@ -2755,7 +2843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../etape8_erreurs/" class="md-nav__link">
+      <a href="../../tuto_mvc/etapes/etape8_erreurs/" class="md-nav__link">
         
   
   
@@ -2783,7 +2871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../etape9_qss/" class="md-nav__link">
+      <a href="../../tuto_mvc/etapes/etape9_qss/" class="md-nav__link">
         
   
   
@@ -2811,7 +2899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cheatsheet_composants/" class="md-nav__link">
+      <a href="../../tuto_mvc/etapes/cheatsheet_composants/" class="md-nav__link">
         
   
   
@@ -2839,7 +2927,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../telechargement/" class="md-nav__link">
+      <a href="../../tuto_mvc/telechargement/" class="md-nav__link">
         
   
   
@@ -2924,7 +3012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../exercices/examen_formatif/" class="md-nav__link">
+      <a href="../../exercices/examen_formatif/" class="md-nav__link">
         
   
   
@@ -2972,113 +3060,184 @@
   
 
 
-<h1 id="etape-4-la-vue-interface-graphique">Étape 4 : La Vue (Interface Graphique)</h1>
-<p>Nous allons maintenant construire l'interface graphique de notre application. Pour bien comprendre comment Qt gère la mémoire et l'agencement des éléments, nous allons coder l'interface <strong>100% en C++</strong>, sans utiliser l'outil visuel (<code>.ui</code>).</p>
-<div class="admonition info">
-<p class="admonition-title">Pourquoi coder à la main ?</p>
-<p>Bien que Qt propose un outil de dessin (Qt Designer), coder "à la main" vous permet de maîtriser chaque pointeur et de comprendre réellement le système de <strong>Parent/Enfant</strong> indispensable en C++.</p>
-</div>
-<hr />
-<h2 id="la-hierarchie-des-objets-dans-qt">🏗️ La Hiérarchie des Objets dans Qt</h2>
-<p>Dans Qt, une interface est un <strong>Arbre d'objets</strong>. Chaque objet a un <strong>Parent</strong>.
-*   Si vous supprimez le parent, tous les enfants sont automatiquement supprimés de la mémoire.
-*   C'est la base de la gestion de mémoire dans Qt.</p>
-<hr />
-<h2 id="declaration-includeviewclientwindowhpp">🛠️ Déclaration : include/view/ClientWindow.hpp</h2>
-<p>Nous déclarons nos composants comme des membres privés. Ainsi, nous y avons accès partout dans la classe sans risque de collision.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#pragma once</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;QMainWindow&gt;</span><span class="c1">  // Équivalent C# : Form / Window</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;QLineEdit&gt;</span><span class="c1">    // Équivalent Web : &lt;input type=&quot;text&quot;&gt; | C# : TextBox</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;QDateEdit&gt;</span><span class="c1">    // Équivalent Web : &lt;input type=&quot;date&quot;&gt; | C# : DateTimePicker</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;QLabel&gt;</span><span class="c1">       // Équivalent Web : &lt;span&gt; / &lt;label&gt;    | C# : Label</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;QPushButton&gt;</span><span class="c1">  // Équivalent Web : &lt;button&gt;            | C# : Button</span>
+<h1 id="conversions-entre-chaines-et-nombres">Conversions entre Chaînes et Nombres</h1>
+<p>La conversion de texte en données numériques (et inversement) est une tâche quotidienne en programmation, particulièrement lors de la lecture de fichiers de configuration ou de données (comme le format <code>.livre</code>).</p>
+<h2 id="1-la-methode-classique-stdstoi-stdstod">1. La méthode classique : <code>std::stoi</code>, <code>std::stod</code>...</h2>
+<p>Incluses dans <code>&lt;string&gt;</code>, ces fonctions sont simples mais ont un comportement strict : elles <strong>lèvent des exceptions</strong> si la conversion échoue.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Fonction</th>
+<th style="text-align: left;">Type de retour</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>std::stoi</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;">String to Integer</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>std::stol</code></td>
+<td style="text-align: left;"><code>long</code></td>
+<td style="text-align: left;">String to Long</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>std::stoll</code></td>
+<td style="text-align: left;"><code>long long</code></td>
+<td style="text-align: left;">String to Long Long</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>std::stoul</code></td>
+<td style="text-align: left;"><code>unsigned long</code></td>
+<td style="text-align: left;">String to Unsigned Long</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>std::stof</code></td>
+<td style="text-align: left;"><code>float</code></td>
+<td style="text-align: left;">String to Float</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>std::stod</code></td>
+<td style="text-align: left;"><code>double</code></td>
+<td style="text-align: left;">String to Double</td>
+</tr>
+</tbody>
+</table>
+<h3 id="exemple-et-gestion-derreur">Exemple et Gestion d'erreur</h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;42&quot;</span><span class="p">;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">stoi</span><span class="p">(</span><span class="n">s</span><span class="p">);</span><span class="w"> </span><span class="c1">// Succès</span>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">class</span><span class="w"> </span><span class="nc">ClientWindow</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">QMainWindow</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="n">Q_OBJECT</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="k">public</span><span class="o">:</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="k">explicit</span><span class="w"> </span><span class="n">ClientWindow</span><span class="p">(</span><span class="n">QWidget</span><span class="w"> </span><span class="o">*</span><span class="n">parent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">nullptr</span><span class="p">);</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="c1">// Getters pour que le Contrôleur puisse lire les saisies</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="n">QString</span><span class="w"> </span><span class="nf">getNom</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="n">QString</span><span class="w"> </span><span class="nf">getPrenom</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="n">QDate</span><span class="w"> </span><span class="nf">getDate</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="c1">// Méthode pour mettre à jour l&#39;affichage</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">updateSummary</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">QString</span><span class="o">&amp;</span><span class="w"> </span><span class="n">texte</span><span class="p">);</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">afficherErreur</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">QString</span><span class="o">&amp;</span><span class="w"> </span><span class="n">message</span><span class="p">);</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="nl">signals</span><span class="p">:</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span><span class="c1">// On définit des signaux pour prévenir le Contrôleur</span>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">boutonAppliquerClique</span><span class="p">();</span>
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">boutonErreurClique</span><span class="p">();</span>
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="k">private</span><span class="o">:</span>
-</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">    </span><span class="n">QLineEdit</span><span class="o">*</span><span class="w">   </span><span class="n">m_editNom</span><span class="p">;</span><span class="w">    </span><span class="c1">// Zone de texte (Input)</span>
-</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">    </span><span class="n">QLineEdit</span><span class="o">*</span><span class="w">   </span><span class="n">m_editPrenom</span><span class="p">;</span>
-</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">    </span><span class="n">QDateEdit</span><span class="o">*</span><span class="w">   </span><span class="n">m_editDate</span><span class="p">;</span><span class="w">   </span><span class="c1">// Sélecteur de date</span>
-</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">    </span><span class="n">QLabel</span><span class="o">*</span><span class="w">      </span><span class="n">m_labelSummary</span><span class="p">;</span><span class="w"> </span><span class="c1">// Label pour l&#39;affichage (Output)</span>
-</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">    </span><span class="n">QPushButton</span><span class="o">*</span><span class="w"> </span><span class="n">m_btnSave</span><span class="p">;</span><span class="w">    </span><span class="c1">// Bouton d&#39;action</span>
-</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">    </span><span class="n">QPushButton</span><span class="o">*</span><span class="w"> </span><span class="n">m_btnError</span><span class="p">;</span><span class="w">   </span><span class="c1">// Bouton d&#39;erreur</span>
-</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>
-</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setupUI</span><span class="p">();</span><span class="w"> </span><span class="c1">// La méthode magique qui construit tout</span>
-</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="p">};</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">erreur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">stoi</span><span class="p">(</span><span class="s">&quot;abc&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 💥 Lève std::invalid_argument</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">}</span><span class="w"> </span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">exception</span><span class="o">&amp;</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Erreur de conversion : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">what</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p">}</span>
 </span></code></pre></div>
 <hr />
-<h2 id="implementation-pas-a-pas-srcviewclientwindowcpp">🛠️ Implémentation Pas à Pas : src/view/ClientWindow.cpp</h2>
-<p>La construction d'une interface Qt suit toujours la même recette en 3 étapes :</p>
-<h3 id="1-la-page-le-conteneur">1. La "Page" (Le Conteneur)</h3>
-<p>On commence par créer un widget qui servira de support (le fond de la fenêtre ou d'une section).</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">ClientWindow::setupUI</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="c1">// ÉTAPE 1 : Le Conteneur principal (La page blanche)</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">auto</span><span class="o">*</span><span class="w"> </span><span class="n">centralWidget</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">QWidget</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<h2 id="2-la-methode-pro-c1720-charconv">2. La méthode "Pro" (C++17/20) : <code>&lt;charconv&gt;</code></h2>
+<p>Pour les performances critiques ou pour éviter les exceptions, C++ propose <code>std::from_chars</code>. C'est l'outil le plus rapide du langage. Il ne dépend pas de la "Locale" (langue du système), ce qui le rend très prévisible pour les fichiers de données.</p>
+<h3 id="stdfrom_chars-string-nombre"><code>std::from_chars</code> (String ➔ Nombre)</h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;charconv&gt;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;system_error&gt;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="kt">void</span><span class="w"> </span><span class="nf">exemple_simple</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;12345&quot;</span><span class="p">;</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">valeur</span><span class="p">;</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="c1">// std::from_chars_result est une structure contenant :</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="c1">// - const char* ptr : un pointeur sur le premier caractère non converti</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="c1">// - std::errc ec    : un code d&#39;erreur (vaut std::errc{} si succès)</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">from_chars_result</span><span class="w"> </span><span class="n">resultat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">from_chars</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">data</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span><span class="w"> </span><span class="n">valeur</span><span class="p">);</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">resultat</span><span class="p">.</span><span class="n">ec</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">errc</span><span class="p">{})</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Succès : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">valeur</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="p">}</span>
 </span></code></pre></div>
-<h3 id="2-le-canevas-le-layout">2. Le "Canevas" (Le Layout)</h3>
-<p>On définit comment les éléments seront rangés sur cette page (en ligne, en colonne, en grille).</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">    </span><span class="c1">// ÉTAPE 2 : Le Canevas vertical (On empile les éléments)</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">auto</span><span class="o">*</span><span class="w"> </span><span class="n">mainLayout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">QVBoxLayout</span><span class="p">(</span><span class="n">centralWidget</span><span class="p">);</span>
-</span></code></pre></div>
-<h3 id="3-les-composants-les-widgets">3. Les "Composants" (Les Widgets)</h3>
-<p>On crée les éléments visuels et on les pose sur le canevas.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">    </span><span class="c1">// ÉTAPE 3 : Création et ajout des composants</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="k">auto</span><span class="o">*</span><span class="w"> </span><span class="n">groupSaisie</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">QGroupBox</span><span class="p">(</span><span class="s">&quot;Informations personnelles&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">);</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="k">auto</span><span class="o">*</span><span class="w"> </span><span class="n">formLayout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">QFormLayout</span><span class="p">(</span><span class="n">groupSaisie</span><span class="p">);</span><span class="w"> </span><span class="c1">// Un sous-canevas pour le formulaire</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="n">m_editNom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">QLineEdit</span><span class="p">(</span><span class="k">this</span><span class="p">);</span><span class="w">     </span><span class="c1">// Le composant TextBox</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="n">m_editPrenom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">QLineEdit</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="n">m_editDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">QDateEdit</span><span class="p">(</span><span class="n">QDate</span><span class="o">::</span><span class="n">currentDate</span><span class="p">(),</span><span class="w"> </span><span class="k">this</span><span class="p">);</span>
+<h3 id="bases-personnalisees-hexa-binaire">Bases personnalisées (Hexa, Binaire...)</h3>
+<p>Contrairement à <code>stoi</code>, on peut spécifier la base très facilement.
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">hex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;FF&quot;</span><span class="p">;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">std</span><span class="o">::</span><span class="n">from_chars</span><span class="p">(</span><span class="n">hex</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span><span class="w"> </span><span class="n">hex</span><span class="p">.</span><span class="n">data</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hex</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">);</span><span class="w"> </span><span class="c1">// n vaut 255</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">bin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;1010&quot;</span><span class="p">;</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">std</span><span class="o">::</span><span class="n">from_chars</span><span class="p">(</span><span class="n">bin</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span><span class="w"> </span><span class="n">bin</span><span class="p">.</span><span class="n">data</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">bin</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w">  </span><span class="c1">// n vaut 10</span>
+</span></code></pre></div></p>
+<h3 id="parsing-iteratif-extraire-plusieurs-nombres">Parsing itératif (Extraire plusieurs nombres)</h3>
+<p>C'est ici que <code>std::from_chars</code> est imbattable. Le pointeur <code>resultat.ptr</code> renvoyé nous indique où reprendre la lecture.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;10,20,30,40&quot;</span><span class="p">;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">resultats</span><span class="p">;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">curseur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">data</span><span class="p">();</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">fin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">data</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
 </span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="c1">// On pose les composants sur le canevas du formulaire</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="n">formLayout</span><span class="o">-&gt;</span><span class="n">addRow</span><span class="p">(</span><span class="s">&quot;Nom :&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">m_editNom</span><span class="p">);</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="n">formLayout</span><span class="o">-&gt;</span><span class="n">addRow</span><span class="p">(</span><span class="s">&quot;Prénom :&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">m_editPrenom</span><span class="p">);</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="n">formLayout</span><span class="o">-&gt;</span><span class="n">addRow</span><span class="p">(</span><span class="s">&quot;Date de naissance :&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">m_editDate</span><span class="p">);</span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">    </span><span class="n">m_btnSave</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">QPushButton</span><span class="p">(</span><span class="s">&quot;Appliquer les modifications&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">);</span><span class="w"> </span><span class="c1">// Le bouton</span>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">    </span><span class="n">m_btnError</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">QPushButton</span><span class="p">(</span><span class="s">&quot;Générer Erreur Volontaire&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">);</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">curseur</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">fin</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">from_chars_result</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">from_chars</span><span class="p">(</span><span class="n">curseur</span><span class="p">,</span><span class="w"> </span><span class="n">fin</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">res</span><span class="p">.</span><span class="n">ec</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">errc</span><span class="p">{})</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">        </span><span class="n">resultats</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">        </span><span class="n">curseur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">res</span><span class="p">.</span><span class="n">ptr</span><span class="p">;</span><span class="w"> </span><span class="c1">// On avance le curseur au prochain caractère</span>
 </span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">    </span><span class="c1">// On assemble le tout sur le canevas principal</span>
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">    </span><span class="n">mainLayout</span><span class="o">-&gt;</span><span class="n">addWidget</span><span class="p">(</span><span class="n">groupSaisie</span><span class="p">);</span>
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">    </span><span class="n">mainLayout</span><span class="o">-&gt;</span><span class="n">addWidget</span><span class="p">(</span><span class="n">m_btnSave</span><span class="p">);</span>
-</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">    </span><span class="n">mainLayout</span><span class="o">-&gt;</span><span class="n">addWidget</span><span class="p">(</span><span class="n">m_btnError</span><span class="p">);</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">curseur</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">fin</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">*</span><span class="n">curseur</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;,&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">            </span><span class="n">curseur</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="c1">// On saute la virgule</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span><span class="w"> </span><span class="c1">// Erreur ou fin de chaîne</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="p">}</span>
 </span></code></pre></div>
-<h3 id="4-le-feedback-la-zone-de-retour">4. Le Feedback (La zone de retour)</h3>
-<p>On ajoute un dernier composant pour voir le résultat de nos actions.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">    </span><span class="n">m_labelSummary</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">QLabel</span><span class="p">(</span><span class="s">&quot;En attente...&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">);</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">mainLayout</span><span class="o">-&gt;</span><span class="n">addWidget</span><span class="p">(</span><span class="n">m_labelSummary</span><span class="p">);</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="n">setCentralWidget</span><span class="p">(</span><span class="n">centralWidget</span><span class="p">);</span><span class="w"> </span><span class="c1">// On &quot;publie&quot; la page dans la fenêtre</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">}</span>
+<h3 id="stdto_chars-nombre-string-ultra-rapide"><code>std::to_chars</code> (Nombre ➔ String ultra-rapide)</h3>
+<p>C'est le jumeau de <code>from_chars</code>. Il écrit directement dans un tableau de caractères (buffer) sans créer d'objet <code>std::string</code> intermédiaire (donc zéro allocation mémoire).</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;charconv&gt;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kt">char</span><span class="w"> </span><span class="n">buffer</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="kt">int</span><span class="w"> </span><span class="n">valeur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1234</span><span class="p">;</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="c1">// std::to_chars_result contient un char* ptr (non const)</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">std</span><span class="o">::</span><span class="n">to_chars_result</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">to_chars</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="n">buffer</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">valeur</span><span class="p">);</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">res</span><span class="p">.</span><span class="n">ec</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">errc</span><span class="p">{})</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="c1">// On termine la chaîne pour l&#39;affichage (to_chars ne met pas de \0)</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="o">*</span><span class="n">res</span><span class="p">.</span><span class="n">ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;\0&#39;</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Buffer : &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">buffer</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="p">}</span>
 </span></code></pre></div>
 <hr />
-<h2 id="points-de-reflexion-pour-letudiant">🧠 Points de Réflexion pour l'Étudiant</h2>
+<h2 id="3-nombre-string-laboutissement-c20">3. Nombre ➔ String (L'aboutissement C++20)</h2>
+<h3 id="la-base-stdto_string">La base : <code>std::to_string</code></h3>
+<p>Simple, mais ne permet aucun formatage (nombre de décimales, etc.).
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="mf">123.45</span><span class="p">);</span><span class="w"> </span><span class="c1">// &quot;123.450000&quot;</span>
+</span></code></pre></div></p>
+<h3 id="le-standard-moderne-stdformat-c20">Le standard moderne : <code>std::format</code> (C++20) 🌟</h3>
+<p>C'est la méthode recommandée. Elle est sûre, rapide et extrêmement flexible.
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;format&gt;</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">hp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="p">;</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="kt">double</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1234.5678</span><span class="p">;</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="c1">// Formatage simple</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">format</span><span class="p">(</span><span class="s">&quot;PV: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">hp</span><span class="p">);</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="c1">// Formatage avancé (2 décimales, largeur de 10 avec des zéros)</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">format</span><span class="p">(</span><span class="s">&quot;Score: {:010.2f}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">score</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="c1">// Résultat : &quot;Score: 0001234.57&quot;</span>
+</span></code></pre></div></p>
+<hr />
+<h2 id="4-les-conversions-avec-qt-qstring">4. Les conversions avec Qt (<code>QString</code>)</h2>
+<p>Si vous êtes dans un projet Qt, utilisez les méthodes intégrées qui sont optimisées pour <code>QString</code>.</p>
+<h3 id="qstring-nombre"><code>QString</code> ➔ Nombre</h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">QString</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;123&quot;</span><span class="p">;</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kt">bool</span><span class="w"> </span><span class="n">ok</span><span class="p">;</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">toInt</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ok</span><span class="p">);</span><span class="w"> </span><span class="c1">// On passe l&#39;adresse d&#39;un booléen pour vérifier le succès</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ok</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="c1">// Utiliser n</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="nombre-qstring">Nombre ➔ <code>QString</code></h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">42</span><span class="p">;</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">QString</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QString</span><span class="o">::</span><span class="n">number</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1">// Ou avec formatage (similaire à printf)</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="n">QString</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QString</span><span class="p">(</span><span class="s">&quot;%1 pts&quot;</span><span class="p">).</span><span class="n">arg</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+</span></code></pre></div>
+<h2 id="resume-quoi-utiliser">📜 Résumé : Quoi utiliser ?</h2>
 <ol>
-<li><strong>Pourquoi des pointeurs ?</strong> Parce que les objets graphiques vivent sur le <strong>Tas (Heap)</strong>. Qt gère leur cycle de vie grâce au système Parent/Enfant.</li>
-<li><strong>Pourquoi pas de Singleton ?</strong> Imaginez que vous vouliez ouvrir deux fenêtres d'édition de client en même temps. Un Singleton empêcherait d'avoir deux contrôleurs distincts. En injectant le contrôleur manuellement, votre architecture est prête pour le multi-fenêtrage.</li>
-<li><strong>Encapsulation</strong> : Remarquez que <code>ClientWindow</code> n'a aucune idée de ce qu'est un <code>Client</code>. Elle ne sait que lire des textes et des dates. Elle est <strong>purement graphique</strong>.</li>
+<li><strong>En général (C++ pur)</strong> : Utilisez <code>std::stoi</code> / <code>std::stod</code> si vous gérez les exceptions, ou <code>std::format</code> pour transformer en texte.</li>
+<li><strong>Pour la performance (Parsing de gros fichiers)</strong> : Utilisez <code>&lt;charconv&gt;</code>.</li>
+<li><strong>Dans un TP avec Qt</strong> : Utilisez <code>s.toInt()</code> et <code>QString::number()</code>.</li>
 </ol>
-<div class="admonition success">
-<p class="admonition-title">Fait !</p>
-<p>Nous avons une fenêtre vide et un modèle pur. Il ne nous reste plus qu'à écrire le "cerveau" de l'application : le <strong>Contrôleur</strong>.</p>
-</div>
 
 
 
@@ -3128,12 +3287,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "content.code.copy", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "content.code.copy", "toc.integrate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../../../javascript/alltarget.js"></script>
+        <script src="../../javascript/alltarget.js"></script>
       
     
   </body>
